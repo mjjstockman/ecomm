@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+from .form import ProductForm
 
 
 def all(request):
@@ -14,16 +15,16 @@ def all(request):
 
 
 def add(request):
-    # form = ProductForm()
+    form = ProductForm()
 
-    # if request.method == 'POST':
-    #     form = ProductForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return redirect('/')
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
 
     context = {
-        # 'form': form
+        'form': form
     }
 
     return render(request, 'products/add.html', context)
