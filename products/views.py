@@ -28,3 +28,22 @@ def add(request):
     }
 
     return render(request, 'products/add.html', context)
+
+
+def edit(request, pk):
+    """Allows authors to edit their setlists
+    """
+    product = Product.objects.get(id=pk)
+    form = ProductForm(instance=product)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {
+        'form': form,
+    }
+    return render(request, 'products/add.html', context)
+
