@@ -7,7 +7,23 @@ def all(request):
     products = Product.objects.all()
 
     context = {
-        'products': products,
+        'products': products
     }
 
     return render(request, 'products/all.html', context)
+
+
+def add(request):
+    # form = ProductForm()
+
+    # if request.method == 'POST':
+    #     form = ProductForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('/')
+
+    context = {
+        # 'form': form
+    }
+
+    return render(request, 'products/add.html', context)
