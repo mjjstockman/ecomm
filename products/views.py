@@ -47,3 +47,17 @@ def edit(request, pk):
     }
     return render(request, 'products/add.html', context)
 
+
+def delete(request, pk):
+    """Allows the setlist author to delete the setlist
+    """
+    product = Product.objects.get(id=pk)
+
+    if request.method == 'POST':
+        product.delete()
+        return redirect('/')
+
+    context = {
+        'product': product,
+    }
+    return render(request, 'products/delete.html', context)
