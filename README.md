@@ -640,7 +640,7 @@ I have resolved this by adding if statement. If the Subscriber is registered use
 
 ## Bugs left in the project
 
-### FAQ questions form creating Subscriber
+### FAQ question form creating Subscriber
 
 I initially added Newsletter column to Question model. This was intending to create Subscriber after the question has been submitted. 
 
