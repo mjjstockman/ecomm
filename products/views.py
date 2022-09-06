@@ -31,13 +31,11 @@ def add(request):
 
 
 def edit(request, pk):
-    """Allows authors to edit their setlists
-    """
     product = Product.objects.get(id=pk)
     form = ProductForm(instance=product)
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, instance=product)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             return redirect('/')
