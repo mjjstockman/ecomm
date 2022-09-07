@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import Product
 from .form import ProductForm
 
 
+@staff_member_required
 def all(request):
     # products = Product.get_object_or_404.all()
     products = Product.objects.all()
@@ -14,6 +16,7 @@ def all(request):
     return render(request, 'products/all.html', context)
 
 
+@staff_member_required
 def add(request):
     form = ProductForm()
 
@@ -30,6 +33,7 @@ def add(request):
     return render(request, 'products/add.html', context)
 
 
+@staff_member_required
 def edit(request, pk):
     product = Product.objects.get(id=pk)
     form = ProductForm(instance=product)
@@ -46,6 +50,7 @@ def edit(request, pk):
     return render(request, 'products/add.html', context)
 
 
+@staff_member_required
 def delete(request, pk):
     """Allows the setlist author to delete the setlist
     """
