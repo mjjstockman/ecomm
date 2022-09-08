@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from products.models import Product
 
 
@@ -11,3 +11,14 @@ def menu_all(request):
     }
 
     return render(request, 'menu/menu-all.html', context)
+
+
+def detail(request, pk):
+    """View setlist details
+    """
+    # product = get_object_or_404(Product, pk=product_id)
+    product = Product.objects.get(id=pk)
+    context = {
+        'product': product,
+    }
+    return render(request, 'menu/detail.html', context)
