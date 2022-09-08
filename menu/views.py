@@ -16,7 +16,6 @@ def menu_all(request):
 def detail(request, pk):
     """View setlist details
     """
-    # product = get_object_or_404(Product, pk=product_id)
     product = Product.objects.get(id=pk)
     context = {
         'product': product,
