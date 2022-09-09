@@ -22,8 +22,7 @@
                     <li class="list-group-item">Price: £{{ product.price }}</li>
                 </ul>
                 <div class="card-body">
-                    <a href="{% url 'edit_product' product.id %}" class="card-link">Edit</a>
-                    <a href="{% url 'delete_product' product.id %}" class="card-link">Delete</a>
+                    <a href="{% url 'detail' product.id %}" class="card-link">See Info</a>
                 </div>
             </div>
         </div>
