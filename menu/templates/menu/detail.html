@@ -11,7 +11,9 @@
                     NAME: {{ product.name }}
                 </div>
                 {% if product.image %}
-                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                </a>
                 {% endif %}
                 <div class=" card-body">
                     <h5 class="card-title">Description:</h5>
