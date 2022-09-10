@@ -86,7 +86,7 @@
                     {% endif %}
 
                 </ul>
-                <form class="d-flex" method="GET" action="">
+                <form class="d-flex" method="GET" action="{% url 'detail' }">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -94,22 +94,22 @@
         </div>
     </nav>
     {% if messages %}
-    <div class="message-contrainer">
-        {% for message in messages %}
+    <div class=" message-contrainer">
+                    {% for message in messages %}
 
-        {% endfor %}
-    </div>
-    {% endif %}
+                    {% endfor %}
+            </div>
+            {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+            {% block page_header %}
+            {% endblock %}
 
-    {% block content %}
+            {% block content %}
 
-    {% endblock %}
+            {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+            {% block postloadjs %}
+            {% endblock %}
 </body>
 
 </html>
