@@ -84,6 +84,15 @@
                     </li>
                     {% endif %}
                     {% endif %}
+                    <li class="nav-item list-inline-item">
+                        <a class="nav-link" href="{% url 'view_cart' %}">Shopping Cart
+                            {% if total %}
+                            £{{ total|floatformat:2 }}
+                            {% else %}
+                            £0.00
+                            {% endif %}
+                        </a>
+                    </li>
 
                 </ul>
                 <form class="d-flex" method="GET" action="{% url 'detail' }">
