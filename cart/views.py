@@ -7,7 +7,7 @@ def view_cart(request):
     return render(request, 'cart/cart.html')
 
 
-def add_to_cart(request, item_id):
+def add_to_cart(request, pk):
     """ Add a quantity of the specified product to the shopping cart """
 
     # quantity will be a str from template so convert to int
@@ -18,12 +18,12 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     # if cart dict already contains the item_id...
-    if item_id in list(cart.keys()):
+    if pk in list(cart.keys()):
         # ... increment quantity
-        cart[item_id] += quantity
+        cart[pk] += quantity
     else:
         # or add the item_id with quantity
-        cart[item_id] = quantity
+        cart[pk] = quantity
 
     # add cart to session
     request.session['cart'] = cart
