@@ -32,10 +32,10 @@ def menu_all(request):
     return render(request, 'menu/menu-all.html', context)
 
 
-def detail(request, pk):
+def detail(request, product_id):
     """View setlist details
     """
-    product = get_object_or_404(Product, id=pk)
+    product = get_object_or_404(Product, pk=product_id)
     context = {
         'product': product
     }
