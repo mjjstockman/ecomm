@@ -27,5 +27,5 @@ def add_to_cart(request, product_id):
 
     # add cart to session
     request.session['cart'] = cart
-    print(request.session['cart'])
+    # print(request.session['cart'])
     return redirect(redirect_url)
