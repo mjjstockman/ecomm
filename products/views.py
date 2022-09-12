@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 # from django.contrib.auth.decorators import user_passes_test
 from .models import Product
@@ -35,8 +35,8 @@ def add(request):
 
 
 @staff_member_required
-def edit(request, pk):
-    product = Product.objects.get(id=pk)
+def edit(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
     form = ProductForm(instance=product)
 
     if request.method == 'POST':
@@ -52,10 +52,10 @@ def edit(request, pk):
 
 
 @staff_member_required
-def delete(request, pk):
+def delete(request, product_id):
     """Allows the setlist author to delete the setlist
     """
-    product = Product.objects.get(id=pk)
+    product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
         product.delete()
