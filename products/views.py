@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 # from django.contrib.auth.decorators import user_passes_test
 from .models import Product
@@ -25,7 +25,8 @@ def add(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            # use reverse instead
+            return redirect(reverse('products'))
 
     context = {
         'form': form
