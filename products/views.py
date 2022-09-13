@@ -34,7 +34,7 @@ def add(request):
     return render(request, 'products/add.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='/')
 def edit(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     form = ProductForm(instance=product)
