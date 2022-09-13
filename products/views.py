@@ -25,7 +25,6 @@ def add(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            # use reverse instead
             return redirect(reverse('products'))
 
     context = {
