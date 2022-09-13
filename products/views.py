@@ -5,7 +5,7 @@ from .models import Product
 from .form import ProductForm
 
 
-@staff_member_required
+@staff_member_required(login_url='/')
 def all(request):
     # products = Product.get_object_or_404.all()
     products = Product.objects.all()
@@ -17,7 +17,7 @@ def all(request):
     return render(request, 'products/all.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='/')
 def add(request):
     form = ProductForm()
 
@@ -51,7 +51,7 @@ def edit(request, product_id):
     return render(request, 'products/add.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='/')
 def delete(request, product_id):
     """Allows the setlist author to delete the setlist
     """
