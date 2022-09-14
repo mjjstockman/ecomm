@@ -43,7 +43,7 @@ def edit(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect(reverse('products'))
 
     context = {
         'form': form,
@@ -59,7 +59,7 @@ def delete(request, product_id):
 
     if request.method == 'POST':
         product.delete()
-        return redirect('/')
+        return redirect(reverse('products'))
 
     context = {
         'product': product,
