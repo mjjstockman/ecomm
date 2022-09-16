@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 
 {% block content %}
@@ -71,7 +72,7 @@
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">MAKE FUNCT IN VIEW TO CALCULATE SUBTOTAL</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
