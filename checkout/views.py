@@ -1,13 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
+import stripe
 from products.models import Product
+from cart.contexts import cart_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-import stripe
-from cart.contexts import cart_contents
-
-
 
 
 def checkout(request):
@@ -33,22 +31,22 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+                    # if isinstance(item_data, int):
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+                    # else:
+                    #     for size, quantity in item_data['items_by_size'].items():
+                    #         order_line_item = OrderLineItem(
+                    #             order=order,
+                    #             product=product,
+                    #             quantity=quantity,
+                    #             product_size=size,
+                    #         )
+                    #         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your cart wasn't found in our database. "
