@@ -25,6 +25,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+        
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -45,7 +46,12 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            # prevent duplicate save events by using commit=False
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_cart = json.dumps(cart)
+            order.save()
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
