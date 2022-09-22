@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'home',
     'menu',
     'products',
+    'profiles',
 ]
 
 MIDDLEWARE = [
