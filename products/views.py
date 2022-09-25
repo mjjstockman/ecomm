@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 # from django.contrib.auth.decorators import user_passes_test
 from .models import Product
 from .form import ProductForm
 
 
-@staff_member_required(login_url='/')
+@login_required
 def all(request):
     # products = Product.get_object_or_404.all()
     products = Product.objects.all()
@@ -18,7 +18,7 @@ def all(request):
     return render(request, 'products/all.html', context)
 
 
-@staff_member_required(login_url='/')
+@login_required
 def detail(request, product_id):
     """View setlist details
     """
@@ -29,9 +29,13 @@ def detail(request, product_id):
 
     return render(request, 'menu/detail.html', context)
 
-@staff_member_required(login_url='/')
+@login_required
 def add(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -51,9 +55,13 @@ def add(request):
     return render(request, template, context)
 
 
-
+@login_required
 def edit(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -76,25 +84,14 @@ def edit(request, product_id):
     return render(request, template, context)
 
 
-# @staff_member_required(login_url='/')
-# def delete(request, product_id):
-#     """Allows the setlist author to delete the setlist
-#     """
-#     product = get_object_or_404(Product, pk=product_id)
-
-#     if request.method == 'POST':
-#         product.delete()
-#         return redirect(reverse('products'))
-
-#     context = {
-#         'product': product,
-#     }
-#     return render(request, 'products/delete.html', context)
-
-@staff_member_required(login_url='/')
+@login_required
 def delete(request, product_id):
     """Allows the setlist author to delete the setlist
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
