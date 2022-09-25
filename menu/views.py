@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from django.db.models import Q
 from products.models import Product
 
@@ -16,7 +17,7 @@ def menu_all(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                # messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             
             # set queries var to Q obj where name or description contains the query, case insensitive
