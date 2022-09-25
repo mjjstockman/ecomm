@@ -55,7 +55,6 @@ def add(request):
     return render(request, template, context)
 
 
-@login_required
 def edit(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
