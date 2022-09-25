@@ -32,6 +32,7 @@ def menu_all(request):
     return render(request, 'menu/menu-all.html', context)
 
 
+# REMOVE ONCE USING PRODUCTS APP
 def detail(request, product_id):
     """View setlist details
     """

@@ -18,20 +18,27 @@ def all(request):
 
 
 @staff_member_required(login_url='/')
-def add(request):
-    form = ProductForm()
-
-    if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect(reverse('products'))
-
+def detail(request, product_id):
+    """View setlist details
+    """
+    product = get_object_or_404(Product, pk=product_id)
     context = {
-        'form': form
+        'product': product
     }
 
-    return render(request, 'products/add.html', context)
+    return render(request, 'menu/detail.html', context)
+
+@staff_member_required(login_url='/')
+def add(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 
 @staff_member_required(login_url='/')
