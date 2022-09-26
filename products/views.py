@@ -10,9 +10,11 @@ from .form import ProductForm
 def all(request):
     # products = Product.get_object_or_404.all()
     products = Product.objects.all()
+    cart = request.session.get('cart', {})
 
     context = {
-        'products': products
+        'products': products,
+        'cart': cart
     }
 
     return render(request, 'products/all.html', context)
