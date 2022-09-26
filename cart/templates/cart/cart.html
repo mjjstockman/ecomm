@@ -83,7 +83,7 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'menu_all' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
@@ -101,7 +101,7 @@
             </div>
             {% else %}
             <p class="lead mb-5">Your cart is empty.</p>
-            <a href="{% url 'menu_all' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
@@ -115,7 +115,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'menu/includes/quantity_input_script.html' %}
+{% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
     // Update quantity on click

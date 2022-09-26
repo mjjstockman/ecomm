@@ -29,7 +29,7 @@ def detail(request, product_id):
         'product': product
     }
 
-    return render(request, 'menu/detail.html', context)
+    return render(request, 'products/detail.html', context)
 
 @login_required
 def add(request):
@@ -43,7 +43,7 @@ def add(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:

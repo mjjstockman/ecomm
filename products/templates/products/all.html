@@ -71,7 +71,7 @@
                     </div>
                 </form>
                 <div class="card-body">
-                    <a href="{% url 'detail' product.id %}" class="card-link">See Info</a>
+                    <a href="{% url 'product_detail' product.id %}" class="card-link">See Info</a>
                 </div>
                 <!-- add at to cart button -->
                 {% if request.user.is_superuser %}

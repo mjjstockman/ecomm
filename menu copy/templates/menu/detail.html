@@ -70,7 +70,7 @@
                 </form>
 
                 <div class="card-body">
-                    <a href="{% url 'menu_all' %}" class="card-link">Back To Menu</a>
+                    <a href="{% url 'products' %}" class="card-link">Back To Menu</a>
                     <a href="{% url 'delete_product' product.id %}" class="card-link">Delete</a>
                 </div>
             </div>
@@ -83,5 +83,5 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'menu/includes/quantity_input_script.html' %}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
