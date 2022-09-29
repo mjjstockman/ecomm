@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Q
 # from django.contrib.auth.decorators import user_passes_test
 from .models import Product
 from .form import ProductForm
@@ -11,9 +12,21 @@ def all(request):
     # products = Product.get_object_or_404.all()
     products = Product.objects.all()
     cart = request.session.get('cart', {})
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
 
     context = {
         'products': products,
+        'search_term': query,
         'cart': cart
     }
 
