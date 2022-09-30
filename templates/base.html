@@ -48,69 +48,106 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'products' %}">Menu</a>
-                    </li>
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Product Management
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a></li>
-                            <li><a class="dropdown-item" href="#">Edit Product</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    {% endif %}
-                    {% endif %}
-                    <li class="nav-item list-inline-item">
-                        <a class="nav-link" href="{% url 'view_cart' %}">Shopping Cart
-                            {% if total %}
-                            £{{ total|floatformat:2 }}
-                            {% else %}
-                            £0.00
-                            {% endif %}
-                        </a>
-                    </li>
+            <div class="row">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}">My Profile</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}">Menu</a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Product Management
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a></li>
+                                <li><a class="dropdown-item" href="#">Edit Product</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
+                        {% endif %}
+                        <li class="nav-item list-inline-item">
+                            <a class="nav-link" href="{% url 'view_cart' %}">Shopping Cart
+                                {% if total %}
+                                £{{ total|floatformat:2 }}
+                                {% else %}
+                                £0.00
+                                {% endif %}
+                            </a>
+                        </li>
 
-                </ul>
-                <form class="d-flex" method="GET" action="{% url 'products' %}">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                    </ul>
+                    <form class="d-flex" method="GET" action="{% url 'products' %}">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            name="q">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="row">
+                    <ul class="navbar-nav float-none float-md-end">
+                        <li class="nav-item"><a class="nav-link active"
+                                href="{% url 'products' %}?category=bratwurst">Bratwursts</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="{% url 'products' %}?category=schnitzels">Schnitzels</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="{% url 'products' %}?category=currywurst">Currywurst</a></li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
+    <!-- <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="#">Brand</a><button class="navbar-toggler"
+                data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <div class="row ms-auto">
+                    <div class="col-12">
+                        <ul class="navbar-nav float-none float-md-end">
+                            <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 order-md-first">
+                        <ul class="navbar-nav float-none float-md-end">
+                            <li class="nav-item"><a class="nav-link active" href="#">Secondary One</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Secondary Two</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Secondary Three</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     {% if messages %}
     <div class="message-container">
