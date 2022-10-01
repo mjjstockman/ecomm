@@ -34,6 +34,13 @@
   <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
+<button class="btn btn-outline-info">
+  <a href="{% provider_login_url 'google'%}?next=/">
+    <i class="fab fa-google"></i>
+    Login with Google
+  </a>
+</button>
+
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {{ form|crispy }}
