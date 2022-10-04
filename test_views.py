@@ -1,4 +1,4 @@
-from django.test import TestCase
+import unittest
 from django.urls import reverse, resolve
 from home.views import index
 from products.views import all, detail, add, edit, delete
@@ -6,7 +6,7 @@ from profiles.views import profile, order_history
 from cart.views import view_cart, add_to_cart, adjust_cart, remove_from_cart
 
 
-class TestUrls(TestCase):
+class TestUrls(unittest.TestCase):
 
     def test_home_url(self):
         url = reverse('home')
