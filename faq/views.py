@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+def faq(request):
+    return render(request, 'faq/faq.html')
+
+def faq(request):
+    """View setlist details
+    """
+    
+    return render(request, 'setlist/detail.html', context)
