@@ -5,7 +5,7 @@ STATUS = ((0, "Submitted"), (1, "Published"))
 
 
 class Question(models.Model):
-    title = models.CharField(max_length=200, unique=True)
+    # title = models.CharField(max_length=200, unique=True)
     body = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, related_name="question_author"
@@ -18,7 +18,7 @@ class Question(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return self.title
+        return self.body
 
 
 class Answer(models.Model):
