@@ -3,7 +3,9 @@
 
 {% block content %}
 <h1 class="display-4 text-success">FAQ!!!</h1>
-
+{% for question in questions %}
+{{ question.body }}
+{% endfor %}
 <form action="" method="post">
     {% csrf_token %}
     {{ form | crispy }}
