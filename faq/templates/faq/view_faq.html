@@ -5,8 +5,14 @@
 <h1 class="display-4 text-success">FAQ!!!</h1>
 {% for question in questions %}
 <p>{{ question.body }}</p>
+{% if question.question_answer.all %}
+{% for answer in question.question_answer.all %}
+<p>{{ answer.body }}</p>
 {% endfor %}
-
+{% else %}
+ADD ANSWER FORM
+{% endif %}
+{% endfor %}
 
 
 <!-- <form action="" method="post">

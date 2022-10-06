@@ -22,7 +22,7 @@ class AnswerForm(forms.ModelForm):
     """
     class Meta:
         model = Answer
-        fields = ['answer']
+        fields = ['body']
         # widgets = {
         #     'author': forms.HiddenInput(),
         #     }

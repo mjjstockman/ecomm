@@ -23,7 +23,7 @@ class Question(models.Model):
 
 class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.SET_NULL, null=True, related_name='question_answer')
-    answer = models.CharField(max_length=200, unique=True)
+    body = models.CharField(max_length=200, unique=True)
     # author = models.ForeignKey(
     #     User, on_delete=models.CASCADE, related_name="answer_author"
     # )
