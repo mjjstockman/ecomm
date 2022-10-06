@@ -7,9 +7,9 @@ STATUS = ((0, "Submitted"), (1, "Published"))
 class Question(models.Model):
     # title = models.CharField(max_length=200, unique=True)
     body = models.CharField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, related_name="question_author"
-    )
+    # author = models.ForeignKey(
+    #     User, on_delete=models.SET_NULL, null=True, related_name="question_author"
+    # )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -22,11 +22,11 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.SET_NULL, null=True)
     body = models.CharField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="answer_author"
-    )
+    # author = models.ForeignKey(
+    #     User, on_delete=models.CASCADE, related_name="answer_author"
+    # )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
