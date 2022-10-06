@@ -12,8 +12,8 @@
             {{ question.body }}
         </button>
     </h2>
-    <div id="collapse{{question.id}}" class="accordion-collapse collapse show" aria-labelledby="heading{{question.id}}"
-        data-bs-parent="#accordionExample">
+    <div id="collapse{{question.id}}" class="accordion-collapse collapse {% if forloop.first %} show {% endif %}"
+        aria-labelledby="heading{{question.id}}" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             {% if question.question_answer.all %}
             {% for answer in question.question_answer.all %}
