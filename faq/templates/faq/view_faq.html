@@ -3,16 +3,29 @@
 
 {% block content %}
 <h1 class="display-4 text-success">FAQ!!!</h1>
-{% for question in questions %}
-<p>{{ question.body }}</p>
-{% if question.question_answer.all %}
-{% for answer in question.question_answer.all %}
-<p>{{ answer.body }}</p>
-{% endfor %}
-{% else %}
-ADD ANSWER FORM
-{% endif %}
-{% endfor %}
+
+<div class="accordion" id="accordionExample">
+    {% for question in questions %}
+    <h2 class="accordion-header" id="heading{{question.id}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse{{question.id}}" aria-expanded="true" aria-controls="collapse{{question.id}}">
+            {{ question.body }}
+        </button>
+    </h2>
+    <div id="collapse{{question.id}}" class="accordion-collapse collapse show" aria-labelledby="heading{{question.id}}"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            {% if question.question_answer.all %}
+            {% for answer in question.question_answer.all %}
+            <p>{{ answer.body }}</p>
+            {% endfor %}
+            {% else %}
+            ADD ANSWER FORM
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 
 <!-- <form action="" method="post">
@@ -22,20 +35,9 @@ ADD ANSWER FORM
 </form> -->
 
 
-<!-- <div class="container-fluid">
-    {% for question in question_list %}
-    <p>{{ question.title }}</p>
-    <p>{{ question.body }}</p>
-    <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
-        <i class="fa-solid fa-file-circle-plus pe-1"></i>Add Setlist</a> -->
 
-<!-- Add button to add answer -->
-<!-- Like products detail. Show Q'ion, add form to submit answer -->
-<!-- If superuser default = 1, if user default = 0 -->
-<!-- <p>{{ question.id }}</p>
-    {% endfor %} -->
-<!-- </div>
-<h1 class="display-4 text-success">FAQ!!!</h1> -->
+
+
 
 <!-- <div class="accordion" id="accordionExample">
     {% for question in question_list %}
