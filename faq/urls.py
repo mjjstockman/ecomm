@@ -3,4 +3,5 @@ from .import views
 
 urlpatterns = [
     path('', views.view_faq, name='view_faq'),
+    path('', views.view_faq, name='answer'),
 ]
