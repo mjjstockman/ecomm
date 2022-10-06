@@ -1,5 +1,5 @@
 from django import forms
-from .models import Question
+from .models import Question, Answer
 
 
 class QuestionForm(forms.ModelForm):
@@ -14,3 +14,15 @@ class QuestionForm(forms.ModelForm):
         #     'author': forms.HiddenInput(),
         #     }
 
+
+class AnswerForm(forms.ModelForm):
+    """Uses Setlist model to create form gigs, song and author fields
+    The gig and author fields are taken from the views and hidden from 
+    the user 
+    """
+    class Meta:
+        model = Answer
+        fields = ['body']
+        # widgets = {
+        #     'author': forms.HiddenInput(),
+        #     }
