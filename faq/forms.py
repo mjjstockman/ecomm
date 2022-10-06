@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-from django.forms import ModelForm
-from .models import Question, Answer
-
-
-class QuestionForm(ModelForm):
-    class Meta:
-        model = Question
-        fields = ('body',)
-=======
 from django import forms
 from .models import Question, Answer
 
@@ -36,4 +26,3 @@ class AnswerForm(forms.ModelForm):
         # widgets = {
         #     'author': forms.HiddenInput(),
         #     }
->>>>>>> new-question
