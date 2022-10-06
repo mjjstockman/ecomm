@@ -6,7 +6,7 @@ def view_faq(request):
 
     questions = Question.objects.filter(status=1).order_by('-created_on')
     # question_form = QuestionForm()
-    # answer_form = AnswerForm()
+    answer_form = AnswerForm()
 
     # if request.method == 'POST':
     #     question_form = QuestionForm(request.POST)
@@ -15,7 +15,7 @@ def view_faq(request):
 
     context = {
         # 'question_form': question_form,
-        # 'answer_form': answer_form,
+        'answer_form': answer_form,
         'questions': questions
     }
     return render(request, 'faq/view_faq.html', context)

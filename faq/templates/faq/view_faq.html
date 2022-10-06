@@ -20,7 +20,11 @@
             <p>{{ answer.body }}</p>
             {% endfor %}
             {% else %}
-            ADD ANSWER FORM
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ answer_form | crispy }}
+                <input type="submit" value="Submit Answer">
+            </form>
             {% endif %}
         </div>
     </div>
