@@ -4,30 +4,32 @@
 {% block content %}
 <h1 class="display-4 text-success">FAQ!!!</h1>
 
-<div class="accordion" id="accordionExample">
+<div class="accordion" id="faqAccordion">
     {% for question in questions %}
-    <h2 class="accordion-header" id="heading{{question.id}}">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapse{{question.id}}" aria-expanded="true" aria-controls="collapse{{question.id}}">
-            {{ question.body }}
-        </button>
-    </h2>
-    <div id="collapse{{question.id}}" class="accordion-collapse collapse {% if forloop.first %} show {% endif %}"
-        aria-labelledby="heading{{question.id}}" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-            {% if question.question_answer.all %}
-            {% for answer in question.question_answer.all %}
-            <p>{{ answer.body }}</p>
-            {% endfor %}
-            {% else %}
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ answer_form | crispy }}
-                <input type="submit" value="Submit Answer">
-            </form>
-            {% endif %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{question.id}}">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse{{question.id}}" aria-expanded="true" aria-controls="collapse{{question.id}}">
+                {{ question.body }}
+            </button>
+        </h2>
+        <div id="collapse{{question.id}}" class="accordion-collapse collapse {% if forloop.first %} show {% endif %}"
+            aria-labelledby="heading{{question.id}}" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                {% if question.question_answer.all %}
+                {% for answer in question.question_answer.all %}
+                <p>{{ answer.body }}</p>
+                {% endfor %}
+                {% else %}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ answer_form | crispy }}
+                    <input type="submit" value="Submit Answer">
+                </form>
+                {% endif %}
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
