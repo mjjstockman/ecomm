@@ -18,7 +18,7 @@
             <div class="accordion-body">
                 {% if question.question_answer.all %}
                 {% for answer in question.question_answer.all %}
-                <p>{{ answer.body }}</p>
+                <p>{{ answer.body | safe }}</p>
                 {% endfor %}
                 {% else %}
                 <form action="" method="post">
