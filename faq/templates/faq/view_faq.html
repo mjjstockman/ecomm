@@ -16,25 +16,24 @@
         <div id="collapse{{question.id}}" class="accordion-collapse collapse {% if forloop.first %} show {% endif %}"
             aria-labelledby="heading{{question.id}}" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-                {% if question.question_answer.all %}
                 {% for answer in question.question_answer.all %}
+                {% if answer.status == 1 %}
                 <p>{{ answer.body | safe }}</p>
-                {% endfor %}
                 {% else %}
-                <!-- <form action="answer/{{ question.id }}" method="post"> -->
                 <form action="{% url 'answer' question.id %}" method="post">
                     {% csrf_token %}
                     {{ answer_form | crispy }}
                     <input type="submit" value="Submit Answer">
                 </form>
                 {% endif %}
+                {% endfor %}
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
 
-<form action="question/" method="post">
+<form action="{% url 'question' %}" method="post">
     {% csrf_token %}
     {{ question_form | crispy }}
     <input type="submit" value="Submit Question">
