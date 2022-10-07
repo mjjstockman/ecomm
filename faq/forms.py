@@ -10,6 +10,9 @@ class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = ['body']
+        labels = {
+            'body': 'Question',
+        }
         # widgets = {
         #     'author': forms.HiddenInput(),
         #     }
@@ -23,6 +26,9 @@ class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ['body']
+        # labels = {
+        #     'body: 'What is your name',
+        # }
         widgets = {
             'question': forms.HiddenInput(),
             }
