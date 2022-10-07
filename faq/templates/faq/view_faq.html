@@ -21,7 +21,8 @@
                 <p>{{ answer.body | safe }}</p>
                 {% endfor %}
                 {% else %}
-                <form action="answer/{{ question.id }}" method="post">
+                <!-- <form action="answer/{{ question.id }}" method="post"> -->
+                <form action="{% url 'answer' question.id %}" method="post">
                     {% csrf_token %}
                     {{ answer_form | crispy }}
                     <input type="submit" value="Submit Answer">
