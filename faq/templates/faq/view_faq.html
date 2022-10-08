@@ -19,15 +19,17 @@
                 {% for answer in question.question_answer.all %}
                 {% if answer.status == 1 %}
                 <p>{{ answer.body | safe }}</p>
-                {% else %}
-                <form action="{% url 'answer' question.id %}" method="post">
-                    {% csrf_token %}
-                    {{ answer_form | crispy }}
-                    <input type="submit" value="Submit Answer">
-                </form>
+                {% if forloop.last %}
+                ADD ANOTHER ANSWER
+                {% endif %}
                 {% endif %}
                 {% endfor %}
             </div>
+            <form action="{% url 'answer' question.id %}" method="post">
+                {% csrf_token %}
+                {{ answer_form | crispy }}
+                <input type="submit" value="Submit Answer">
+            </form>
         </div>
         {% endfor %}
     </div>
