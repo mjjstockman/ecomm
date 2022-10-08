@@ -13,9 +13,6 @@ class QuestionForm(forms.ModelForm):
         labels = {
             'body': 'Question',
         }
-        # widgets = {
-        #     'author': forms.HiddenInput(),
-        #     }
 
 
 class AnswerForm(forms.ModelForm):
@@ -29,6 +26,3 @@ class AnswerForm(forms.ModelForm):
         labels = {
             'body': 'Add answer',
         }
-        widgets = {
-            'question': forms.HiddenInput(),
-            }
