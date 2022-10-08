@@ -9,8 +9,8 @@ class AnswerAdmin(SummernoteModelAdmin):
     summernote_fields = ('body')
 
 
-# class AnswerTabularInline(admin.TabularInline):
-#     model = Answer
+class AnswerInline(admin.TabularInline):
+    model = Answer
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
@@ -19,9 +19,14 @@ class QuestionAdmin(admin.ModelAdmin):
     # prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     actions = ['publish_questions']
+    inlines = [
+        AnswerInline,
+    ]
 
     def publish_questions(self, request, queryset):
         queryset.update(status=True)
+
+
 
 
 
