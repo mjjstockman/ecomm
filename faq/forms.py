@@ -26,9 +26,9 @@ class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
         fields = ['body']
-        # labels = {
-        #     'body: 'What is your name',
-        # }
+        labels = {
+            'body': 'Add answer',
+        }
         widgets = {
             'question': forms.HiddenInput(),
             }
