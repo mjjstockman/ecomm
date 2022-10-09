@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
 STATUS = ((0, "Submitted"), (1, "Published"))
 
@@ -36,3 +38,10 @@ class Answer(models.Model):
 
     def __str__(self):
         return f"Answer to {self.question}"
+
+
+
+# @receiver(pre_save, sender=Answer)
+# def faq_answered(sender, instance, **kwargs):
+#     print(sender.objects.get(id=instance.id).status)
+#     print(instance.status)
