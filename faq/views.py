@@ -42,8 +42,8 @@ def answer(request, pk):
 def question(request):
     """Adds a setlist to the database for the admin to consider
     """
-    author = request.user
 
+    author = request.user
     question_form = QuestionForm()
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)
