@@ -8,11 +8,6 @@ def view_faq(request):
     question_form = QuestionForm()
     answer_form = AnswerForm()
 
-    # if request.method == 'POST':
-    #     question_form = QuestionForm(request.POST)
-    #     if question_form.is_valid():
-    #         question_form.save()
-
     context = {
         'question_form': question_form,
         'answer_form': answer_form,
@@ -26,13 +21,14 @@ def answer(request, pk):
     """Adds a setlist to the database for the admin to consider
     """
     question = Question.objects.get(id=pk)
-    # author = request.user
+    author = request.user
 
     answer_form = AnswerForm()
     if request.method == 'POST':
         answer_form = AnswerForm(request.POST)
         if answer_form.is_valid():
             answer_form.instance.question = question
+            answer_form.instance.author = author
             answer_form.save()
             return redirect('/')
         else:
@@ -46,13 +42,13 @@ def answer(request, pk):
 def question(request):
     """Adds a setlist to the database for the admin to consider
     """
-    # question = Question.objects.get(id=pk)
-    # author = request.user
+    author = request.user
 
     question_form = QuestionForm()
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)
         if question_form.is_valid():
+            question_form.instance.author = author
             question_form.save()
             return redirect('/')
         else:
