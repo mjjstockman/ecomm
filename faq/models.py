@@ -41,7 +41,7 @@ class Answer(models.Model):
 
 
 
-# @receiver(pre_save, sender=Answer)
-# def faq_answered(sender, instance, **kwargs):
-#     print(sender.objects.get(id=instance.id).status)
-#     print(instance.status)
+@receiver(pre_save, sender=Answer)
+def faq_answered(sender, instance, **kwargs):
+    print(sender.objects.get(id=instance.id).status)
+    print(instance.status)
