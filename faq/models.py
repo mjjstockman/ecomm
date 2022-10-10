@@ -39,6 +39,22 @@ class Answer(models.Model):
     def __str__(self):
         return f"Answer to {self.question}"
 
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if self.status == 1:
+            # email = self.question
+            q_email = self.question.author.email
+            a_email = self.author.email
+            print(q_email)
+            print(a_email)
+
+            # send email here
+
+        super().save(*args, **kwargs)
+
 
 
 # @receiver(pre_save, sender=Answer)
