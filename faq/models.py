@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
+from django.core.mail import send_mail
+from django.conf import settings
 
 STATUS = ((0, "Submitted"), (1, "Published"))
 
@@ -40,17 +42,13 @@ class Answer(models.Model):
         return f"Answer to {self.question}"
 
     def save(self, *args, **kwargs):
-        """
-        Override the original save method to set the order number
-        if it hasn't been set already.
-        """
         if self.status == 1:
-            q_email = self.question.author.email
-            a_email = self.author.email
-            print(q_email)
-            print(a_email)
-
-            # send email here
+            question = self.question.body
+            subject = 'Your question on Get Wurst has been answered!'
+            message = f'Your question { question } on Get Wurst has been answered!'
+            email_from = settings.EMAIL_HOST_USER
+            user_email = [self.question.author.email,]
+            send_mail(subject, message, email_from, user_email)
 
         super().save(*args, **kwargs)
 

@@ -56,3 +56,7 @@ def question(request):
                 'question_form': question_form
             }
             return render(request, 'faq/view_faq.html', context)
+
+
+def test_print():
+    print("here we go!!")
