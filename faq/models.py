@@ -45,7 +45,6 @@ class Answer(models.Model):
         if it hasn't been set already.
         """
         if self.status == 1:
-            # email = self.question
             q_email = self.question.author.email
             a_email = self.author.email
             print(q_email)
@@ -56,8 +55,3 @@ class Answer(models.Model):
         super().save(*args, **kwargs)
 
 
-
-# @receiver(pre_save, sender=Answer)
-# def faq_answered(sender, instance, **kwargs):
-#     print('fdsghbn')
-#     print(author)
