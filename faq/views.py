@@ -30,6 +30,8 @@ def answer(request, pk):
         if answer_form.is_valid():
             answer_form.instance.question = question
             answer_form.instance.author = author
+            if request.user.is_superuser:
+                answer_form.instance.status = 1
             answer_form.save()
             return redirect('/')
         else:
@@ -43,13 +45,14 @@ def answer(request, pk):
 def question(request):
     """Adds a setlist to the database for the admin to consider
     """
-
     author = request.user
     question_form = QuestionForm()
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)
         if question_form.is_valid():
             question_form.instance.author = author
+            if request.user.is_superuser:
+                question_form.instance.status = 1
             question_form.save()
             return redirect('/')
         else:
