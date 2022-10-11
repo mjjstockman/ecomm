@@ -26,6 +26,7 @@ def answer(request, pk):
     answer_form = AnswerForm()
     if request.method == 'POST':
         answer_form = AnswerForm(request.POST)
+        answer_form = AnswerForm(request.POST)
         if answer_form.is_valid():
             answer_form.instance.question = question
             answer_form.instance.author = author
@@ -57,6 +58,3 @@ def question(request):
             }
             return render(request, 'faq/view_faq.html', context)
 
-
-def test_print():
-    print("here we go!!")

@@ -7,7 +7,8 @@ from django.dispatch import receiver
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
-    delivery information and order history
+    delivery information, order history and wether user wants an email if
+    their question has been answered in faq
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email_answer = models.BooleanField(null=True, blank=True)

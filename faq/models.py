@@ -16,6 +16,7 @@ class Question(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    email_on_answer = models.BooleanField()
 
     class Meta:
         ordering = ["-created_on"]
@@ -42,7 +43,7 @@ class Answer(models.Model):
         return f"Answer to {self.question}"
 
     def save(self, *args, **kwargs):
-        if self.status == 1:
+        if self.status == 1 and self.question.email_on_answer:
             question = self.question.body
             subject = 'Your question on Get Wurst has been answered!'
             message = f'Your question { question } on Get Wurst has been answered!'

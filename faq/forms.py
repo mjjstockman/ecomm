@@ -9,7 +9,7 @@ class QuestionForm(forms.ModelForm):
     """
     class Meta:
         model = Question
-        fields = ['body']
+        fields = ['body', 'email_on_answer']
         labels = {
             'body': 'Question',
         }

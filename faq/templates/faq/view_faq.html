@@ -29,12 +29,6 @@
                 {% csrf_token %}
                 {{ answer_form | crispy }}
                 <input type="submit" value="Submit Answer">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="emailAnswered">
-                    <label class="form-check-label" for="emailAnswered">
-                        Get email when answered
-                    </label>
-                </div>
             </form>
         </div>
         {% endfor %}

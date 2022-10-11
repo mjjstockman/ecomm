@@ -2,6 +2,10 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Question, Answer
 
+# from django.contrib.auth.admin import UserAdmin
+# UserAdmin.list_display += ('new_field',)  # don't forget the commas
+# UserAdmin.list_filter += ('new_field',)
+# UserAdmin.fieldsets += ('new_field',)
 
 @admin.register(Answer)
 class AnswerAdmin(SummernoteModelAdmin):
