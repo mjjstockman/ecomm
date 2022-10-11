@@ -52,4 +52,3 @@ class Answer(models.Model):
 
         super().save(*args, **kwargs)
 
-
