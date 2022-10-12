@@ -23,7 +23,9 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         # ... increment quantity
         cart[item_id] += quantity
-        messages.success(request, f'Updated { product.name } quantity to {cart[item_id]}')
+        messages.success(
+            request,
+            f'Updated { product.name } quantity to {cart[item_id]}')
     else:
         # or add the item_id with quantity
         cart[item_id] = quantity
@@ -44,10 +46,14 @@ def adjust_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
-        messages.success(request, f'Updated { product.name } quantity to your cart')
+        messages.success(
+            request,
+            f'Updated { product.name } quantity to your cart')
     else:
         cart.pop(item_id)
-        messages.success(request, f'Removed { product.name } quantity to your cart')
+        messages.success(
+            request,
+            f'Removed { product.name } quantity to your cart')
 
     request.session['cart'] = cart
 
@@ -63,10 +69,7 @@ def remove_from_cart(request, item_id):
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
-        
+
     except Exception as e:
         messages.error(request, f'Error removing item {e}')
         return HttpResponse(status=500)
-        
-
-    
