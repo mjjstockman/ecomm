@@ -18,7 +18,7 @@ class Question(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    email_on_answer = models.BooleanField()
+    email_on_answer = models.BooleanField(default=0)
 
     class Meta:
         ordering = ["-created_on"]
@@ -42,6 +42,10 @@ class Answer(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    like = models.ManyToManyField(User, related_name='like_answer',
+                                   blank=True)
+    dislike = models.ManyToManyField(User, related_name='dislike_answer',
+                                      blank=True)
 
     class Meta:
         ordering = ["-created_on"]

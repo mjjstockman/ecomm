@@ -19,6 +19,12 @@
                 {% for answer in question.question_answer.all %}
                 {% if answer.status == 1 %}
                 <p>{{ answer.body | safe }}</p>
+                <form action="{% url 'like' answer.pk %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" , name="answer_id" , value="{{ answer.id }}">Like</button>
+                    <input type="hidden" name="next" value=" {{ answer.id }}">
+                </form>
+                Liked by {{ answer.like.all.count }} number of users.
                 {% if forloop.last %}
                 ADD ANOTHER ANSWER
                 {% endif %}
