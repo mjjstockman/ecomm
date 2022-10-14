@@ -13,6 +13,8 @@ class QuestionForm(forms.ModelForm):
         labels = {
             'body': 'Question',
         }
+        
+
 
 
 class AnswerForm(forms.ModelForm):
