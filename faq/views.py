@@ -20,7 +20,8 @@ def view_faq(request):
 def answer(request, pk):
     """Adds a setlist to the database for the admin to consider
     """
-    question = Question.objects.get(id=pk)
+    # question = Question.objects.get(id=pk)
+    question = get_object_or_404(Question, id=pk)
     author = request.user
 
     answer_form = AnswerForm()
@@ -63,8 +64,7 @@ def question(request):
 
 
 def like(request, pk):
-    answer = Answer.objects.get(id=pk)
-    # answer = get_object_or_404(Answer)
+    answer = get_object_or_404(Answer, id=pk)
     if answer.like.filter(id=request.user.id).exists():
         answer.like.remove(request.user)
     else:
