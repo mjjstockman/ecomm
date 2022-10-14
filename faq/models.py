@@ -16,7 +16,7 @@ class Question(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    email_on_answer = models.BooleanField(default=0)
+    email_on_answer = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-created_on"]
