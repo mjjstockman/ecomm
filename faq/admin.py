@@ -29,7 +29,8 @@ class QuestionAdmin(admin.ModelAdmin):
         if self.status == 1:
             question = self.question.body
             subject = 'Your question on Get Wurst has been answered!'
-            message = 'Your question {{question}} on Get Wurst has been answered!'
+            message = 'Your question {{question}} on Get Wurst has been \
+                       answered!'
             email_from = settings.EMAIL_HOST_USER
             user_email = [self.question.author.email,]
             send_mail(subject, message, email_from, user_email)
