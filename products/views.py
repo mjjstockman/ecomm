@@ -2,14 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
-# from django.contrib.auth.decorators import user_passes_test
 from .models import Product, Category
 from .form import ProductForm
 
 
 @login_required
 def all(request):
-    # products = Product.get_object_or_404.all()
     products = Product.objects.all()
     cart = request.session.get('cart', {})
     query = None

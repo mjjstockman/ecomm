@@ -20,7 +20,6 @@ def view_faq(request):
 def answer(request, pk):
     """Adds a setlist to the database for the admin to consider
     """
-    # question = Question.objects.get(id=pk)
     question = get_object_or_404(Question, id=pk)
     author = request.user
 
@@ -72,43 +71,3 @@ def like(request, pk):
 
     return render(request, 'faq/view_faq.html')
 
-
-    # def post(self, request, slug, *args, **kwargs):
-    #     post = get_object_or_404(Post, slug=slug)
-    #     if post.likes.filter(id=request.user.id).exists():
-    #         post.likes.remove(request.user)
-    #     else:
-    #         post.likes.add(request.user)
-
-    #     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
-    # def agree(request, pk):
-    # """A user can agree with a setlist
-    # TODO: merge agree/disagree logic 
-    # """
-    # setlist = Setlist.objects.get(id=pk)
-    # disagree = False
-
-    # for disagree in setlist.disagree.all():
-    #     if disagree == request.user:
-    #         disagree = True
-    #         break
-
-    # if disagree:
-    #     setlist.disagree.remove(request.user)
-
-    # agree = False
-
-    # for agree in setlist.agree.all():
-    #     if agree == request.user:
-    #         agree = True
-    #         break
-
-    # if not agree:
-    #     setlist.agree.add(request.user)
-
-    # if agree:
-    #     setlist.agree.remove(request.user)
-
-    # return redirect(request.META['HTTP_REFERER'])

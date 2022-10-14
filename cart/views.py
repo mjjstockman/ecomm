@@ -33,7 +33,6 @@ def add_to_cart(request, item_id):
 
     # add cart to session
     request.session['cart'] = cart
-    # print(request.session['cart'])
     return redirect(redirect_url)
 
 
