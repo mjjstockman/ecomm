@@ -9,17 +9,13 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
         
     name = models.CharField(max_length=254)
-    # friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
 
-    def get_friendly_name(self):
-        return self.name
-
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', default="To Be Added",
+    category = models.ForeignKey('Category', default=0,
                  on_delete=models.SET_DEFAULT)
     name = models.CharField(max_length=254)
     description = models.TextField()
