@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load cart_tools %}
 
 {% block content %}
 
@@ -42,11 +43,18 @@
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" 
-                                        type="number" name="quantity" value="1"
+                                    {% for item in cart_items %}
+                                        <input class="form-control qty_input"
+                                        type="number" name="quantity" value="{{ item.quantity }}"
                                         min="1" max="15" 
                                         data-item_id="{{ product.id }}" 
                                         id="id_qty_{{ product.id }}">
+                                    {% endfor %}
+                                    <!-- <input class="form-control qty_input"
+                                        type="number" name="quantity" value="{{ item.quantity }}"
+                                        min="1" max="15" 
+                                        data-item_id="{{ product.id }}" 
+                                        id="id_qty_{{ product.id }}"> -->
                                     <div class="input-group-append">
                                         <button class="increment-qty btn 
                                             btn-black rounded-0"
