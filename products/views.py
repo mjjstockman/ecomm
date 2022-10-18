@@ -10,6 +10,7 @@ from .form import ProductForm
 def all(request):
     products = Product.objects.all()
     cart = request.session.get('cart', {})
+    
     query = None
     categories = None
 
@@ -121,5 +122,8 @@ def delete(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
+    context = {
+        'product': product
+    }
     messages.success(request, 'Product deleted!')
-    return redirect(reverse('products'))
+    return render(request, 'products/all.html', context)

@@ -45,13 +45,15 @@
                                     </div>
                                     {% for item in cart_items %}
                                         <input class="form-control qty_input"
-                                        type="number" name="quantity" value="{{ item.quantity }}"
+                                        type="number" name="quantity"                         
+                                        value="{{ item.quantity }}"
                                         min="1" max="15" 
                                         data-item_id="{{ product.id }}" 
                                         id="id_qty_{{ product.id }}">
                                     {% empty %}
-                                    <input class="form-control qty_input"
-                                        type="number" name="quantity" value=0
+                                        <input class="form-control qty_input"
+                                        type="number" name="quantity"                         
+                                        value=0
                                         min="1" max="15" 
                                         data-item_id="{{ product.id }}" 
                                         id="id_qty_{{ product.id }}">
@@ -93,13 +95,38 @@
                         class="card-link">See Info</a>
                 </div>
                 <!-- add at to cart button -->
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                    <a class="text-danger" 
-                        href="{% url 'delete_product' product.id %}">Delete</a>
-                </small>
-                {% endif %}
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                            <a class="text-danger" 
+                                href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                
+                <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ product.id }}">
+        Launch static backdrop modal
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="deleteProductModal{{ product.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteProductLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Delete</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete {{ product.name }}?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-danger" 
+                                                    href="{% url 'delete_product' product.id %}">Delete</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>      
+                    {% endif %}
             </div>
         </div>
         {% empty %}
