@@ -51,6 +51,7 @@ class TestViews(TestCase):
 
         self.assertEqual(response.status_code, 302)
         self.assertEqual(self.product1.name, 'Product 1')
+        # self.assertEqual(self.product1.category, 'Category 1')
         self.assertTemplateUsed('products/add.html')
 
 
