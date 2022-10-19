@@ -13,14 +13,16 @@ class TestViews(TestCase):
         )
         self.products_url = reverse('products')
         self.products_detail_url = reverse('product_detail', args=[1])
+        self.products_edit_url = reverse('edit_product', args=[1])
         self.product1 = Product.objects.create(
             name = 'Product 1',
             short_description = 'Prod 1 description',
             description = 'Prod 1 full description',
             price = 1,
-            image = 'media/product_images/test.png',
+            image = 'media/product_images/test1.png',
             category = self.category1
         )
+
 
     def test_products_all_GET(self):
         
@@ -38,10 +40,25 @@ class TestViews(TestCase):
         self.assertTemplateUsed('products/detail.html')
 
 
-    # def test_products_add_POST(self):
+    # needed as used in setup???
+    def test_products_add_POST_adds_new_product(self):
        
-    #     response = self.client.get(self.products_url)
+        response = self.client.post(self.products_url)
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertTemplateUsed('products/add.html')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(self.product1.name, 'Product 1')
+        self.assertTemplateUsed('products/add.html')
+
+
+    def test_products_edit_POST_edits_product(self):
+
+        self.product1.name = 'Edited Product Name'
+       
+        response = self.client.post(self.products_edit_url, {
+            'name': 'Edited Product Name'
+        })
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(self.product1.name, 'Edited Product Name')
+        self.assertTemplateUsed('products/add.html')
 
