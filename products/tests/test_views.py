@@ -14,6 +14,7 @@ class TestViews(TestCase):
         self.products_url = reverse('products')
         self.products_detail_url = reverse('product_detail', args=[1])
         self.products_edit_url = reverse('edit_product', args=[1])
+        self.products_delete_url = reverse('delete_product', args=[1])
         self.product1 = Product.objects.create(
             name = 'Product 1',
             short_description = 'Prod 1 description',
@@ -22,6 +23,9 @@ class TestViews(TestCase):
             image = 'media/product_images/test1.png',
             category = self.category1
         )
+
+    # def tearDown(self):
+    #     self.category1.delete()
 
 
     def test_products_all_GET(self):
@@ -61,4 +65,14 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(self.product1.name, 'Edited Product Name')
         self.assertTemplateUsed('products/add.html')
+
+    def test_products_delete_POST_deletes_product(self):
+
+        self.product1.delete()
+        
+        response = self.client.post(self.products_delete_url)
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(Product.objects.count(), 0)
+
 
