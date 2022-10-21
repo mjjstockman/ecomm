@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Product, Category
+from .models import Product, Category, Fake
 
 
 class ProductForm(forms.ModelForm):
@@ -19,3 +19,10 @@ class ProductForm(forms.ModelForm):
         # self.fields['category'].choices = categories
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class FakeForm(forms.ModelForm):
+
+    class Meta:
+        model = Fake
+        fields = '__all__'
