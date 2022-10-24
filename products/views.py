@@ -7,7 +7,6 @@ from .form import ProductForm
 from .form import FakeForm
 
 
-@login_required
 def all(request):
     products = Product.objects.all()
     cart = request.session.get('cart', {})
