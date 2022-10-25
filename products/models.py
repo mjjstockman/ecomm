@@ -15,8 +15,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', default=0,
-                 on_delete=models.SET_DEFAULT)
+    category = models.ManyToManyField(to=Category, default=0)
     name = models.CharField(max_length=254)
     short_description = models.TextField()
     description = models.TextField()
