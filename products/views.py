@@ -42,7 +42,6 @@ def all(request):
     return render(request, 'products/all.html', context)
 
 
-@login_required
 def detail(request, product_id):
     """View setlist details
     """
@@ -54,7 +53,7 @@ def detail(request, product_id):
     return render(request, 'products/detail.html', context)
 
 
-@login_required
+
 def add(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
