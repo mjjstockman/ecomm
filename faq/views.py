@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import QuestionForm, AnswerForm
 from .models import Question, Answer
 
+
 def view_faq(request):
 
     questions = Question.objects.filter(status=1).order_by('-created_on')
