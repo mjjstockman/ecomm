@@ -1,3 +1,8 @@
+/* Allows h-100 and vertical centering */
+html {
+  height: 100%;
+}
+
 abbr {
   border-bottom: none !important;
   cursor: inherit !important;
@@ -6,4 +11,13 @@ abbr {
 
 body {
     background-color: red;
+}
+
+.hero-image {
+  background-image: url("/media/media/product_images/hero.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; 
 }
