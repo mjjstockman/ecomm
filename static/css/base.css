@@ -25,7 +25,12 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* color: white; */
   /* position: relative;  */
+}
+
+.white-text {
+  color: white;
 }
 
 /* Adapted from https://getcssscan.com/css-buttons-examples */
