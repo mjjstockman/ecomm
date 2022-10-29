@@ -11,6 +11,12 @@ abbr {
 
 body {
     background-color: red;
+    font-family: 'PT Sans', sans-serif;
+    /* font-size: 5em; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Paytone One', sans-serif;
 }
 
 .hero-image {
