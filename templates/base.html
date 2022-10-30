@@ -59,7 +59,8 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="/media/media/product_images/logo.png" alt="Black outline of a Bratwurst with Get Wurst written on top to look like the text was done using a squirty bottle of sauce">
+                <img src="/media/media/product_images/logo.png"
+                    alt="Black outline of a Bratwurst with Get Wurst written on top to look like the text was done using a squirty bottle of sauce">
             </a>
             <div class="row">
                 <button class="navbar-toggler" type="button" 
@@ -147,11 +148,21 @@
 
                     </ul>
                     <form class="d-flex" method="GET" action="{% url 'products' %}">
-                        <input class="form-control me-2" type="search" 
-                            placeholder="Search" aria-label="Search" name="q">
+                        <input class="form-control me-2 border border-4 rounded-pill border-dark"
+                            type="search" placeholder="Search" aria-label="Search" name="q">
                         <button class="btn btn-outline-success" 
                             type="submit">Search</button>
                     </form>
+
+                    <!-- <div class="input-group">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" id="form1" class="form-control" />
+                            <label class="form-label" for="form1">Search</label>
+                        </div>
+                        <button id="search-button" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div> -->
                 </div>
                 <div class="row">
                     <ul class="navbar-nav float-none float-md-end">
