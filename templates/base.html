@@ -85,7 +85,8 @@
                                 Logout
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item text-center">
+                            <i class="fa-solid fa-user"></i>
                             <a class="nav-link" href="{% url 'profile' %}"
                                 >My Profile
                             </a>
@@ -108,8 +109,8 @@
                                 Menu
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <!-- ADD ABREVIATION -->
+                        <li class="nav-item text-center">
+                            <i class="fa-solid fa-clipboard-question"></i>
                             <a class="nav-link" href="{% url 'view_faq' %}">
                                 <abbr title="Frequently Asked Questions">FAQs</abbr>
                             </a>
@@ -135,14 +136,16 @@
                         </li>
                         {% endif %}
                         {% endif %}
-                        <li class="nav-item list-inline-item">
+                        <li class="nav-item list-inline-item text-center">
                             <a class="nav-link" href="{% url 'view_cart' %}">
+                                <div><i class="fa-solid fa-basket-shopping"></i></div>
                                 Shopping Cart
                                 {% if total %}
                                     £{{ total|floatformat:2 }}
                                 {% else %}
                                 £0.00
                                 {% endif %}
+                                <!-- <div><i class="fa-solid fa-basket-shopping"></i></div> -->
                             </a>
                         </li>
 
@@ -154,11 +157,11 @@
                             type="submit">Search</button>
                     </form>
 
-                    <div class="input-group mb-3 border border-4 rounded-pill border-dark">
+                    <!-- <div class="input-group mb-3 border border-4 rounded-pill border-dark">
                         <span class="input-group-text" id="basic-addon1">@</span>
                         <input type="text" class="form-control" placeholder="Username" aria-label="Username"
                             aria-describedby="basic-addon1">
-                    </div>
+                    </div> -->
 
                     <!-- <div class="input-group">
                         <div class="form-outline">
@@ -177,11 +180,11 @@
                             Bratwursts
                         </a></li>
                         <li class="nav-item"><a class="nav-link"
-                            href="{% url 'products' %}?category=Schnitzel">
+                            href="{% url 'products' %}?category=Schnitzels">
                             Schnitzels
                         </a></li>
                         <li class="nav-item"><a class="nav-link"
-                            href="{% url 'products' %}?category=currywurst">
+                            href="{% url 'products' %}?category=Currywurst">
                             Currywurst
                         </a></li>
                     </ul>
