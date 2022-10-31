@@ -8,9 +8,8 @@ from .form import FakeForm
 
 
 def all(request):
-    products = Product.objects.all()
+    products = Product.objects.all() 
     cart = request.session.get('cart', {})
-    
     query = None
     categories = None
 
@@ -20,17 +19,15 @@ def all(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-            if 'q' in request.GET:
-                query = request.GET['q']
-                if not query:
-                    messages.error(
-                        request, "You didn't enter any search criteria!")
-                    return redirect(reverse('products'))
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
 
-                queries = Q(
-                    name__icontains=query) | Q(
-                    description__icontains=query)
-                products = products.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
 
     context = {
         'products': products,

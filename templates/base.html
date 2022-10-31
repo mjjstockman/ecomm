@@ -154,6 +154,12 @@
                             type="submit">Search</button>
                     </form>
 
+                    <div class="input-group mb-3 border border-4 rounded-pill border-dark">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+
                     <!-- <div class="input-group">
                         <div class="form-outline">
                             <input id="search-input" type="search" id="form1" class="form-control" />
@@ -167,11 +173,11 @@
                 <div class="row">
                     <ul class="navbar-nav float-none float-md-end">
                         <li class="nav-item"><a class="nav-link active"
-                            href="{% url 'products' %}?category=bratwurst">
+                            href="{% url 'products' %}?category=Bratwurst">
                             Bratwursts
                         </a></li>
                         <li class="nav-item"><a class="nav-link"
-                            href="{% url 'products' %}?category=schnitzels">
+                            href="{% url 'products' %}?category=Schnitzel">
                             Schnitzels
                         </a></li>
                         <li class="nav-item"><a class="nav-link"
@@ -182,6 +188,9 @@
                 </div>
             </div>
     </nav>
+
+    
+
 
     {% if messages %}
     <div class="message-container">
