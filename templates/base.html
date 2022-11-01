@@ -74,30 +74,17 @@
                     id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-lg-0">
                         <li class="nav-item">
-                            {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">
-                                Logout
-                            </a>
-                        </li>
-                        <li class="nav-item text-center">
-                            <a class="nav-link" href="{% url 'profile' %}">
-                                <i class="fa-solid fa-user"></i>
-                                My Profile
-                            </a>
-                            
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_signup' %}">
-                                Register
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_login' %}">
-                                Login
-                            </a>
-                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarAccountDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarAccountDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                                </ul>
+                            </li>
                         {% endif %}
                         </li>
                         <li class="nav-item">
@@ -111,26 +98,40 @@
                                 <abbr title="Frequently Asked Questions">FAQs</abbr>
                             </a>
                         </li>
+
+
                         {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" 
-                                id="navbarDarkDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                    Product Management
+                            {% if request.user.is_superuser %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" 
+                                    id="navbarDarkDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                        Product Management
+                                </a>
+                            
+                                <ul class="dropdown-menu dropdown-menu-dark" 
+                                    aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" 
+                                        href="{% url 'add_product' %}">
+                                        Add Product
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        Edit Product
+                                    </a></li>
+                                </ul>
+                            </li>
+                            {% endif %}
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">
+                                Register
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" 
-                                aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" 
-                                    href="{% url 'add_product' %}">
-                                    Add Product
-                                </a></li>
-                                <li><a class="dropdown-item" href="#">
-                                    Edit Product
-                                </a></li>
-                            </ul>
                         </li>
-                        {% endif %}
+                        <li>
+                            <a class="nav-link" href="{% url 'account_login' %}">
+                                Login
+                            </a>
+                        </li>
                         {% endif %}
                         <li class="nav-item list-inline-item text-center">
                             <a class="nav-link" href="{% url 'view_cart' %}">
@@ -141,7 +142,6 @@
                                 {% else %}
                                 £0.00
                                 {% endif %}
-                                <!-- <div><i class="fa-solid fa-basket-shopping"></i></div> -->
                             </a>
                         </li>
 
