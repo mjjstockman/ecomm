@@ -81,7 +81,6 @@
                                     <i class="fa-solid fa-user"></i>
                                     My Account
                                 </a>
-                                
                                 <ul class="dropdown-menu" aria-labelledby="navbarAccountDropdownMenuLink">
                                     <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                                     <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
@@ -106,15 +105,12 @@
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 Shopping Cart
                                 {% if total %}
-                                £{{ total|floatformat:2 }}
+                                    £{{ total|floatformat:2 }}
                                 {% else %}
-                                £0.00
+                                    £0.00
                                 {% endif %}
                             </a>
                         </li>
-
-
-
 
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
@@ -139,7 +135,7 @@
                             </li>
                             {% endif %}
                         {% else %}
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_signup' %}">
                                 Signup
                             </a>
@@ -148,38 +144,12 @@
                             <a class="nav-link" href="{% url 'account_login' %}">
                                 Login
                             </a>
-                        </li> -->
-                        <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button"
-                            aria-controls="sidebar">Login / Register</a>
-                        <!-- <button class="btn btn-primary" 
-                type="button" 
-                data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvasStart" 
-                aria-controls="offcanvasStart">
-          Toggle offcanvas
-        </button> -->
-        <div class="offcanvas offcanvas-end" 
-             tabindex="-1" 
-             id="sidebar" 
-             aria-labelledby="sidebar-label">
-            <!-- <div class="offcanvas-header">
-                <h3 id="offcanvasStartLabel">
-                  Offcanvas
-                 </h3>
-                <button type="button" 
-                        class="btn-close text-reset" 
-                        data-bs-dismiss="offcanvas" 
-                        aria-label="Close">
-                </button>
-            </div> -->
-            <!-- <div class="offcanvas-body">
-                <h5>
-                    Bootstrap is the most popular CSS 
-                    Framework for developing responsive
-                    and mobile-first websites.
-                </h5> 
-            </div> -->
-        </div> 
+                        </li>
+                        <div class="offcanvas offcanvas-end" 
+                            tabindex="-1" 
+                            id="sidebar" 
+                            aria-labelledby="sidebar-label">
+                        </div> 
                         {% endif %}
                     </ul>
                     <form class="d-flex" method="GET" action="{% url 'products' %}">
@@ -188,22 +158,6 @@
                         <button class="btn btn-outline-success" 
                             type="submit">Search</button>
                     </form>
-
-                    <!-- <div class="input-group mb-3 border border-4 rounded-pill border-dark">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                    </div> -->
-
-                    <!-- <div class="input-group">
-                        <div class="form-outline">
-                            <input id="search-input" type="search" id="form1" class="form-control" />
-                            <label class="form-label" for="form1">Search</label>
-                        </div>
-                        <button id="search-button" type="button" class="btn btn-primary">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div> -->
                 </div>
                 <div class="row text-center">
                     <ul class="navbar-nav float-none float-md-end">
@@ -227,9 +181,9 @@
     <nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Dark offcanvas navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            <button type="button" class="btn primary-btn" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
-                <span class="navbar-toggler-icon"></span>
+                Login
             </button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark"
                 aria-labelledby="offcanvasNavbarDarkLabel">
@@ -246,20 +200,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
                     </ul>
                     <form class="d-flex mt-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -273,17 +213,17 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-        {% with message.level as level %}
-        {% if level == 40 %}
-        {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-        {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-        {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-        {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-        {% endwith %}
+            {% with message.level as level %}
+            {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+            {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
