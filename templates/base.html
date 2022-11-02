@@ -139,7 +139,7 @@
                             </li>
                             {% endif %}
                         {% else %}
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_signup' %}">
                                 Signup
                             </a>
@@ -148,7 +148,38 @@
                             <a class="nav-link" href="{% url 'account_login' %}">
                                 Login
                             </a>
-                        </li>
+                        </li> -->
+                        <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button"
+                            aria-controls="sidebar">Login / Register</a>
+                        <!-- <button class="btn btn-primary" 
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasStart" 
+                aria-controls="offcanvasStart">
+          Toggle offcanvas
+        </button> -->
+        <div class="offcanvas offcanvas-end" 
+             tabindex="-1" 
+             id="sidebar" 
+             aria-labelledby="sidebar-label">
+            <!-- <div class="offcanvas-header">
+                <h3 id="offcanvasStartLabel">
+                  Offcanvas
+                 </h3>
+                <button type="button" 
+                        class="btn-close text-reset" 
+                        data-bs-dismiss="offcanvas" 
+                        aria-label="Close">
+                </button>
+            </div> -->
+            <!-- <div class="offcanvas-body">
+                <h5>
+                    Bootstrap is the most popular CSS 
+                    Framework for developing responsive
+                    and mobile-first websites.
+                </h5> 
+            </div> -->
+        </div> 
                         {% endif %}
                     </ul>
                     <form class="d-flex" method="GET" action="{% url 'products' %}">
@@ -174,7 +205,7 @@
                         </button>
                     </div> -->
                 </div>
-                <div class="row">
+                <div class="row text-center">
                     <ul class="navbar-nav float-none float-md-end">
                         <li class="nav-item"><a class="nav-link active"
                             href="{% url 'products' %}?category=Bratwurst">
@@ -191,6 +222,52 @@
                     </ul>
                 </div>
             </div>
+    </nav>
+
+    <nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dark offcanvas navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark"
+                aria-labelledby="offcanvasNavbarDarkLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </nav>
 
     {% if messages %}
