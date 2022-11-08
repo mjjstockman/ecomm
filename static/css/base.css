@@ -1,4 +1,8 @@
 /* Allows h-100 and vertical centering */
+*{
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
