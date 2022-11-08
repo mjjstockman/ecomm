@@ -146,12 +146,14 @@
                               {% endif %}
                           </a>
                       </li>
+                      {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'profile' %}">
                             <i class="fa-solid fa-user"></i>
                             My Profile
                         </a>
                     </li>
+                    {% endif %}
                      <form class="d-flex">
                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                          <button class="btn btn-outline-success" type="submit">Search</button>
