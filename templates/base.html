@@ -56,89 +56,92 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
-        <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="/media/media/product_images/logo.png"
-                    alt="Black outline of a Bratwurst with Get Wurst written on top to look like the text was done using a squirty bottle of sauce">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0 w-100">
-                    {% if user.is_authenticated %}
-                        <li class="nav-item order-md-2 ms-md-auto">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        {% if user.is_superuser %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-clipboard-list"></i>
-                                Product Management
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item text-center" href="{% url 'products' %}">Update or Delete Product</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item text-center" href="{% url 'add_product' %}">Add Product</a>
-                                </li>
-                            </ul>
-                        </li>
-                        {% endif %}
-                    {% else %}
-                        <li class="nav-item order-md-1 ms-md-auto">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                        </li>
-                        <li class="nav-item order-md-2">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+            <div class="container-fluid d-flex">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="/media/media/product_images/logo.png"
+                        alt="Black outline of a Bratwurst with Get Wurst written on top to look like the text was done using a squirty bottle of sauce">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 w-100">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item order-md-2 ms-md-auto">
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                            {% if user.is_superuser %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    Product Management
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item text-center" href="{% url 'products' %}">Update or Delete Product</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-center" href="{% url 'add_product' %}">Add Product</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            {% endif %}
+                        {% else %}
+                        <li class="nav-item order-lg-1">
                             <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
                         </li>
-                    {% endif %}
-                    <hr>
-                    
-                     <li class="nav-item ms-md-auto"> 
-                         <a class="nav-link" href="{% url 'products' %}">
-                            <i class="fa-solid fa-book-open"></i>
-                            Menu
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'view_faq' %}">
-                            <i class="fa-solid fa-circle-question"></i>
-                            <abbr title="Frequently Asked Questions">FAQs</abbr>
-                        </a>
-                     </li>
-                      <li class="nav-item list-inline-item text-center">
-                          <a class="nav-link" href="{% url 'view_cart' %}">
-                              <i class="fa-solid fa-basket-shopping"></i>
-                              Cart
-                              {% if total %}
-                              £{{ total|floatformat:2 }}
-                              {% else %}
-                              £0.00
-                              {% endif %}
-                          </a>
-                      </li>
-                      {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">
-                            <i class="fa-solid fa-user"></i>
-                            My Profile
-                        </a>
-                    </li>
-                    {% endif %}
-                     <form class="d-flex" method="GET" action="{% url 'products' %}">
-                         <input class="form-control me-2" type="search"
-                             placeholder="Search" aria-label="Search" name="q">
-                         <button class="btn btn-outline-success" type="submit">Search</button>
-                     </form>     
-                </ul>
-        </div>
-    </nav>
+                            <li class="nav-item order-lg-2 mx-sm-auto">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            
+                        {% endif %}
+                        <hr>                       
+                        <li class="nav-item ms-md-auto">
+                            <a class="nav-link" href="{% url 'products' %}">
+                                <i class="fa-solid fa-book-open"></i>
+                                Menu
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'view_faq' %}">
+                                <i class="fa-solid fa-circle-question"></i>
+                                <abbr title="Frequently Asked Questions">FAQs</abbr>
+                            </a>
+                        </li>
+                        <li class="nav-item list-inline-item text-center">
+                            <a class="nav-link" href="{% url 'view_cart' %}">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                Cart
+                                {% if total %}
+                                £{{ total|floatformat:2 }}
+                                {% else %}
+                                £0.00
+                                {% endif %}
+                            </a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'profile' %}">
+                                <i class="fa-solid fa-user"></i>
+                                My Profile
+                            </a>
+                        </li>
+                        {% endif %}
+                        <form class="d-flex" method="GET" action="{% url 'products' %}">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search" name="q">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     {% if messages %}
     <div class="message-container">
