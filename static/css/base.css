@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-image {
-  background-image: url("/media/media/product_images/hero.jpg");
+  background-image: url("/media/hero.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
