@@ -14,7 +14,7 @@ abbr {
 }
 
 body {
-    background-color: red;
+    background-color: #D19A11;
     font-family: 'PT Sans', sans-serif;
     /* font-size: 5em; */
 }
@@ -219,12 +219,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Paytone One', sans-serif;
 }
 
-.hero-image {
-  background-image: url("/media/hero.jpg");
+.hero-img {
+  transform:translateX(50%);
+  /* background-image: url("/media/hot-dog-crop.png"); */
+  /*
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   /* color: white; */
   /* position: relative;  */
 }
