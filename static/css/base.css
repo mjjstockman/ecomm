@@ -19,10 +19,10 @@ body {
     /* font-size: 5em; */
 }
 
-#hero-img-container {
+/* #hero-img-container {
   background-image: url('media/hero.jpg');
   
-}
+} */
 /* from Bulma */
 /* .icon {
   align-items: center;
@@ -227,18 +227,11 @@ h1, h2, h3, h4, h5, h6 {
   /* transform:translateX(50%); */
   background-image: url("/media/hero-burger.png");
   height:50vh;
-  /*
-  height: 50%;
-  background-position: center;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: cover; */
-  /* color: white; */
-  /* position: relative;  */
+  background-position: 60vw;
 }
 
-/* #hero-img-container{
-  transform: translateX(50%)
-} */
 
 .white-text {
   color: white;
