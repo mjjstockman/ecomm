@@ -19,6 +19,9 @@ body {
     /* font-size: 5em; */
 }
 
+.card {
+  border: 2px solid black;
+}
 
 
 /* #hero-img-container {
