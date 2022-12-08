@@ -21,8 +21,12 @@ body {
 
 .card {
   border: 2px solid black;
+  border-radius: 0;
 }
 
+.card > img {
+  border-radius: 0;
+}
 
 /* #hero-img-container {
   background-image: url('media/hero.jpg');
