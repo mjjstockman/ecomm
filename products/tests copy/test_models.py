@@ -11,7 +11,7 @@ class TestModels(TestCase):
             description='Prod 1 full description',
             price=1,
             image='media/product_images/test1.png',
-            product1.caterogy=category1
-            # category = self.category1
+            # product1.caterogy=category1
+            category=self.category1
         )
-       
+

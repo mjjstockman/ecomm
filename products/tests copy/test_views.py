@@ -24,56 +24,56 @@
 #             category = self.category1
 #         )
 
-    # def tearDown(self):
-    #     self.category1.delete()
+#     def tearDown(self):
+#         self.category1.delete()
 
 
-    # def test_products_all_GET(self):
+#     def test_products_all_GET(self):
         
-    #     response = self.client.get(self.products_url)
+#         response = self.client.get(self.products_url)
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertTemplateUsed('products/all.html')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed('products/all.html')
 
 
-    # def test_products_detail_GET(self):
+#     def test_products_detail_GET(self):
        
-    #     response = self.client.get(self.products_url)
+#         response = self.client.get(self.products_url)
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertTemplateUsed('products/detail.html')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed('products/detail.html')
 
 
-    # needed as used in setup???
-    # def test_products_add_POST_adds_new_product(self):
+#     needed as used in setup???
+#     def test_products_add_POST_adds_new_product(self):
        
-    #     response = self.client.post(self.products_url)
+#         response = self.client.post(self.products_url)
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertEqual(self.product1.name, 'Product 1')
-        # self.assertEqual(self.product1.category, 'Category 1')
-        # self.assertTemplateUsed('products/add.html')
+#         self.assertEqual(response.status_code, 200)
+#         self.assertEqual(self.product1.name, 'Product 1')
+#         self.assertEqual(self.product1.category, 'Category 1')
+#         self.assertTemplateUsed('products/add.html')
 
 
-    # def test_products_edit_POST_edits_product(self):
+#     def test_products_edit_POST_edits_product(self):
 
-    #     self.product1.name = 'Edited Product Name'
+#         self.product1.name = 'Edited Product Name'
        
-    #     response = self.client.post(self.products_edit_url, {
-    #         'name': 'Edited Product Name'
-    #     })
+#         response = self.client.post(self.products_edit_url, {
+#             'name': 'Edited Product Name'
+#         })
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertEqual(self.product1.name, 'Edited Product Name')
-    #     self.assertTemplateUsed('products/add.html')
+#         self.assertEqual(response.status_code, 302)
+#         self.assertEqual(self.product1.name, 'Edited Product Name')
+#         self.assertTemplateUsed('products/add.html')
 
-    # def test_products_delete_POST_deletes_product(self):
+#     def test_products_delete_POST_deletes_product(self):
 
-    #     self.product1.delete()
+#         self.product1.delete()
         
-    #     response = self.client.post(self.products_delete_url)
+#         response = self.client.post(self.products_delete_url)
 
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertEqual(Product.objects.count(), 0)
+#         self.assertEqual(response.status_code, 302)
+#         self.assertEqual(Product.objects.count(), 0)
 
 
