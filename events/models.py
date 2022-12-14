@@ -1,5 +1,5 @@
 from django.db import models
 
 
-class Event:
+class Event(models.Model):
     pass
