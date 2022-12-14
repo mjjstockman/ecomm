@@ -9,3 +9,5 @@ class Event(models.Model):
     def addLink(self, name):
         pass
 
+    def addImg(self, link):
+        pass
