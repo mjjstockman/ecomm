@@ -14,3 +14,7 @@ def test_canAddEventName(event):
 
 def test_canAddEventLink(event):
     event.addLink("https://tramlines.org.uk/")
+
+
+def test_canAddEventImg(event):
+    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.39_78nCoVz.png")
