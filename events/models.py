@@ -5,3 +5,7 @@ class Event(models.Model):
 
     def addName(self, name):
         pass
+
+    def addLink(self, name):
+        pass
+
