@@ -2,4 +2,6 @@ from django.db import models
 
 
 class Event(models.Model):
-    pass
+
+    def addName(self, name):
+        pass
