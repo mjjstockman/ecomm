@@ -1,5 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
+from events.views import events
 
 
 class TestUrls(SimpleTestCase):
