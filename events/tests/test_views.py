@@ -13,5 +13,5 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'events/events.html')
 
     def test_can_instantiate_an_event(self):
-        event = Event()
+        self.event = Event()
         self.assertIsInstance(self.event, event)
