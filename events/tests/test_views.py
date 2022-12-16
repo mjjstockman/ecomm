@@ -7,7 +7,9 @@ class TestViews(TestCase):
     def test_events_view(self):
         client = Client()
 
-        response = client.get('events')
+        response = client.get(reverse('events'))
 
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'events/events.html')
 
+ 
