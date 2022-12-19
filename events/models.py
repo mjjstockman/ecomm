@@ -2,12 +2,5 @@ from django.db import models
 
 
 class Event(models.Model):
-
-    def addName(self, name):
-        pass
-
-    def addLink(self, name):
-        pass
-
-    def addImg(self, link):
-        pass
+    name = models.CharField(max_length=150, null=True)
+ 
