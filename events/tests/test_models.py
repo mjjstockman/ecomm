@@ -16,4 +16,5 @@ class TestModels(TestCase):
 
     def test_can_add_an_event_image(self):
         self.event.image = 'image'
+        # assert 1 == 2
         self.assertEqual(self.event.image, 'image')
