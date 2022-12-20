@@ -27,15 +27,5 @@ class Product(models.Model):
         return self.name
 
 
-class Fake(models.Model):
-    category = models.ForeignKey('Category',
-                 on_delete=models.CASCADE, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    # short_description = models.TextField()
-    # description = models.TextField()
-    # price = models.DecimalField(max_digits=6, decimal_places=2)
-    # image = models.ImageField(upload_to='media/product_images')
 
-    def __str__(self):
-        return self.name
 

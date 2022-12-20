@@ -4,7 +4,6 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
 from .form import ProductForm
-from .form import FakeForm
 
 
 def all(request):
@@ -124,16 +123,3 @@ def delete(request, product_id):
     }
     messages.success(request, 'Product deleted!')
     return render(request, 'products/all.html', context)
-
-
-def fake(request):
-    """View setlist details
-    """
-    form = FakeForm()
-    # product = get_object_or_404(Product, pk=product_id)
-    context = {
-        # 'product': product,
-        'form': form
-    }
-
-    return render(request, 'products/fake.html', context)
