@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from .models import Event
 
 
-def all(request):
-    events = Event.objects.all()
+def events_all(request):
+    events = get_list_or_404(Event)
 
     context = {
         'events': events,

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, get_list_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
@@ -8,7 +8,8 @@ from .form import FakeForm
 
 
 def all(request):
-    products = Product.objects.all() 
+    # products = Product.objects.all() 
+    products = get_list_or_404(Product)
     cart = request.session.get('cart', {})
     query = None
     categories = None

@@ -1,11 +1,12 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
 from .forms import QuestionForm, AnswerForm
 from .models import Question, Answer
 
 
 def view_faq(request):
 
-    questions = Question.objects.filter(status=1).order_by('-created_on')
+    # questions = Question.objects.filter(status=1).order_by('-created_on')
+    questions = get_list_or_404(Question.objects.filter(status=1).order_by('-created_on'))
     question_form = QuestionForm()
     answer_form = AnswerForm()
 
@@ -21,7 +22,8 @@ def view_faq(request):
 def answer(request, pk):
     """Adds a setlist to the database for the admin to consider
     """
-    question = get_object_or_404(Question, id=pk)
+    # question = get_object_or_404(Question, id=pk)
+    question = get_list_or_404(Question, id=pk)
     author = request.user
 
     answer_form = AnswerForm()
@@ -60,7 +62,6 @@ def question(request):
                 'question_form': question_form
             }
             return render(request, 'faq/view_faq.html', context)
-
 
 
 def like(request, pk):
