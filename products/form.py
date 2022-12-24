@@ -4,12 +4,18 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
     class Meta:
         model = Product
-        fields = ['image', 'name', 'short_description', 'description', 'category', 'price']
+        fields = [
+            "image",
+            "name",
+            "short_description",
+            "description",
+            "category",
+            "price",
+        ]
 
-    image = forms.ImageField(label='Image', widget=CustomClearableFileInput)
+    image = forms.ImageField(label="Image", widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -18,4 +24,4 @@ class ProductForm(forms.ModelForm):
 
         # self.fields['category'].choices = categories
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+            field.widget.attrs["class"] = "border-black rounded-0"

@@ -27,7 +27,8 @@
 <!-- Set it to noindex, nofollow for 'thin' pages (pages that don't have much information), where you don't want Google or
     Bing to judge your site based on that content -->
 
-<title>SITE TITLE</title>
+
+
 <!-- This is what will display in the tab at the top of a user's browser window -->
 <!-- Title should be less than 60 characters -->
 <!-- Unique title on every page, don't repeat yourself -->
@@ -36,19 +37,19 @@
 
 <!-- Social media integration, for when people share your content -->
 <!-- Facebook, LinkedIn, Google -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="TITLE OF YOUR POST OR PAGE" /> <!-- Same as what's inside <title> tag -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="TITLE OF YOUR POST OR PAGE"> <!-- Same as what's inside <title> tag -->
 <!-- The title you want displayed when your page is linked to -->
-<meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" />
+<meta property="og:description" content="DESCRIPTION OF PAGE CONTENT">
 <!-- Same as what's inside description meta tag -->
 <!-- The description you want displayed when your page is linked to (maximum 300 characters) -->
-<meta name="image" property="og:image" content="URL TO IMAGE" />
+<meta name="image" property="og:image" content="URL TO IMAGE">
 <!-- URL of image to be displayed when your site is linked to -->
 <!-- Be careful when building non-static sites like your MS3 and MS4, this can be a little tricky -->
-<meta property="og:image:alt" content="ALT TEXT FOR IMAGE" />
+<meta property="og:image:alt" content="ALT TEXT FOR IMAGE">
 <!-- Alt text for above image - an accessibility win -->
-<meta property="og:url" content="#" /> <!-- Your page's URL -->
-<meta property="og:site_name" content="SITE NAME" /> <!-- Same as what's inside <title> tag -->
+<meta property="og:url" content="#"> <!-- Your page's URL -->
+<meta property="og:site_name" content="SITE NAME"> <!-- Same as what's inside <title> tag -->
 <meta name="author" content="AUTHOR NAME HERE"> <!-- Your name -->
 
 <!-- Twitter -->
@@ -67,6 +68,8 @@
 <meta name="twitter:site" content="@USERNAME"> <!-- The site's Twitter handle -->
 <meta name="twitter:creator" content="@USERNAME"> <!-- Your personal Twitter handle -->
 {% endblock %}
+
+{% block extra_title %}Add Product{% endblock %}
 
 
 {% block content %}
