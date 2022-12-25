@@ -465,20 +465,76 @@ Three oaks utilises [facebook](https://www.facebook.com/Three-Oaks-Bonsai-Shop-1
 [HTML validator](https://validator.w3.org/nu/#textarea)
 
 
-| App  |  page | result |
-| ------ | ------ | ------ |
-|  Home | Home | [No errors](README_docs/HTML-validator/01-home.pdf) |
-|  Trees | Add tree form| [No errors](README_docs/HTML-validator/02-shop-add-tree-form.pdf) |
-|  Trees | Shop | [No errors](README_docs/HTML-validator/02-shop.pdf) |
-|  Trees | Tree detail | [No errors](README_docs/HTML-validator/02-tree-detail.pdf) |
-|  Questions | FAQ | [No errors](README_docs/HTML-validator/03-faq.pdf) |
-|  Questions | FAQ form | [No errors](README_docs/HTML-validator/03-question-form.pdf) |
-|  Newsletter | Subscribers Manager| [No errors](README_docs/HTML-validator/04-Admin-subscribers.pdf) |
-|  Profiles | User Profile | [No errors](README_docs/HTML-validator/04-user-profile.pdf) |
-|  Accounts | User login | [No errors](README_docs/HTML-validator/04-users-login.pdf) |
-|  Accounts | Register User | [No errors](README_docs/HTML-validator/04-users-register.pdf) |
-|  Accounts | User sign out | [No errors](README_docs/HTML-validator/04-users-signout.pdf) |
-
+| App | File | Result | Issue Description |Link|
+|--|--|--|--|--|
+|cart |cart.html|--|--|--|
+|cart |cart_tools.py|--|--|--|
+|cart |admin.py|--|--|--|
+|cart |apps.py|--|--|--|
+|cart |contexts.py|--|--|--|
+|cart |models.py|--|--|--|
+|cart |urls.py|--|--|--|
+|cart |views.py|--|--|--|
+|checkout |checkout.css|--|--|--|
+|checkout |stripe_elements.js|--|--|--|
+|checkout |confirmation_email_body.txt|--|--|--|
+|checkout |confirmation_email_subject.txt|--|--|--|
+|checkout |checkout_success.html|--|--|--|
+|checkout |checkout.html|--|--|--|
+|checkout |admin.py|--|--|--|
+|checkout |forms.py|--|--|--|
+|checkout |models.py|--|--|--|
+|checkout |signals.py|--|--|--|
+|checkout |urls.py|--|--|--|
+|checkout |views.py|--|--|--|
+|checkout |webhook_handler.py|--|--|--|
+|checkout |webhooks.py|--|--|--|
+|ecommerce |base.css|--|--|--|
+|ecommerce |custom_storages.py|--|--|--|
+|ecommerce |settings.py|--|--|--|
+|ecommerce |urls.py|--|--|--|
+|events |all.html|--|--|--|
+|events |admin.py|--|--|--|
+|events |models.py|--|--|--|
+|events |urls.py|--|--|--|
+|events |views.py|--|--|--|
+|faq |view_faq.html|--|--|--|
+|faq |admin.py|--|--|--|
+|faq |forms.py|--|--|--|
+|faq |models.py|--|--|--|
+|faq |urls.py|--|--|--|
+|faq |views.py|--|--|--|
+|home |index.html|--|--|--|
+|home |admin.py|--|--|--|
+|home |models.py|--|--|--|
+|home |urls.py|--|--|--|
+|home |views.py|--|--|--|
+|products |custom_clearable_file_input.html|--|--|--|
+|products |quantity_input_script.html|--|--|--|
+|products |add.html|--|--|--|
+|products |all.html|--|--|--|
+|products |detail.html|--|--|--|
+|products |edit.html|--|--|--|
+|products |admin.py|--|--|--|
+|products |form.py|--|--|--|
+|products |models.py|--|--|--|
+|products |urls.py|--|--|--|
+|products |views.py|--|--|--|
+|products |widgets.py|--|--|--|
+|profiles |profile.css|--|--|--|
+|profiles |profile.html|--|--|--|
+|profiles |admin.py|--|--|--|
+|profiles |forms.py|--|--|--|
+|profiles |models.py|--|--|--|
+|profiles |urls.py|--|--|--|
+|profiles |views.py|--|--|--|
+|templates |toast_error.html|--|--|--|
+|templates |toast_info.html|--|--|--|
+|templates |toast_success.html|--|--|--|
+|templates |toast_warning.html|--|--|--|
+|templates |cat_nav.html|--|--|--|
+|templates |main_nav.html|--|--|--|
+|templates |base.html|--|--|--|
 
 ### CSS validation
 
