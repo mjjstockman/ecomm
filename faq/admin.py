@@ -7,10 +7,11 @@ from .models import Question, Answer
 class AnswerAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('body')
-  
+
 
 class AnswerInline(admin.TabularInline):
     model = Answer
+
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):

@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 # context processor making below available in all templates
 def cart_contents(request):
 
@@ -20,7 +21,6 @@ def cart_contents(request):
             'quantity': item_data,
             'product': product,
         })
- 
 
     # if total < settings.FREE_DELIVERY_THRESHOLD:
     #     delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -28,9 +28,9 @@ def cart_contents(request):
     # else:
     #     delivery = 0
     #     free_delivery_delta = 0
-    
+
     # grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,
