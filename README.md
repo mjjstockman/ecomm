@@ -467,14 +467,17 @@ Three oaks utilises [facebook](https://www.facebook.com/Three-Oaks-Bonsai-Shop-1
 
 | App | File | Result | Issue Description |Link|
 |--|--|--|--|--|
-|cart |cart.html|--|--|--|
+|cart |cart.html|No errors|n/a|n/a|
 |cart |cart_tools.py|--|--|--|
 |cart |admin.py|--|--|--|
 |cart |apps.py|--|--|--|
 |cart |contexts.py|--|--|--|
 |cart |models.py|--|--|--|
 |cart |urls.py|--|--|--|
-|cart |views.py|--|--|--|
+|cart |views.py|--|cart/views.py:73:11: W0703: Catching too general exception Exception (broad-except)
+cart/views.py:73:4: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)|--|
+|checkout |apps.py | checkout/apps.py:9:8: C0415: Import outside toplevel (checkout.signals) (import-outside-toplevel)
+checkout/apps.py:9:8: W0611: Unused import checkout.signals (unused-import)
 |checkout |checkout.css|--|--|--|
 |checkout |stripe_elements.js|--|--|--|
 |checkout |confirmation_email_body.txt|--|--|--|
@@ -482,11 +485,25 @@ Three oaks utilises [facebook](https://www.facebook.com/Three-Oaks-Bonsai-Shop-1
 |checkout |checkout_success.html|--|--|--|
 |checkout |checkout.html|--|--|--|
 |checkout |admin.py|--|--|--|
-|checkout |forms.py|--|--|--|
-|checkout |models.py|--|--|--|
-|checkout |signals.py|--|--|--|
+|checkout |forms.py|checkout/forms.py:6:4: R0903: Too few public methods (0/2) (too-few-public-methods)|--|--|
+|checkout |models.py||checkout/models.py:49:21: E1101: Instance of 'Order' has no 'lineitems' member (no-member)
+checkout/models.py:91:30: E1101: Instance of 'ForeignKey' has no 'price' member (no-member)
+checkout/models.py:95:53: E1101: Instance of 'ForeignKey' has no 'order_number' member (no-member)|--|
+|checkout |signals.py|checkout/signals.py:8:19: W0613: Unused argument 'sender' (unused-argument)
+checkout/signals.py:8:37: W0613: Unused argument 'created' (unused-argument)
+checkout/signals.py:8:0: W0613: Unused argument 'kwargs' (unused-argument)
+checkout/signals.py:16:21: W0613: Unused argument 'sender' (unused-argument)
+checkout/signals.py:16:0: W0613: Unused argument 'kwargs' (unused-argument)|--|--|
 |checkout |urls.py|--|--|--|
-|checkout |views.py|--|--|--|
+|checkout |views.py|checkout/views.py:30:11: W0703: Catching too general exception Exception (broad-except)
+checkout/views.py:30:4: C0103: Variable name "e" doesn't conform to snake_case naming style (invalid-name)
+checkout/views.py:36:0: R0914: Too many local variables (19/15) (too-many-locals)
+checkout/views.py:54:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+checkout/views.py:63:30: E1101: Class 'Product' has no 'objects' member (no-member)
+checkout/views.py:81:23: E1101: Class 'Product' has no 'DoesNotExist' member (no-member)
+checkout/views.py:116:26: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+checkout/views.py:127:19: E1101: Class 'UserProfile' has no 'DoesNotExist' member (no-member)
+checkout/views.py:154:18: E1101: Class 'UserProfile' has no 'objects' member (no-member)|--|--|
 |checkout |webhook_handler.py|--|--|--|
 |checkout |webhooks.py|--|--|--|
 |ecommerce |base.css|--|--|--|
@@ -499,16 +516,37 @@ Three oaks utilises [facebook](https://www.facebook.com/Three-Oaks-Bonsai-Shop-1
 |events |urls.py|--|--|--|
 |events |views.py|--|--|--|
 |faq |view_faq.html|--|--|--|
-|faq |admin.py|--|--|--|
-|faq |forms.py|--|--|--|
-|faq |models.py|--|--|--|
+|faq |admin.py|faq/admin.py:30:11: E1101: Instance of 'QuestionAdmin' has no 'status' member (no-member)
+faq/admin.py:31:23: E1101: Instance of 'QuestionAdmin' has no 'question' member (no-member)
+faq/admin.py:1:0: E0611: No name 'settings' in module 'django.contrib' (no-name-in-module)
+faq/admin.py:31:11: E1101: Instance of 'QuestionAdmin' has no 'status' member (no-member)
+faq/admin.py:32:23: E1101: Instance of 'QuestionAdmin' has no 'question' member (no-member)
+faq/admin.py:37:26: E1101: Instance of 'QuestionAdmin' has no 'question' member (no-member)
+faq/admin.py:38:12: E0602: Undefined variable 'send_mail' (undefined-variable)
+faq/admin.py:40:8: E1101: Super of 'QuestionAdmin' has no 'save' member (no-member)
+faq/admin.py:32:12: W0612: Unused variable 'question' (unused-variable)|--|--|
+|faq |forms.py|faq/forms.py:10:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+faq/forms.py:23:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+|--|--|
+|faq |models.py|faq/models.py:21:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+faq/models.py:48:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+faq/models.py:55:32: E1101: Instance of 'ForeignKey' has no 'email_on_answer' member (no-member)
+faq/models.py:56:23: E1101: Instance of 'ForeignKey' has no 'body' member (no-member)
+faq/models.py:61:26: E1101: Instance of 'ForeignKey' has no 'author' member (no-member)|--|--|
 |faq |urls.py|--|--|--|
-|faq |views.py|--|--|--|
+|faq |views.py|faq/views.py:24:20: C0103: Argument name "pk" doesn't conform to snake_case naming style (invalid-name)
+faq/views.py:27:4: W0621: Redefining name 'question' from outer scope (line 45) (redefined-outer-name)
+faq/views.py:33:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+faq/views.py:24:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+faq/views.py:51:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+faq/views.py:45:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+faq/views.py:62:18: C0103: Argument name "pk" doesn't conform to snake_case naming style (invalid-name)
+faq/views.py:63:4: W0621: Redefining name 'answer' from outer scope (line 24) (redefined-outer-name)|--|--|
 |home |index.html|--|--|--|
 |home |admin.py|--|--|--|
 |home |models.py|--|--|--|
 |home |urls.py|--|--|--|
-|home |views.py|--|--|--|
+|home |views.py|faq/views.py:11:8: E1101: Class 'Question' has no 'objects' member (no-member)|--|--|
 |products |custom_clearable_file_input.html|--|--|--|
 |products |quantity_input_script.html|--|--|--|
 |products |add.html|--|--|--|
@@ -516,16 +554,30 @@ Three oaks utilises [facebook](https://www.facebook.com/Three-Oaks-Bonsai-Shop-1
 |products |detail.html|--|--|--|
 |products |edit.html|--|--|--|
 |products |admin.py|--|--|--|
-|products |form.py|--|--|--|
-|products |models.py|--|--|--|
+|products |form.py|products/form.py:7:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+products/form.py:22:21: E1101: Class 'Category' has no 'objects' member (no-member)
+products/form.py:7:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+products/form.py:22:21: E1101: Class 'Category' has no 'objects' member (no-member)
+products/form.py:22:8: W0612: Unused variable 'categories' (unused-variable)
+products/form.py:26:12: W0612: Unused variable 'field_name' (unused-variable)|--|--|
+|products |models.py|products/models.py:7:4: R0903: Too few public methods (0/2) (too-few-public-methods)
+products/models.py:12:15: E1101: Instance of 'Category' has no 'name' member (no-member)|--|--|
 |products |urls.py|--|--|--|
-|products |views.py|--|--|--|
+|products |views.py|products/views.py:15:0: W0622: Redefining built-in 'all' (redefined-builtin)
+products/views.py:25:23: E1101: Instance of 'list' has no 'filter' member (no-member)
+products/views.py:26:25: E1101: Class 'Category' has no 'objects' member (no-member)
+products/views.py:66:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+products/views.py:96:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+profiles/views.py:13:4: W0621: Redefining name 'profile' from outer scope (line 11) (redefined-outer-name)|--|--|
 |products |widgets.py|--|--|--|
 |profiles |profile.css|--|--|--|
 |profiles |profile.html|--|--|--|
 |profiles |admin.py|--|--|--|
-|profiles |forms.py|--|--|--|
-|profiles |models.py|--|--|--|
+|profiles |forms.py|profiles/forms.py:6:4: R0903: Too few public methods (0/2) (too-few-public-methods)|--|--|
+|profiles |models.py|profiles/models.py:26:15: E1101: Instance of 'OneToOneField' has no 'username' member (no-member)
+profiles/models.py:35:8: E1101: Class 'UserProfile' has no 'objects' member (no-member)
+profiles/models.py:30:34: W0613: Unused argument 'sender' (unused-argument)
+profiles/models.py:30:0: W0613: Unused argument 'kwargs' (unused-argument)|--|--|
 |profiles |urls.py|--|--|--|
 |profiles |views.py|--|--|--|
 |templates |toast_error.html|--|--|--|

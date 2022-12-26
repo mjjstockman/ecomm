@@ -17,4 +17,5 @@ def test_canAddEventLink(event):
 
 
 def test_canAddEventImg(event):
-    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.39_78nCoVz.png")
+    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.\
+                  39_78nCoVz.png")

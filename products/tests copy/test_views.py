@@ -29,7 +29,7 @@
 
 
 #     def test_products_all_GET(self):
-        
+
 #         response = self.client.get(self.products_url)
 
 #         self.assertEqual(response.status_code, 200)
@@ -37,7 +37,7 @@
 
 
 #     def test_products_detail_GET(self):
-       
+
 #         response = self.client.get(self.products_url)
 
 #         self.assertEqual(response.status_code, 200)
@@ -46,7 +46,7 @@
 
 #     needed as used in setup???
 #     def test_products_add_POST_adds_new_product(self):
-       
+
 #         response = self.client.post(self.products_url)
 
 #         self.assertEqual(response.status_code, 200)
@@ -58,7 +58,7 @@
 #     def test_products_edit_POST_edits_product(self):
 
 #         self.product1.name = 'Edited Product Name'
-       
+
 #         response = self.client.post(self.products_edit_url, {
 #             'name': 'Edited Product Name'
 #         })
@@ -70,10 +70,8 @@
 #     def test_products_delete_POST_deletes_product(self):
 
 #         self.product1.delete()
-        
+
 #         response = self.client.post(self.products_delete_url)
 
 #         self.assertEqual(response.status_code, 302)
 #         self.assertEqual(Product.objects.count(), 0)
-
-

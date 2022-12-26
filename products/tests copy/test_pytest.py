@@ -11,4 +11,3 @@
 # def test_set_category_price(product_1):
 #     product_1.set_name('Prod 1')
 #     assert product_1_name('Prod 1') is True
-    

@@ -14,4 +14,3 @@
 #             product1.caterogy=category1
 #             category=self.category1
 #         )
-

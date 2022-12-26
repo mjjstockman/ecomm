@@ -24,5 +24,3 @@
 #     def test_product_delete_url_resolves(self):
 #         url = reverse('delete_product', args=[1])
 #         self.assertEqual(resolve(url).func, delete)
-
-   

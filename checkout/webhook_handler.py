@@ -24,7 +24,6 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
         send_mail(
             subject,
             body,
@@ -56,7 +55,6 @@ class StripeWH_Handler:
         for field, value in billing_details.address.items():
             if value == "":
                 billing_details.address[field] = None
-
 
         # Update profile information if save_info was checked
         # Allows anonymous users to checkout
@@ -137,7 +135,6 @@ class StripeWH_Handler:
             content=f'Webhook received: {event["type"]} | SUCCESS: Created \
                       order in webhook',
             status=200)
-
 
     def handle_payment_intent_payment_failed(self, event):
         """

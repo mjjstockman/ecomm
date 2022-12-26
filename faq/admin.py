@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin, settings
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Question, Answer
 
@@ -23,7 +23,8 @@ class QuestionAdmin(admin.ModelAdmin):
         AnswerInline,
     ]
 
-    def publish_questions(self, request, queryset):
+    # def publish_questions(self, request, queryset):
+    def publish_questions(self, queryset):
         queryset.update(status=True)
 
     def save(self, *args, **kwargs):
