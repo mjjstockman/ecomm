@@ -17,3 +17,5 @@ urlpatterns = [
     path('faq/', include('faq.urls')),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'ecommerce.views.handler404'

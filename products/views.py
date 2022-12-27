@@ -13,6 +13,7 @@ from .form import ProductForm
 
 
 def all(request):
+
     # products = Product.objects.all()
     products = get_list_or_404(Product)
     cart = request.session.get("cart", {})
