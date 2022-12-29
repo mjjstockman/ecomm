@@ -15,7 +15,8 @@ class TestFakeForm(TestCase):
         form = FakeForm(data={
             'name': 'Fake Name 1',
             'category': self.category1,
-            'image': SimpleUploadedFile('file.jpg', b"file_content", content_type='image/jpeg')
+            'image': SimpleUploadedFile('file.jpg', b"file_content",
+                                        content_type='image/jpeg')
         })
 
         self.assertTrue(form.is_valid())
