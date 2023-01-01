@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404, handler500, handler403, handler405
+from .views import handler403, handler404, handler405, handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -18,4 +18,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+handler403 = 'ecommerce.views.handler403'
 handler404 = 'ecommerce.views.handler404'
+handler405 = 'ecommerce.views.handler405'
+handler500 = 'ecommerce.views.handler500'
