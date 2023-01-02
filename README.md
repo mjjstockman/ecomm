@@ -568,8 +568,269 @@ Python3 -m flake8
 
 ### Automated tests
 
-Automated tests have not been created due to time constrains of the project.
+Attempts at automated testing.....
 
+
+## Events
+
+### events/events
+
+import pytest
+from events.models import Event
+
+
+@pytest.fixture()
+def event():
+    event = Event()
+    return event
+
+
+def test_canAddEventName(event):
+    event.addName("Glasto")
+
+
+def test_canAddEventLink(event):
+    event.addLink("https://tramlines.org.uk/")
+
+
+def test_canAddEventImg(event):
+    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.\
+                  39_78nCoVz.png")
+
+### events/models
+
+from django.test import TestCase
+from events.models import Event
+
+
+class TestModels(TestCase):
+
+    def setUp(self):
+        self.event = Event()
+
+    def test_can_instantiate_an_event(self):
+        self.assertIsInstance(self.event, Event)
+
+    def test_can_add_an_event_name(self):
+        self.event.name = 'Glasto'
+        self.assertEqual(self.event.name, 'Glasto')
+
+    def test_can_add_an_event_image(self):
+        self.event.image = 'image'
+        # assert 1 == 2
+        self.assertEqual(self.event.image, 'image')
+
+### events/urls
+
+from django.test import SimpleTestCase
+from django.urls import reverse, resolve
+from events.views import events
+
+
+class TestUrls(SimpleTestCase):
+
+    def test_events_url_is_resolved(self):
+        url = reverse('events')
+        self.assertEqual(resolve(url).func, events)
+
+
+### events/views
+from django.test import TestCase, Client
+from django.urls import reverse
+
+
+class TestViews(TestCase):
+
+    def test_events_view(self):
+        client = Client()
+
+        response = client.get(reverse('events'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'events/events.html')
+
+## FAQ
+
+### faq/urls
+
+from django.test import SimpleTestCase
+from django.urls import reverse, resolve
+from faq.views import view_faq
+
+
+class TestUrls(SimpleTestCase):
+
+    def test_faq_url_resolves(self):
+        url = reverse('view_faq')
+        self.assertEqual(resolve(url).func, view_faq)
+
+### Products
+
+## Products/conftest
+import pytest
+
+
+@pytest.fixture
+def setUp():
+    print("Setting up")
+    yield
+    print("Tearing down")
+
+
+@pytest.fixture(autouse=True)
+def each_time():
+    print("Autouse=True, runs each time")
+
+
+## products/forms
+class TestFakeForm(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.category1 = Category.objects.create(
+            name='Category 1',
+        )
+
+    def test_fake_form_valid_data(self):
+        form = FakeForm(data={
+            'name': 'Fake Name 1',
+            'category': self.category1,
+            'image': SimpleUploadedFile('file.jpg', b"file_content",
+                                        content_type='image/jpeg')
+        })
+
+        self.assertTrue(form.is_valid())
+
+## products/models
+
+class TestModels(TestCase):
+    def test_product_has_a_category(self):
+        category1 = Category.objects.create(name='Category 1')
+        product1 = Product.objects.create(
+            name='Product 1',
+            short_description='Prod 1 description',
+            description='Prod 1 full description',
+            price=1,
+            image='media/product_images/test1.png',
+            product1.caterogy=category1
+            category=self.category1
+        )
+
+## products/froms
+
+
+import pytest
+from products.models import Category
+
+
+@pytest.fixture
+def test_product_1(db):
+    return Category.objects.create_product('Product 1')
+
+
+@pytest.mxampleark.django_db
+def test_set_category_price(product_1):
+    product_1.set_name('Prod 1')
+    assert product_1_name('Prod 1') is True
+    
+## products/models
+
+class TestModels(TestCase):
+    def test_product_has_a_category(self):
+        category1 = Category.objects.create(name='Category 1')
+        product1 = Product.objects.create(
+            name='Product 1',
+            short_description='Prod 1 description',
+            description='Prod 1 full description',
+            price=1,
+            image='media/product_images/test1.png',
+            product1.caterogy=category1
+            category=self.category1
+        )
+
+## products/pytest
+import pytest
+from products.models import Category
+
+
+@pytest.fixture
+def test_product_1(db):
+    return Category.objects.create_product('Product 1')
+
+
+@pytest.mxampleark.django_db
+def test_set_category_price(product_1):
+    product_1.set_name('Prod 1')
+    assert product_1_name('Prod 1') is True
+    
+
+## products/urls
+import unittest
+from django.urls import reverse, resolve
+from products.views import all, detail, add, edit, delete
+
+
+class TestUrls(unittest.TestCase):
+
+    def test_products_url_resolves(self):
+        url = reverse('products')
+        self.assertEqual(resolve(url).func, all)
+
+    def test_product_detail_url_resolves(self):
+        url = reverse('product_detail', args=[1])
+        self.assertEqual(resolve(url).func, detail)
+
+    def test_add_product_url_resolves(self):
+        url = reverse('add_product')
+        self.assertEqual(resolve(url).func, add)
+
+    def test_product_edit_url_resolves(self):
+        url = reverse('edit_product', args=[1])
+        self.assertEqual(resolve(url).func, edit)
+
+    def test_product_delete_url_resolves(self):
+        url = reverse('delete_product', args=[1])
+        self.assertEqual(resolve(url).func, delete)
+
+   
+## products/views
+import unittest
+from django.urls import reverse, resolve
+from products.views import all, detail, add, edit, delete
+
+
+class TestUrls(unittest.TestCase):
+
+    def test_products_url_resolves(self):
+        url = reverse('products')
+        self.assertEqual(resolve(url).func, all)
+
+    def test_product_detail_url_resolves(self):
+        url = reverse('product_detail', args=[1])
+        self.assertEqual(resolve(url).func, detail)
+
+    def test_add_product_url_resolves(self):
+        url = reverse('add_product')
+        self.assertEqual(resolve(url).func, add)
+
+    def test_product_edit_url_resolves(self):
+        url = reverse('edit_product', args=[1])
+        self.assertEqual(resolve(url).func, edit)
+
+    def test_product_delete_url_resolves(self):
+        url = reverse('delete_product', args=[1])
+        self.assertEqual(resolve(url).func, delete)
+
+## products/widgets
+from django.forms.widgets import ClearableFileInput
+from django.utils.translation import gettext_lazy as _
+
+
+class CustomClearableFileInput(ClearableFileInput):
+    clear_checkbox_label = _("Remove")
+    initial_text = _("Current Image")
+    input_text = _("")
+    template_name = "products/custom_widget_templates/\
+                     custom_clearable_file_input.html"
 ### Lighthouse
 
 - Initial report showed only 90% on accesibility, which has been imporoved by adding missing aria-labels. 
