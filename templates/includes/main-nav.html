@@ -29,6 +29,7 @@
                  {% endif %}
                  {% if user.is_authenticated %}
                  <li class="nav-item order-lg-1 ms-lg-auto">
+                    <p>Hi, {{ user.get_username }}</p>
                      <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                  </li>
                  {% else %}
