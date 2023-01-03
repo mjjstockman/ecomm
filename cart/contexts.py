@@ -6,7 +6,7 @@ from products.models import Product
 
 # context processor making below available in all templates
 def cart_contents(request):
-
+    """ Make cart_contents available to all apps """
     cart_items = []
     total = 0
     product_count = 0
