@@ -859,6 +859,30 @@ class CustomClearableFileInput(ClearableFileInput):
 
 ## Project Bugs and Solutions:
 
+### menu/add/
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/menu-add-ws.png)
+
+Saw space between exception value, checked code
+
+```
+class CustomClearableFileInput(ClearableFileInput):
+    clear_checkbox_label = _("Remove")
+    initial_text = _("Current Image")
+    input_text = _("")
+    template_name = "products/custom_widget_templates/\
+                     custom_clearable_file_input.html"
+```
+
+Incorrect line break.
+
+How solved:
+https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines
+
+```
+template_name = "products/custom_widget_templates/" \
+                    "custom_clearable_file_input.html"
+```
+
 ### Grid with filtering and sorting icons
 - allow user to choose filter or sort - this makes the smaller amount of icons displayed at once
 - the grid breaks in a bit uncontrolled way, but it allows displaying the filters in a dynamic way.
