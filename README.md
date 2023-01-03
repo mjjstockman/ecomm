@@ -883,6 +883,30 @@ template_name = "products/custom_widget_templates/" \
                     "custom_clearable_file_input.html"
 ```
 
+
+### Cat-nav links
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/list-no-filter.png)
+
+Saw refering to a list var
+
+```
+def all(request):
+    products = get_list_or_404(Product)
+    cart = request.session.get("cart", {})
+    query = None
+    categories = None
+```
+
+Products var is a list.  Change back to Product.objects.all
+
+def all(request):
+    products = Product.objects.all()
+    cart = request.session.get("cart", {})
+    query = None
+    categories = None
+
+
+
 ### Grid with filtering and sorting icons
 - allow user to choose filter or sort - this makes the smaller amount of icons displayed at once
 - the grid breaks in a bit uncontrolled way, but it allows displaying the filters in a dynamic way.
