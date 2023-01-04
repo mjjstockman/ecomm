@@ -7,6 +7,14 @@ STATUS = ((0, "Submitted"), (1, "Published"))
 
 
 class Question(models.Model):
+    """_summary_
+
+    Args:
+        models (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     body = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
         User,

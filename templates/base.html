@@ -83,6 +83,8 @@
 
     {% endblock %}
 
+    {% include "includes/footer.html" %}
+    
     {% block postloadjs %}
     <script>
         let toastElList = [].slice.call(document.querySelectorAll('.toast'))
