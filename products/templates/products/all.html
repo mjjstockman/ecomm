@@ -72,7 +72,26 @@
 
 <div class="container">
     <div class="row"> 
-        {% for product in products %} 
+        {% for product in products %}
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{ product.name }}">
+            <div class="card-body">
+                <h6 class="card-title">{{ product.name }}</h6>
+                <a href="{% url 'products' %}?category={{ product.category }}"
+                    class="card-subtitle mb-2 text-muted text-decoration-none">
+                    {{ product.category }}
+                </a>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="card-link">Edit</a>
+                <a href="#" class="card-link">Delete</a>
+            </div>
+        </div>
+
+
+
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
             <div class="card">
                 <img src="{{ product.image.url }}" class="menu-img" alt="{{ product.name }}">
@@ -83,6 +102,7 @@
                 <!-- <div class="card-body">
                     <p class="card-text">{{ product.description }}</p>
                 </div> -->
+                <!-- WHY USING AN UL -->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-muted"> 
                         <a href="{% url 'products' %}?category={{ product.category }}">
@@ -91,13 +111,28 @@
                     </li>
                     <li class="list-group-item">£{{ product.price }}</li>
                 </ul> 
-                {% if request.user.is_superuser %} 
-                <small class="ml-3">
+                {% if request.user.is_superuser %}
+                <a class="btn btn-secondary" href="{% url 'edit_product' product.id %}">
+                    Edit
+                <a>
+                <!-- <div class="g-drid">
+                    <button type="button" class="btn btn-primary">
+                        <a href="{% url 'edit_product' product.id %}" class="card-link btn btn-secondary"
+                            role="button"> EDIT 98</a>
+                    </button>
+                </div> -->
+                <!-- <button type="button" class="btn btn-primary">
+                    <a href="{% url 'edit_product' product.id %}" class="card-link btn btn-secondary"
+                        role="button">Edit</a>
+                </button> -->
+                <!-- <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}" class="card-link btn btn-info" role="button">Edit</a>
-                </small>
+                </small> -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#deleteProductModal{{ product.id }}"> Delete </button>
+                    data-bs-target="#deleteProductModal{{ product.id }}">
+                    Delete
+                </button>
                 <!-- Modal -->
                 <div class="modal fade" id="deleteProductModal{{ product.id }}" data-bs-backdrop="static"
                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteProductLabel" aria-hidden="true">
@@ -173,10 +208,10 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form> 
-                <div class="card-body">
+                <!-- <div class="card-body">
                     <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-info" role="button">See
                         More Info</a>
-                </div>
+                </div> -->
                 {% endif %}
             </div>
         </div> 
