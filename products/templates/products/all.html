@@ -78,6 +78,7 @@
             <img src="{{ product.image.url }}" class="card-img-top" alt="{ product.name }}">
             <div class="card-body">
                 <h6 class="card-title">{{ product.name }}</h6>
+                <!-- category should be a link as navigates to new page -->
                 <a href="{% url 'products' %}?category={{ product.category }}"
                     class="card-subtitle mb-2 text-muted text-decoration-none">
                     {{ product.category }}
@@ -85,6 +86,7 @@
                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
+                <!-- edit and delete should be buttons as performing an action -->
                 <a href="#" class="card-link">Edit</a>
                 <a href="#" class="card-link">Delete</a>
             </div>
