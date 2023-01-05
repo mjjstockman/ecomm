@@ -76,6 +76,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
             <div class="card">
                 <img src="{{ product.image.url }}" class="menu-img" alt="{{ product.name }}">
+                <div class="bottom-right">Bottom Right</div>
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.short_description }}</p>
@@ -84,10 +85,7 @@
                     <p class="card-text">{{ product.description }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-muted"> 
-                        <a href="{% url 'products' %}?category=Bratwurst">
-                             Category: {{ product.category }}
-                        </a>
+                    <li class="list-group-item"> Category: {{ product.category }}
                     </li>
                     <li class="list-group-item">£{{ product.price }}</li>
                 </ul> 
