@@ -906,6 +906,8 @@ def all(request):
     categories = None
 
 
+### link vs btn
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/link-vs-btn.png)
 
 ### Grid with filtering and sorting icons
 - allow user to choose filter or sort - this makes the smaller amount of icons displayed at once
