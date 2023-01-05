@@ -76,16 +76,16 @@
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
             <div class="card">
                 <img src="{{ product.image.url }}" class="menu-img" alt="{{ product.name }}">
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.short_description }}</p>
+                    <!-- <p class="card-text">{{ product.short_description }}</p> -->
                 </div>
-                <div class="card-body">
+                <!-- <div class="card-body">
                     <p class="card-text">{{ product.description }}</p>
-                </div>
+                </div> -->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item text-muted"> 
-                        <a href="{% url 'products' %}?category=Bratwurst">
+                        <a href="{% url 'products' %}?category={{ product.category }}">
                              Category: {{ product.category }}
                         </a>
                     </li>
@@ -117,10 +117,10 @@
                     </div>
                 </div> 
                 {% else %} 
-                <div class="card-body">
+                <!-- <div class="card-body">
                     <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-info" role="button">See
                         More Info</a>
-                </div>
+                </div> -->
                 <form class="form container" action="{% url 'add_to_cart' product.id %}" method="POST"> {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
@@ -173,6 +173,10 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form> 
+                <div class="card-body">
+                    <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-info" role="button">See
+                        More Info</a>
+                </div>
                 {% endif %}
             </div>
         </div> 
