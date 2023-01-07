@@ -91,6 +91,7 @@
                 </a>
             </div> <!-- closes card-body -->
             <!-- Button trigger modal -->
+            {% if request.user.is_superuser %}
             <div class="d-grid gap-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
                     DELETE 
@@ -119,6 +120,7 @@
                     </div>
                 </div>
             </div> <!-- closes modal -->
+            {% endif %}
         </div> <!-- closes card -->
     </div> <!-- closes row -->
         {% empty %} 
