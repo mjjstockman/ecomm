@@ -92,13 +92,13 @@
             </div> <!-- closes card-body -->
             <!-- Button trigger modal -->
             {% if request.user.is_superuser %}
-            <div class="d-grid gap-2">
+            <div class="d-grid gap-2 mb-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
                     DELETE 
                 </button>
                 <a class="btn btn-secondary" href="{% url 'edit_product' product.id %}">
                     Edit
-                <a>
+                </a>
             </div>
             <!-- Modal -->
             <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="deleteProductModalLabel"
