@@ -13,6 +13,10 @@
             <div class="card-body my-auto">
                 <h1 class="card-title">{{ product.name }}</h1>
                 <p class="card-text">{{ product.description }}</p>
+                <a href="{% url 'products' %}?category={{ product.category }}"
+                    class="card-subtitle mb-2 text-muted text-decoration-none">
+                    {{ product.category }}
+                </a>
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
