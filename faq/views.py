@@ -1,5 +1,6 @@
-from django.shortcuts import (render, redirect, get_object_or_404,
+from django.shortcuts import (render, redirect, reverse, get_object_or_404,
                               get_list_or_404)
+from django.http import HttpResponseRedirect
 from .forms import QuestionForm, AnswerForm
 from .models import Question, Answer
 
@@ -66,4 +67,4 @@ def like(request, pk):
     else:
         answer.like.add(request.user)
 
-    return render(request, "faq/view_faq.html")
+    return HttpResponseRedirect(reverse("view_faq"))
