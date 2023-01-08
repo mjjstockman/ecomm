@@ -69,47 +69,53 @@
 {% endblock %}
 
 {% block content %}
-<h1 class="display-4 text-success">FAQ!!!</h1>
 
-<div class="accordion" id="faqAccordion">
-    {% for question in questions %}
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="heading{{question.id}}">
-            <button class="accordion-button" type="button" 
-                data-bs-toggle="collapse"
-                data-bs-target="#collapse{{question.id}}" aria-expanded="true" 
-                aria-controls="collapse{{question.id}}">
-                {{ question.body }}
-            </button>
-        </h2>
-        <div id="collapse{{question.id}}" class="accordion-collapse collapse 
-            {% if forloop.first %} show {% endif %}" 
-            aria-labelledby="heading{{question.id}}"
-            data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-                {% for answer in question.question_answer.all %}
-                {% if answer.status == 1 %}
-                <p>{{ answer.body | safe }}</p>
-                <form action="{% url 'like' answer.pk %}" method="POST">
+<div class="container">
+    <h1>FAQ!!!</h1>
+
+    <div class="accordion" id="faqAccordion">
+        {% for question in questions %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{question.id}}">
+                <button class="accordion-button" type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{question.id}}" aria-expanded="true" 
+                    aria-controls="collapse{{question.id}}">
+                    {{ question.body }}
+                </button>
+            </h2>
+            <div id="collapse{{question.id}}" class="accordion-collapse collapse 
+                {% if forloop.first %} show {% endif %}" 
+                aria-labelledby="heading{{question.id}}"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    {% for answer in question.question_answer.all %}
+                    {% if answer.status == 1 %}
+                    <p>{{ answer.body | safe }}</p>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'like' answer.pk %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" name="answer_id" class="border-0" 
+                            value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                        <input type="hidden" name="next" value=" {{ answer.id }}">
+                    </form>
+                    {% endif %}
+                    Liked by {{ answer.like.all.count }} number of users.
+                    {% if forloop.last %}
+                    ADD ANOTHER ANSWER
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <form action="{% url 'answer' question.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" , name="answer_id", 
-                        value="{{ answer.id }}">Like</button>
-                    <input type="hidden" name="next" value=" {{ answer.id }}">
+                    {{ answer_form | crispy }}
+                    <input type="submit" value="Submit Answer">
                 </form>
-                Liked by {{ answer.like.all.count }} number of users.
-                {% if forloop.last %}
-                ADD ANOTHER ANSWER
-                {% endif %}
-                {% endif %}
-                {% endfor %}
             </div>
-            <form action="{% url 'answer' question.id %}" method="post">
-                {% csrf_token %}
-                {{ answer_form | crispy }}
-                <input type="submit" value="Submit Answer">
-            </form>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 
