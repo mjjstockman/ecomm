@@ -101,7 +101,7 @@
                         <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                     </form>
                     {% endif %}
-                    Liked by {{ answer.like.all.count }} number of users.
+                    Liked by {{ answer.like.all.count }} user{{ answer.like.all.count|pluralize }}
                     {% if forloop.last %}
                     ADD ANOTHER ANSWER
                     {% endif %}
