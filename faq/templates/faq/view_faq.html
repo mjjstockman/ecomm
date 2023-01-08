@@ -107,12 +107,13 @@
                     {% endif %}
                     {% endif %}
                     {% endfor %}
+                    <form action="{% url 'answer' question.id %}" method="post">
+                        {% csrf_token %}
+                        {{ answer_form | crispy }}
+                        <input type="submit" value="Submit Answer">
+                    </form>
                 </div>
-                <form action="{% url 'answer' question.id %}" method="post">
-                    {% csrf_token %}
-                    {{ answer_form | crispy }}
-                    <input type="submit" value="Submit Answer">
-                </form>
+                
             </div>
             {% endfor %}
         </div>
