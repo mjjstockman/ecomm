@@ -71,13 +71,14 @@
 {% block content %}
 
 <div class="container">
-    <h1>FAQ!!!</h1>
+    <h1>FAQ!</h1>
     <h1>We hear you may have a question for Get Wurst?</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate id 
         porro adipisci quas iste error ea vero recusandae, laboriosam corrupti, 
         tempore necessitatibus maiores ipsam praesentium ut? Aspernatur, eaque. 
         Dolorem, placeat.</p>
-    
+    <button class="btn btn-primary" id="btnExpandAll">Expand All</button>
+    <button class="btn btn-primary" id="btnCollapseAll">collapse All</button>
     <div class="accordion" id="faqAccordion">
         {% for question in questions %}
         <div class="accordion-item">
@@ -107,8 +108,7 @@
                                     <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                                 </form>
                                 <span class="d-inline-block mb-5" >Liked by {{ answer.like.all.count }}
-                                user{{ answer.like.all.count|pluralize }}</span>
-                    
+                                user{{ answer.like.all.count|pluralize }}</span>                
                                 {% if forloop.last %}
                                     <p>ADD ANOTHER ANSWER</p>
                                 {% endif %}
@@ -120,18 +120,29 @@
                         {{ answer_form | crispy }}
                         <input type="submit" value="Submit Answer">
                     </form>
-                </div>
-                
+                </div>  
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}  
     </div>
-    <form class="mx-3" action="{% url 'question' %}" method="post">
-        {% csrf_token %}
-        {{ question_form | crispy }}
-        <input type="submit" value="Submit Question">
-    </form>
 </div>
+
+<p>rdtfgyhui</p>
+
+<!-- <form action="{% url 'question' %}" method="post">
+    {% csrf_token %}
+    {{ question_form | crispy }}
+    <input type="submit" value="Submit Question">
+</form> -->
 
 
 {% endblock %}
+
+<!-- <script>
+    $(document).ready(function() {
+        $('#btnExpandAll').click(function() {
+            $('.accordion-collapse collapse').collapse('show');
+        });
+    });
+
+</script> -->
