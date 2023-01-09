@@ -27,9 +27,9 @@ def answer(request, pk):
     # question = get_object_or_404(Question, id=pk)
     question = get_list_or_404(Question, id=pk)
     author = request.user
-    liked = False
-    if post.like.filter(id=self.request.user.id).exists():
-        liked = True
+    # liked = False
+    # if post.like.filter(id=self.request.user.id).exists():
+    #     liked = True
 
     answer_form = AnswerForm()
     if request.method == "POST":
