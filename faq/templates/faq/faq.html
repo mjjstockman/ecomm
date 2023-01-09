@@ -125,16 +125,12 @@
         </div>
         {% endfor %}  
     </div>
+    <form action="{% url 'question' %}" method="post">
+        {% csrf_token %}
+        {{ question_form | crispy }}
+        <input type="submit" value="Submit Question">
+    </form>
 </div>
-
-<p>rdtfgyhui</p>
-
-<!-- <form action="{% url 'question' %}" method="post">
-    {% csrf_token %}
-    {{ question_form | crispy }}
-    <input type="submit" value="Submit Question">
-</form> -->
-
 
 {% endblock %}
 
