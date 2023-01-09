@@ -93,18 +93,23 @@
                     {% if answer.status == 1 %}
                     <p>{{ answer.body | safe }}</p>
                     {% if user.is_authenticated %}
-                    <form action="{% url 'like' answer.pk %}" method="POST">
+                    <form action="{% url 'like' answer.pk %}" method="POST" class="d-inline">
                         {% csrf_token %}
+                        <!-- CHANGE BUTTON TO TOGGLE BETWEEN SOLID AND NOT -->
                         <button type="submit" name="answer_id" class="border-0" 
                             value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
                         </button>
                         <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                     </form>
+                    {% if liked %}
+                    YOU HAVE LIKED
                     {% endif %}
-                    Liked by {{ answer.like.all.count }} user{{ answer.like.all.count|pluralize }}
-                    {% if forloop.last %}
+                    {% endif %}
+                    <span>Liked by {{ answer.like.all.count }} user{{ answer.like.all.count|pluralize }}</span>
+                    
+                    <!-- {% if forloop.last %}
                     ADD ANOTHER ANSWER
-                    {% endif %}
+                    {% endif %} -->
                     {% endif %}
                     {% endfor %}
                     <form action="{% url 'answer' question.id %}" method="post">

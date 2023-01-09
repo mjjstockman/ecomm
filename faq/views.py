@@ -5,7 +5,7 @@ from .forms import QuestionForm, AnswerForm
 from .models import Question, Answer
 
 
-def view_faq(request):
+def faq(request):
 
     # questions = Question.objects.filter(status=1).order_by('-created_on')
     questions = get_list_or_404(
@@ -19,7 +19,7 @@ def view_faq(request):
         "answer_form": answer_form,
         "questions": questions,
     }
-    return render(request, "faq/view_faq.html", context)
+    return render(request, "faq/faq.html", context)
 
 
 def answer(request, pk):
@@ -27,6 +27,9 @@ def answer(request, pk):
     # question = get_object_or_404(Question, id=pk)
     question = get_list_or_404(Question, id=pk)
     author = request.user
+    liked = False
+    if post.like.filter(id=self.request.user.id).exists():
+        liked = True
 
     answer_form = AnswerForm()
     if request.method == "POST":
@@ -39,8 +42,11 @@ def answer(request, pk):
             answer_form.save()
             return redirect("/")
         else:
-            context = {"answer_form": answer_form}
-            return render(request, "faq/view_faq.html", context)
+            context = {
+                "answer_form": answer_form,
+                "liked": liked
+                }
+            return render(request, "faq/faq.html", context)
 
 
 def question(request):
@@ -57,7 +63,7 @@ def question(request):
             return redirect("/")
         else:
             context = {"question_form": question_form}
-            return render(request, "faq/view_faq.html", context)
+            return render(request, "faq/faq.html", context)
 
 
 def like(request, pk):
@@ -67,4 +73,4 @@ def like(request, pk):
     else:
         answer.like.add(request.user)
 
-    return HttpResponseRedirect(reverse("view_faq"))
+    return HttpResponseRedirect(reverse("faq"))

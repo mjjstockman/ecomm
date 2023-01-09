@@ -16,13 +16,9 @@ class QuestionForm(forms.ModelForm):
 
 
 class AnswerForm(forms.ModelForm):
-    """Uses Setlist model to create form gigs, song and author fields
-    The gig and author fields are taken from the views and hidden from
-    the user
-    """
     class Meta:
         model = Answer
         fields = ['body']
         labels = {
-            'body': 'Add answer',
+            'body': 'Submit answer',
         }
