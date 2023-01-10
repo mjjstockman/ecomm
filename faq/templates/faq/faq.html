@@ -73,15 +73,17 @@
 <div class="container">
     <h1>FAQ!</h1>
     <h1>We hear you may have a question for Get Wurst?</h1>
+    <a href="#ask-question" class="btn btn-primary">Ask Question</a>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate id 
         porro adipisci quas iste error ea vero recusandae, laboriosam corrupti, 
         tempore necessitatibus maiores ipsam praesentium ut? Aspernatur, eaque. 
         Dolorem, placeat.</p>
 
-    <!-- HOW ADD ARIA-CONTROLS WHEN DON;T KNOW HOW MANY ANSWERS??????? -->
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
-        aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle Answers</button>
-    
+    <!-- HOW ADD ARIA-CONTROLS WHEN DON;T KNOW HOW many   -->
+    <button class="btn btn-primary" onclick="toggleFaq()" id="faqToggle" type="button" data-bs-toggle="collapse"
+        data-bs-target=".multi-collapse"
+        aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
+
     <div class="accordion" id="faqAccordion">
         {% for question in questions %}
         <div class="accordion-item">
@@ -131,7 +133,7 @@
     </div>
 </div>
 
-<form action="{% url 'question' %}" method="post" class="my-3 mx-3">
+<form action="{% url 'question' %}" id="ask-question" method="post" class="my-3 mx-3">
     {% csrf_token %}
     {{ question_form | crispy }}
     <input type="submit" value="Submit Question">
@@ -139,10 +141,15 @@
 
 {% endblock %}
 
-<script>
-    $(document).ready(function() {
-        $('#btnExpandAll').click(function() {
-            $('.accordion-collapse collapse').collapse('show');
-        });
-    });
-</script>
+{% block postloadjs %}
+    <script>
+        function toggleFaq() {
+            var text = document.getElementById("faqToggle");
+            if (text.innerHTML === "Expand All") {
+                text.innerHTML = "Collapse All";
+            } else {
+                text.innerHTML = "Expand All";
+            }
+        }
+    </script>
+{% endblock %}
