@@ -82,36 +82,71 @@
         obcaecati quidem.</p>
 </div>
 
-
+{% for event in events %}
 
 <div class="container-fluid">
     <div class="row">
+
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-3 left">
             <div class="row">
-                {% for event in events %}
+                {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <img class="card-img-top" src="{{ event.image.url }}" alt="{{ event.name }}">
-                                <h1 class="card-title">{{ event.name }}</h1>
-                                <p class="card-text">{{ event.date|date:"M o" }}</p>
+                               <img src="{{ event.image.url }}" alt="{{ event.name }}" class="img-fluid">
+                               <a href="{{ event.link }}">
+                                   <h1 class="card-title">{{ event.name }}</h1>
+                               </a>
+                               <p class="card-text">{{ event.date|date:"M o" }}</p>                
                             </div>
-                            
+                           
+        
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
+                
+        </div>
+    </div>
+    <!-- {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
+            {% endif %}
+        </ul>
+    </nav> -->
+    {% endif %}
+</div>
+{%endblock%}
+ 
+<div class="card mb-3 border border-5 border-dark w-75 mx-auto my-5">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ event.image.url }}" alt="{{ event.name }}" class="img-fluid">
+        </div>
+        <div class="col-md-8 d-flex">
+            <div class="card-body my-auto">
+                <a href="{{ event.link }}">
+                    <h1 class="card-title">{{ event.name }}</h1>
+                </a>
+                <p class="card-text">{{ event.date|date:"M o" }}</p>
             </div>
         </div>
     </div>
-    
 </div>
+
+
+{% endfor %}
 {% endblock %}
- 
+
+
+
+
+
+
