@@ -8,11 +8,19 @@
   --gw-cta-btn-bg: #7BF1A8;
 }
 
+.accordion {
+  --bs-accordion-border-color: var(--gw-dark);
+}
+
+.btn {
+  --bs-btn-border-radius: 0;
+}
+
 .btn-cta {
   --bs-btn-color: var(--gw-dark);
   --bs-btn-bg: var(--gw-cta-btn-bg);
   --bs-btn-border-color: #0e1c19;
-  --bs-btn-border-radius: 0;
+  
 }
 
 .btn-primary {
