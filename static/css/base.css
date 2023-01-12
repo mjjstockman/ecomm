@@ -37,18 +37,21 @@
   --bs-card-border-radius: 0;
 }
 
+#footer {
+  background-color: var(--gw-primary-color);
+}
+
+.navbar {
+  background-color: var(--gw-primary-color);
+}
+
+#footer a {
+  color: var(--gw-dark);
+}
+
 .gw-h1 {
   color: #EFC102;
 }
-
-/* .btn-primary {
-  --bs-btn-color: var(--gw-dark);
-  --bs-btn-bg: var(--gw-secondary-color);
-  --bs-btn-border-color: #2AAC67;
-} */
-
-
-
 
 *{
   box-sizing: border-box;
