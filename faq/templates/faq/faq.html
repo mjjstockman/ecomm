@@ -133,12 +133,13 @@
     </div>
 </div>
 
-<form action="{% url 'question' %}" id="ask-question" method="post" class="my-3 mx-3">
-    {% csrf_token %}
-    {{ question_form | crispy }}
-    <input type="submit" value="Submit Question">
-</form>
-
+<div class="container">
+    <form action="{% url 'question' %}" id="ask-question" method="post" class="my-3">
+        {% csrf_token %}
+        {{ question_form | crispy }}
+        <input type="submit" value="Submit Question">
+    </form>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
