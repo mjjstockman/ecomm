@@ -69,15 +69,16 @@
 {% endblock %}
 
 {% block content %}
+<button type="button" class="btn btn-primary">Primary</button>
 <section class="container my-3">
     <div class="row hero align-items-center">
         <div class="col-11 border">
-            <h1 class="py-3">Banging BRATWURSTS.</h1>
-            <h1 class="py-3">Proper CURRYWURST.</h1>
-            <h1 class="py-3">And now.......<br>BURGERS.</h1>
+            <h1 class="py-3">Banging <span class="gw-h1">BRATWURSTS.</span></h1>
+            <h1 class="py-3">Proper <span class="gw-h1">CURRYWURST.</span></h1>
+            <h1 class="py-3">And now.......<br><span class="gw-h1">BURGERS.</span></h1>
             <div class="my-3">
                 <h4>
-                    <a class="btn btn-primary" href="{% url 'products' %}" role="button">View Menu</a>
+                    <a class="btn btn-cta" href="{% url 'products' %}" role="button">View Menu</a>
                     <!-- <a class="btn btn-secondary" href="#" role="button">CTA</a> -->
                 </h4>
             </div>

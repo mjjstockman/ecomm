@@ -1,4 +1,55 @@
 /* Allows h-100 and vertical centering */
+
+:root{
+  --gw-primary-color: #EFC102;
+  --gw-secondary-color: #7BF1A8;
+  --gw-dark: #090C08;
+  --gw-btn-txt: #709255;
+  --gw-cta-btn-bg: #7BF1A8;
+}
+
+.btn-cta {
+  --bs-btn-color: var(--gw-dark);
+  --bs-btn-bg: var(--gw-cta-btn-bg);
+  --bs-btn-border-color: #0e1c19;
+  --bs-btn-border-radius: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0d6efd;
+  --bs-btn-border-color: #0d6efd;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+.card {
+  --bs-card-border-color: var(--gw-dark);
+  --bs-card-border-width: 5px;
+  --bs-card-border-radius: 0;
+}
+
+.gw-h1 {
+  color: #EFC102;
+}
+
+/* .btn-primary {
+  --bs-btn-color: var(--gw-dark);
+  --bs-btn-bg: var(--gw-secondary-color);
+  --bs-btn-border-color: #2AAC67;
+} */
+
+
+
+
 *{
   box-sizing: border-box;
 }
@@ -28,7 +79,7 @@ abbr {
 }
 
 body {
-    background-color: blue;
+    /* background-color: blue; */
     font-family: 'PT Sans', sans-serif;
     /* font-size: 5em; */
 }
