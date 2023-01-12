@@ -43,6 +43,11 @@
 
 .navbar {
   background-color: var(--gw-primary-color);
+  color: red;
+}
+
+.nav-link {
+  color: var(--gw-dark);
 }
 
 #footer a {
