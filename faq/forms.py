@@ -3,12 +3,13 @@ from .models import Question, Answer
 
 
 class QuestionForm(forms.ModelForm):
-    """Uses Setlist model to create form gigs, song and author fields
-    The gig and author fields are taken from the views and hidden from
-    the user
-    """
-    email_on_answer = forms.CharField(widget=forms.CheckboxInput(
-                      attrs={"class": "rounded-0"}))
+    def __init__(self, *args, **kwargs):
+        super(QuestionForm, self).__init__(*args, **kwargs)
+
+        self.fields['body'].label = "Question"
+
+    email_on_answer = forms.CharField(widget=forms.CheckboxInput(attrs={"class": "rounded-0"}))
+    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
 
     class Meta:
         model = Question
@@ -19,6 +20,13 @@ class QuestionForm(forms.ModelForm):
 
 
 class AnswerForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(AnswerForm, self).__init__(*args, **kwargs)
+
+        self.fields['body'].label = "Answer"
+
+    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
+
     class Meta:
         model = Answer
         fields = ['body']
