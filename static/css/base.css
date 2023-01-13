@@ -22,14 +22,14 @@
   --bs-accordion-border-color: var(--gw-dark);
 }
 
-
 .accordion-item {
   border-radius: 0 !important;
-  ;
 }
 
 .btn {
   --bs-btn-border-radius: 0;
+
+
 }
 
 .btn-cta {

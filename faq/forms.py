@@ -25,7 +25,7 @@ class AnswerForm(forms.ModelForm):
 
         self.fields['body'].label = "Answer"
 
-    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
+    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0 border border-dark border-2"}))
 
     class Meta:
         model = Answer
