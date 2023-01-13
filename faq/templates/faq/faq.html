@@ -69,7 +69,7 @@
 {% endblock %}
 
 {% block content %}
-
+<button type="button" class="btn btn-primary">Primary</button>
 <div class="container">
     <h1>FAQ!</h1>
     <h1>We hear you may have a question for Get Wurst?</h1>
@@ -84,7 +84,7 @@
         data-bs-target=".multi-collapse"
         aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
 
-    <div class="accordion" id="faqAccordion">
+    <div class="accordion border border-5 border-dark" id="faqAccordion">
         {% for question in questions %}
         <div class="accordion-item">
             <h2 class="accordion-header" id="heading{{question.id}}">
