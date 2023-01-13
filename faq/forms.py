@@ -7,6 +7,9 @@ class QuestionForm(forms.ModelForm):
     The gig and author fields are taken from the views and hidden from
     the user
     """
+    email_on_answer = forms.CharField(widget=forms.CheckboxInput(
+                      attrs={"class": "rounded-0"}))
+
     class Meta:
         model = Question
         fields = ['body', 'email_on_answer']
