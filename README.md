@@ -906,6 +906,35 @@ def all(request):
     categories = None
 
 
+### FAQ form labels
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/faq-label-error.png)
+
+Django field labels not working once added css
+
+```
+class QuestionForm(forms.ModelForm):
+    email_on_answer = forms.CharField(widget=forms.CheckboxInput(attrs={"class": "rounded-0"}))
+    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
+
+    class Meta:
+        model = Question
+        fields = ['body', 'email_on_answer']
+        labels = {
+            'body': 'Question',
+        }
+
+```
+
+Add as below instead....
+
+'''
+class QuestionForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(QuestionForm, self).__init__(*args, **kwargs)
+
+        self.fields['body'].label = "Question"
+'''
+
 ### link vs btn
 Error: ![IMG ALT DESC HERE](static/images/readme/bugs/link-vs-btn.png)
 

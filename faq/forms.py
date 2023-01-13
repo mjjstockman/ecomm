@@ -24,12 +24,14 @@ class AnswerForm(forms.ModelForm):
         super(AnswerForm, self).__init__(*args, **kwargs)
 
         self.fields['body'].label = "Answer"
-
+   
     body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
 
+    
     class Meta:
         model = Answer
         fields = ['body']
         labels = {
             'body': 'Submit answer',
         }
+
