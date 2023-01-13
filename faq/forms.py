@@ -8,8 +8,8 @@ class QuestionForm(forms.ModelForm):
 
         self.fields['body'].label = "Question"
 
-    email_on_answer = forms.CharField(widget=forms.CheckboxInput(attrs={"class": "rounded-0"}))
-    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0"}))
+    email_on_answer = forms.CharField(widget=forms.CheckboxInput(attrs={"class": "rounded-0 border border-dark border-3"}))
+    body = forms.CharField(widget=forms.TextInput(attrs={"class": "rounded-0 border border-dark border-3"}))
 
     class Meta:
         model = Question
