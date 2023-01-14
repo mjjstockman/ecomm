@@ -36,13 +36,12 @@
 
 .btn {
   --bs-btn-border-radius: 0;
-  border: 3px var(--gw-cta-btn-dark);
+  --bs-btn-border-color: var(--gw-dark);
 }
 
 .btn-cta {
   --bs-btn-color: var(--gw-dark);
   --bs-btn-bg: var(--gw-cta-btn-main);
-  --bs-btn-border-color: var(--gw-cta-btn-main);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: var(--gw-cta-btn-dark);
   --bs-btn-hover-border-color: var(--gw-cta-btn-darker);
