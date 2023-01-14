@@ -124,7 +124,7 @@
                     <form action="{% url 'answer' question.id %}" method="post">
                         {% csrf_token %}
                         {{ answer_form | crispy }}
-                        <input type="submit" value="Submit Answer">
+                        <input type="submit" class="btn btn-primary" value="Submit Answer">
                     </form>
                 </div>  
             </div>
