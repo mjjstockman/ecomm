@@ -18,6 +18,23 @@
   --gw-btn-darkest: #1A5751;
 }
 
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  /* background-color: blue; */
+  background-clip: padding-box;
+  border: 3px solid var(--gw-dark);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 .accordion-button:not(.collapsed) {
   background-color: var(--gw-primary-lighter-color);
 }
@@ -28,6 +45,10 @@
 
 .accordion-item {
   border-radius: 0 !important;
+}
+
+.primary-light {
+  background-color: var(--gw-primary-lighter-color);
 }
 
 .btn {
