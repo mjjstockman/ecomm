@@ -13,10 +13,10 @@
                      <a class="nav-link" href="{% url 'products' %}?category=Schnitzel"> Schnitzel </a>
                  </li>
                  <li>
-                     <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                             name="q">
-                         <button class="btn btn-outline-success" type="submit">Search</button>
+                     <form class="d-flex border border-3 border-dark" role="search" method="GET" action="{% url 'products' %}">
+                         <input class="form-control rounded-0" type="search" placeholder="Search"
+                             aria-label="Search" name="q">
+                         <button class="btn btn-primary" type="submit">Search</button>
                      </form>
                  </li>
              </ul>
