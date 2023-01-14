@@ -80,9 +80,13 @@
   border-radius: 0;
 }
 
+.form-comtrol-pend {
+  background-color: var(--gw-primary-lighter-color);
+  border: 3px solid var(--gw-dark);
+}
+
 .form-check-input[type=checkbox] {
   border: 3px solid var(--gw-dark);
-  border-radius: 0;
 }
 
 .card {
