@@ -16,6 +16,8 @@
   --gw-btn-dark: #71ABA5;
   --gw-btn-darker: #46807A;
   --gw-btn-darkest: #1A5751;
+
+  --gw-link: #7EB2DD;
 }
 
 .accordion-item:first-of-type .accordion-button {
@@ -88,6 +90,17 @@
   --bs-card-border-width: 5px;
   --bs-card-border-radius: 0;
 }
+
+.event-link {
+    text-decoration: none;
+    color: #7EB2DD;
+  }
+
+.event-link:hover {
+    text-decoration: underline;
+    color:#578DB6
+}
+
 
 #footer {
   background-color: var(--gw-primary-color);
