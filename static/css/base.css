@@ -18,23 +18,10 @@
   --gw-btn-darkest: #1A5751;
 }
 
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  /* background-color: blue; */
-  background-clip: padding-box;
-  border: 3px solid var(--gw-dark);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.accordion-item:first-of-type .accordion-button {
   border-radius: 0;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
 .accordion-button:not(.collapsed) {
   background-color: var(--gw-primary-lighter-color);
 }
@@ -47,12 +34,9 @@
   border-radius: 0 !important;
 }
 
-.primary-light {
-  background-color: var(--gw-primary-lighter-color);
-}
-
 .btn {
   --bs-btn-border-radius: 0;
+  border: 3px var(--gw-cta-btn-dark);
 }
 
 .btn-cta {
@@ -72,11 +56,10 @@
   --bs-btn-disabled-border-color: var(--gw-cta-btn-main);
 }
 
-
 .btn-primary {
   --bs-btn-color: var(--gw-dark);
   --bs-btn-bg: var(--gw-btn-main);
-  --bs-btn-border-color: var(--gw-btn-main);
+  --bs-btn-border-color: var(--gw-dark);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: var(--gw-btn-dark);
   --bs-btn-hover-border-color: var(--gw-btn-darker);
@@ -88,6 +71,17 @@
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: var(--gw-btn-main);
   --bs-btn-disabled-border-color: var(--gw-btn-main);
+}
+
+.form-control {
+  color: var(--gw-dark);
+  border: 3px solid var(--gw-dark);
+  border-radius: 0;
+}
+
+.form-check-input[type=checkbox] {
+  border: 3px solid var(--gw-dark);
+  border-radius: 0;
 }
 
 .card {
