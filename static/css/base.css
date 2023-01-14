@@ -7,7 +7,11 @@
   --gw-dark: #090C08;
   --gw-btn-txt: #709255;
 
-
+  --gw-cta-btn-main: #FF6F59;
+  --gw-cta-btn-dark: #D64C3A;
+  --gw--cta-btn-darker: #AE261D;
+  --gw-cta-btn-darkest: #860000;
+  
   --gw-btn-main: #9DD9D2;
   --gw-btn-dark: #71ABA5;
   --gw-btn-darker: #46807A;
@@ -34,9 +38,19 @@
 
 .btn-cta {
   --bs-btn-color: var(--gw-dark);
-  --bs-btn-bg: var(--gw-cta-btn-bg);
-  --bs-btn-border-color: #0e1c19;
-  
+  --bs-btn-bg: var(--gw-cta-btn-main);
+  --bs-btn-border-color: var(--gw-cta-btn-main);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--gw-cta-btn-dark);
+  --bs-btn-hover-border-color: var(--gw-cta-btn-darker);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--gw-cta-btn-darker);
+  --bs-btn-active-border-color: var(--gw-cta-btn-darkest);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--gw-cta-btn-main);
+  --bs-btn-disabled-border-color: var(--gw-cta-btn-main);
 }
 
 
