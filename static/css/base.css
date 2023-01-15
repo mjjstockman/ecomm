@@ -18,6 +18,8 @@
   --gw-btn-darkest: #1A5751;
 
   --gw-link: #7EB2DD;
+  --gw-link-visited: #2F6990;
+  --gw-link-hover: #578DB6;
 }
 
 .accordion-item:first-of-type .accordion-button {
@@ -97,18 +99,16 @@
 
 /* links */
 
-a {
-    color: #7EB2DD;
-  }
+a:link {
+    color: var(--gw-link);
+}
 
 a:visited {
-  text-decoration: none;
-  color: #2F6990;
+  color: var(--gw-link-visited);
 }
 
 a:hover {
-    text-decoration: underline;
-    color:#578DB6
+    color:var(--gw-link-hover);
 }
 
 
