@@ -95,12 +95,18 @@
   --bs-card-border-radius: 0;
 }
 
-.event-link {
-    text-decoration: none;
+/* links */
+
+a {
     color: #7EB2DD;
   }
 
-.event-link:hover {
+a:visited {
+  text-decoration: none;
+  color: #2F6990;
+}
+
+a:hover {
     text-decoration: underline;
     color:#578DB6
 }
