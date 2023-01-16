@@ -7,7 +7,6 @@
 
 {% block inner_content %}
 
-<!-- add own css -->
 <h1>{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
@@ -47,5 +46,8 @@
     <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   </p>
 </form>
+
+
+
 
 {% endblock %}
