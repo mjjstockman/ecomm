@@ -22,6 +22,11 @@
   --gw-link-hover: #578DB6;
 }
 
+
+.thin-border {
+  border: 3px solid var(--gw-dark);
+}
+
 h1,
 h2,
 h3,
@@ -102,11 +107,11 @@ h6 {
 }
 
 /* WHT NEEDED?? WHY DIFFERENTLY STYLED TO SIGN IN FORM??????z */
-/* #signup_form p input {
+#signup_form p input {
   border: 3px solid var(--gw-dark);
   width: 100%;
   height: 42px;
-} */
+}
 
 /* form input {
   border: 3px solid var(--gw-dark);
@@ -211,3 +216,6 @@ body {
   transform: translateX(-25%);
 }
 
+.thick-border {
+  border: 5px solid var(--gw-dark);
+}
