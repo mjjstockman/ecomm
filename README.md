@@ -935,6 +935,23 @@ class QuestionForm(forms.ModelForm):
         self.fields['body'].label = "Question"
 '''
 
+### allauth signup
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/signup-diff-style.png)
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/signin-diff-style.png)
+
+Why styled differently??
+
+Targeted the input and guessed styling.
+
+```
+#signup_form p input {
+  border: 3px solid var(--gw-dark);
+  width: 100%;
+  height: 42px;
+}
+```
+
+
 ### link vs btn
 Error: ![IMG ALT DESC HERE](static/images/readme/bugs/link-vs-btn.png)
 
