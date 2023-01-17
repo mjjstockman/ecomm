@@ -16,9 +16,9 @@
   of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
   for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-<div class="socialaccount_ballot">
+<!-- <div class="socialaccount_ballot">
   <div class="login-or">{% trans 'or' %}</div>
-</div>
+</div> -->
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
@@ -27,7 +27,7 @@
   <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 
-<button class="btn btn-outline-info">
+<button class="btn btn-primary mb-3">
   <a href="{% provider_login_url 'google'%}?next=/">
     <i class="fab fa-google"></i>
     Login with Google
