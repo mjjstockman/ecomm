@@ -10,16 +10,8 @@
 <div class="container thick-border">
     <div class="row">
         <div class="col">
-
-            <h2 class="logo-font mb-4">Shopping Cart</h2>
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
             {% if cart_items %}
-            <div class="table-responsive rounded">
+            <div class="table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
                         <tr>
@@ -34,7 +26,7 @@
                     {% for item in cart_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            <img class="img-fluid rounded" 
+                            <img class="img-fluid" 
                             src="{{ item.product.image.url }}">
                         </td>
                         <td class="py-3">
@@ -108,7 +100,7 @@
             </div>
             {% else %}
             <p class="lead mb-5">Your cart is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-primary rounded-0 btn-lg">
+            <a href="{% url 'products' %}" class="btn btn-primary btn-lg mb-3">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
