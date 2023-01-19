@@ -71,11 +71,11 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 mt-3">
+        <div class="col-12">
             <div class="row">
                 {% for product in products %}
                 <div class="col-md-6 col-lg-4">
-                    <div class="card mb-4">
+                    <div class="card mb-3">
                         <div class="card-body">
                             <div class="image-container">
                                 <!-- ADD ARIA LABEL -->
@@ -94,7 +94,7 @@
                                     class="card-subtitle mb-2 text-muted text-decoration-none">
                                     {{ product.category }}
                                 </a>
-                                <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-cta mb-3"
+                                <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-cta"
                                     role="button">
                                     See More Info
                                 </a>
