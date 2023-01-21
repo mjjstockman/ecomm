@@ -884,6 +884,109 @@ template_name = "products/custom_widget_templates/" \
 ```
 
 
+### Wet menu template
+Error: ![IMG ALT DESC HERE](static/images/readme/bugs/faq-label-error.png)
+COMMIT 501
+
+Wet menu/all template
+
+```
+<h2>Bratwursts</h2>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                {% for product in products %}
+                {% if product.category|slugify == 'bratwurst' %}
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    <!-- ADD ARIA LABEL -->
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top card-img" src="{{ product.image.url }}"
+                                            alt="{{ product.name }}" class="h-50">
+                                    </a>
+                                </div>
+                                <div>
+                                    <h1 class="card-title">{{ product.name }}</h1>
+                                    </a>
+                                    <p class="card-text">{{ product.short_description }}</p>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <a href="{% url 'products' %}?category={{ product.category }}"
+                                        class="card-subtitle mb-2 text-muted text-decoration-none">
+                                        {{ product.category }}
+                                    </a>
+                                    <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-cta"
+                                        role="button">
+                                        See More Info
+                                    </a>
+                                    <!-- Button trigger modal -->
+                                    {% if request.user.is_superuser %}
+                                    <div class="card-body border-top border-1 border-dark">
+                                        <div class="d-grid gap-2 mb-2">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#deleteProductModal">
+                                                DELETE
+                                            </button>
+                                            <a class="btn btn-secondary" href="{% url 'edit_product' product.id %}">
+                                                Edit
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteProductModal" tabindex="-1"
+                                        aria-labelledby="deleteProductModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="deleteProductModalLabel">Modal title
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete {{ product.name }}?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <a class="btn btn-danger"
+                                                        href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- closes modal -->
+                                    {% endif %} <!-- close superuser-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% empty %}
+                <h2>NO PRODUCTS YET</h2>
+                {% endfor %}
+             </div>  <!-- closes row -->
+
+             <h2>Currywurst</h2>
+             <div class="row">
+                 {% for product in products %}
+                 {% if product.category|slugify == 'currywurst' %}
+                 
+                 <div class="col-md-6 col-lg-4 mb-3">
+                     <div class="card">
+
+```
+
+Used parial template to DRY
+
+'''
+class QuestionForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(QuestionForm, self).__init__(*args, **kwargs)
+
+        self.fields['body'].label = "Question"
+
 ### Cat-nav links
 Error: ![IMG ALT DESC HERE](static/images/readme/bugs/list-no-filter.png)
 
