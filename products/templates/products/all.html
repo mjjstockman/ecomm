@@ -70,6 +70,17 @@
 
 {% block content %}
 <div class="container">
+
+
+    <!-- Tutor example -->
+    <h2>Bratwursts</h2>
+    {% for product in products %}
+        {% if product.category|slugify == 'bratwurst' %}
+            {% include "products/_partial_example.html" %}
+        {% endif %}
+    {% endfor %}
+
+
     <h1>Menu</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis fugit amet blanditiis libero eligendi? Blanditiis eius maxime, 
     placeat nemo similique optio. Placeat sint labore maxime dolor, saepe repellendus ad? Harum.</p>
