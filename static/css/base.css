@@ -89,7 +89,6 @@ h6 {
   --bs-btn-disabled-border-color: var(--gw-btn-main);
 }
 
-
 .form-control {
   color: var(--gw-dark);
   border: 3px solid var(--gw-dark);
@@ -130,6 +129,7 @@ h6 {
 .form-check-input[type=checkbox] {
   border-radius: 0;
 }
+
 
 /* links */
 
@@ -217,4 +217,8 @@ body {
 
 .thick-border {
   border: 5px solid var(--gw-dark);
+}
+
+.hover-link {
+  background-color: red;
 }

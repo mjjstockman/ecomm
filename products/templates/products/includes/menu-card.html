@@ -4,12 +4,14 @@
             <div class="image-container">
                 <!-- ADD ARIA LABEL -->
                 <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top card-img" src="{{ product.image.url }}" alt="{{ product.name }}"
+                    <img class="card-img-top card-img" id="imgHover" src="{{ product.image.url }}"
+                        alt="{{ product.name }}"
                         class="h-50">
                 </a>
             </div>
             <div>
-                <h1 class="card-title">{{ product.name }}</h1>
+                <a href="{% url 'product_detail' product.id %}">
+                    <h1 class="card-title menu-hover">{{ product.name }}</h1>
                 </a>
                 <p class="card-text">{{ product.short_description }}</p>
             </div>
@@ -61,3 +63,16 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    document.getElementById("imgHover").addEventListener("mouseover", hoverFunction)
+
+    function hoverFunction() {
+        elsToChange = document.getElementsByClassName("menu-hover")
+        for (el of elsToChange) {
+            el.addClass("hover-link")
+        }
+    }
+
+</script>
