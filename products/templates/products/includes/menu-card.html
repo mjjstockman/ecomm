@@ -7,11 +7,12 @@
                     <img class="card-img-top card-img" id="imgHover" src="{{ product.image.url }}"
                         alt="{{ product.name }}"
                         class="h-50">
+                    <h1 class="card-title menu-hover">{{ product.name }}</h1>
                 </a>
             </div>
             <div>
                 <a href="{% url 'product_detail' product.id %}">
-                    <h1 class="card-title menu-hover">{{ product.name }}</h1>
+                    
                 </a>
                 <p class="card-text">{{ product.short_description }}</p>
             </div>
@@ -64,15 +65,19 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
 
-    document.getElementById("imgHover").addEventListener("mouseover", hoverFunction)
+    const cardImages = document.querySelectorAll('.card-img');
 
-    function hoverFunction() {
-        elsToChange = document.getElementsByClassName("menu-hover")
-        for (el of elsToChange) {
-            el.addClass("hover-link")
-        }
-    }
+    cardImages.forEach(img => img.addEventListener('mouseover', (event) => {
+        const link = event.target.parentNode.parentNode.parentNode.children[1].children[0];
+        link.style.color = 'darkblue';
+    }));
 
-</script>
+
+    cardImages.forEach(img => img.addEventListener('mouseleave', (event) => {
+        const link = event.target.parentNode.parentNode.parentNode.children[1].children[0];
+        link.style.color = 'lightblue';
+    }));
+
+</script> -->
