@@ -36,6 +36,10 @@ def all(request):
                        Q(description__icontains=query))
             products = products.filter(queries)
 
+            if not products:
+                messages.error(request, "NO ITEMS!!!")
+                return redirect(reverse("products"))
+
     context = {
         "products": products,
         "search_term": query,
