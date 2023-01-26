@@ -58,8 +58,8 @@
                             data-bs-target="#deleteProductModal">
                             DELETE
                         </button>
-                        <a class="btn btn-secondary" href="{% url 'edit_product' product.id %}">
-                            Edit
+                        <a class="btn btn-primary" href="{% url 'edit_product' product.id %}">
+                            EDIT
                         </a>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                                 Are you sure you want to delete {{ product.name }}?
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                 <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                             </div>
                         </div>
