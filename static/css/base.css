@@ -22,6 +22,11 @@
   --gw-link-hover: #578DB6;
 }
 
+.modal-content {
+  border-radius: 0;
+  border: 5px solid var(--gw-dark);
+}
+
 .secondary-color {
   color: var(--gw-btn-main);
 }

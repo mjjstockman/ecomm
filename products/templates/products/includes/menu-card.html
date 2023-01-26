@@ -1,3 +1,31 @@
+<!-- {% if product.category|slugify == 'bratwurst' %}
+    {% if forloop.first %}
+        <h1>Bratwurst</h1>
+        <p> BRATTY Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cupiditate eligendi deserunt architecto rem dictased voluptates,
+                laudantium omnis excepturi exercitationem. Minus necessitatibus vitae explicabo molestiae quis consequatur earum
+                placeat.
+        </p>
+    {% endif %}
+{% elif product.category|slugify == 'currywurst' %}
+    {% if forloop.first %}
+        <h1>Currywurst</h1>
+        <p> CURRY Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cupiditate eligendi deserunt architecto
+            rem dictased voluptates,
+            laudantium omnis excepturi exercitationem. Minus necessitatibus vitae explicabo molestiae quis consequatur earum
+            placeat.
+        </p>
+    {% endif %}
+{% elif product.category|slugify == 'burger' %} 
+    {% if forloop.first %}
+        <h1>Currywurst</h1>
+        <p> BURGER Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cupiditate eligendi deserunt architecto
+            rem dictased voluptates,
+            laudantium omnis excepturi exercitationem. Minus necessitatibus vitae explicabo molestiae quis consequatur earum
+            placeat.
+        </p>
+    {% endif %}
+{% endif %} -->
+
 <div class="col-md-6 col-lg-4 mb-3">
     <div class="card">
         <div class="card-body">
@@ -36,7 +64,8 @@
                     </div>
                 </div>
                 <!-- Modal -->
-                <div class="modal fade" id="deleteProductModal" tabindex="-1" aria-labelledby="deleteProductModalLabel"
+                <div class="modal custom-modal fade" id="deleteProductModal" tabindex="-1"
+                    aria-labelledby="deleteProductModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
