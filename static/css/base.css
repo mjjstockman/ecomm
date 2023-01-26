@@ -123,6 +123,11 @@ h6 {
   border-radius: 0;
 }
 
+.dropdown-menu {
+  border-radius: 0;
+  border: 3px solid var(--gw-dark);
+}
+
 .form-comtrol-pend {
   background-color: var(--gw-primary-lighter-color);
   border: 3px solid var(--gw-dark);
