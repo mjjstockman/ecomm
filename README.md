@@ -12,6 +12,9 @@
     + [Trolley app](#trolley-app)
     + [User app - allauth](#user-app---allauth)
     + [Profile app](#profile-app)
+  * [Images](#images)
+    + [Home page](#home-page)
+    + [Shop - trees app](#shop---trees-app)
   * [Agile Methodology](#agile-methodology)
     + [Canban board and issues](#canban-board-and-issues)
     + [Sprints - milestones](#sprints---milestones)
@@ -250,6 +253,13 @@ The allauth templates have been styled by bootstrap classes to match the general
 
 The profile app has been designed by using the same template as checkout app. The profile form is on the left and previous orders list is on the right.
 
+## Images
+
+### Optimisattion
+sizing...
+https://tiny-img.com/blog/best-image-size-for-website/
+https://www.simpleimageresizer.com/
+https://tinypng.com/
 
 ## Agile Methodology
 
@@ -1507,6 +1517,9 @@ class MediaStorage(S3Boto3Storage):
 * [icon](https://www.flaticon.com/free-icons/trees)
 * png to svg [converter](https://convertio.co/download/d39aa7f30e79f4379b9bce697c5afe384b5853/)
 * resizing photos by [photoresizer](https://www.photoresizer.com/)
+* [TinyPng Image Guide](https://tiny-img.com/blog/best-image-size-for-website/)
+* [Simple Image Resizer](https://www.simpleimageresizer.com/)
+* [TinyPng](https://tinypng.com/)
 
 ### Tutorials and inspiration
 
