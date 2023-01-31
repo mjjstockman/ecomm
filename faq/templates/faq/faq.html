@@ -79,7 +79,6 @@
         tempore necessitatibus maiores ipsam praesentium ut? Aspernatur, eaque. 
         Dolorem, placeat.</p>
 
-    <!-- HOW ADD ARIA-CONTROLS WHEN DON;T KNOW HOW many   -->
     <button class="btn btn-secondary" onclick="toggleFaq()" id="faqToggle" type="button" data-bs-toggle="collapse"
         data-bs-target=".multi-collapse"
         aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Expand All</button>
@@ -106,15 +105,20 @@
                             {% if user.is_authenticated %}
                                 <form action="{% url 'like' answer.pk %}" method="POST" class="d-inline">
                                     {% csrf_token %}
-                                    <!-- CHANGE BUTTON TO TOGGLE BETWEEN SOLID AND NOT -->
-                                    <button type="submit" name="answer_id" class="border-0" 
-                                        value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
-                                    </button>
+                                    {% if answer in request.user.like_answer.all %}
+                                        <button type="submit" name="answer_id" class="border-0"
+                                            value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
+                                        </button>
+                                     {% else %}
+                                        <button type="submit" name="answer_id" class="border-0"
+                                            value="{{ answer.id }}"><i class="fa-regular fa-thumbs-up"></i>
+                                        </button>
+                                     {% endif %}
+                                    
                                     <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                                 </form>
                                 <span class="d-inline-block mb-5" >Liked by {{ answer.like.all.count }}
-                                user{{ answer.like.all.count|pluralize }}</span>
-                    
+                                user{{ answer.like.all.count|pluralize }}</span>                   
                                 {% if forloop.last %}
                                     <p>ADD ANOTHER ANSWER</p>
                                 {% endif %}

@@ -26,10 +26,17 @@ def answer(request, pk):
     """Adds a setlist to the database for the admin to consider"""
     question = get_object_or_404(Question, id=pk)
     # question = get_list_or_404(Question, id=pk)
+    answer = get_object_or_404(Answer, id=pk)
+    # print(answer_form.instance.question)
+    # print(answer)
     author = request.user
-    liked = False
-    if post.like.filter(id=self.request.user.id).exists():
-        liked = True
+    # liked = False
+    # print(liked)
+    # if answer.like.filter(id=self.request.user.id).exists():
+    #     liked = True
+    #     print(liked)
+    # else:
+    #     liked = False
 
     answer_form = AnswerForm()
     if request.method == "POST":
@@ -41,12 +48,13 @@ def answer(request, pk):
                 answer_form.instance.status = 1
             answer_form.save()
             return redirect("/")
-        else:
-            context = {
-                "answer_form": answer_form,
-                "liked": liked
-                }
-            return render(request, "faq/faq.html", context)
+        # else:
+    context = {
+        "answer_form": answer_form,
+        # "liked": liked,
+        "answer": answer,
+        }
+    return render(request, "faq/faq.html", context)
 
 
 def question(request):
@@ -70,7 +78,11 @@ def like(request, pk):
     answer = get_object_or_404(Answer, id=pk)
     if answer.like.filter(id=request.user.id).exists():
         answer.like.remove(request.user)
+        liked = False
+        print(liked)
     else:
         answer.like.add(request.user)
+        liked = True
+        print(liked)
 
     return HttpResponseRedirect(reverse("faq"))
