@@ -114,13 +114,13 @@
                                             value="{{ answer.id }}"><i class="fa-regular fa-thumbs-up"></i>
                                         </button>
                                      {% endif %}
-                                    
+                                     <hr>
                                     <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                                 </form>
-                                <span class="d-inline-block mb-5" >Liked by {{ answer.like.all.count }}
+                                <span class="d-inline-block mb-3" >Liked by {{ answer.like.all.count }}
                                 user{{ answer.like.all.count|pluralize }}</span>                   
                                 {% if forloop.last %}
-                                    <p>ADD ANOTHER ANSWER</p>
+                                    <h3>Feel free to submit another answer below!</h3>
                                 {% endif %}
                             {% endif %} 
                         {% endif %}
