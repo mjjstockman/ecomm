@@ -93,18 +93,18 @@
     </div> 
 
     {% if current_categories|length == 0 %}
-         <h2 id="currywurst">Currywurst</h2>
-         <p>CURRY INFO</p>
+         <h2 id="chicken">Chicken</h2>
+         <p>CHICKEN INFO</p>
     {% endif %}
     {% for category in current_categories %}
-    {% if category|lower == 'currywurst' %}
-    <h2 id="currywurst">Currywurst</h2>
-    <p>CURRY INFO</p>
+    {% if category|lower == 'chicken' %}
+    <h2 id="chicken">Chicken</h2>
+    <p>CHICKEN INFO</p>
      {% endif %}
      {% endfor %}
     <div class="row">
         {% for product in products %}
-            {% if product.category|slugify == 'currywurst' %}
+            {% if product.category|slugify == 'chicken' %}
                 {% include 'products/includes/menu-card.html' %}
             {% endif %}
         {% endfor %}
