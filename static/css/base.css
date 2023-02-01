@@ -233,9 +233,7 @@ abbr {
 }
 
 body {
-    /* background-color: blue; */
     font-family: 'PT Sans', sans-serif;
-    /* font-size: 5em; */
 }
 
 .card-img {
@@ -245,12 +243,9 @@ body {
 }
 
 
-.hero {
-  height: 60vh
-}
-
 .hero-img {
   height:60vh;
+  max-height: 400px;
   transform: translateX(-25%);
 }
 
@@ -264,4 +259,9 @@ body {
 
 .card-img-top {
   max-height: 200px;
+}
+
+p {
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  font-size: 1rem;
 }
