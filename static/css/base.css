@@ -21,10 +21,10 @@
   --gw-link-visited: #2F6990;
   --gw-link-hover: #578DB6;
 
-  --gw-font-size-1: clamp(1rem, 0.3077rem + 3.0769vw, 3rem);
+  --gw-font-size: clamp(1rem, 0.3077rem + 3.0769vw, 3rem);
   --gw-font-size-2: clamp(1.625rem, 0.5rem + 5vw, 4.875rem);
-  --gw-font-size-3: clamp(2.625rem, 0.8077rem + 8.0769vw, 7.875rem);
-  --gw-font-size-4: clamp(4.25rem, 1.3077rem + 13.0769vw, 12.75rem);
+  --gw-font-size-1: clamp(2.625rem, 0.8077rem + 8.0769vw, 7.875rem);
+  --gw-font-size-: clamp(4.25rem, 1.3077rem + 13.0769vw, 12.75rem);
 }
 
 
@@ -266,8 +266,48 @@ body {
   max-height: 200px;
 }
 
-p {
+p,
+.nav-link {
   /* font-size: clamp(1rem, 1.5rem, 2rem); */
   /* font-size: 1.5rem; */
-  font-size: clamp(1rem, 0.3077rem + 3.0769vw, 3rem);
+  /* font-size: clamp(1rem, 0.3077rem + 3.0769vw, 3rem); */
+  font-size: clamp(1rem, 0.7647rem + 1.1765vw, 1.5rem);
+  /* font-size: 1rem; */
 }
+
+h1 {
+  /* font-size: var(--gw-font-size-1); */
+  /* font-size: clamp(2.3125rem, 2.2321rem + 0.4018vw, 2.875rem); */
+  /* font-size: clamp(5rem, 4.7143rem + 1.4286vw, 7rem); */
+  /* font-size: clamp(2rem, 1.7647rem + 1.1765vw, 2.5rem); */
+  /* font-size: clamp(1.6875rem, 1.5404rem + 0.7353vw, 2rem); */
+  font-size: clamp(2rem, 1.7647rem + 1.1765vw, 2.5rem);
+}
+
+h2 {
+  /* font-size: var(--gw-font-size-2); */
+  /* font-size: clamp(4.5rem, 4.2857rem + 1.0714vw, 5rem); */
+  /* font-size: clamp(4.5rem, 4.4286rem + 0.3571vw, 5rem); */
+  font-size: clamp(1.6875rem, 1.5404rem + 0.7353vw, 2rem);
+  /* font-size: clamp(1.6875rem, 1.5404rem + 0.7353vw, 2rem); */
+}
+
+/* NOTN USED YET, CHANGE ALL h4's to h3's, h5's to h4 etc */
+h3 {
+  font-size: clamp(1.5625rem, 1.4743rem + 0.4412vw, 1.75rem);
+}
+
+
+h4 {
+  /* font-size: clamp(4rem, 3.9286rem + 0.3571vw, 4.5rem); */
+  font-size: clamp(1.375rem, 1.3162rem + 0.2941vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(1.25rem, 1.2206rem + 0.1471vw, 1.3125rem);
+}
+
+
+/* h6 {
+
+} */
