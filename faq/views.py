@@ -24,9 +24,9 @@ def answer(request, pk):
     """Adds a setlist to the database for the admin to consider"""
     question = get_object_or_404(Question, id=pk)
     author = request.user
-    liked = False
-    if post.like.filter(id=self.request.user.id).exists():
-        liked = True
+    # liked = False
+    # if post.like.filter(id=self.request.user.id).exists():
+    #     liked = True
     answer_form = AnswerForm()
     if request.method == "POST":
         answer_form = AnswerForm(request.POST)
