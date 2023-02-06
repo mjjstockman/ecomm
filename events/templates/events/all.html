@@ -85,7 +85,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-3">
-            <div class="row">
+            <!-- <div class="row"> -->
                 {% for event in events %}
                 <div class="col-md-6 col-lg-4">
                     <div class="card mb-4">
@@ -104,12 +104,12 @@
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
+                <!-- {% if forloop.counter|divisibleby:3 %} -->
+            <!-- </div> -->
+            <!-- <div class="row"> -->
+                <!-- {% endif %} -->
                 {% endfor %}
-            </div>
+            <!-- </div> -->
         </div>
     </div>  
 </div>
