@@ -1,5 +1,5 @@
- <nav class="navbar navbar-expand-lg w-100">
-     <div class="container">
+ <nav class="navbar navbar-expand-lg w-100 px-2">
+     <!-- <div class="container"> -->
          <a class="navbar-brand" href="{% url 'home' %}">
              <img id="nav-logo" src="/media/logo.png"
                  alt="Black outline of a Bratwurst with Get Wurst written on top to look like the text was done using a squirty bottle of sauce">
@@ -78,11 +78,11 @@
                          My Profile
                      </a>
                  </li>
-                 <li>
+                 <!-- <li>
                      <p class="navbar-text nav-color">Hi, {{ user.get_username }}</p>
-                 </li>
+                 </li> -->
                  {% endif %}
              </ul>
          </div>
-     </div>
+     <!-- </div> -->
  </nav>
