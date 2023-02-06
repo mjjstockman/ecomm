@@ -197,6 +197,7 @@ a:hover {
 a.nav-link {
   color:var(--gw-dark)
 }
+
 #footer {
   background-color: var(--gw-primary-color);
 }
