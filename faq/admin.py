@@ -33,7 +33,7 @@ class QuestionAdmin(admin.ModelAdmin):
             message = 'Your question {{question}} on Get Wurst has been \
                        answered!'
             email_from = settings.EMAIL_HOST_USER
-            user_email = [self.question.author.email,]
+            user_email = [self.question.author.email, ]
             send_mail(subject, message, email_from, user_email)
 
         super().save(*args, **kwargs)
