@@ -47,10 +47,11 @@
     <script src="https://js.stripe.com/v3/"></script>
 
     {% endblock %}
-
+src="{{ MEDIA_URL }}logo.png"
     {% block extra_js %}
     {% endblock %}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ STATIC_URL }}/favicons/apple-touch-icon.png">
+    {% static 'css/base.css' %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ STATIC_URL }}favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ STATIC_URL }}favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ STATIC_URL }}favicons/favicon-16x16.png">
     <link rel="manifest" href="{{ STATIC_URL }}favicons/site.webmanifest">
