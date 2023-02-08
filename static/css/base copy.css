@@ -329,18 +329,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Paytone One', sans-serif;
 }
 
-.hero {
-  height: 60vh
-}
+
 .hero-img {
-  /* transform:translateX(50%); */
-  /* background-image: url("/media/hero-burger.png"); */
-  /* height:25vh; */
-  /* background-position: 70vw 0vw;  */
-  /* background-size: 100%;  */
-  /* background-repeat: no-repeat;  */
-  /* min-height: 100%; */
-  /* max-width:100%; */
   height:60vh;
   transform: translateX(-25%);
 }

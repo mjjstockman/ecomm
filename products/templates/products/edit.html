@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block content %}
-<div class="container border col-6">
+<div class="container">
     <div class="row">
-        <h2 class="logo-font mb-4">Product Management</h2>
+        <h2>Product Management</h2>
         <h5 class="text-muted">Edit a Product</h5>
     </div>
 
@@ -21,7 +21,7 @@
                 {{ field }}
                 {% endif %}
                 {% endfor %}
-                <div class="text-right">
+                <div>
                     <a class="btn btn-secondary" 
                         href="{% url 'products' %}">Cancel</a>
                     <button class="btn btn-primary" type="submit">
