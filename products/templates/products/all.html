@@ -71,16 +71,21 @@
 {% block content %}
 <div class="container">
     <h1>Menu</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis fugit amet blanditiis libero eligendi? Blanditiis
-        eius maxime, placeat nemo similique optio. Placeat sint labore maxime dolor, saepe repellendus ad? Harum.</p>
+    <p>Take a look at our menu below. Everything's been chosen for its quality and freshness.
+        We are extremely proud of the food we serve and believe that you will agree
+        that we offer the very best street food in the East Midlands.
+    </p>
         {% if current_categories|length == 0 %}
         <h2 id="bratwurst">Bratwurst</h2>
-        <p>BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO</p>
+        <p>All our Bratwursts are genuine German top quality products. Think of a supercharged
+            hotdog with the tastiest, thickest sausage in a perfect brioche bun.
+        </p>
         {% endif %}
         {% for category in current_categories %}
         {% if category|lower == 'bratwurst' %}
             <h2 id="bratwurst">Bratwurst</h2>
-            <p>BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO BRATTY INFO</p>
+            <p>All our Bratwursts are genuine German top quality products. Think of a supercharged
+                hotdog with the tastiest, thickest sausage in a perfect brioche bun.</p>
         {% endif %}
         {% endfor %}
 
@@ -94,12 +99,14 @@
 
     {% if current_categories|length == 0 %}
          <h2 id="chicken">Chicken</h2>
-         <p>CHICKEN INFO</p>
+         <p>We only use free range organic chicken sourced from local family run farms. These happy
+            chickens not only taste better but are free from any artifical additives.</p>
     {% endif %}
     {% for category in current_categories %}
     {% if category|lower == 'chicken' %}
     <h2 id="chicken">Chicken</h2>
-    <p>CHICKEN INFO</p>
+    <p>We only use free range organic chicken sourced from local family run farms. These happy
+        chickens not only taste better but are free from any artifical additives.</p>
      {% endif %}
      {% endfor %}
     <div class="row">
@@ -112,7 +119,8 @@
 
     {% if current_categories|length == 0 %}
     <h2 id="burgers">Burgers</h2>
-    <p>BURGERS INFO BURGERS INFO BURGERS INFO BURGERS INFO BURGERS INFO BURGERS INFO BURGERS INFO BURGERS INFO</p>
+    <p>100% British grass-fed free range beef. Our award winning cows are slowly reared until
+        they naturally reach maturity and develop an incredibally rounded flavour.</p>
     {% endif %}
     {% for category in current_categories %}
     {% if category|lower == 'burger' %}
