@@ -1,5 +1,6 @@
 from django.shortcuts import (render, redirect, reverse, get_object_or_404,
                               get_list_or_404)
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .forms import QuestionForm, AnswerForm
 from .models import Question, Answer
@@ -20,6 +21,7 @@ def faq(request):
     return render(request, "faq/faq.html", context)
 
 
+@login_required
 def answer(request, pk):
     """Adds a setlist to the database for the admin to consider"""
     question = get_object_or_404(Question, id=pk)
@@ -45,6 +47,7 @@ def answer(request, pk):
             return render(request, "faq/faq.html", context)
 
 
+@login_required
 def question(request):
     """Adds a setlist to the database for the admin to consider"""
     author = request.user
@@ -62,6 +65,7 @@ def question(request):
             return render(request, "faq/faq.html", context)
 
 
+@login_required
 def like(request, pk):
     answer = get_object_or_404(Answer, id=pk)
     if answer.like.filter(id=request.user.id).exists():
