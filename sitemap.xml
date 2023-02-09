@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/faq/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/events/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/cart/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/?category=Bratwurst</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/?category=Chicken</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/?category=Burger</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/43/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/45/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/46/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/52/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/53/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/54/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/55/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/56/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/47/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/48/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/49/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecomm-gw.herokuapp.com/menu/50/</loc>
+  <lastmod>2023-02-09T16:32:54+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /profiles/
+Sitemap: https://ecomm-gw.herokuapp.com/sitemap.xml
