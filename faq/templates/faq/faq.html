@@ -27,7 +27,7 @@
     <!-- Set it to noindex, nofollow for 'thin' pages (pages that don't have much information), where you don't want Google or
     Bing to judge your site based on that content -->
 
-    <title>SITE TITLE</title>
+    <!-- <title>SITE TITLE</title> -->
     <!-- This is what will display in the tab at the top of a user's browser window -->
     <!-- Title should be less than 60 characters -->
     <!-- Unique title on every page, don't repeat yourself -->
@@ -67,7 +67,7 @@
     <meta name="twitter:site" content="@USERNAME"> <!-- The site's Twitter handle -->
     <meta name="twitter:creator" content="@USERNAME"> <!-- Your personal Twitter handle -->
 {% endblock %}
-
+{% block extra_title %}FAQ{% endblock %}
 {% block content %}
 
 <div class="container mb-3">

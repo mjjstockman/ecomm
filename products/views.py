@@ -59,6 +59,7 @@ def detail(request, product_id):
     return render(request, "products/detail.html", context)
 
 
+@login_required
 def add(request):
     """Add a product to the store"""
     if not request.user.is_superuser:
@@ -88,6 +89,7 @@ def add(request):
     return render(request, template, context)
 
 
+@login_required
 def edit(request, product_id):
     """Edit a product in the store"""
     if not request.user.is_superuser:

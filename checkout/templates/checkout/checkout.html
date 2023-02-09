@@ -1,7 +1,9 @@
 {% extends "base.html" %} {% load static %} {% load cart_tools %} 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
-{% endblock %} {% block content %}
+{% endblock %} 
+{% block extra_title %}Checkout{% endblock %}
+{% block content %}
 <!-- template taken from code institute boutique ado walkthrough -->
 <div class="container mb-2">
     <div class="row">
