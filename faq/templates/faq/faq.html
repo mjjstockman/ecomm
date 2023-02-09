@@ -73,7 +73,11 @@
 <div class="container mb-3">
     <h1>FAQ!</h1>
     <h1>We hear you may have a question for Get Wurst?</h1>
+    {% if user.is_authenticated %}
     <a href="#ask-question" class="btn btn-primary my-3">Ask Question</a>
+    {% else %}
+    PLEASE LOG IN TO INTERACT 
+    {% endif %}
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate id 
         porro adipisci quas iste error ea vero recusandae, laboriosam corrupti, 
         tempore necessitatibus maiores ipsam praesentium ut? Aspernatur, eaque. 
@@ -127,6 +131,7 @@
                          {% if not forloop.last %}
                          <hr>
                          {% endif %}
+                        
                         {% endif %}
                     {% endfor %}
 
@@ -144,6 +149,7 @@
     </div>
 </div>
 
+{% if user.is_authenticated %}
 <div class="container">
     <form action="{% url 'question' %}" id="ask-question" method="post">
         {% csrf_token %}
@@ -151,6 +157,7 @@
         <input type="submit" class="btn btn-primary" value="Submit Question">
     </form>
 </div>
+{% endif %}
 {% endblock %}
 
 {% block postloadjs %}
