@@ -130,6 +130,5 @@ def delete(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    context = {"product": product}
     messages.success(request, "Product deleted!")
-    return render(request, "products/all.html", context)
+    return redirect(reverse("products"))
