@@ -179,7 +179,9 @@ h6 {
   border-radius: 0;
 }
 
-
+a.nav-link {
+  color: var(--gw-dark);
+}
 /* links */
 
 a:link {
@@ -191,11 +193,17 @@ a:visited {
 }
 
 a:hover {
-    color:var(--gw-link-hover);
+    color: var(--gw-link-hover);
+}
+
+a.nav-link:hover {
+  border-bottom: 3px solid #47390b;
+  /* color: #fff; */
 }
 
 a.nav-link {
-  color:var(--gw-dark)
+  color: var(--gw-dark);
+  border-bottom: 3px solid transparent;
 }
 
 #footer {
