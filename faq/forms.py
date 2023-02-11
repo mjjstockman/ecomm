@@ -14,6 +14,9 @@ class QuestionForm(forms.ModelForm):
         labels = {
             'body': 'Question',
         }
+        help_texts = {
+                'email_on_answer': 'Tick if you\'d like an email when your question in answered.'
+        }
 
 
 class AnswerForm(forms.ModelForm):
@@ -28,3 +31,4 @@ class AnswerForm(forms.ModelForm):
         labels = {
             'body': 'Submit answer',
         }
+        
