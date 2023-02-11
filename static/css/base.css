@@ -1,5 +1,3 @@
-/* Allows h-100 and vertical centering */
-
 :root{
   --gw-primary-color: #EFC102;
   --gw-primary-lighter-color: #F0E582;
@@ -196,14 +194,12 @@ a:hover {
     color: var(--gw-link-hover);
 }
 
-a.nav-link:hover {
-  border-bottom: 3px solid #47390b;
-  /* color: #fff; */
-}
-
 a.nav-link {
   color: var(--gw-dark);
-  border-bottom: 3px solid transparent;
+} 
+
+a.nav-link:hover {
+  color: #DD6031;
 }
 
 #footer {
@@ -229,20 +225,6 @@ a.nav-link {
 
 html {
   height: 100%;
-}
-
-.image-flash {
-  position: absolute;
-  bottom: 5%;
-  min-width: 30%;
-  left: -2px;
-  background-color: #23BBBB;
-}
-
-.author {
-  color: white;
-  margin: 4px;
-  text-transform: uppercase;
 }
 
 abbr {
@@ -276,10 +258,7 @@ body {
   background-color: red;
 }
 
-
-
 .nav-link {
-  /* font-size: clamp(1.025rem, 1.0662rem + 0.2941vw, 1.1rem); */
   font-size: clamp(1.025rem, 0.9897rem + 0.1765vw, 1.1rem);
 }
 
@@ -293,23 +272,19 @@ h1 {
 
 h2 {
   font-size: clamp(1.6875rem, 1.5404rem + 0.7353vw, 2rem);
-
 }
 
-/* NOTN USED YET, CHANGE ALL h4's to h3's, h5's to h4 etc */
 h3 {
   font-size: clamp(1.5625rem, 1.4743rem + 0.4412vw, 1.75rem);
 }
 
 h4 {
-
   font-size: clamp(1.375rem, 1.3162rem + 0.2941vw, 1.5rem);
 }
 
 h5 {
   font-size: clamp(1.25rem, 1.2206rem + 0.1471vw, 1.3125rem);
 }
-
 
 @media only screen and (max-width: 370px) {
   #nav-logo {
