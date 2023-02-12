@@ -86,7 +86,7 @@
     <!-- CORRECT ARIA-CONTROLS VALUE??????????????????????????? -->
     <button class="btn btn-primary border border-dark border-5 border-bottom-0" onclick="toggleFaq()" id="faqToggle"
         type="button" data-bs-toggle="collapse"
-        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand
+        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand All
     </button>
 
     <div class="accordion border border-5 border-dark" id="faqAccordion">
@@ -164,10 +164,10 @@
     <script>
         function toggleFaq() {
             var text = document.getElementById("faqToggle");
-            if (text.innerHTML === "Expand") {
-                text.innerHTML = "Collapse";
+            if (text.innerHTML === "Collapse All") {
+                text.innerHTML = "Expand All";
             } else {
-                text.innerHTML = "Expand";
+                text.innerHTML = "Collapse All";
             }
         }
     </script>
