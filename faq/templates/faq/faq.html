@@ -83,10 +83,10 @@
         tempore necessitatibus maiores ipsam praesentium ut? Aspernatur, eaque. 
         Dolorem, placeat.</p>
 
-
+    <!-- CORRECT ARIA-CONTROLS VALUE??????????????????????????? -->
     <button class="btn btn-primary border border-dark border-5 border-bottom-0" onclick="toggleFaq()" id="faqToggle"
         type="button" data-bs-toggle="collapse"
-        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand All
+        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand
     </button>
 
     <div class="accordion border border-5 border-dark" id="faqAccordion">
@@ -164,10 +164,10 @@
     <script>
         function toggleFaq() {
             var text = document.getElementById("faqToggle");
-            if (text.innerHTML === "Expand All") {
-                text.innerHTML = "Collapse All";
+            if (text.innerHTML === "Expand") {
+                text.innerHTML = "Collapse";
             } else {
-                text.innerHTML = "Expand All";
+                text.innerHTML = "Expand";
             }
         }
     </script>
