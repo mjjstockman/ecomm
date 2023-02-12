@@ -56,8 +56,8 @@ h6 {
   border-radius: 0;
 }
 
-.accordion-button:not(.collapsed) {
-  background-color: var(--gw-primary-lighter-color);
+.accordion-button {
+  background-color: var(--gw-primary-lighter-color) !important;
 }
 
 .accordion {
@@ -242,6 +242,7 @@ body {
     height: 40vh;
     object-fit: cover;
     max-height: 200px;
+    min-width: 100px;
 }
 
 .hero-img {
