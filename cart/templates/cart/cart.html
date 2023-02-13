@@ -66,8 +66,8 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info" role='button'><small>Update</small></a>
-                            <a class="remove-item text-danger" role='button'
+                            <a class="text-info" role='button'><small>Update</small></a>
+                            <a class="text-danger" role='button'
                                 id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3 w-25">
@@ -82,13 +82,13 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn btn-primary btn-lg">
+                            <a href="{% url 'products' %}" class="btn btn-primary">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btn-cta btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-cta">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
