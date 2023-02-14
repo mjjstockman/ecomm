@@ -287,6 +287,13 @@ h5 {
   font-size: clamp(1.25rem, 1.2206rem + 0.1471vw, 1.3125rem);
 }
 
+
+/* Stripe */
+.stripe-style-input,
+.StripeElement {
+  border: 3px solid var(--gw-dark) !important;
+}
+
 @media only screen and (max-width: 370px) {
   #nav-logo {
     width: 200px;
