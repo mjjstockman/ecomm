@@ -45,6 +45,7 @@
 
     {% block extra_js %}
     {% endblock %}
+
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ STATIC_URL }}apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ STATIC_URL }}favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ STATIC_URL }}favicon-16x16.png">
@@ -111,6 +112,13 @@
             bsToast.show();
         })
     </script>
+
+    <script>
+        const activePage = window.location.pathname;
+        console.log(activePage);
+        // console.log("tgdsgdsgfds");
+    </script>
+
     {% endblock %}
 </body>
 

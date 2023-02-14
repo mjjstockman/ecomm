@@ -214,6 +214,10 @@ a.nav-link:hover {
   color: var(--gw-dark);
 }
 
+.nav-link a {
+  color: var(--gw-dark);
+}
+
 #footer a {
   color: var(--gw-dark);
 }
