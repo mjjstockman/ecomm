@@ -114,10 +114,32 @@
     </script>
 
     <script>
-        const activePage = window.location.pathname;
-        console.log(activePage);
-        // console.log("tgdsgdsgfds");
+        const navLinkEls = document.querySelectorAll('.nav-link');
+        const windowPathname = window.location.pathname;
+
+        navLinkEls.forEach(navLinkEl => {
+            if (navLinkEl.href.includes(windowPathname)) {
+                navLinkEl.classList.add('active');
+            }
+        })
+        // var activePage = window.location.pathname;
+        // var navLink = document.querySelectorAll('nav-link')
+        // console.log(activePage);
+        // for (var i = 0; i < navLink.length; i++) { navLink[i].addEventListener("click", function() { var
+        //     current=document.getElementsByClassName("active"); current[0].className=current[0].className.replace(" active", "" ); this.className +=" active" ; }); }
+        // console.log(navLink[0]);
+        // Get the container element
+        // var btnContainer = document.getElementById("myDIV");
+        // var btnContainer = document.getElementsByClassName(nav-link);
+
+        // Get all buttons with class="btn" inside the container
+        // var btns = getElementsByClassName("a.nav-link");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        // for (var i = 0; i < btns.length; i++) { btns[i].addEventListener("click", function() { var
+        //     current=document.getElementsByClassName("active"); current[0].className=current[0].className.replace("active", "" ); this.className +=" active" ; }); }
     </script>
+
 
     {% endblock %}
 </body>

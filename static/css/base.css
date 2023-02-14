@@ -198,8 +198,9 @@ a.nav-link {
   color: var(--gw-dark);
 } 
 
-a.nav-link:hover {
-  color: #DD6031;
+a.nav-link:hover,
+.active {
+  color: #DD6031 !important;
 }
 
 #footer {
@@ -214,9 +215,7 @@ a.nav-link:hover {
   color: var(--gw-dark);
 }
 
-.nav-link a {
-  color: var(--gw-dark);
-}
+
 
 #footer a {
   color: var(--gw-dark);
@@ -259,10 +258,6 @@ body {
   border: 5px solid var(--gw-dark);
 }
 
-.hover-link {
-  background-color: red;
-}
-
 .nav-link {
   font-size: clamp(1.025rem, 0.9897rem + 0.1765vw, 1.1rem);
 }
@@ -290,6 +285,10 @@ h4 {
 h5 {
   font-size: clamp(1.25rem, 1.2206rem + 0.1471vw, 1.3125rem);
 }
+/* 
+.active {
+  color: #DD6031 !important;
+} */
 
 
 /* Stripe */
