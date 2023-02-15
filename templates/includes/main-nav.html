@@ -27,41 +27,54 @@
                      </ul>
                  </li>
                  {% endif %}
+                 
                  {% if user.is_authenticated %}
                  
                  <li class="nav-item order-lg-1 ms-lg-auto">
-                    
-                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                     <a class="nav-link"
+                         href="{% url 'account_logout' %}">Logout</a>
                  </li>
                  {% else %}
+                 {% with url_name=request.resolver_match.url_name %}
                  <li class="nav-item order-lg-1 ms-lg-auto">
-                     <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+                     <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}"
+                         href="{% url 'account_signup' %}">Signup</a>
                  </li>
+                 
                  <li class="nav-item order-lg-2">
-                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                     <a class="nav-link {% if url_name == 'account_login' %}active{% endif %}"
+                         href="{% url 'account_login' %}">Login</a>
                  </li>
+                 {% endwith %}
 
                  {% endif %}
+                 {% with url_name=request.resolver_match.url_name %}  
+                 
                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'products' %}">
+                     <a class="nav-link"
+                         href="{% url 'products' %}">
                          <i class="fa-solid fa-book-open"></i>
-                         Menu
+                         Menu                        
                      </a>
                  </li>
+                 
                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'faq' %}">
+                     <a class="nav-link {% if url_name == 'faq' %}active{% endif %}" href="{% url 'faq' %}">
                          <i class="fa-solid fa-circle-question"></i>
                          <abbr title="Frequently Asked Questions">FAQs</abbr>
+                         
                      </a>
                  </li>
+                 
                   <li class="nav-item">
-                      <a class="nav-link" href="{% url 'events_all' %}">
+                      <a class="nav-link {% if url_name == 'events_all' %}active{% endif %}" href="{% url 'events_all' %}">
                         <i class="fa-solid fa-cake-candles"></i>
                         Events
                       </a>
                   </li>
+                  
                  <li class="nav-item list-inline-item">
-                     <a class="nav-link" href="{% url 'view_cart' %}">
+                     <a class="nav-link {% if url_name == 'view_cart' %}active{% endif %}" href="{% url 'view_cart' %}">
                          <i class="fa-solid fa-basket-shopping"></i>
                          Cart
                          {% if total %}
@@ -74,7 +87,7 @@
                  {% if user.is_authenticated %}
                  <li class="nav-item">
                      <a class="nav-link" href="{% url 'profile' %}">
-                         <i class="fa-solid fa-user"></i>
+                         <i class="fa-solid fa-user{% if url_name == 'profile' %}active{% endif %}"></i>
                          My Profile
                      </a>
                  </li>
@@ -82,6 +95,7 @@
                      <p class="navbar-text nav-color">Hi, {{ user.get_username }}</p>
                  </li> -->
                  {% endif %}
+                 {% endwith %}
              </ul>
          </div>
      <!-- </div> -->
