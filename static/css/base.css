@@ -290,7 +290,10 @@ h5 {
   color: #DD6031 !important;
 } */
 
-
+.qty_input {
+  /* background-color: pink; */
+  min-width: 26px !important;
+}
 /* Stripe */
 .stripe-style-input,
 .StripeElement {
@@ -300,5 +303,14 @@ h5 {
 @media only screen and (max-width: 370px) {
   #nav-logo {
     width: 200px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .qty_input {
+    /* background-color: pink; */
+    min-width: 26px !important;
+    padding: 0 !important;
+    /* margin: 0 !important; */
   }
 }
