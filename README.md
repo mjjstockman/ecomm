@@ -54,7 +54,7 @@ This is a fictional website (for educational purposes) for a street food company
 
 ## User Demographics
 
-The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community.
+The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community
 
 [Back to top ⇧](#Setlist-Sharer)
 ## User Stories
