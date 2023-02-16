@@ -33,11 +33,14 @@
                  {% endif %}
                  
                  {% if user.is_authenticated %}
+                 {% with url_name=request.resolver_match.url_name %}
                  
                  <li class="nav-item order-lg-1 ms-lg-auto">
-                     <a class="nav-link"
+                     <a class="nav-link {% if url_name == 'account_logout' %}active{% endif %}"
                          href="{% url 'account_logout' %}">Logout</a>
                  </li>
+                 {% endwith %}
+
                  {% else %}
                  {% with url_name=request.resolver_match.url_name %}
                  <li class="nav-item order-lg-1 ms-lg-auto">
