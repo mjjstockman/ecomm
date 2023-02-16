@@ -11,11 +11,15 @@
          <div class="collapse navbar-collapse" id="mainNavContent">
              <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 text-center">
                  {% if user.is_superuser %}
+                 {% with url_name=request.resolver_match.url_name %}
                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <a class="nav-link dropdown-toggle {% if url_name == 'add_product' %}active{% endif %}" href="#"
+                         id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                          <i class="fa-solid fa-clipboard-list"></i>
                          Product Management
                      </a>
+                     <!-- {{ url_name }} -->
+                    {% endwith %}
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                          <li>
                              <a class="dropdown-item text-center" href="{% url 'products' %}">Update or Delete
@@ -51,10 +55,10 @@
                  {% with url_name=request.resolver_match.url_name %}  
                  
                  <li class="nav-item">
-                     <a class="nav-link"
+                     <a class="nav-link {% if url_name == 'products' %}active{% endif %}"
                          href="{% url 'products' %}">
                          <i class="fa-solid fa-book-open"></i>
-                         Menu                        
+                         Menu                      
                      </a>
                  </li>
                  
@@ -86,7 +90,7 @@
                  </li>
                  {% if user.is_authenticated %}
                  <li class="nav-item">
-                     <a class="nav-link" href="{% url 'profile' %}">
+                     <a class="nav-link {% if url_name == 'profile' %}active{% endif %}" href="{% url 'profile' %}">
                          <i class="fa-solid fa-user{% if url_name == 'profile' %}active{% endif %}"></i>
                          My Profile
                      </a>
