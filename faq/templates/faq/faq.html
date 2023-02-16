@@ -105,7 +105,6 @@
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body border-0">
                     {% for answer in question.question_answer.all %}
-                    <!-- {{ question.question_answer.all }} -->
                         {% if answer.status == 1 %}
                         <p>{{ answer.body | safe }}</p>
                             {% if user.is_authenticated %}
@@ -120,7 +119,6 @@
                                             value="{{ answer.id }}"><i class="fa-regular fa-thumbs-up"></i>
                                         </button>
                                      {% endif %}
-                                    <!-- <input type="hidden" name="next" value=" {{ answer.id }}"> -->
                                 </form>
                                 <span class="d-inline-block mb-3" >Liked by {{ answer.like.all.count }}
                                 user{{ answer.like.all.count|pluralize }}</span>     
@@ -131,11 +129,8 @@
                          {% if not forloop.last %}
                          <hr>
                          {% endif %}
-                        
                         {% endif %}
                     {% endfor %}
-
-
                     {% if user.is_authenticated %}
                     <form action="{% url 'answer' question.id %}" method="post">
                         {% csrf_token %}

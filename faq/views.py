@@ -42,7 +42,7 @@ def answer(request, pk):
         else:
             context = {
                 "answer_form": answer_form,
-                "liked": liked
+                "liked": liked,
                 }
             return render(request, "faq/faq.html", context)
 
