@@ -134,7 +134,6 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-# ADDED BELOW TO GET django.db.utils.ProgrammingError: column "author_id" of relation "faq_answer" already exists ERROR
 else:
     DATABASES = {
         "default": {
