@@ -19,10 +19,10 @@
                          Product Management
                      </a>
                      <!-- {{ url_name }} -->
-                    {% endwith %}
+                    
                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                          <li>
-                             <a class="dropdown-item text-center" href="{% url 'products' %}">Update or Delete
+                             <a class="dropdown-item text-center " href="{% url 'products' %}">Update or Delete
                                  Product</a>
                          </li>
                          <li>
@@ -30,6 +30,7 @@
                          </li>
                      </ul>
                  </li>
+                 {% endwith %}
                  {% endif %}
                  
                  {% if user.is_authenticated %}
