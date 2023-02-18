@@ -101,6 +101,9 @@
                 aria-labelledby="heading{{question.id}}"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body border-0">
+                    {% if not question.question_answer.all %}
+                        SOZ, NO ANSWER YET!
+                    {% endif %}
                     {% for answer in question.question_answer.all %}
                         {% if answer.status == 1 %}
                         <p>{{ answer.body | safe }}</p>
