@@ -60,9 +60,9 @@ vegetarian, veg, food for events, best in Sheffield">
 {% endblock %}
 {% block extra_title %}Home{% endblock %}
 {% block content %}
-<section class="container">
+<section class="container-fluid ps-3 ps-md-5">
     <div class="row">
-        <div class="col-11">
+        <div class="col-6">
             <h1 class="py-3">Banging <span class="secondary-color">BRATWURSTS.</span></h1>
             <h1 class="py-3">Proper <span class="secondary-color">CHICKEN.</span></h1>
             <h1 class="py-3">And now.......<br><span class="secondary-color">BURGERS.</span></h1>
@@ -72,9 +72,8 @@ vegetarian, veg, food for events, best in Sheffield">
                 </h4>
             </div>
         </div>
-        <div class="col-1">
-            <img src="{{ MEDIA_URL }}hero-burger.png" class="hero-img"
-                alt="A delicous looking double cheese burger">
+        <div class="col-6 overflow-hidden">
+            <img src="{{ MEDIA_URL }}hero-burger.png" class="hero-img" alt="A delicous looking double cheese burger">
         </div>   
     </div> 
 </section>

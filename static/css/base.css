@@ -254,7 +254,7 @@ body {
 .hero-img {
   height:60vh;
   max-height: 400px;
-  transform: translateX(-25%);
+  /* transform: translateX(-25%); */
 }
 
 .thick-border {
