@@ -25,6 +25,9 @@
   --gw-font-size-: clamp(4.25rem, 1.3077rem + 13.0769vw, 12.75rem);
 }
 
+.toast-header {
+  background-color: var(--gw-primary-lighter-color);
+}
 
 .select {
   border: 3px solid var(--gw-dark);
