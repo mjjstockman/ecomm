@@ -1,6 +1,6 @@
 <div class="col-md-6 col-lg-4 mb-3">
-    <div class="card thick-border">
-        <div class="card-body">
+    <div class="card">
+        <div class="card-body thick-border">
             <div class="image-container">
                 <!-- ADD ARIA LABEL -->
                 <a href="{% url 'product_detail' product.id %}">
@@ -20,7 +20,6 @@
                 <a href="{% url 'product_detail' product.id %}" class="card-link btn btn-cta" role="button">
                     See More Info
                 </a>
-                <!-- Button trigger modal -->
                 {% if request.user.is_superuser %}
                 <hr>
                 <div class="card-body">
@@ -34,7 +33,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- Modal -->
                 <div class="modal custom-modal fade" id="deleteProductModal{{ product.id }}" tabindex="-1"
                     aria-labelledby="deleteProductModalLabel{{ product.id }}"
                     aria-hidden="true">
@@ -55,27 +53,9 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- closes modal -->
+                </div> 
                 {% endif %}
-                <!-- close superuser-->
             </div>
         </div>
     </div>
 </div>
-
-<!-- <script>
-
-    const cardImages = document.querySelectorAll('.card-img');
-
-    cardImages.forEach(img => img.addEventListener('mouseover', (event) => {
-        const link = event.target.parentNode.parentNode.parentNode.children[1].children[0];
-        link.style.color = 'darkblue';
-    }));
-
-
-    cardImages.forEach(img => img.addEventListener('mouseleave', (event) => {
-        const link = event.target.parentNode.parentNode.parentNode.children[1].children[0];
-        link.style.color = 'lightblue';
-    }));
-
-</script> -->

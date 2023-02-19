@@ -48,9 +48,9 @@ html {
   border-radius: 0;
 }
 
-.select {
+/* .select {
   border: 3px solid var(--gw-dark);
-}
+} */
 
 
 /* Colours */
@@ -117,14 +117,13 @@ h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: var(--gw-cta-btn-dark);
   --bs-btn-hover-border-color: var(--gw-cta-btn-darker);
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--gw-cta-btn-darker);
   --bs-btn-active-border-color: var(--gw-cta-btn-darkest);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: var(--gw-cta-btn-main);
-  --bs-btn-disabled-border-color: var(--gw-cta-btn-main);
+  /* --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
+  /* --bs-btn-disabled-color: #fff; */
+  /* --bs-btn-disabled-bg: var(--gw-cta-btn-main); */
+  /* --bs-btn-disabled-border-color: var(--gw-cta-btn-main); */
 }
 
 .btn-primary {
@@ -134,31 +133,14 @@ h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: var(--gw-btn-dark);
   --bs-btn-hover-border-color: var(--gw-btn-darker);
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
+  /* --bs-btn-focus-shadow-rgb: 49, 132, 253; */
+  /* --bs-btn-active-color: #fff; */
   --bs-btn-active-bg: var(--gw-btn-darker);
   --bs-btn-active-border-color: var(--gw-btn-darkest);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: var(--gw-btn-main);
-  --bs-btn-disabled-border-color: var(--gw-btn-main);
-}
-
-.btn-secondary {
-  --bs-btn-color: var(--gw-dark);
-  --bs-btn-bg: #7BF1A8;
-  --bs-btn-border-color: var(--gw-dark);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: var(--gw-btn-dark);
-  --bs-btn-hover-border-color: var(--gw-btn-darker);
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: var(--gw-btn-darker);
-  --bs-btn-active-border-color: var(--gw-btn-darkest);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: var(--gw-btn-main);
-  --bs-btn-disabled-border-color: var(--gw-btn-main);
+  /* --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
+  /* --bs-btn-disabled-color: #fff; */
+  /* --bs-btn-disabled-bg: var(--gw-btn-main); */
+  /* --bs-btn-disabled-border-color: var(--gw-btn-main); */
 }
 
 
@@ -236,31 +218,14 @@ abbr {
   border: 3px solid var(--gw-dark);
 }
 
-
 /* Card */
-/* .card {
-  --bs-card-border-color: var(--gw-dark);
-  --bs-card-border-width: 5px;
-  --bs-card-border-radius: 0;
-} */
-
 .card-img {
-  border-radius: 0;
-}
-
-.card-img {
-  width: 100%;
-  height: 40vh;
   object-fit: cover;
-  max-height: 200px;
+  width: 100%;
   min-width: 100px;
-}
-
-
-/* Modal */
-.modal-content {
+  height: 40vh;
+  max-height: 200px;
   border-radius: 0;
-  border: 5px solid var(--gw-dark);
 }
 
 
@@ -269,14 +234,7 @@ abbr {
   background-color: var(--gw-primary-lighter-color);
 }
 
-
-/* Form */
-.form-control {
-  color: var(--gw-dark);
-  border: 3px solid var(--gw-dark);
-  border-radius: 0;
-}
-
+/* Forms */
 .form-comtrol-pend {
   background-color: var(--gw-primary-lighter-color);
   border: 3px solid var(--gw-dark);
@@ -284,17 +242,7 @@ abbr {
 
 .form-check-input[type=checkbox] {
   border: 3px solid var(--gw-dark);
-}
-
-.form-check-input[type=checkbox] {
   border-radius: 0;
-}
-
-/* WHT NEEDED?? WHY DIFFERENTLY STYLED TO SIGN IN FORM??????z */
-#signup_form p input {
-  border: 3px solid var(--gw-dark);
-  width: 100%;
-  height: 42px;
 }
 
 
