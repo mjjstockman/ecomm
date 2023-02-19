@@ -298,11 +298,11 @@ h5 {
   }
 }
 
-@media only screen and (min-width: 576px) {
+/* @media only screen and (min-width: 576px) {
   #hero-txt {
     padding-left: 10vw;
   }
-}
+} */
 
 @media only screen and (max-width: 575px) {
   .sm-no-border {
