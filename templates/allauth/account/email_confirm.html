@@ -8,6 +8,7 @@
 
 {% block content %}
 <!-- change style -->
+<div class="container border border-5 border-dark sm-no-border p-4">
 <h1>{% trans "Confirm E-mail Address" %}</h1>
 
 {% if confirmation %}
@@ -20,7 +21,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
     {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button type="submit" class="btn btn-primary">{% trans 'Confirm' %}</button>
 </form>
 
 {% else %}
@@ -31,5 +32,5 @@
         e-mail confirmation request</a>.{% endblocktrans %}</p>
 
 {% endif %}
-
+</div>
 {% endblock %}
