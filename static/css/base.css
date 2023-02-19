@@ -300,7 +300,7 @@ h5 {
 
 @media only screen and (min-width: 576px) {
   #hero-txt {
-    border: 0px solid !important;
+    padding-left: 10vw;
   }
 }
 
