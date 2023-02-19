@@ -1,24 +1,23 @@
 /* Allows h-100 and vertical centering */
 
 :root{
+  /* colours */
   --gw-primary-color: #EFC102;
   --gw-primary-lighter-color: #F0E582;
-  --gw-secondary-color: #7BF1A8;
   --gw-dark: #090C08;
-  --gw-btn-txt: #709255;
 
+  /* cta button */
   --gw-cta-btn-main: #FF6F59;
   --gw-cta-btn-dark: #D64C3A;
   --gw--cta-btn-darker: #AE261D;
   --gw-cta-btn-darkest: #860000;
 
+  /* primary btn */
   --gw-btn-main: #9DD9D2;
   --gw-btn-dark: #71ABA5;
   --gw-btn-darker: #46807A;
   --gw-btn-darkest: #1A5751;
 }
-
-
 
 .accordion-button:not(.collapsed) {
   background-color: var(--gw-primary-lighter-color);
@@ -34,12 +33,7 @@
 
 .btn {
   --bs-btn-border-radius: 0;
-
-
 }
-
-
-
 
 .btn-primary {
   --bs-btn-color: var(--gw-dark);
