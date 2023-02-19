@@ -21,7 +21,7 @@
   --gw-link-visited: #2F6990;
   --gw-link-hover: #578DB6;
 
-  /* Typography */
+  /* Text sizing */
   --gw-font-size: clamp(1rem, 0.3077rem + 3.0769vw, 3rem);
   --gw-font-size-2: clamp(1.625rem, 0.5rem + 5vw, 4.875rem);
   --gw-font-size-1: clamp(2.625rem, 0.8077rem + 8.0769vw, 7.875rem);
@@ -37,12 +37,15 @@ html {
   height: 100%;
 }
 
+
 .thin-border {
   border: 3px solid var(--gw-dark);
+  border-radius: 0;
 }
 
 .thick-border {
   border: 5px solid var(--gw-dark);
+  border-radius: 0;
 }
 
 .select {
@@ -235,11 +238,11 @@ abbr {
 
 
 /* Card */
-.card {
+/* .card {
   --bs-card-border-color: var(--gw-dark);
   --bs-card-border-width: 5px;
   --bs-card-border-radius: 0;
-}
+} */
 
 .card-img {
   border-radius: 0;
