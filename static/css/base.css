@@ -37,7 +37,7 @@ html {
   height: 100%;
 }
 
-
+/* Borders */ 
 .thin-border {
   border: 3px solid var(--gw-dark);
   border-radius: 0;
@@ -46,6 +46,11 @@ html {
 .thick-border {
   border: 5px solid var(--gw-dark);
   border-radius: 0;
+}
+
+.form-control {
+    border: 3px solid var(--gw-dark);
+    border-radius: 0;
 }
 
 /* .select {
