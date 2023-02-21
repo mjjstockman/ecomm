@@ -13,26 +13,19 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add the specified product and quantity to cart """
     product = get_object_or_404(Product, pk=item_id)
-    # quantity will be a str from template so convert to int
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    # create a session
-    # if cart var exists add to session, if not make new cart dict
     cart = request.session.get('cart', {})
 
-    # if cart dict already contains the item_id...
     if item_id in list(cart.keys()):
-        # ... increment quantity
         cart[item_id] += quantity
         messages.success(
             request,
             f'Updated { product.name } quantity to {cart[item_id]}')
     else:
-        # or add the item_id with quantity
         cart[item_id] = quantity
         messages.success(request, f'Added { product.name } to your cart')
 
-    # add cart to session
     request.session['cart'] = cart
     return redirect(redirect_url)
 
@@ -41,7 +34,6 @@ def adjust_cart(request, item_id):
     """ Adjust the quantity of the specified product """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-
     cart = request.session.get('cart', {})
 
     if quantity > 0:
