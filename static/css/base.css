@@ -274,6 +274,7 @@ abbr {
 @media only screen and (max-width: 370px) {
   #nav-logo {
     width: 200px;
+    height: 100px;
   }
 }
 

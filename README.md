@@ -1398,6 +1398,10 @@ Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/seo.png)
 
 (static/images/readme/bugs/link-vs-btn.png)
 
+## What did
+Gave logo explicit width and height.
+
+
 
 
 ### Manual tests
