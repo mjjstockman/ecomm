@@ -1377,10 +1377,28 @@ class CustomClearableFileInput(ClearableFileInput):
                      custom_clearable_file_input.html"
 ### Lighthouse
 
-- Initial report showed only 90% on accesibility, which has been imporoved by adding missing aria-labels. 
-- Performance could be further improved by analysing the file types of images. Also the heroku app starts really slowly as I have free subscription.
+- Initial Lighthouse reports can be seen below
 
-![lighthouse report](README_docs/lighthouse.PNG)
+<!-- CHANGE CHANGE CHANGE LINK CHANGE CHANGE CHANGE -->
+![lighthouse report]((static/images/readme/lighthouse/first/lighthouse report viewer.dpf))
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/overall.png)
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/accessibility.png)
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/best-practices.png)
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/performance.png)
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/pwa.png)
+
+Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/seo.png)
+
+(static/images/readme/bugs/link-vs-btn.png)
+
+(static/images/readme/bugs/link-vs-btn.png)
+
+
 
 ### Manual tests
 
