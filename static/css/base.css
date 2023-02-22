@@ -60,7 +60,7 @@ html {
 
 /* Colours */
 .secondary-color {
-  color: var(--gw-btn-main);
+  color: var(--gw-primary-lighter-color);
 }
 
 #footer {
