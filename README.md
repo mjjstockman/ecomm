@@ -1375,6 +1375,7 @@ class CustomClearableFileInput(ClearableFileInput):
     input_text = _("")
     template_name = "products/custom_widget_templates/\
                      custom_clearable_file_input.html"
+
 ### Lighthouse
 
 - Initial Lighthouse reports can be seen below
@@ -1389,6 +1390,12 @@ Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/accessibility.
 Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/best-practices.png)
 
 Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/performance.png)
+
+The following article helped to improve elimination of render blocking resources:
+https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources/
+
+Used Crirical Path CSS Generator (https://www.sitelocity.com/critical-path-css-generator)
+to identify the critical paths.
 
 Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/pwa.png)
 
