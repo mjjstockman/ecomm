@@ -1394,8 +1394,15 @@ Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/performance.pn
 The following article helped to improve elimination of render blocking resources:
 https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources/
 
-Used Crirical Path CSS Generator (https://www.sitelocity.com/critical-path-css-generator)
-to identify the critical paths.
+
+Eliminate render-blocking resources
+(static/images/readme/lighthouse/first.coverage.png)
+
+Main render-blocking resources are Stripe (with 447,926 bytes and 78% being unused) and Bootstrap (with 194,696 and 87 % being unused).
+It was decided not to purge these of unused CSS incase the project needs expanding on or revision at a future date.
+
+
+Used Crirical Path CSS Generator (https://jonassebastianohlsson.com/criticalpathcssgenerator/). CAN"T WORJ OUT AT MO!!!!!!!!!!!
 
 Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/pwa.png)
 
