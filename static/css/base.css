@@ -258,13 +258,17 @@ abbr {
   min-width: 26px !important;
 }
 
+#nav-logo {
+  width: 250px;
+  height: 100px;
+}
 
 /* Media Queries */
 
 @media only screen and (max-width: 370px) {
   #nav-logo {
     width: 200px;
-    height: 100px;
+    height: 80px;
   }
 }
 
