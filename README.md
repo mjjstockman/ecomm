@@ -1401,6 +1401,9 @@ Eliminate render-blocking resources
 Main render-blocking resources are Stripe (with 447,926 bytes and 78% being unused) and Bootstrap (with 194,696 and 87 % being unused).
 It was decided not to purge these of unused CSS incase the project needs expanding on or revision at a future date.
 
+Correct ratio of logo
+[IMG ALT DESC HERE](static/images/readme/lighthouse/first/logo-ratio.png)
+(static/images/readme/lighthouse/first/logo-ratio.png)
 
 Used Crirical Path CSS Generator (https://jonassebastianohlsson.com/criticalpathcssgenerator/). CAN"T WORJ OUT AT MO!!!!!!!!!!!
 
