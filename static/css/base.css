@@ -5,9 +5,9 @@
   --gw-dark: #090C08;
 
   /* CTA Button */
-  --gw-cta-btn-main: #FF6F59;
-  --gw-cta-btn-dark: #D64C3A;
-  --gw--cta-btn-darker: #AE261D;
+  --gw-cta-btn-main: #FFB8E4;
+  --gw-cta-btn-dark: #CF8BB6;
+  --gw--cta-btn-darker: #A1618A;
   
   /* Primary Btn */
   --gw-btn-main: #9DD9D2;
@@ -16,9 +16,10 @@
   --gw-btn-darkest: #1A5751;
 
   /* Links */
-  --gw-link: #7EB2DD;
-  --gw-link-visited: #2F6990;
-  --gw-link-hover: #578DB6;
+  --gw-link: #25598E;
+  --gw-link-hover: #1D426D;
+  --gw-link-visited: #153251;
+
 
   /* Text sizing */
   --gw-font-size: clamp(1rem, 0.3077rem + 3.0769vw, 3rem);
@@ -138,9 +139,9 @@ a:link {
   color: var(--gw-link);
 }
 
-a:visited {
+/* a:visited {
   color: #800080;
-}
+} */
 
 a:hover {
   color: var(--gw-link-hover);
