@@ -196,6 +196,18 @@ abbr {
   border-radius: 0 !important;
 }
 
+.accordion-button {
+  color: var(--gw-link) !important;
+}
+
+.accordion-button:hover {
+  color: var(--gw-link-hover) !important;
+}
+
+.accordion-button:visited {
+  color: var(--gw-link-visited) !important;
+}
+
 .dropdown-menu {
   border-radius: 0;
   border: 3px solid var(--gw-dark);
