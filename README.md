@@ -1405,7 +1405,7 @@ Correct ratio of logo
 [IMG ALT DESC HERE](static/images/readme/lighthouse/first/logo-ratio.png)
 (static/images/readme/lighthouse/first/logo-ratio.png)
 
-Used Crirical Path CSS Generator (https://jonassebastianohlsson.com/criticalpathcssgenerator/). CAN"T WORJ OUT AT MO!!!!!!!!!!!
+Used Crirical Path CSS Generator (https://jonassebastianohlsson.com/criticalpathcssgenerator/). CAN"T WORJ OUT AT MO!!!!!!!!!!
 
 Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/pwa.png)
 
