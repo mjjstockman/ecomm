@@ -272,17 +272,19 @@ abbr {
   }
 }
 
+@media only screen and (max-width: 376px) {
+  #detail-add-btn {
+    margin-top: 7px;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .sm-no-border {
     border: 0px solid !important;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .qty_input {
-    min-width: 26px !important;
-    /* padding: 0 !important; */
-  }
-}
+
+
 
 
