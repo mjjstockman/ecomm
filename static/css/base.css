@@ -232,11 +232,11 @@ abbr {
 /* Forms */
 .form-control-pend {
   background-color: var(--gw-primary-lighter-color) !important;
-  border: 3px solid var(--gw-dark);
+  border: 3px solid var(--gw-dark) !important;
 }
 
 .form-check-input[type=checkbox] {
-  border: 3px solid var(--gw-dark);
+  border: 3px solid var(--gw-dark) !important;
   border-radius: 0;
 }
 
@@ -281,7 +281,7 @@ abbr {
 @media only screen and (max-width: 767px) {
   .qty_input {
     min-width: 26px !important;
-    padding: 0 !important;
+    /* padding: 0 !important; */
   }
 }
 
