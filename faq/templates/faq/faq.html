@@ -2,13 +2,14 @@
 {% load static %}
 
 {% block extra_meta %}
-    <meta name="description" content="DESCRIPTION">
+    <meta name="description" content="Frequently Asked Questions customers have submitted.
+    Logged in users can ask a question, post an answer and like current answers.">
     <!-- Each page should have a unique description. Page, not site. -->
     <!-- Length can be up to 160 characters on desktop, 130 characters on mobile -->
     <!-- You can have up to 158 description tags (although generally you won't need more than one per page) -->
     <!-- Add a clear call to action, don't duplicate descriptions, include keywords, discounts, or offers if you're selling something -->
 
-    <meta name="keywords" content="KEYWORDS">
+    <meta name="keywords" content="FAQ, F.A.Q., F.A.Qs Frequently Asked Questions, What is a Bratwurst">
     <!-- These are the keywords that your site can be searched with on Google -->
     <!-- Make these single words, relevant to your site, often searched -->
 
@@ -16,7 +17,7 @@
     <!-- This sets the site up to be responsive, known as a responsive design meta tag. Don't use it if your site isn't responsive! -->
     <!-- width makes the page match the screen's width, and initial scale sets the CSS pixels and the device pixels to a 1:1 ratio -->
 
-    <link rel="canonical" href="#">
+    <link rel="canonical" href="https://ecomm-gw.herokuapp.com/faq">
     <!-- This tells search engines to use this URL as the main page, and that it shouldn't index other pages -->
     <!-- So if you have a site with multiple URLs, they're treated as seperate sites. This messes with the SEO, so putting this in
     with the correct link gives you better results, and more accuracy with data tracking -->
@@ -100,8 +101,12 @@
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body border-0">
                     {% if not question.question_answer.all %}
-                        <p>This question hasn't had an approved answer yet. <a
-                                href="{% url 'account_login' %}">Login</a>
+                        <p>This question hasn't had an approved answer yet.
+                            {% if user.is_authenticated %}
+                            Submit an answer below.
+                            {% else %}
+                            {% endif %}
+                            <a href="{% url 'account_login' %}">Login</a>
                             or <a href="{% url 'account_signup' %}">Signup</a> to submit an answer!
                         </p>
                     {% endif %}
@@ -156,11 +161,58 @@
 </div>
 {% endif %}
 
+////////////////////////////////////////////////
 
+<p class="accordion-expand-holder">
+    <a class="accordion-expand-all" href="#">Expand all</a>
+</p>
+<div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
+
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        Section 1
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        Section 2
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        Section 3
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+</div>
+
+///////////////////////////////////////////////////////////////////////////
 {% endblock %}
 
+
+
 {% block postloadjs %}
-    <script>
+    <!-- <script>
         function toggleFaq() {
             var text = document.getElementById("faqToggle");
             if (text.innerHTML === "Collapse All") {
@@ -169,5 +221,54 @@
                 text.innerHTML = "Collapse All";
             }
         }
+    </script> -->
+    <script>
+        var headers = $('#accordion .accordion-header');
+        var contentAreas = $('#accordion .ui-accordion-content ').hide();
+        var expandLink = $('.accordion-expand-all');
+
+        // add the accordion functionality
+        headers.click(function () {
+            var panel = $(this).next();
+            var isOpen = panel.is(':visible');
+
+            // open or close as necessary
+            panel[isOpen ? 'slideUp' : 'slideDown']()
+                // trigger the correct custom event
+                .trigger(isOpen ? 'hide' : 'show');
+
+            // stop the link from causing a pagescroll
+            return false;
+        });
+
+        // hook up the expand/collapse all
+        expandLink.click(function () {
+            var isAllOpen = $(this).data('isAllOpen');
+
+            contentAreas[isAllOpen ? 'hide' : 'show']()
+                .trigger(isAllOpen ? 'hide' : 'show');
+        });
+
+        // when panels open or close, check to see if they're all open
+        contentAreas.on({
+            // whenever we open a panel, check to see if they're all open
+            // if all open, swap the button to collapser
+            show: function () {
+                var isAllOpen = !contentAreas.is(':hidden');
+                if (isAllOpen) {
+                    expandLink.text('Collapse All')
+                        .data('isAllOpen', true);
+                }
+            },
+            // whenever we close a panel, check to see if they're all open
+            // if not all open, swap the button to expander
+            hide: function () {
+                var isAllOpen = !contentAreas.is(':hidden');
+                if (!isAllOpen) {
+                    expandLink.text('Expand all')
+                        .data('isAllOpen', false);
+                }
+            }
+        });
     </script>
 {% endblock %}
