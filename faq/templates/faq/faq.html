@@ -91,6 +91,83 @@
         {% endfor %}
     </div>
 </div>
+//////////////////////////////////////////////////
+<!-- <div class="container mb-3">
+     <button class="btn btn-primary thick-border border-bottom-0 ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"
+        type="button" data-bs-toggle="collapse"
+        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand All
+    </button>
+    <p class="accordion-expand-holder">
+        <a class="accordion-expand-all" href="#">Expand all</a>
+    </p>
+
+    <div class="accordion thick-border ui-accordion ui-widget ui-helper-reset" id="faqAccordion">
+        {% for question in questions %}
+        <div class="accordion-item">
+            <h2 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-corner-all"
+                id="heading{{question.id}}">
+                <button class="accordion-button" type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{question.id}}" aria-expanded="true" 
+                    aria-controls="collapse{{question.id}}">
+                    {{ question.body }}
+                </button>
+            </h2>
+            <div id="collapse{{question.id}}" class="accordion-collapse collapse multi-collapse" 
+                aria-labelledby="heading{{question.id}}"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body border-0">
+                    {% if not question.question_answer.all %}
+                        <p>This question hasn't had an approved answer yet.
+                            {% if user.is_authenticated %}
+                            Submit an answer below.
+                            {% else %}
+                            {% endif %}
+                            <a href="{% url 'account_login' %}">Login</a>
+                            or <a href="{% url 'account_signup' %}">Signup</a> to submit an answer!
+                        </p>
+                    {% endif %}
+                    {% for answer in question.question_answer.all %}
+                        {% if answer.status == 1 %}
+                        <p>{{ answer.body | safe }}</p>
+                            {% if user.is_authenticated %}
+                                <form action="{% url 'like' answer.pk %}" method="POST" class="d-inline">
+                                    {% csrf_token %}
+                                    {% if answer in request.user.like_answer.all %}
+                                        <button type="submit" name="answer_id" class="border-0"
+                                            value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
+                                        </button>
+                                     {% else %}
+                                        <button type="submit" name="answer_id" class="border-0"
+                                            value="{{ answer.id }}"><i class="fa-regular fa-thumbs-up"></i>
+                                        </button>
+                                     {% endif %}
+                                </form>
+                                <span class="d-inline-block mb-3" >Liked by {{ answer.like.all.count }}
+                                user{{ answer.like.all.count|pluralize }}</span>     
+                                {% if forloop.last %}
+                                    <h3>Feel free to submit another answer below!</h3>
+                                {% endif %}
+                            {% endif %} 
+                         {% if not forloop.last %}
+                         <hr>
+                         {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'answer' question.id %}" method="post">
+                        {% csrf_token %}
+                        {{ answer_form | crispy }}
+                        <input type="submit" class="btn btn-primary" value="Submit Answer">
+                    </form>
+                    {% endif %}
+                </div>  
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div> -->
 
 {% if user.is_authenticated %}
 <div class="container">
@@ -102,9 +179,8 @@
 </div>
 {% endif %}
 
-////////////////////////////////////////////////
 
-<p class="accordion-expand-holder">
+<!-- <p class="accordion-expand-holder">
     <a class="accordion-expand-all" href="#">Expand all</a>
 </p>
 <div id="accordion" class="ui-accordion ui-widget ui-helper-reset">
@@ -145,9 +221,53 @@
             odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
         </p>
     </div>
-</div>
+</div> -->
 
-///////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////
+
+<p class="accordion-expand-holder">
+    <a class="accordion-expand-all" href="#">Expand all</a>
+</p>
+<!-- <div id="accordion thick-border" class="ui-accordion ui-widget ui-helper-reset"> -->
+<div id="accordion" class="ui-accordion ui-widget ui-helper-reset thick-border">
+
+
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default accordion-button">
+        Section 1
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        Section 2
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3 class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all">
+        <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+        Section 3
+    </h3>
+    <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+</div>
 {% endblock %}
 
 
@@ -163,53 +283,53 @@
             }
         }
     </script> -->
-    <script>
-        var headers = $('#accordion .accordion-header');
-        var contentAreas = $('#accordion .ui-accordion-content ').hide();
-        var expandLink = $('.accordion-expand-all');
+<script>
+    var headers = $('#accordion .accordion-header');
+    var contentAreas = $('#accordion .ui-accordion-content ').hide();
+    var expandLink = $('.accordion-expand-all');
 
-        // add the accordion functionality
-        headers.click(function () {
-            var panel = $(this).next();
-            var isOpen = panel.is(':visible');
+    // add the accordion functionality
+    headers.click(function() {
+    var panel = $(this).next();
+    var isOpen = panel.is(':visible');
 
-            // open or close as necessary
-            panel[isOpen ? 'slideUp' : 'slideDown']()
-                // trigger the correct custom event
-                .trigger(isOpen ? 'hide' : 'show');
+    // open or close as necessary
+    panel[isOpen? 'slideUp': 'slideDown']()
+    // trigger the correct custom event
+    .trigger(isOpen? 'hide': 'show');
 
-            // stop the link from causing a pagescroll
-            return false;
-        });
+    // stop the link from causing a pagescroll
+    return false;
+    });
 
-        // hook up the expand/collapse all
-        expandLink.click(function () {
-            var isAllOpen = $(this).data('isAllOpen');
+    // hook up the expand/collapse all
+    expandLink.click(function(){
+    var isAllOpen = $(this).data('isAllOpen');
 
-            contentAreas[isAllOpen ? 'hide' : 'show']()
-                .trigger(isAllOpen ? 'hide' : 'show');
-        });
+    contentAreas[isAllOpen? 'hide': 'show']()
+    .trigger(isAllOpen? 'hide': 'show');
+    });
 
-        // when panels open or close, check to see if they're all open
-        contentAreas.on({
-            // whenever we open a panel, check to see if they're all open
-            // if all open, swap the button to collapser
-            show: function () {
-                var isAllOpen = !contentAreas.is(':hidden');
-                if (isAllOpen) {
-                    expandLink.text('Collapse All')
-                        .data('isAllOpen', true);
-                }
-            },
-            // whenever we close a panel, check to see if they're all open
-            // if not all open, swap the button to expander
-            hide: function () {
-                var isAllOpen = !contentAreas.is(':hidden');
-                if (!isAllOpen) {
-                    expandLink.text('Expand all')
-                        .data('isAllOpen', false);
-                }
-            }
-        });
-    </script>
+    // when panels open or close, check to see if they're all open
+    contentAreas.on({
+    // whenever we open a panel, check to see if they're all open
+    // if all open, swap the button to collapser
+    show: function(){
+    var isAllOpen = !contentAreas.is(':hidden');
+    if(isAllOpen){
+    expandLink.text('Collapse All')
+    .data('isAllOpen', true);
+    }
+    },
+    // whenever we close a panel, check to see if they're all open
+    // if not all open, swap the button to expander
+    hide: function(){
+    var isAllOpen = !contentAreas.is(':hidden');
+    if(!isAllOpen){
+    expandLink.text('Expand all')
+    .data('isAllOpen', false);
+    }
+    }
+    });
+</script>
 {% endblock %}
