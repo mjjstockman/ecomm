@@ -80,8 +80,7 @@
     <p>Your question may already have an answer! Check below.</p>
 
     <button class="btn btn-primary thick-border border-bottom-0" onclick="toggleFaq()" id="faqToggle"
-        type="button" data-bs-toggle="collapse"
-        data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="accordion-item">Expand All
+        type="button" aria-expanded="false" aria-controls="accordion-item">Expand All
     </button>
 
     <div class="accordion thick-border" id="faqAccordion">
@@ -95,7 +94,7 @@
                     {{ question.body }}
                 </button>
             </h2>
-            <div id="collapse{{question.id}}" class="accordion-collapse collapse multi-collapse" 
+            <div id="collapse{{question.id}}" class="accordion-collapse collapse " 
                 aria-labelledby="heading{{question.id}}"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body border-0">
@@ -166,12 +165,25 @@
 {% block postloadjs %}
     <script>
         function toggleFaq() {
-            var text = document.getElementById("faqToggle");
-            if (text.innerHTML === "Collapse All") {
-                text.innerHTML = "Expand All";
-            } else {
-                text.innerHTML = "Collapse All";
-            }
+            // get all questions
+            var elements = document.getElementsByClassName("accordion-collapse");
+            // see if have .show
+            // num = elements.classList.contains("show");
+            for (let i = 0; i < elements.length; i++)
+                 { 
+                    // console.log(typeof elements);
+                    elements.classList.includes("show");
+                }
+                //  { elements.classList.add("show") }
+            // console.log(elements.classList.contains("show"));
+
+            // change btn text
+            // var text = document.getElementById("faqToggle");
+            // if (text.innerHTML === "Collapse All") {
+            //     text.innerHTML = "Expand All";
+            // } else {
+            //     text.innerHTML = "Collapse All";
+            // }
         }
     </script>
 {% endblock %}
