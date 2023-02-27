@@ -80,7 +80,7 @@
     <p>Your question may already have an answer! Check below.</p>
 
     <button class="btn btn-primary thick-border border-bottom-0" onclick="toggleFaq()" id="faqToggle"
-        type="button" aria-expanded="false" aria-controls="accordion-item">Expand All
+        data-bs-toggle="collapse" data-bs-target=".multi-collapse" type="button" aria-expanded="false" aria-controls="accordion-item">Expand All
     </button>
 
     <div class="accordion thick-border" id="faqAccordion">
@@ -94,7 +94,7 @@
                     {{ question.body }}
                 </button>
             </h2>
-            <div id="collapse{{question.id}}" class="accordion-collapse collapse " 
+            <div id="collapse{{question.id}}" class="accordion-collapse collapse multi-collapse"
                 aria-labelledby="heading{{question.id}}"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body border-0">
@@ -159,6 +159,58 @@
 </div>
 {% endif %}
 
+<!-- ///////////////////////////////////// -->
+<p class="accordion-expand-holder">
+    <a class="accordion-expand-all" href="#">Expand all</a>
+</p>
+<div id="accordion" class="ui-accordion ui-widget ui-helper-reset thick-border">
+    {% for question in questions %}
+     <h3
+         class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all accordion-button">
+         <span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>
+          {{ question.body }}
+     </h3>
+     <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">
+        {% if not question.question_answer.all %}
+        <p>This question hasn't had an approved answer yet.
+            {% if user.is_authenticated %}
+            Submit an answer below.
+            {% else %}
+            {% endif %}
+            <a href="{% url 'account_login' %}">Login</a>
+            or <a href="{% url 'account_signup' %}">Signup</a> to submit an answer!
+        </p>
+        {% endif %}
+         {% for answer in question.question_answer.all %}
+         {% if answer.status == 1 %}
+         <p>{{ answer.body | safe }}</p>
+         {% if user.is_authenticated %}
+         <form action="{% url 'like' answer.pk %}" method="POST" class="d-inline">
+             {% csrf_token %}
+             {% if answer in request.user.like_answer.all %}
+             <button type="submit" name="answer_id" class="border-0" value="{{ answer.id }}"><i
+                     class="fa-solid fa-thumbs-up"></i>
+             </button>
+             {% else %}
+             <button type="submit" name="answer_id" class="border-0" value="{{ answer.id }}"><i
+                     class="fa-regular fa-thumbs-up"></i>
+             </button>
+             {% endif %}
+         </form>
+         <span class="d-inline-block mb-3">Liked by {{ answer.like.all.count }}
+             user{{ answer.like.all.count|pluralize }}</span>
+         {% if forloop.last %}
+         <h3>Feel free to submit another answer below!</h3>
+         {% endif %}
+         {% endif %}
+         {% if not forloop.last %}
+         <hr>
+         {% endif %}
+         {% endif %}
+         {% endfor %}
+     </div>
+    {% endfor %}
+
 
 {% endblock %}
 
@@ -166,24 +218,75 @@
     <script>
         function toggleFaq() {
             // get all questions
-            var elements = document.getElementsByClassName("accordion-collapse");
+            // var elements = document.getElementsByClassName("accordion-collapse");
+            // console.log(elements)
             // see if have .show
             // num = elements.classList.contains("show");
-            for (let i = 0; i < elements.length; i++)
-                 { 
-                    // console.log(typeof elements);
-                    elements.classList.includes("show");
-                }
+            // for (let i = 0; i < elements.length; i++)
+            //      { 
+            //         // console.log(typeof elements);
+            //         elements.classList.includes("show");
+            //     }
                 //  { elements.classList.add("show") }
             // console.log(elements.classList.contains("show"));
 
             // change btn text
-            // var text = document.getElementById("faqToggle");
-            // if (text.innerHTML === "Collapse All") {
-            //     text.innerHTML = "Expand All";
-            // } else {
-            //     text.innerHTML = "Collapse All";
-            // }
+            var text = document.getElementById("faqToggle");
+            if (text.innerHTML === "Collapse All") {
+                text.innerHTML = "Expand All";
+            } else {
+                text.innerHTML = "Collapse All";
+            }
         }
+    </script>
+
+    <script>
+        var headers = $('#accordion .accordion-header');
+        var contentAreas = $('#accordion .ui-accordion-content ').hide();
+        var expandLink = $('.accordion-expand-all');
+
+        // add the accordion functionality
+        headers.click(function() {
+        var panel = $(this).next();
+        var isOpen = panel.is(':visible');
+
+        // open or close as necessary
+        panel[isOpen? 'slideUp': 'slideDown']()
+        // trigger the correct custom event
+        .trigger(isOpen? 'hide': 'show');
+
+        // stop the link from causing a pagescroll
+        return false;
+        });
+
+        // hook up the expand/collapse all
+        expandLink.click(function(){
+        var isAllOpen = $(this).data('isAllOpen');
+
+        contentAreas[isAllOpen? 'hide': 'show']()
+        .trigger(isAllOpen? 'hide': 'show');
+        });
+
+        // when panels open or close, check to see if they're all open
+        contentAreas.on({
+        // whenever we open a panel, check to see if they're all open
+        // if all open, swap the button to collapser
+        show: function(){
+        var isAllOpen = !contentAreas.is(':hidden');
+        if(isAllOpen){
+        expandLink.text('Collapse All')
+        .data('isAllOpen', true);
+        }
+        },
+        // whenever we close a panel, check to see if they're all open
+        // if not all open, swap the button to expander
+        hide: function(){
+        var isAllOpen = !contentAreas.is(':hidden');
+        if(!isAllOpen){
+        expandLink.text('Expand all')
+        .data('isAllOpen', false);
+        }
+        }
+        });
     </script>
 {% endblock %}
