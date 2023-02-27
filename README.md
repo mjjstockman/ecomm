@@ -50,13 +50,13 @@ This is a fictional website (for educational purposes) for a street food company
 
 # UX and Design
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## User Demographics
 
 The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 ## User Stories
 
 User Stories were added to the Git Hub project board and can be read from [here](https://github.com/users/mjjstockman/projects/21)
@@ -149,7 +149,7 @@ As a Site User I can not notice any inconsistency throughout the site so that th
 | 			| Delete products	|  Delete products through admin | Must have | 4 | No |
 | 			|  				|  Delete products through site | Must have | 4 | No |
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Wireframes
 
@@ -165,7 +165,7 @@ Wireframes were being made for other screen sizes, but throught development it b
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Database Design
 <img  src="docs/readme_images/general/ERD.jpg"  alt="Entity Relationship Diagram">
@@ -176,8 +176,7 @@ The design for the small sized screens were kept for all sizes.
 
 The home app was created to seperate some of the logic.  This is possibly not the best design to use but was done so to see how this would be implemented.  Another app called addimage was used to increase future usability in different apps, but this was not fully realised.  
 
-[Back to top ⇧](#Setlist-Sharer)
-
+[Back to top ⇧](#Get-Wurst)
 
 
 ## Typography
@@ -187,7 +186,7 @@ The home app was created to seperate some of the logic.  This is possibly not th
 - Headings: Open Sans, with a fallback of serif. 
 - Body: Crimson Text, with a fallback of sans-serif.
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Features
 
@@ -209,21 +208,20 @@ If the user is not logged in the navigation displys the following links for Home
 
 <img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
 
-
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 ## Hero Image
 
 An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
 
 <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst))
 
 ## About Information Box
 
 A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the sites pupose, so they understand its goal.
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Gigs
 All the gigs the admin has entered are shown on the hopme page with their date, venue and city.
@@ -232,7 +230,7 @@ Below the gig info an image is displayed with two buttons opposite.
 
 <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Setlists
 If a setlist has not yet been submitted, the user can create one to submit by clicking on the Add Setlist button.
@@ -245,7 +243,7 @@ If the author of a setlist is signed in they can edit or delete the setlist.
 
 If the logged in user is not the author of the setlist they can agree or disagree with it by clicking on the appropriate button in the setlist detail page.
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Photos
 If a photo has not yet been submitted, the user can create one to submit one clicking on the Add Photo button.
@@ -255,14 +253,14 @@ If a photo has been submitted but not yet confirmed this is shown to the user.
 If a photo have been confirmed by the site admin they are displayed on the home page.
 
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 ## Footer
 
 The footer feature at the bottom of the page lets users know who it was developed by.
 
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Features to Implement in the future
 
@@ -281,26 +279,15 @@ accordionItems.forEach(item => item.classList.remove('show'));  #  this will ope
 
 Add to look into if have time
 
-Allow the order of songs played to be submitted and displayed.
 
-Fully implement automated testing.
-
-Combine the agree / disagree logic for setlists.
- 
-Automatically email the admin when a new setlist or photo has been selected.
-
-Allow the user to delete a photo they have submitted.
-
-Correctly seperate the project into seperate apps for reusability.  This was attempted (seperating adding an image and home etc. into their own models) but not fully realised due to time constraints.  Prefably, the addimage (and possibly the home app) models, views etc should have been moved back into the setlist app.
-
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 
 # Testing
 
 Details on site testing can be found [here](TESTING.md).
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Get-Wurst)
 
 # Bugs
 
@@ -311,7 +298,7 @@ Active pages were not being highlighted properly in the nav.  This was due to th
 ## Remaining Bugs
 The hero div is not resizing on larger screens.
 
-[Back to top ⇧](#Setlist-Sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Deployment
 
@@ -333,7 +320,7 @@ Click Save.
 
 The URL address for the deployed site will be shown.
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 - - -
 
@@ -347,7 +334,7 @@ Click "Fork" at the top right of the page.
 
 The repository will be copied into your GitHub account.
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 - - - 
 
@@ -373,7 +360,7 @@ $ git clone https://github.com/mjjstockman/https://github.com/mjjstockman/setlis
 
 Press **Enter**.
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 
 
@@ -388,7 +375,7 @@ In the Settings tab click on Reveal Config Vars button
 
 Copy or make a note of the value of the DATABASE_URL var
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Attach PostgreSQL database 
 In settings.py add the following below 'from pathlib import Path
@@ -407,7 +394,7 @@ In settings.py add the following below 'from pathlib import Path
 
 Migrate changes
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 # Prepare environment and settings.py files
 Add a env.py file to the root directory if it does not exist
 
@@ -428,7 +415,7 @@ Change SECRET_KEY key in settings.py to:
 
     SECRET_KEY  =  os.environ.get('SECRET_KEY')
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Store static and media files on Cloudinary
 
@@ -492,7 +479,7 @@ Click on the Deploy Branch button
 
 Click on the Open app button to open the project
 
-[Back to top ⇧](#Setlist-sharer)
+[Back to top ⇧](#Get-Wurst)
 
 # Google Authentification
 In order to allow users to register and login using Google.
@@ -519,7 +506,7 @@ Many thanks to the following which were used throughout the creation of this sit
 - [Typespiration](https://typespiration.com)
 
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Get-Wurst)
 
 ## Images
 
@@ -527,7 +514,7 @@ The Hero image was taken from [Adobe Stock Image](https://stock.adobe.com/).
 
 All other images were taken from [Pexels](https://www.pexels.com/).
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Get-Wurst)
 
 ## Acknowledgements
 
@@ -535,7 +522,7 @@ All other images were taken from [Pexels](https://www.pexels.com/).
 - Thank you to the Code Institute Slack community for their advice.
 - A wonderful [README.md](https://github.com/rebeccatraceyt/KryanLive) by [Rebecca Tracey-Timoney](https://github.com/rebeccatraceyt) was used for inspiration and guidance.
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Get-Wurst)
 
 
 
