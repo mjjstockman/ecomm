@@ -266,6 +266,21 @@ The footer feature at the bottom of the page lets users know who it was develope
 
 # Features to Implement in the future
 
+Add a Expand / Collapse All button to the accordion in the FAQ app.
+
+Tried many different ways but never satifactory.
+
+1.  Toggling
+2.  Using SO answer https://stackoverflow.com/questions/12843418/jquery-ui-accordion-expand-collapse-all
+3.  Using.....
+
+const accordionItems = document.querySelectorAll('.accordion-collapse');
+
+accordionItems.forEach(item => item.classList.add('show'));  #  this will open them all
+accordionItems.forEach(item => item.classList.remove('show'));  #  this will open them all
+
+Add to look into if have time
+
 Allow the order of songs played to be submitted and displayed.
 
 Fully implement automated testing.
