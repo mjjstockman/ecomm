@@ -80,6 +80,15 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            current_cart = cart_contents(request)
+            total = current_cart['total']
+            stripe_total = round(total * 100)
+            stripe.api_key = stripe_secret_key
+            intent = stripe.PaymentIntent.create(
+                amount=stripe_total,
+                currency=settings.STRIPE_CURRENCY,
+        )
+
     else:
         cart = request.session.get('cart', {})
         if not cart:
