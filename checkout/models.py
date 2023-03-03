@@ -16,7 +16,6 @@ class Order(models.Model):
         related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
-    # phone_number = models.CharField(max_length=20, null=False, blank=False)
     phone_number = PhoneNumberField()
     postcode = models.CharField(max_length=20, null=True, blank=True)
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
@@ -39,7 +38,7 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Generate a random, unique order number using UUID and slice at 8 chars
+        Generate a random, unique order number using UUID and slice at 8 chars.
         """
         long_num = uuid.uuid4().hex.upper()
         short_num = long_num[:8]
@@ -47,8 +46,7 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added,
-        accounting for delivery costs.
+        Update grand total each time a line item is added.
         """
         self.total = self.lineitems.aggregate(Sum('lineitem_total'))[
             'lineitem_total__sum'] or 0
