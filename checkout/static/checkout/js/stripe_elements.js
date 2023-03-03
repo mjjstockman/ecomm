@@ -6,8 +6,6 @@
 */
 
 /*jshint esversion: 6 */
-
-// slice off the quotation marks
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -55,7 +53,6 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    // prevent multiple submissions
     card.update({
         'disabled': true
     });
@@ -111,7 +108,6 @@ form.addEventListener('submit', function (ev) {
             }
         });
     }).fail(function () {
-        // just reload the page, the error will be in django messages
         location.reload();
     });
 });

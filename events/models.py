@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Event(models.Model):
+    """
+    Model for events Get Wurst has worked.
+    """
     name = models.CharField(max_length=150)
     image = models.ImageField(upload_to='events')
     link = models.URLField(max_length=200)

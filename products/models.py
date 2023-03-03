@@ -3,6 +3,9 @@ from django import forms
 
 
 class Category(models.Model):
+    """
+    Overide Django admin name
+    """
 
     class Meta:
         verbose_name_plural = 'Categories'

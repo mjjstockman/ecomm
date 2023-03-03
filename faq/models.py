@@ -7,13 +7,8 @@ STATUS = ((0, "Submitted"), (1, "Published"))
 
 
 class Question(models.Model):
-    """_summary_
+    """
 
-    Args:
-        models (_type_): _description_
-
-    Returns:
-        _type_: _description_
     """
     body = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -25,7 +20,6 @@ class Question(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     email_on_answer = models.BooleanField(default=False)
-    # has_published_answer = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-created_on"]

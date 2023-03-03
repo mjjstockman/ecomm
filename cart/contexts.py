@@ -3,7 +3,9 @@ from products.models import Product
 
 
 def cart_contents(request):
-    """ Make cart_items, total and product_count available to all apps """
+    """
+    Make cart_items, total and product_count available to all apps.
+    """
     cart_items = []
     total = 0
     product_count = 0

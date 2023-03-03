@@ -5,13 +5,16 @@ from products.models import Product
 
 
 def view_cart(request):
-    """ A view that renders the cart content page """
-
+    """
+    A view that renders the cart content page.
+    """
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ Add the specified product and quantity to cart """
+    """
+    Add the specified product and quantity to cart.
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -31,7 +34,9 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """ Adjust the quantity of the specified product """
+    """
+    Adjust the quantity of the specified product.
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -53,7 +58,9 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """ Remove all of the specified product from the cart """
+    """
+    Remove all of the specified product from the cart.
+    """
     try:
         product = get_object_or_404(Product, pk=item_id)
         cart = request.session.get('cart', {})

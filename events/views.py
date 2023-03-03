@@ -3,6 +3,9 @@ from .models import Event
 
 
 def events_all(request):
+    """
+    Get all events and return template.
+    """
     events = get_list_or_404(Event)
 
     context = {

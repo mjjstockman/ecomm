@@ -4,6 +4,9 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
+    """
+    Model form for product info.
+    """
     class Meta:
         model = Product
         fields = [

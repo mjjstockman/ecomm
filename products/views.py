@@ -14,6 +14,9 @@ from .form import ProductForm
 
 
 def all(request):
+    """
+    View for all products.
+    """
     products = Product.objects.all()
     cart = request.session.get("cart", {})
     query = None
@@ -52,7 +55,9 @@ def all(request):
 
 
 def detail(request, product_id):
-    """View setlist details"""
+    """
+    View product details.
+    """
     product = get_object_or_404(Product, pk=product_id)
     context = {"product": product}
 
@@ -61,7 +66,9 @@ def detail(request, product_id):
 
 @login_required
 def add(request):
-    """Add a product to the store"""
+    """
+    Add a product to the store.
+    """
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
@@ -91,7 +98,9 @@ def add(request):
 
 @login_required
 def edit(request, product_id):
-    """Edit a product in the store"""
+    """
+    Allows a logged in superuser to edit a product from the store.
+    """
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
@@ -123,7 +132,9 @@ def edit(request, product_id):
 
 @login_required
 def delete(request, product_id):
-    """Allows the setlist author to delete the setlist"""
+    """
+    Allows a logged in superuser to delete a product from the store.
+    """
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
         return redirect(reverse("home"))
