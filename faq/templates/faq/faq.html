@@ -125,11 +125,13 @@
                                 {% if forloop.last %}
                                     <h3>Feel free to submit another answer below!</h3>
                                 {% endif %}
-                            {% endif %}
+                            {% else %}
                             <p>
                                 <a href="{% url 'account_login' %}">Login</a>
-                                or <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
+                                or <a href="{% url 'account_signup' %}">Sign Up</a> to submit another answer!
                             </p>
+                            {% endif %}
+                            
                          {% if not forloop.last %}
                          <hr>
                          {% endif %}
