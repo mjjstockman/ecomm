@@ -97,11 +97,11 @@
                     {% if not question.question_answer.all %}
                         <p>This question hasn't had an approved answer yet.
                             {% if user.is_authenticated %}
-                            Submit an answer below.
-                            {% else %}
+                                Submit an answer below.
+                                {% else %}
+                                    <a href="{% url 'account_login' %}">Login</a> 
+                                    or <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
                             {% endif %}
-                            <a href="{% url 'account_login' %}">Login</a>
-                            or <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
                         </p>
                     {% endif %}
                     {% for answer in question.question_answer.all %}
@@ -125,7 +125,9 @@
                                 {% if forloop.last %}
                                     <h3>Feel free to submit another answer below!</h3>
                                 {% endif %}
-                            {% endif %} 
+                            {% endif %}
+                            <a href="{% url 'account_login' %}">Login</a>
+                            or <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
                          {% if not forloop.last %}
                          <hr>
                          {% endif %}
