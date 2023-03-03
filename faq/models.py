@@ -8,7 +8,7 @@ STATUS = ((0, "Submitted"), (1, "Published"))
 
 class Question(models.Model):
     """
-
+    Model for submitted user questions.
     """
     body = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -29,6 +29,9 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
+    """
+    Model for submitted user answers.
+    """
     question = models.ForeignKey(
         Question,
         on_delete=models.SET_NULL,
