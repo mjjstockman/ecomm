@@ -58,7 +58,6 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    # if isinstance(item_data, int):
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -87,8 +86,7 @@ def checkout(request):
             intent = stripe.PaymentIntent.create(
                 amount=stripe_total,
                 currency=settings.STRIPE_CURRENCY,
-        )
-
+            )
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -152,7 +150,6 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        # Save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
