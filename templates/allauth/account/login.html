@@ -8,14 +8,14 @@
 
 {% block inner_content %}
 
-  <h1>{% trans "Signup" %}</h1>
+  <h1>{% trans "Sign Up" %}</h1>
 
   {% get_providers as socialaccount_providers %}
 
   {% if socialaccount_providers %}
-  <p>{% blocktrans with site.name as site_name %}Please login with one
-    of your existing third party accounts. Or, <a href="{{ signup_url }}">signup</a>
-    for a {{ site_name }} account and login below:{% endblocktrans %}</p>
+  <p>{% blocktrans with site.name as site_name %}Please Login with one
+    of your existing third party accounts. Or, <a href="{{ signup_url }}">Sign Up</a>
+    for a {{ site_name }} account and Login below:{% endblocktrans %}</p>
 
   <!-- <div class="socialaccount_ballot">
     <div class="login-or">{% trans 'or' %}</div>
@@ -25,7 +25,7 @@
 
   {% else %}
   <p>{% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">signup</a> first.{% endblocktrans %}</p>
+    <a href="{{ signup_url }}">Sign Up</a> first.{% endblocktrans %}</p>
   {% endif %}
 
   <button class="btn btn-primary mb-3">
