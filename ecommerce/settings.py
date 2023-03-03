@@ -46,10 +46,10 @@ INSTALLED_APPS = [
     "checkout",
     "events",
     "home",
+    "phonenumbers",
     "phonenumber_field",
     "products",
-    "profiles",
-    
+    "profiles", 
 ]
 
 MIDDLEWARE = [
