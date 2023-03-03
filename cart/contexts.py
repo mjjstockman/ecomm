@@ -2,9 +2,8 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 
-# context processor making below available in all templates
 def cart_contents(request):
-    """ Make cart_contents available to all apps """
+    """ Make cart_items, total and product_count available to all apps """
     cart_items = []
     total = 0
     product_count = 0
