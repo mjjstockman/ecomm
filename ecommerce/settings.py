@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "phonenumbers",
     "phonenumber_field",
     "products",
-    "profiles", 
+    "profiles",
 ]
 
 MIDDLEWARE = [
@@ -180,7 +180,6 @@ USE_TZ = True
 
 PHONENUMBER_DEFAULT_REGION = 'GB'
 PHONENUMBER_DB_FORMAT = 'NATIONAL'
-
 
 
 # Static files (CSS, JavaScript, Images)

@@ -23,12 +23,12 @@
     <a href="{{ signup_url }}">Sign Up</a> first.{% endblocktrans %}</p>
   {% endif %}
 
-  <button class="btn btn-primary mb-3">
-    <a href="{% provider_login_url 'google'%}?next=/">
+  <!-- <button class="btn btn-primary mb-3"> -->
+    <a class="btn btn-primary mb-3" href=" {% provider_login_url 'google'%}?next=/">
       <i class="fab fa-google"></i>
       Login with Google
     </a>
-  </button>
+  <!-- </button> -->
 
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}

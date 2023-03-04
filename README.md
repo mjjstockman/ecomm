@@ -658,24 +658,47 @@ The app is designed as a e-commerce application that encourages the users to mak
 The following table was used to plan the development of the project.  This helped to easily break down
 Themes into Epics, their related User Stories and prioritise their importance. 
 
-| Theme | Epic | Related User Stories | MOSCOW |Order | Completed |
+| Theme | Epic | Related User Stories | MOSCOW | Completed |
 |--|--|--|--|--|--|
-| Account Management | Sign up | #2 Sign up using username / password | Must have |1 | No |
-| 					| 			| #3 Sign up using social media | Should have | 20 | No |
-| 					| Sign in | #1 Log in using username / password | Must have | 2 | No |
-| 					| 		  | #4 Log in using social media | Should have | 21 | No |
-| 					| 			| #4 Forgot sign in info | Should have | 21 | No |
-| 					| Log out | #5 Manual log out | Must have | 3 | No |
+| Account Management | Sign up | #2 Sign up using username / password | Must have | Yes |
+| 					| 			| #3 Sign up using Google | Should have | Yes |
+| 					| 			| #3 Confirm Sign up via email | Should have | Yes |
+| 					| Sign in | #1 Log in using username / password | Must have | 2 | Yes |
+| 					| 		  | #4 Log in using social media | Should have | 21 | Yes |
+| 					| 			| #4 Forgot sign in info | Should have | 21 | Yes |
+| 					| 			| Login state | Should have | 21 | Yes |
+| 					| 			| Forget sigin info | Should have | Yes |
+| 					| Log out | #5 Manual log out | Must have | 3 | Yes |
 | 					| 			| #6 Automatic log out | Won't have | 22 | No |
-| Products | Add products | Add products through admin | Must have | 4 | No |
-| 			| 				|  Add products through site | Must have | 4 | No |
-| 			| View products| View all products | Must have | 4 | No |
-| 			| 			| View products by category | Must have | 4 | No |
-| 			| 			| View new products | Must have | 4 | No |
-| 			| Edit products	|  Edit products through admin | Must have | 4 | No |
-| 			|  				|  Edit products through site | Must have | 4 | No |
-| 			| Delete products	|  Delete products through admin | Must have | 4 | No |
+| Products | Add products | Add products through admin | Must have | 4 | Yes |
+| 			| 				|  Add products through site | Must have | 4 | Yes |
+| 			| View products| View all products | Must have | 4 | Yes |
+| 			| 			| View products by category | Must have | 4 | Yes |
+| 			| 			| View new products | Must have | 4 | Yes |
+| 			| 			| Search products | Should have | 4 | Yes |
+| 			| Edit products	|  Edit products through admin | Must have | 4 | Yes |
+| 			|  				|  Edit products through site | Must have | 4 | Yes |
+| 			| Delete products	|  Delete products through admin | Must have | 4 | Yes |
+| 			|           	|  Delete products through frontend | Must have | Yes |
+| 			|  				|  #30 | Must have | 4 | No |
+| Cart	    | Make purchase |  Add item to cart | Must have | 4 | No |
+| 			|  				|  Change product quantity in cart | Should have | No |
+| 			|  				|  Remove items from cart | Should have | No |
+| 			|  				|  See order total | Must have | 4 | No |
+| 			|  				|  Pay for goods | Must have | No |
+| 			|  				|  Know if an order was successful | Must have | 4 | No |
+| 			|  				|  Email order confirmation | Should have | No |
+| 	Profile |  Details		|  Save profile details | Should have | No |
+|           |           	|  Edit profile details | Should have | No |
+| 			|  				|  View order history | Should have | No |
+| FAQ		|  				|  Submit a question | Must have | No |
+| 			|  				|  View FAQ's and answers | Must have | No |
+| Events	|  				|  See previous events | Must have | No |
 | 			|  				|  Delete products through site | Must have | 4 | No |
+| Marketing	|  				|  Add Facebook page | Must have | No |
+
+
+
 
 <!-- | id  |  content | how was it satisfied
 | ------ | ------ | ------ |
