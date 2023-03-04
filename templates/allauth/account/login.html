@@ -1,7 +1,6 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
-<!-- {% load account socialaccount %} -->
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Login" %}{% endblock %}
@@ -16,10 +15,6 @@
   <p>{% blocktrans with site.name as site_name %}Please Login with one
     of your existing third party accounts. Or, <a href="{{ signup_url }}">Sign Up</a>
     for a {{ site_name }} account and Login below:{% endblocktrans %}</p>
-
-  <!-- <div class="socialaccount_ballot">
-    <div class="login-or">{% trans 'or' %}</div>
-  </div> -->
 
   {% include "socialaccount/snippets/login_extra.html" %}
 

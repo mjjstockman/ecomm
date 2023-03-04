@@ -1,6 +1,6 @@
 # Get Wurst
 
-<img  src="docs/readme_images/multi-mockup.png"  alt="Mockup of the Get Wurst website on a phone, tablet, laptop and monitor screen">
+<img src="static/images/readme/amiresponsive-mockup.png"  alt="Mockup of the Get Wurst website on a phone, tablet, laptop and monitor screen">
 
 *Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
 
