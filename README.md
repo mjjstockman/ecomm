@@ -659,43 +659,41 @@ The following table was used to plan the development of the project.  This helpe
 Themes into Epics, their related User Stories and prioritise their importance. 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
-|--|--|--|--|--|--|
-| Account Management | Sign up | #2 Sign up using username / password | Must have | Yes |
-| 					| 			| #3 Sign up using Google | Should have | Yes |
-| 					| 			| #3 Confirm Sign up via email | Should have | Yes |
-| 					| Sign in | #1 Log in using username / password | Must have | 2 | Yes |
-| 					| 		  | #4 Log in using social media | Should have | 21 | Yes |
-| 					| 			| #4 Forgot sign in info | Should have | 21 | Yes |
-| 					| 			| Login state | Should have | 21 | Yes |
-| 					| 			| Forget sigin info | Should have | Yes |
-| 					| Log out | #5 Manual log out | Must have | 3 | Yes |
-| 					| 			| #6 Automatic log out | Won't have | 22 | No |
-| Products | Add products | Add products through admin | Must have | 4 | Yes |
-| 			| 				|  Add products through site | Must have | 4 | Yes |
-| 			| View products| View all products | Must have | 4 | Yes |
-| 			| 			| View products by category | Must have | 4 | Yes |
-| 			| 			| View new products | Must have | 4 | Yes |
-| 			| 			| Search products | Should have | 4 | Yes |
-| 			| Edit products	|  Edit products through admin | Must have | 4 | Yes |
-| 			|  				|  Edit products through site | Must have | 4 | Yes |
-| 			| Delete products	|  Delete products through admin | Must have | 4 | Yes |
-| 			|           	|  Delete products through frontend | Must have | Yes |
-| 			|  				|  #30 | Must have | 4 | No |
-| Cart	    | Make purchase |  Add item to cart | Must have | 4 | No |
-| 			|  				|  Change product quantity in cart | Should have | No |
-| 			|  				|  Remove items from cart | Should have | No |
-| 			|  				|  See order total | Must have | 4 | No |
-| 			|  				|  Pay for goods | Must have | No |
-| 			|  				|  Know if an order was successful | Must have | 4 | No |
-| 			|  				|  Email order confirmation | Should have | No |
-| 	Profile |  Details		|  Save profile details | Should have | No |
-|           |           	|  Edit profile details | Should have | No |
-| 			|  				|  View order history | Should have | No |
-| FAQ		|  				|  Submit a question | Must have | No |
-| 			|  				|  View FAQ's and answers | Must have | No |
-| Events	|  				|  See previous events | Must have | No |
-| 			|  				|  Delete products through site | Must have | 4 | No |
-| Marketing	|  				|  Add Facebook page | Must have | No |
+|--|--|--|--|--|
+| Account Management | Sign up | [#15](https://github.com/mjjstockman/ecomm/issues/15) Sign up using email, username and password | Must have | Yes |
+| 					| 			| [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google | Should have | Yes |
+| 					| 			| [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email | Should have | Yes |
+| 					| Sign in | [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password | Must have | Yes |
+| 					| 		  | [#19](https://github.com/mjjstockman/ecomm/issues/19) Login using Google | Should have | Yes |
+| 					| 			| [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info | Should have | Yes |
+| 					| 			| [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state | Should have  Yes |
+| 					| Log out | [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual log out | Must have | Yes |
+| 					| 			| [#23](https://github.com/mjjstockman/ecomm/issues/23) Automatic log out | Won't have | No |
+| Products | Add products | [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin | Must have | Yes |
+| 			| 				| [#20](https://github.com/mjjstockman/ecomm/issues/20) Add products through site | Must have |Yes |
+| 			| View products| [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products | Must have |  Yes |
+| 			| 			|[#26](https://github.com/mjjstockman/ecomm/issues/26) View products by category | Must have | Yes |
+| 			| 			| [#20](https://github.com/mjjstockman/ecomm/issues/20) View new products | Won't have | Yes |
+| 			| 			| [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
+| 			| Edit products	|  [#27](https://github.com/mjjstockman/ecomm/issues/27) Edit products through admin | Must have | Yes |
+| 			|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20) Edit products through site | Must have  Yes |
+| 			| Delete products	| [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through admin | Must have | Yes |
+| 			|           	| [#20](https://github.com/mjjstockman/ecomm/issues/20) Delete products through frontend | Must have | Yes |
+| Cart	    | Make purchase | [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart | Must have |  No |
+| 			|  				| [#30](https://github.com/mjjstockman/ecomm/issues/30) Change product quantity in cart | Should have | No |
+| 			|  				| [#31](https://github.com/mjjstockman/ecomm/issues/31) Remove items from cart | Should have | No |
+| 			|  				|  [#32](https://github.com/mjjstockman/ecomm/issues/32) See order total | Must have |  No |
+| 			|  				| [#33](https://github.com/mjjstockman/ecomm/issues/33) Pay for goods | Must have | No |
+| 			|  				|  [#34](https://github.com/mjjstockman/ecomm/issues/34)Know if an order was successful | Must have | No |
+| 			|  				| [#35](https://github.com/mjjstockman/ecomm/issues/35)Email order confirmation | Should have | No |
+| 	Profile |  Details		| [#20](https://github.com/mjjstockman/ecomm/issues/20) Save profile details | Should have | No |
+|           |           	| [#20](https://github.com/mjjstockman/ecomm/issues/20)Edit profile details | Should have | No |
+| 			|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20)View order history | Should have | No |
+| FAQ		|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20)Submit a question | Must have | No |
+| 			|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20)View FAQ's and answers | Must have | No |
+| Events	|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20)See previous events | Must have | No |
+| 			|  				|  [#20](https://github.com/mjjstockman/ecomm/issues/20)Delete products through site | Must have | No |
+| Marketing	|  				|  [#36](https://github.com/mjjstockman/ecomm/issues/20)Add Facebook page | Must have | No |
 
 
 
