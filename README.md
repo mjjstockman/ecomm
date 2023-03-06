@@ -59,95 +59,50 @@ The target market are fans of the particular band, especially those who are want
 [Back to top ⇧](#Get-Wurst)
 ## User Stories
 
-User Stories were added to the Git Hub project board and can be read from [here](https://github.com/users/mjjstockman/projects/21)
-
-A kanban was used to keep an agile view on user stories.  Below is an example of the kanban at a particular set of time.
-
-Sign up
-Sign up using e-mail, username and password#1
-Sign up using Google#2
-Confirm sign up via email#25
-
-Events
-See previous events#8
-
-General
-Site purpose#15
+A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23/views/1).
 
 
-Log out
-Manual log out#11
-Automatic log out#10
+### Themes, Epics, Related User Stories, MOSCOW
 
+The following table was used to plan the development of the project.  This helped to easily break down
+Themes into Epics, their related User Stories and prioritise their importance. 
 
-Log in
-Log in using username and password #3
-Log in using Google#4
-Login state#18
-Forgot sign in info#34
-
-
-Products
-Sort the products by category#6
-View goods#7
-Search products#30
-Delete product from site#32
-Edit products on site#31
-Add product to site#33
-
-Cart
-Add items to basket#29
-See current total cost at all times#40
-Change product quantity in basket#42
-Remove items from cart#43
-
-Checkout
-See total cost when placing / confirming order#41
-Pay for goods#14
-Know if an order was successful #5
-Email order confirmation#39
-
-Profile
-Edit personal details#8
-View order history#37
-Save personal details#9
-
-FAQ
-Submit a question#6
-View FAQ's and answers#7
-
-Site Owner
-Site security#13
-Well tested#12
-As a Site Owner I can have a Facebook account so that my brand reach is extended
-
-SEO
-Search engine optimisation#28
-
-Progress indicators#21
-As a Site User I can tell the site is processing transactions through progress indicators so that I know the site is processing and not ignoring my attempted transaction or frozen
-
-Consistency#20
-As a Site User I can not notice any inconsistency throughout the site so that the site seems professional and I can always tell I am on the same site
-
-| Theme | Epic | Related User Stories | MOSCOW |Order | Completed |
-|--|--|--|--|--|--|
-| Account Management | Sign up | #2 Sign up using username / password | Must have |1 | No |
-| 					| 			| Sign up using Google #2
-| 					| Sign in | #1 Log in using username / password | Must have | 2 | No |
-| 					| 		  | #4 Log in using social media | Should have | 21 | No |
-| 					| 			| #4 Forgot sign in info | Should have | 21 | No |
-| 					| Log out | #5 Manual log out | Must have | 3 | No |
-| 					| 			| #6 Automatic log out | Won't have | 22 | No |
-| Products | Add products | Add products through admin | Must have | 4 | No |
-| 			| 				|  Add products through site | Must have | 4 | No |
-| 			| View products| View all products | Must have | 4 | No |
-| 			| 			| View products by category | Must have | 4 | No |
-| 			| 			| View new products | Must have | 4 | No |
-| 			| Edit products	|  Edit products through admin | Must have | 4 | No |
-| 			|  				|  Edit products through site | Must have | 4 | No |
-| 			| Delete products	|  Delete products through admin | Must have | 4 | No |
-| 			|  				|  Delete products through site | Must have | 4 | No |
+| Theme | Epic | Related User Stories | MOSCOW | Completed |
+|--|--|--|--|--|
+| Account Management | Sign up | [#15](https://github.com/mjjstockman/ecomm/issues/15) Sign up using email, username and password | Must have | Yes |
+| 					| 			| [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google | Should have | Yes |
+| 					| 			| [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email | Should have | Yes |
+| 					| Sign in | [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password | Must have | Yes |
+| 					| 		  | [#19](https://github.com/mjjstockman/ecomm/issues/19) Login using Google | Should have | Yes |
+| 					| 			| [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info | Should have | Yes |
+| 					| 			| [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state | Should have |  Yes |
+| 					| Log out | [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual log out | Must have | Yes |
+| 					| 			| [#23](https://github.com/mjjstockman/ecomm/issues/23) Automatic log out | Won't have | No |
+| Products | Add products | [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin | Must have | Yes |
+| 			| 				| [#20](https://github.com/mjjstockman/ecomm/issues/20) Add products through site | Must have |Yes |
+| 			| View products| [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products | Must have |  Yes |
+| 			| 			|[#26](https://github.com/mjjstockman/ecomm/issues/26) View products by category | Must have | Yes |
+| 			| 			| View new products | Won't have | No |
+| 			| 			| [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
+| 			| Edit products	|  [#27](https://github.com/mjjstockman/ecomm/issues/27) Edit products through site | Must have | Yes |
+| 			|  				|  [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin | Must have |  Yes |
+| 			| Delete products	| [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin | Must have | Yes |
+| 			|           	| [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site | Must have | Yes |
+| Cart	    | Make purchase | [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart | Must have |  Yes |
+| 			|  				| [#30](https://github.com/mjjstockman/ecomm/issues/30) Change product quantity in cart | Should have | Yes |
+| 			|  				| [#31](https://github.com/mjjstockman/ecomm/issues/31) Remove items from cart | Should have | Yes |
+| 			|  				|  [#32](https://github.com/mjjstockman/ecomm/issues/32) See order total | Must have |  Yes |
+| 			|  				| [#33](https://github.com/mjjstockman/ecomm/issues/33) Pay for goods | Must have | Yes |
+| 			|  				|  [#34](https://github.com/mjjstockman/ecomm/issues/34) Know if an order was successful | Must have | Yes |
+| 			|  				| [#35](https://github.com/mjjstockman/ecomm/issues/35) Email order confirmation | Should have | Yes |
+| 	Profile |  Details		| [#40](https://github.com/mjjstockman/ecomm/issues/40) Save profile details | Should have | Yes |
+|           |           	| [#41](https://github.com/mjjstockman/ecomm/issues/41) Edit profile details | Should have | Yes |
+| 			|  				|  [#42](https://github.com/mjjstockman/ecomm/issues/42) View order history | Should have | Yes |
+| FAQ		|  				|  [#43](https://github.com/mjjstockman/ecomm/issues/43) Submit a question | Must have | Yes |
+|   		|  				|  [#44](https://github.com/mjjstockman/ecomm/issues/44) Submit an answer | Must have | Yes |
+|   		|  				|  [#46](https://github.com/mjjstockman/ecomm/issues/46) Email when question answered | Could have | Yes |
+| Events	|  				|  [#45](https://github.com/mjjstockman/ecomm/issues/45) See previous events | Should have | Yes |
+| Marketing	|  				|  [#36](https://github.com/mjjstockman/ecomm/issues/20) Add Facebook page | Must have | Yes |
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -183,8 +138,8 @@ The home app was created to seperate some of the logic.  This is possibly not th
 
 [Typespiration](https://typespiration.com/) was used to find complimenting [Google Font](https://fonts.google.com) pairings, with the following decided upon:
 
-- Headings: Open Sans, with a fallback of serif. 
-- Body: Crimson Text, with a fallback of sans-serif.
+- Headings: Paytone One, with a fallback of sans-serif. 
+- Body: PT Sans, with a fallback of sans-serif.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -192,13 +147,13 @@ The home app was created to seperate some of the logic.  This is possibly not th
 
 ## Navigation and Header
 
-The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site as this is common practice and is the area where most users eyes will be initially drawn to. It will be not be'sticky', as the main links a user will need when scrolling are provided. When a link is hovered over it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once selected.
+The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site as this is common practice and is the area where most users eyes will be initially drawn to. When a link is hovered over it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once selected.
 
-The 'hamburger' icon was used on small screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
+The 'hamburger' icon was used on large screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
 
 <img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon">
 
-The logo is displayed on the left hand side and the nav on the right.
+The logo is displayed on the left hand side and is a link to the home page.
 
 If the user is logged in the navigation displys the following links for Home and Logout:
 <img src="docs/readme_images/features/nav/nav-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
@@ -206,42 +161,52 @@ If the user is logged in the navigation displys the following links for Home and
 
 If the user is not logged in the navigation displys the following links for Home and Sign Up and Login:
 
-<img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
+<img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at large size showing the hamburger icon">
 
+# Home Page
 [Back to top ⇧](#Get-Wurst)
 ## Hero Image
 
-An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
+An eye-catching image of a burger is placed. This helps grab the users attention and make them want to order food! The burger is used as this is a new
+addition to Get Wurst's menu.
 
 <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
 
 [Back to top ⇧](#Get-Wurst))
 
-## About Information Box
+## Our Story Information Box
 
 A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the sites pupose, so they understand its goal.
 
 [Back to top ⇧](#Get-Wurst)
 
-## Gigs
-All the gigs the admin has entered are shown on the hopme page with their date, venue and city.
+# Menu
+The menu shows a brief general introduction to the products.
 
-Below the gig info an image is displayed with two buttons opposite.
+This is followed by information of the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particualr item.
+
+This is followed with the same for Chicken and then Burgers.
 
 <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
 
 [Back to top ⇧](#Get-Wurst)
 
-## Setlists
-If a setlist has not yet been submitted, the user can create one to submit by clicking on the Add Setlist button.
+## Product Detail
+An image of the product is shown as well as it's name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more then 9.
 
-If a setlist has been submitted but not yet confirmed this is shown to the user.
+A primary button back to the menu and a CTA add to cart button is shown below the qunatity input.
 
-If a setlist have been confirmed by the site admin they can be viewed by clicking on the View Setlist button.
+## Events
+The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in 
+Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
-If the author of a setlist is signed in they can edit or delete the setlist.
+## Cart
+If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
-If the logged in user is not the author of the setlist they can agree or disagree with it by clicking on the appropriate button in the setlist detail page.
+A user with items in their cart is shown an image of the item, it's name and price. They can use a quantity input to adjust the quantity, or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help install user confidence.
+
+## Checkout
+
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -653,47 +618,7 @@ The app is designed as a e-commerce application that encourages the users to mak
 
 <!-- ### User Stories that have been satisfied by creation of particular apps in ths project: -->
 
-### Themes, Epics, Related User Stories, MOSCOW
 
-The following table was used to plan the development of the project.  This helped to easily break down
-Themes into Epics, their related User Stories and prioritise their importance. 
-
-| Theme | Epic | Related User Stories | MOSCOW | Completed |
-|--|--|--|--|--|
-| Account Management | Sign up | [#15](https://github.com/mjjstockman/ecomm/issues/15) Sign up using email, username and password | Must have | Yes |
-| 					| 			| [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google | Should have | Yes |
-| 					| 			| [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email | Should have | Yes |
-| 					| Sign in | [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password | Must have | Yes |
-| 					| 		  | [#19](https://github.com/mjjstockman/ecomm/issues/19) Login using Google | Should have | Yes |
-| 					| 			| [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info | Should have | Yes |
-| 					| 			| [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state | Should have |  Yes |
-| 					| Log out | [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual log out | Must have | Yes |
-| 					| 			| [#23](https://github.com/mjjstockman/ecomm/issues/23) Automatic log out | Won't have | No |
-| Products | Add products | [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin | Must have | Yes |
-| 			| 				| [#20](https://github.com/mjjstockman/ecomm/issues/20) Add products through site | Must have |Yes |
-| 			| View products| [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products | Must have |  Yes |
-| 			| 			|[#26](https://github.com/mjjstockman/ecomm/issues/26) View products by category | Must have | Yes |
-| 			| 			| View new products | Won't have | No |
-| 			| 			| [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
-| 			| Edit products	|  [#27](https://github.com/mjjstockman/ecomm/issues/27) Edit products through site | Must have | Yes |
-| 			|  				|  [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin | Must have |  Yes |
-| 			| Delete products	| [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin | Must have | Yes |
-| 			|           	| [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site | Must have | Yes |
-| Cart	    | Make purchase | [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart | Must have |  Yes |
-| 			|  				| [#30](https://github.com/mjjstockman/ecomm/issues/30) Change product quantity in cart | Should have | Yes |
-| 			|  				| [#31](https://github.com/mjjstockman/ecomm/issues/31) Remove items from cart | Should have | Yes |
-| 			|  				|  [#32](https://github.com/mjjstockman/ecomm/issues/32) See order total | Must have |  Yes |
-| 			|  				| [#33](https://github.com/mjjstockman/ecomm/issues/33) Pay for goods | Must have | Yes |
-| 			|  				|  [#34](https://github.com/mjjstockman/ecomm/issues/34) Know if an order was successful | Must have | Yes |
-| 			|  				| [#35](https://github.com/mjjstockman/ecomm/issues/35) Email order confirmation | Should have | Yes |
-| 	Profile |  Details		| [#40](https://github.com/mjjstockman/ecomm/issues/40) Save profile details | Should have | Yes |
-|           |           	| [#41](https://github.com/mjjstockman/ecomm/issues/41) Edit profile details | Should have | Yes |
-| 			|  				|  [#42](https://github.com/mjjstockman/ecomm/issues/42) View order history | Should have | Yes |
-| FAQ		|  				|  [#43](https://github.com/mjjstockman/ecomm/issues/43) Submit a question | Must have | Yes |
-|   		|  				|  [#44](https://github.com/mjjstockman/ecomm/issues/44) Submit an answer | Must have | Yes |
-|   		|  				|  [#46](https://github.com/mjjstockman/ecomm/issues/46) Email when question answered | Could have | Yes |
-| Events	|  				|  [#45](https://github.com/mjjstockman/ecomm/issues/45) See previous events | Should have | Yes |
-| Marketing	|  				|  [#36](https://github.com/mjjstockman/ecomm/issues/20) Add Facebook page | Must have | Yes |
 
 
 
