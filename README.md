@@ -208,6 +208,7 @@ A user with items in their cart is shown an image of the item, it's name and pri
 [Back to top ⇧](#Get-Wurst)
 
 ## Checkout
+The checkout shows an order summary and a form to fill in payment details. There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
 
 
 [Back to top ⇧](#Get-Wurst)
