@@ -210,6 +210,10 @@ A user with items in their cart is shown an image of the item, it's name and pri
 ## Checkout
 The checkout shows an order summary and a form to fill in payment details. There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
 
+When a site user is logged in they can choose to have their details saved by checking a checkbox.
+
+Red warningtext and an explanation icon informs the user how much they are about to be charged.
+
 
 [Back to top ⇧](#Get-Wurst)
 
