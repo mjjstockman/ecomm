@@ -205,6 +205,8 @@ If the current user does not have any items in their cart they are shown a messa
 
 A user with items in their cart is shown an image of the item, it's name and price. They can use a quantity input to adjust the quantity, or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help install user confidence.
 
+[Back to top ⇧](#Get-Wurst)
+
 ## Checkout
 
 
