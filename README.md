@@ -151,6 +151,8 @@ The navigation bar allows the user to easily select which area of the site they 
 
 The 'hamburger' icon was used on large screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
 
+When a user is not logged the right side of the navigation includes a Sign Up and Log in link. A logged in user is shown a "My Profile" and "Logout" link.
+
 <img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon">
 
 The logo is displayed on the left hand side and is a link to the home page.
@@ -212,24 +214,20 @@ The checkout shows an order summary and a form to fill in payment details. There
 
 When a site user is logged in they can choose to have their details saved by checking a checkbox.
 
-Red warningtext and an explanation icon informs the user how much they are about to be charged.
-
+Red warning text and an explanation icon informs the user how much they are about to be charged.
 
 [Back to top ⇧](#Get-Wurst)
 
-## Photos
-If a photo has not yet been submitted, the user can create one to submit one clicking on the Add Photo button.
+## Checkout Success
+The checkout success page shows the user the email confirmation has been sent to their email.
 
-If a photo has been submitted but not yet confirmed this is shown to the user.
-
-If a photo have been confirmed by the site admin they are displayed on the home page.
-
+A primary "Back to Home Page" is displayed beneath. 
 
 [Back to top ⇧](#Get-Wurst)
 
 ## Footer
 
-The footer feature at the bottom of the page lets users know who it was developed by.
+The footer at the bottom of the page includes a link to Get Wurst's Facebook business page and their Privacy Policy.
 
 
 [Back to top ⇧](#Get-Wurst)
