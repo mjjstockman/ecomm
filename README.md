@@ -12,7 +12,6 @@
 
 1. [Introduction](#Introduction)
 3. [UX and Design](#UX-and-design)
-   - [User Demographics](#User-Demographics)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
    - [Database Design](#Database-design) 
@@ -51,11 +50,6 @@ This is a fictional website (for educational purposes) for a street food company
 
 [Back to top ⇧](#Get-Wurst)
 
-## User Demographics
-
-The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community
-
-[Back to top ⇧](#Get-Wurst)
 ## User Stories
 
 A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23/views/1).
