@@ -1,6 +1,6 @@
 # Get Wurst
 
-<img src="static/images/readme/amiresponsive-mockup.png"  alt="Mockup of the Get Wurst website on a phone, tablet, laptop and monitor screen">
+<img src="static/images/readme/general/amiresponsive-mockup.png"  alt="Mockup of the Get Wurst website on a phone, tablet, laptop and monitor screen">
 
 *Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
 
@@ -123,7 +123,8 @@ Wireframes were being made for other screen sizes, but throught development it b
 [Back to top ⇧](#Get-Wurst)
 
 ## Database Design
-<img  src="docs/readme_images/general/ERD.jpg"  alt="Entity Relationship Diagram">
+An ERD for the site can be found below. This was created using [Django-extensions](https://github.com/django-extensions/).
+<img src="static/images/readme/general/erd.png"  alt="Entity Relarionship Diagram">
 
 ## Changes to the design throughout development
 
