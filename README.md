@@ -203,7 +203,19 @@ This is followed by information of the Bratwurst on sale. Each product has an im
 
 This is followed with the same for Chicken and then Burgers.
 
+If a site owner is logged in each product has a delete and edit button. 
+
 <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
+
+[Back to top ⇧](#Get-Wurst)
+
+# Product/delete
+When a site owner is logged in and clicks the "delete" button a pop-up box asks if they are sure if they want to delete the item. They can use a button to either delete the item or cancel.
+
+[Back to top ⇧](#Get-Wurst)
+
+# Product/edit
+When a site owner is logged in and clicks the "edit" button a form is displayed with the product information pre-filled. They can then change any information that needs updating and click the "Update Product" button.  THere is also a button to cancel editing the information.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -212,10 +224,12 @@ An image of the product is shown as well as it's name, long description, price a
 
 A primary button back to the menu and a CTA add to cart button is shown below the qunatity input.
 
+[Back to top ⇧](#Get-Wurst)
 ## Events
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in 
 Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
+[Back to top ⇧](#Get-Wurst)
 ## Cart
 If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
@@ -248,7 +262,7 @@ The footer at the bottom of the page includes a link to Get Wurst's Facebook bus
 
 # Features to Implement in the future
 
-Add a Expand / Collapse All button to the accordion in the FAQ app.
+Add an Expand / Collapse All button to the accordion in the FAQ app.
 
 Tried many different ways but never satifactory.
 
@@ -276,7 +290,17 @@ Details on site testing can be found [here](TESTING.md).
 # Bugs
 
 ## Bugs found throughout Development
-Active pages were not being highlighted properly in the nav.  This was due to the nav being part of a base template.  The following article helped: https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar
+Major bugs were added as GitHub Issues with a "bug" label.
+
+These can be viewed in the following links:
+
+[Google Signin](https://github.com/mjjstockman/ecomm/issues/47)
+
+[Update/Remove links](https://github.com/mjjstockman/ecomm/issues/48)
+
+[Database Issues](https://github.com/mjjstockman/ecomm/issues/49)
+
+[Item quantity](https://github.com/mjjstockman/ecomm/issues/50)
 
 
 ## Remaining Bugs
