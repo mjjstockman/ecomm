@@ -17,7 +17,6 @@
    - [Wireframes](#Wireframes)
    - [Database Design](#Database-design) 
    - [Kanban](#Kanban) 
-   - [Changes to the design throughout development](#Changes-to-the-design-throughout-development)
    - [Typography](#typography)
 4. [Features](#Features)
    - [Navigation and Header](#Navigation-and-Header)
@@ -120,28 +119,26 @@ Themes into Epics, their related User Stories and prioritise their importance.
 ## Menu Page: large, site owner
 <img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of home page">
 
-## FAQs Page: small, site user
-<img src="static/images/readme/wireframes/faq-small-user-wireframe.png"  alt="Black and white wireframe of home page">
+## FAQs Page: small, logged in
+<img src="static/images/readme/wireframes/faq-small-wireframe.png"  alt="Black and white wireframe of home page">
 
 ## FAQs Page: large, site user
-<img src="static/images/readme/wireframes/faq-large-user-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/faq-large-wireframe.png"  alt="Black and white wireframe of home page">
 
-## Menu Page: large
+## Events Page: small
+<img src="static/images/readme/wireframes/events-small-wireframe.png"  alt="Black and white wireframe of home page">
 
-## Menu Page: small
+## Events Page: large
+<img src="static/images/readme/wireframes/events-large-wireframe.png"  alt="Black and white wireframe of home page">
 
-## Home Page: large
+## Cart Page
+<img src="static/images/readme/wireframes/cart-wireframe.png"  alt="Black and white wireframe of home page">
 
-## Menu Page: small
+## Profile Page: small
+<img src="static/images/readme/wireframes/profile-small-wireframe.png"  alt="Black and white wireframe of home page">
 
-## Home Page: large
-
-| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_author.jpg"  alt="Wireframe of the setlist detail page as author on a small screen"> 
-| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_not_author.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
-| Setlist/add |<img  src="docs/readme_images/wireframes/small/setlist_add/setlist_add.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
-
-
-Wireframes were being made for other screen sizes, but throught development it became clear that the design would be suitable across screen sizes, so the designs were scrapped.
+## Profile Page: large
+<img src="static/images/readme/wireframes/profile-large-wireframe.png"  alt="Black and white wireframe of home page">
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
@@ -150,15 +147,6 @@ Wireframes were being made for other screen sizes, but throught development it b
 ## Database Design
 An ERD for the site can be found below. This was created using [Django-extensions](https://github.com/django-extensions/).
 <img src="static/images/readme/general/erd.png"  alt="Entity Relarionship Diagram">
-
-## Changes to the design throughout development
-
-The design for the small sized screens were kept for all sizes.  
-
-The home app was created to seperate some of the logic.  This is possibly not the best design to use but was done so to see how this would be implemented.  Another app called addimage was used to increase future usability in different apps, but this was not fully realised.  
-
-[Back to top ⇧](#Get-Wurst)
-
 
 ## Typography
 
