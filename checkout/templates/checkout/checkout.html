@@ -64,7 +64,8 @@
                 </fieldset>
                 <fieldset class="px-3 mb-5">
                     <legend class="fieldset-label small px-2 w-auto">
-                        Delivery</legend>
+                        Card Details
+                    </legend>
                     {{ order_form.phone_number | as_crispy_field }}
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -109,6 +110,7 @@
                         class="btn btn-primary">
                             <i class="fas fa-chevron-left"></i>
                         Adjust Cart
+                            <i class="fa-solid fa-basket-shopping"></i>
                     </a>
                     <button id="submit-button" class="btn btn-cta">
                         Complete Order
@@ -120,7 +122,6 @@
 
                        Your card will be charged 
                             <strong>£{{ total|floatformat:2 }}</strong>
-
                     </p>
                 </div>
             </form>
