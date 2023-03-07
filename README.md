@@ -304,7 +304,7 @@ These can be viewed in the following links:
 
 
 ## Remaining Bugs
-The hero div is not resizing on larger screens.
+!!!!!!!!!!! UPDATE !!!!!!!!!!!!!!!
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -316,7 +316,7 @@ The code was deployed to GitHub Pages in the following way:
 
 Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+Select the [GitHub Repository](https://github.com/mjjstockman/ecomm).
 
 Open Settings by clicking on the Settings link (with the cog icon).
 
@@ -336,7 +336,7 @@ The URL address for the deployed site will be shown.
 
 Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+Select the [GitHub Repository](https://github.com/mjjstockman/ecomm).
 
 Click "Fork" at the top right of the page.
 
@@ -350,7 +350,7 @@ The repository will be copied into your GitHub account.
 
 Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+Select the [GitHub Repository](https://github.com/mjjstockman/ecomm).
 
 Click on the Code button.
 
@@ -363,7 +363,7 @@ Navigate into the directory you want to clone the repositroy to.
 Type git clone and paste the copied URL.
 
 ```
-$ git clone https://github.com/mjjstockman/https://github.com/mjjstockman/setlistsharer
+$ git clone https://github.com/mjjstockman/ecomm
 ```
 
 Press **Enter**.
