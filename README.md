@@ -108,9 +108,34 @@ Themes into Epics, their related User Stories and prioritise their importance.
 
 ## Wireframes
 
-| Page | Image | 
-| --------------| -------------- | 
-| Home |<img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of the home page on a small screen"> 
+## Home Page: small
+<img src="static/images/readme/wireframes/home-small-wireframe.png"  alt="Black and white wireframe of home page">
+
+## Home Page: large
+<img src="static/images/readme/wireframes/home-large-wireframe.png"  alt="Black and white wireframe of home page">
+
+## Menu Page: small, site owner
+<img src="static/images/readme/wireframes/menu-small-owner-wireframe.png"  alt="Black and white wireframe of home page">
+
+## Menu Page: large, site owner
+<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of home page">
+
+## FAQs Page: small, site user
+<img src="static/images/readme/wireframes/faq-small-user-wireframe.png"  alt="Black and white wireframe of home page">
+
+## FAQs Page: large, site user
+<img src="static/images/readme/wireframes/faq-large-user-wireframe.png"  alt="Black and white wireframe of home page">
+
+## Menu Page: large
+
+## Menu Page: small
+
+## Home Page: large
+
+## Menu Page: small
+
+## Home Page: large
+
 | Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_author.jpg"  alt="Wireframe of the setlist detail page as author on a small screen"> 
 | Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_not_author.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
 | Setlist/add |<img  src="docs/readme_images/wireframes/small/setlist_add/setlist_add.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
@@ -678,8 +703,7 @@ The general structure of the page was based on 1/3 proportions in many of it's f
 The whole of design has been saved in this [pdf file](README_docs/wireframes/wireframes.pdf). 
 
 ### Home page
-
-![wireframes of home page](README_docs/wireframes/01-home.PNG)
+<img src="static/images/readme/wireframes/home-small-wireframe.png"  alt="Black and white wireframe of home page">
 The desing of this page is heavily inspired by bootstrap examples found [here](https://getbootstrap.com/docs/4.0/examples/carousel/). This design was than further individualised to match the overal style of the page.
 
 Home page is divided into three main sections: carousele, staff images and FAQ questions. This aims to give the user a feeling of dealing with real people and entice them to interesting content.
