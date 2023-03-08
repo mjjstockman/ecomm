@@ -18,13 +18,17 @@
    - [Kanban](#Kanban) 
    - [Typography](#typography)
 4. [Features](#Features)
-   - [Navigation and Header](#Navigation-and-Header)
-   - [Hero Image](#Hero-Image)
-   - [About Information Box](#About-Information-Box)
-   - [Gigs](#Gigs)
-   - [Setlists](#Setlists)
-   - [Photos](#Photos)
-   - [Footer](#Footer)
+   - [General](#General)
+    - [Navigation and Header](#Navigation-and-Header)
+   - [Home Page](#Home-Page)
+    - [Hero Image](#Hero-Image)
+    - [Our Story Box](#Our-Story-Information-Box)
+  - [Menu](#Menu)
+   - [Product Delete](#Product/delete)
+   - [Product Edit](#Product/edit)
+ - [Events](#Events)
+ - [Footer](#Footer)
+     - [Products](#General)
 5. [Future Features](#Features-to-Implement-in-the-future)
 6. [Testing](#Testing)
 7. [Bugs](#Bugs)
@@ -102,37 +106,43 @@ Themes into Epics, their related User Stories and prioritise their importance.
 ## Wireframes
 
 ## Home Page: small
-<img src="static/images/readme/wireframes/home-small-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/home-small-wireframe.png"  alt="Black and white wireframe of home page on a small device">
 
 ## Home Page: large
-<img src="static/images/readme/wireframes/home-large-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/home-large-wireframe.png"  alt="Black and white wireframe of home page on a large device">
 
 ## Menu Page: small, site owner
-<img src="static/images/readme/wireframes/menu-small-owner-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/menu-small-owner-wireframe.png"  alt="Black and white wireframe of menu page as site owner on a small device">
 
 ## Menu Page: large, site owner
-<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of menu page as site owner on a small device">
+
+## Menu Page: small, site user
+<img src="static/images/readme/wireframes/menu-small-user-wireframe.png"  alt="Black and white wireframe of menu page as site user on a small device">
+
+## Menu Page: large, site user
+<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of menu page as site user on a large device">
 
 ## FAQs Page: small, logged in
-<img src="static/images/readme/wireframes/faq-small-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/faq-small-loggedin-wireframe.png"  alt="Black and white wireframe of FAQ page as a logged in user on a small device">
 
-## FAQs Page: large, site user
-<img src="static/images/readme/wireframes/faq-large-wireframe.png"  alt="Black and white wireframe of home page">
+## FAQs Page: large, anonymous user
+<img src="static/images/readme/wireframes/faq-large-anonymous-wireframe.png"  alt="Black and white wireframe of FAQ page as an anonymous user on a large device">
 
 ## Events Page: small
-<img src="static/images/readme/wireframes/events-small-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/events-small-wireframe.png"  alt="Black and white wireframe of events page on a small device">
 
 ## Events Page: large
-<img src="static/images/readme/wireframes/events-large-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/events-large-wireframe.png"  alt="Black and white wireframe of events page on a large device">
 
 ## Cart Page
 <img src="static/images/readme/wireframes/cart-wireframe.png"  alt="Black and white wireframe of home page">
 
 ## Profile Page: small
-<img src="static/images/readme/wireframes/profile-small-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/profile-small-wireframe.png"  alt="Black and white wireframe of profile page on a small device">
 
 ## Profile Page: large
-<img src="static/images/readme/wireframes/profile-large-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/profile-large-wireframe.png"  alt="Black and white wireframe of profile page on a large device">
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
@@ -152,6 +162,8 @@ An ERD for the site can be found below. This was created using [Django-extension
 [Back to top ⇧](#Get-Wurst)
 
 # Features
+
+# General
 
 ## Navigation and Header
 
@@ -213,6 +225,7 @@ When a site owner is logged in and clicks the "edit" button a form is displayed 
 
 [Back to top ⇧](#Get-Wurst)
 
+# Product/edit
 ## Product Detail
 An image of the product is shown as well as it's name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more then 9.
 
