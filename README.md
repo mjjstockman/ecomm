@@ -112,6 +112,7 @@ Themes into Epics, their related User Stories and prioritise their importance.
 <img src="static/images/readme/wireframes/home-large-wireframe.png"  alt="Black and white wireframe of home page on a large device">
 
 ## Menu Page: small, site owner
+When a site owner is logged in the menu page has additional "Edit" and "Delete" buttons for each product.
 <img src="static/images/readme/wireframes/menu-small-owner-wireframe.png"  alt="Black and white wireframe of menu page as site owner on a small device">
 
 ## Menu Page: large, site owner
@@ -124,9 +125,12 @@ Themes into Epics, their related User Stories and prioritise their importance.
 <img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of menu page as site user on a large device">
 
 ## FAQs Page: small, logged in
+A logged in user can submit a quetion, an answer and like/remove their like of published answers.
+Useres are told if a questions doesn't have a published answer.
 <img src="static/images/readme/wireframes/faq-small-loggedin-wireframe.png"  alt="Black and white wireframe of FAQ page as a logged in user on a small device">
 
 ## FAQs Page: large, anonymous user
+Non-logged in users can view published questions and answers and see how many people have liked the answer.
 <img src="static/images/readme/wireframes/faq-large-anonymous-wireframe.png"  alt="Black and white wireframe of FAQ page as an anonymous user on a large device">
 
 ## Events Page: small
@@ -225,7 +229,6 @@ When a site owner is logged in and clicks the "edit" button a form is displayed 
 
 [Back to top ⇧](#Get-Wurst)
 
-# Product/edit
 ## Product Detail
 An image of the product is shown as well as it's name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more then 9.
 
@@ -264,6 +267,12 @@ A primary "Back to Home Page" is displayed beneath.
 
 The footer at the bottom of the page includes a link to Get Wurst's Facebook business page and their Privacy Policy.
 
+## Facebook page
+The Facebook link in the footer goes to Get Wurst's Facebook page, as seen below:
+<img src="static/images/readme/general/facebook-top.png"  alt="Get Wurst's Facebook page">
+
+The Facebook page contains Get Wurst's business information:
+<img src="static/images/readme/general/facebook-intro.png"  alt="Get Wurst's Intro information on their Facebook page">
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -524,10 +533,8 @@ Many thanks to the following which were used throughout the creation of this sit
 [Back to top ⇧](#Get-Wurst)
 
 ## Images
-
-The Hero image was taken from [Adobe Stock Image](https://stock.adobe.com/).
-
-All other images were taken from [Pexels](https://www.pexels.com/).
+The logo was created by [Alex Mench](https://twitter.com/Alex_Mench) who kindly gave permission for its use.
+All other images were taken from [Unsplash](https://unsplash.com/).
 
 [Back to top ⇧](#Get-Wurst)
 
