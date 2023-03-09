@@ -14,8 +14,7 @@ class TestGetWurst:
 
     def setup_method(self, method):
         self.driver = webdriver.Chrome()
-
-    self.vars = {}
+        self.vars = {}
 
     def teardown_method(self, method):
         self.driver.quit()
