@@ -63,8 +63,17 @@ Form to update password
 User recieves confirmation their password has been updated
 <img src="static/images/readme/user_story_tests/password-change-confirmation.png"  alt="Notification saying user email needs to be verified">
 
+## [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state
 
+Message confirming signup
 
+<img src="static/images/readme/user_story_tests/google-signin-success.png"  alt="Message confirming signin success">
+
+Nav not loggedin
+<img src="static/images/readme/user_story_tests/nav-anonymous.png"  alt="Navigation bar with SignUp and Login links">
+
+Nav loggedin
+<img src="static/images/readme/user_story_tests/nav-loggedin.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
