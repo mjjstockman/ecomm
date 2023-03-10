@@ -75,6 +75,16 @@ Nav not loggedin
 Nav loggedin
 <img src="static/images/readme/user_story_tests/nav-loggedin.png"  alt="Navigation bar with My Profile and Signout links">
 
+## [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual sign out
+Confirm Sign out
+<img src="static/images/readme/user_story_tests/signout-confirm.png"  alt="Navigation bar with My Profile and Signout links">
+
+Singout confirmation message
+<img src="static/images/readme/user_story_tests/signedout-message.png"  alt="Navigation bar with My Profile and Signout links">
+
+
+
+
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
 |--|--|--|--|--|
