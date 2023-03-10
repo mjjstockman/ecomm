@@ -83,7 +83,7 @@ Singout confirmation message
 <img src="static/images/readme/user_story_tests/signedout-message.png"  alt="Navigation bar with My Profile and Signout links">
 
 
-
+## [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin 
 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
