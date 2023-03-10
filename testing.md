@@ -11,6 +11,22 @@ Once fields are filled with valid inputs
 <img src="static/images/readme/user_story_tests/completed-signup-form.png"  alt="Signup form with e-mail, e-mail again, username, password and password again fields completed">
 
 
+
+## [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google
+
+Google signin option button
+
+<img src="static/images/readme/user_story_tests/google-login-button.png"  alt="Signin page with Google login button">
+
+Google signin choose account
+
+<img src="static/images/readme/user_story_tests/google-choose-account.png"  alt="Normal Google choose account">
+
+Google signin success
+
+<img src="static/images/readme/user_story_tests/google-signin-success.png"  alt="Message confirming signin success">
+
+## [#17] Confirm Sign up via email
 The user is notified that an email to verify their email address is shown
 
 <img src="static/images/readme/user_story_tests/verify-email-message.png"  alt="Notification saying user email needs to be verified">
@@ -19,8 +35,14 @@ User recieves an email
 
 <img src="static/images/readme/user_story_tests/signup-email.png"  alt="Notification saying user email needs to be verified">
 
+## [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password
 
-## [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google
+
+<img src="static/images/readme/user_story_tests/google-login-button.png"  alt="Notification saying user email needs to be verified">
+
+
+<img src="static/images/readme/user_story_tests/username-password-signin-success.png"  alt="Notification saying user email needs to be verified">
+
 
 
 
