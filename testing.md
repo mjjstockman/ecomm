@@ -83,7 +83,32 @@ Singout confirmation message
 <img src="static/images/readme/user_story_tests/signedout-message.png"  alt="Navigation bar with My Profile and Signout links">
 
 
-## [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin 
+## [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin
+Products admin form
+<img src="static/images/readme/user_story_tests/product-admin-form.png"  alt="Navigation bar with My Profile and Signout links">
+
+Products admin list before adding new product
+<img src="static/images/readme/user_story_tests/product-admin-before.png"  alt="Navigation bar with My Profile and Signout links">
+
+Products shown on site before adding new product
+<img src="static/images/readme/user_story_tests/menu-before.png"  alt="Navigation bar with My Profile and Signout links">
+
+Products admin list after adding new product
+<img src="static/images/readme/user_story_tests/product-admin-after.png"  alt="Navigation bar with My Profile and Signout links">
+
+Products shown on site after adding new product
+<img src="static/images/readme/user_story_tests/menu-after.png"  alt="Navigation bar with My Profile and Signout links">
+
+
+## [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products
+
+## [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
+## [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin | Must have |  Yes |
+## [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin | Must have | Yes |
+## [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site | Must have | Yes |
+
+
+
 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
