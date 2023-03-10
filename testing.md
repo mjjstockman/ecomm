@@ -43,6 +43,25 @@ User recieves an email
 
 <img src="static/images/readme/user_story_tests/username-password-signin-success.png"  alt="Notification saying user email needs to be verified">
 
+## [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info 
+
+Users can enter their email to recieve ane email to change their password
+<img src="static/images/readme/user_story_tests/password-reset.png"  alt="Notification saying user email needs to be verified">
+
+Users can enter their email to recieve a link to change their password
+<img src="static/images/readme/user_story_tests/password-reset.png"  alt="Notification saying user email needs to be verified">
+
+They are informed that an email has been sent
+<img src="static/images/readme/user_story_tests/password-reset-email-sent.png"  alt="Notification saying user email needs to be verified">
+
+Email is sent
+<img src="static/images/readme/user_story_tests/password-reset-email.png"  alt="Notification saying user email needs to be verified">
+
+Form to update password
+<img src="static/images/readme/user_story_tests/password-change-form.png"  alt="Notification saying user email needs to be verified">
+
+User recieves confirmation their password has been updated
+<img src="static/images/readme/user_story_tests/password-change-confirmation.png"  alt="Notification saying user email needs to be verified">
 
 
 
