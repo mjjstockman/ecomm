@@ -10,6 +10,15 @@ Once fields are filled with valid inputs
 
 <img src="static/images/readme/user_story_tests/completed-signup-form.png"  alt="Signup form with e-mail, e-mail again, username, password and password again fields completed">
 
+## [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email
+The user is notified that an email to verify their account is shown
+
+<img src="static/images/readme/user_story_tests/verify-email-message.png"  alt="Notification saying user email needs to be verified">
+
+User recieves an email
+
+<img src="static/images/readme/user_story_tests/signup-email.png"  alt="Notification saying user email needs to be verified">
+
 
 
 ## [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google
@@ -26,14 +35,6 @@ Google signin success
 
 <img src="static/images/readme/user_story_tests/google-signin-success.png"  alt="Message confirming signin success">
 
-## [#17] Confirm Sign up via email
-The user is notified that an email to verify their email address is shown
-
-<img src="static/images/readme/user_story_tests/verify-email-message.png"  alt="Notification saying user email needs to be verified">
-
-User recieves an email
-
-<img src="static/images/readme/user_story_tests/signup-email.png"  alt="Notification saying user email needs to be verified">
 
 ## [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password
 
@@ -44,9 +45,6 @@ User recieves an email
 <img src="static/images/readme/user_story_tests/username-password-signin-success.png"  alt="Notification saying user email needs to be verified">
 
 ## [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info 
-
-Users can enter their email to recieve ane email to change their password
-<img src="static/images/readme/user_story_tests/password-reset.png"  alt="Notification saying user email needs to be verified">
 
 Users can enter their email to recieve a link to change their password
 <img src="static/images/readme/user_story_tests/password-reset.png"  alt="Notification saying user email needs to be verified">
@@ -77,20 +75,26 @@ Nav loggedin
 
 ## [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual sign out
 Confirm Sign out
+
 <img src="static/images/readme/user_story_tests/signout-confirm.png"  alt="Navigation bar with My Profile and Signout links">
 
 Singout confirmation message
+
 <img src="static/images/readme/user_story_tests/signedout-message.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 ## [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin
+
 Products admin list before adding new product
+
 <img src="static/images/readme/user_story_tests/product-admin-before.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products admin form
+
 <img src="static/images/readme/user_story_tests/product-admin-form.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products admin list after adding new product
+
 <img src="static/images/readme/user_story_tests/product-admin-after.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site before adding new product
@@ -110,33 +114,76 @@ Add product through site form empty
 Add product through site form complete
 <img src="static/images/readme/user_story_tests/menu-add-form-complete.png"  alt="Navigation bar with My Profile and Signout links">
 
-Menu before adding
+Menu before adding new product
+<img src="static/images/readme/user_story_tests/before-product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
 
-Menu after adding
+
+Menu after adding new product
+<img src="static/images/readme/user_story_tests/product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 ## [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products
 
-## [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
+## [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products
 
 ## [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin
 Products shown on site admin before editing a product
+
 <img src="static/images/readme/user_story_tests/product-admin-before-edit.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site admin after editing a product
+
 <img src="static/images/readme/user_story_tests/product-admin-after-edit.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on menu page before editing a product
-<img src="static/images/readme/user_story_tests/menu-before.png"  alt="Navigation bar with My Profile and Signout links">
+
+<img src="static/images/readme/user_story_tests/menu-after.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on menu page after editing a product
 <img src="static/images/readme/user_story_tests/menu-after-edit.png"  alt="Navigation bar with My Profile and Signout links">
 
 ## [#27](https://github.com/mjjstockman/ecomm/issues/37) Edit products through site
+Product before editing through site
 
-## [#38](https://github.com/mjjstockman/ecomm/issues/388) Delete products through admin 
+<img src="static/images/readme/user_story_tests/before-site-edit.png"  alt="Navigation bar with My Profile and Signout links">
 
-## [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site 
+Product edit form on site
+
+<img src="static/images/readme/user_story_tests/edit-site-form-before.png"  alt="Navigation bar with My Profile and Signout links">
+
+Completed Product edit form on site
+
+<img src="static/images/readme/user_story_tests/edit-site-form-complete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Successful Product edit confirmation
+
+<img src="static/images/readme/user_story_tests/edit-site-confirmation.png"  alt="Navigation bar with My Profile and Signout links">
+
+Product after editing through site
+
+<img src="static/images/readme/user_story_tests/after-site-edit.png"  alt="Navigation bar with My Profile and Signout links">
+
+## [#38](https://github.com/mjjstockman/ecomm/issues/388) Delete products through admin
+
+Menu before deleting product
+
+
+
+## [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site
+
+Menu before deleting product through site
+<img src="static/images/readme/user_story_tests/menu-before-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Confirm Product deletion
+
+<img src="static/images/readme/user_story_tests/confirm-site-deletion.png"  alt="Navigation bar with My Profile and Signout links">
+
+Product deletion message
+
+<img src="static/images/readme/user_story_tests/site-deletion-confirmed.png"  alt="Navigation bar with My Profile and Signout links">
+
+Menu after deleting product through site
+<img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 
