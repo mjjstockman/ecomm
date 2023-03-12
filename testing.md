@@ -98,10 +98,10 @@ Products admin list after adding new product
 <img src="static/images/readme/user_story_tests/product-admin-after.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site before adding new product
-<img src="static/images/readme/user_story_tests/menu-before.png"  alt="Navigation bar with My Profile and Signout links">
+<img src="static/images/readme/user_story_tests/before-product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site after adding new product
-<img src="static/images/readme/user_story_tests/menu-after.png"  alt="Navigation bar with My Profile and Signout links">
+<img src="static/images/readme/user_story_tests/after-product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 ## [#53](https://github.com/mjjstockman/ecomm/issues/53) Add products through site
@@ -163,10 +163,23 @@ Product after editing through site
 
 <img src="static/images/readme/user_story_tests/after-site-edit.png"  alt="Navigation bar with My Profile and Signout links">
 
-## [#38](https://github.com/mjjstockman/ecomm/issues/388) Delete products through admin
+## [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin
 
 Menu before deleting product
 
+<img src="static/images/readme/user_story_tests/menu-before-admin-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Product admin before deleting product
+
+<img src="static/images/readme/user_story_tests/product-admin-before-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Menu after deleting product
+
+<img src="static/images/readme/user_story_tests/menu-after-admin-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Menu after deleting product
+
+<img src="static/images/readme/user_story_tests/menu-after-admin-delete.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 ## [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site
@@ -184,6 +197,28 @@ Product deletion message
 
 Menu after deleting product through site
 <img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+## [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site
+
+Menu before deleting product through site
+<img src="static/images/readme/user_story_tests/menu-before-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+Confirm Product deletion
+
+<img src="static/images/readme/user_story_tests/confirm-site-deletion.png"  alt="Navigation bar with My Profile and Signout links">
+
+Product deletion message
+
+<img src="static/images/readme/user_story_tests/site-deletion-confirmed.png"  alt="Navigation bar with My Profile and Signout links">
+
+Menu after deleting product through site
+<img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
+## [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart
+gg
+Add item to cart
+<img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
+
 
 
 
