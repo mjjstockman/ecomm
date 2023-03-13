@@ -5,26 +5,25 @@
 
 The Signup page shows the following form
 
-<img src="images/us-15/form-empty.png"  alt="Signup form with e-mail, e-mail again, username, password and password again fields">
+<img src="images/us-15/form-empty.png" alt="Signup form with e-mail, e-mail again, username, password and password again fields">
 
 
 Form validation
 
-<img src="images/us-15/form-invalid.png"  alt="Signup form with invalid e-mail and username  fields highlited in red with an error descriptionand red info icon">
+<img src="images/us-15/form-invalid.png" alt="Signup form with invalid e-mail and username fields highlited in red with an error descriptionand red info icon">
 
 
 Missing info
-<img src="images/us-15/form-no-password.png"  alt="Signup form with e-mail, e-mail again, username, password and password again fields">
-
+<img src="images/us-15/form-no-password.png" alt="SSignup form with missing password field warning">
 
 Once filled in correctly...
 
-<img src="images/us-15/form-complete.png"  alt="Signup form with missing password field warning">
+<img src="images/us-15/form-complete.png" alt="Signup form with all fields correctly entered, shows no warning signs">
 
 
 User shown success message and informed to verify email
 
-<img src="images/us-15/verify-email-message.png"  alt="Email sent message">
+<img src="images/us-15/verify-email-message.png" alt="Email sent message, asking user to check their email">
 
 
 ## Confirm Sign up via email
@@ -32,12 +31,12 @@ User shown success message and informed to verify email
 
 User recieves an email
 
-<img src="images/us-17/email.png"  alt="The email a user recieves when they signup">
+<img src="images/us-17/email.png" alt="The email a user recieves when they signup">
 
 
 If user trys to login before confirming email
 
-<img src="images/us-17/email-sent.png"  alt="Message telling the user they need to confirm their email">
+<img src="images/us-17/email-sent.png" alt="Message telling the user they need to confirm their email">
 
 
 ## Sign up using Google
@@ -45,33 +44,33 @@ If user trys to login before confirming email
 
 Google Login button
 
-<img src="images/us-16/google-login-button.png"  alt="Login page with a button to login with Google">
+<img src="images/us-16/google-login-button.png" alt="Login page with a button to login with Google">
 
 Google choose account
 
-<img src="images/us-16/google-choose-account.png"  alt="General signin with Google, choose account">
+<img src="images/us-16/google-choose-account.png" alt="General signin with Google, choose account page">
 
 Google signin success
 
-<img src="images/us-16/google-signin-success.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-16/google-signin-success.png" alt="Message telling the user they successfully signed in">
 
 ## Log in using username / password
 ## [Issue #18](https://github.com/mjjstockman/ecomm/issues/18)
 
 Login form
 
-<img src="images/us-18/login-form.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-18/login-form.png" alt="Message telling the user they successfully signed in">
 
 Logged in message
 
-<img src="images/us-18/loggedin-message.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-18/loggedin-message.png" alt="Message telling the user they successfully signed in">
 
 ## Login using username / password
 ## [Issue #19](https://github.com/mjjstockman/ecomm/issues/19)
 
 Login form
 
-<img src="images/us-18/login-form.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-18/login-form.png"  alt="Login form with username and asterisked out password filled in">
 
 Signedin message
 
@@ -83,38 +82,66 @@ Signedin message
 
 Password reset form
 
-<img src="images/us-20/password-reset-form.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-20/password-reset-form.png" alt="Form for user to enter their email and a button to reset password">
 
 Password reset message
 
-<img src="images/us-20/email-sent.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-20/email-sent.png" alt="Message telling the user they have recieved an email">
 
 User recieves email
 
-<img src="images/us-20/email.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-20/email.png" alt="The email a user gets sent">
 
 New password form
 
-<img src="images/us-20/change-password-form.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-20/change-password-form.png" alt="Form to enter password twice">
 
 Password changed message
 
-<img src="images/us-20/success-message.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-20/success-message.png" alt="Message telling the user their password has been changed">
 
 ## Login state
 ## [Issue #21](https://github.com/mjjstockman/ecomm/issues/21)
 
 nav-anonm
 
-<img src="images/us-21/nav-anonymous.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-21/nav-anonymous.png" alt="Navigation bar with Sign Up and Login links at the far right">
 
 nav-loggedin
 
-<img src="images/us-21/nav-loggedin.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-21/nav-loggedin.png" alt="Navigation bar without Sign Up and Login links but a Logout link at the far right">
 
 loggedin-msg
 
-<img src="images/us-21/login-success-message.png"  alt="Message telling the user they successfully signed in">
+<img src="images/us-21/login-success-message.png" alt="Message telling the user they successfully signed in">
+
+
+## Manual logout
+## [Issue #22](https://github.com/mjjstockman/ecomm/issues/22)
+
+Logout success message
+
+<img src="images/us-22/logout-success-message.png" alt="Message telling the user they successfully signeded out">
+
+
+## Add products through admin
+## [Issue #24](https://github.com/mjjstockman/ecomm/issues/24)
+
+Products in admin before
+
+<img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products">
+
+Products in admin after
+
+<img src="images/us-24/product-admin-after.png" alt="Products admin model showing newly added product">
+
+Products on site before
+
+<img src="images/us-24/menu-before.png" alt="Three burgers on the menu page">
+
+Products on site after
+
+<img src="images/us-24/menu-after.png" alt="Newly added product in the burger menu">
 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
