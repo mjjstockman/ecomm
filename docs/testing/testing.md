@@ -343,14 +343,58 @@ Facebook page shows business info
 ## Save profile info
 ## [Issue #40](https://github.com/mjjstockman/ecomm/issues/40)
 
+No profile info saved
+
+<img src="images/us-40/empty-profile-form.png" alt="Profile form with no info saved">
+
+Completed profile form
+
+<img src="images/us-40/complete-profile-form.png" alt="Profile form with new info">
+
+Profile updated message
+
+<img src="images/us-40/profile-updated-message.png" alt="Message confirming profile was updated">
+
+New profile info
+
+<img src="images/us-40/updated-profile-info.png" alt="Profile with updated info"> 
+
 ## Edit profile info
 ## [Issue #41](https://github.com/mjjstockman/ecomm/issues/41)
+
+Profile before editing
+
+<img src="images/us-41/old-profile-info.png" alt="Profile form with profile info">
+
+Completed edit profile form with new values
+
+<img src="images/us-41/profile-info-form-complete.png" alt="Profile form with new profile info">
+
+Profile updated message
+
+<img src="images/us-41/profile-updated-message.png" alt="Profile successfully added message">
+
+New profile info
+
+<img src="images/us-41/profile-info-updated.png" alt="Form showing new profile info">
 
 ## View order history
 ## [Issue #42](https://github.com/mjjstockman/ecomm/issues/42)
 
+View order history
+
+<img src="images/us-42/order-history.png" alt="Users order history with orfer number, date, items and order total">
+
+Order history detail
+
+<img src="images/us-42/order-history-detail.png" alt="Detailed info on precious order">
+
 ## Submit a question
 ## [Issue #43](https://github.com/mjjstockman/ecomm/issues/43)
+
+Submit a question
+HERE HERE HERE HERE
+<img src="images/us-43/order-history-detail.png" alt="Get Wurst's Facebook intro info">
 
 ## Submit an answer
 ## [Issue #44](https://github.com/mjjstockman/ecomm/issues/44)
@@ -362,5 +406,3 @@ Facebook page shows business info
 ## Email when question asnwered
 ## [Issue #46](https://github.com/mjjstockman/ecomm/issues/46)
 
-## Email when question asnwered
-## [Issue #46](https://github.com/mjjstockman/ecomm/issues/46)
