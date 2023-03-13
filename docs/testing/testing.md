@@ -41,7 +41,7 @@ If user trys to login before confirming email
 
 ## Sign up using Google
 ## [Issue #16](https://github.com/mjjstockman/ecomm/issues/16)
-
+!!!!!!!!!!!!!!!!!!CHANGE TO LOGIN WITH GOOGLE ISSUE 19 !!!!!!!!!!!!!!!!!!
 Google Login button
 
 <img src="images/us-16/google-login-button.png" alt="Login page with a button to login with Google">
@@ -65,8 +65,10 @@ Logged in message
 
 <img src="images/us-18/loggedin-message.png" alt="Message telling the user they successfully signed in">
 
-## Login using username / password
-## [Issue #19](https://github.com/mjjstockman/ecomm/issues/19)
+
+!!!!!!!!!!!!!!!!!!CHANGE SEE ISSUE 16!!!!!!!!!!!!!!!!!!!
+## Login Google
+## [Issue ...........](https://github.com/mjjstockman/ecomm/issues/19)
 
 Login form
 
@@ -142,6 +144,104 @@ Products on site before
 Products on site after
 
 <img src="images/us-24/menu-after.png" alt="Newly added product in the burger menu">
+
+
+## View all products
+## [Issue #25](https://github.com/mjjstockman/ecomm/issues/25)
+ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+All products on menu page
+
+
+## View products by category
+## [Issue #26](https://github.com/mjjstockman/ecomm/issues/26)
+
+
+Bratwurts
+ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+Chicken
+ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+Burgers
+ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+
+
+ADD NEW ISSUE FOR SEARCH PRODU|CT AND UPDATE ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+
+## Search products
+## [Issue .................](https://github.com/mjjstockman/ecomm/issues/26)
+
+
+## Edit products through admin
+## [Issue #37](https://github.com/mjjstockman/ecomm/issues/37)
+
+Products shown on site before editing a product through admin
+
+<img src="images/us-37/menu-before-edit.png" alt="Burger menu with an unedited product">
+
+Product admin edit form
+
+<img src="images/us-37/menu-admin-edit-form.png" alt="Django admin change product form with edited fields">
+
+
+Products shown on site after editing a product through admin
+
+<img src="images/us-37/menu-after-edit.png" alt="Burger menu showing the edited changes to a product">
+
+
+
+## Edit products through site
+## [Issue #27](https://github.com/mjjstockman/ecomm/issues/27)
+
+
+Product before editing through site
+
+<img src="images/us-27/before-site-edit.png" alt="Product image and info before editing through site">
+
+Product edit form on site
+
+<img src="images/us-27/edit-site-form-before.png" alt="Form showing all product fields pre-filled with values">
+
+Completed Product edit form on site
+
+<img src="images/us-27/edit-site-form-complete.png" alt="Form showing all product fields with new values">
+
+Successful Product edit confirmation
+
+<img src="images/us-27/edit-site-confirmation.png" alt="Successfuly updated product message with newly edited product info">
+
+Product after editing through site
+
+<img src="images/us-27/after-site-edit.png" alt="Product image and info after editing through site">
+
+
+## Delete product through site
+## [Issue #28](https://github.com/mjjstockman/ecomm/issues/28)
+
+
+Menu before deleting product through site
+<img src="images/us-28/menu-before-site-delete.png" alt="Menu including test product">
+
+
+Confirm Product deletion
+
+<img src="images/us-28/confirm-site-deletion.png" alt="Message asking user to confrim deletion">
+
+Product deletion message
+
+<img src="images/us-28/site-deletion-confirmed.png" alt="Successfuly deleted product image">
+
+Menu after deleting product through site
+<img src="images/us-28/menu-after-site-delete.png" alt="Menu showing product has been deleted">
+
+
+
+
+
 
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
