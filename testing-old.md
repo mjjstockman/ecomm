@@ -17,7 +17,7 @@ The user is notified that an email to verify their account is shown
 
 User recieves an email
 
-<img src="static/images/readme/user_story_tests/signup-email.png"  alt="Notification saying user email needs to be verified">
+<img src="static/images/readme/user_story_tests/email.png"  alt="Notification saying user email needs to be verified">
 
 
 
@@ -98,10 +98,10 @@ Products admin list after adding new product
 <img src="static/images/readme/user_story_tests/product-admin-after.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site before adding new product
-<img src="static/images/readme/user_story_tests/before-product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
+<img src="static/images/readme/user_story_tests/menu-before.png"  alt="Navigation bar with My Profile and Signout links">
 
 Products shown on site after adding new product
-<img src="static/images/readme/user_story_tests/after-product-added-through-site.png"  alt="Navigation bar with My Profile and Signout links">
+<img src="static/images/readme/user_story_tests/menu-after.png"  alt="Navigation bar with My Profile and Signout links">
 
 
 ## [#53](https://github.com/mjjstockman/ecomm/issues/53) Add products through site
@@ -215,7 +215,7 @@ Menu after deleting product through site
 <img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
 
 ## [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart
-gg
+
 Add item to cart
 <img src="static/images/readme/user_story_tests/menu-after-site-delete.png"  alt="Navigation bar with My Profile and Signout links">
 
