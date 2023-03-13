@@ -61,6 +61,10 @@ Login form
 
 <img src="images/us-18/login-form.png" alt="Message telling the user they successfully signed in">
 
+Login form incorrect details
+
+<img src="images/us-18/login-wrong-details.png" alt="Message telling the user login info is not found">
+
 Logged in message
 
 <img src="images/us-18/loggedin-message.png" alt="Message telling the user they successfully signed in">
@@ -392,9 +396,38 @@ Order history detail
 ## Submit a question
 ## [Issue #43](https://github.com/mjjstockman/ecomm/issues/43)
 
-Submit a question
-HERE HERE HERE HERE
-<img src="images/us-43/order-history-detail.png" alt="Get Wurst's Facebook intro info">
+Questions before adding new one
+
+<img src="images/us-43/questions-before.png" alt="Get Wurst's Facebook intro info">
+
+Asking a question
+
+<img src="images/us-43/question-form-complete.png" alt="Get Wurst's Facebook intro info">
+
+Duplicate question
+
+<img src="images/us-43/question-duplicate-error.png" alt="Get Wurst's Facebook intro info">
+
+Questions after adding new one
+
+<img src="images/us-43/questions-after.png" alt="Get Wurst's Facebook intro info">
+
+Owner question straight to published
+
+<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
+
+User question straight to submitted
+
+<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
+
+Owner publishes question in admin
+
+<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
+
+Question shown on site
+
+<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
+
 
 ## Submit an answer
 ## [Issue #44](https://github.com/mjjstockman/ecomm/issues/44)
