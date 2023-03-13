@@ -304,14 +304,41 @@ Total cost when confirming order
 ## Pay for goods
 ## [Issue #33](https://github.com/mjjstockman/ecomm/issues/33)
 
+Payment form
+
+<img src="images/us-33/payment-form.png" alt="">
+
+Payment form complete
+
+<img src="images/us-33/payment-form-complete.png" alt="Conform order page with cart total">
+
+
 ## Know if an order was successful
 ## [Issue #34](https://github.com/mjjstockman/ecomm/issues/34)
 
+Order confirmation sent
+
+<img src="images/us-33/order-confirmation-email-sent.png" alt="Thany you confirming order info">
+
+Order success message
+
+<img src="images/us-33/order-success-message.png" alt="Message informing user their order was successful">
+
 ## Email order confirmation
 ## [Issue #35](https://github.com/mjjstockman/ecomm/issues/35)
+TO ADD TO ADD TO ADD TO ADD TO ADD TO ADD
 
 ## Facebook page
 ## [Issue #36](https://github.com/mjjstockman/ecomm/issues/36)
+
+Facebook page
+
+<img src="images/us-36/facebook-top.png" alt="Get Wurst's Facebook page">
+
+Facebook page shows business info
+
+<img src="images/us-36/facebook-intro.png" alt="Get Wurst's Facebook intro info">
+
 
 ## Save profile info
 ## [Issue #40](https://github.com/mjjstockman/ecomm/issues/40)
