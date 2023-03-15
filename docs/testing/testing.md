@@ -500,42 +500,24 @@ When staff change other answer to published both answers can be seen.
 <img src="images/us-44/2-answers.png" alt="Get Wurst's Facebook intro info">
 
 
-
-
-
-
-<!-- <img src="images/us-43/question-form-complete.png" alt="Get Wurst's Facebook intro info">
-
-Duplicate questions are not allowed
-
-<img src="images/us-43/duplicate-question.png" alt="Get Wurst's Facebook intro info">
-
-Anonymous users cannot submit a question.
-
-<img src="images/us-43/faq-anon.png" alt="Get Wurst's Facebook intro info">
-
-User submitted questions have default submitted status value
-
-<img src="images/us-43/user-question-default.png" alt="Get Wurst's Facebook intro info">
-
-Staff submitted questions have default published status value
-
-<img src="images/us-43/staff-question-admin.png" alt="Get Wurst's Facebook intro info">
-
-Questions with submitted status value are not shown on the site
-
-<img src="images/us-43/questions-only-approved.png" alt="Get Wurst's Facebook intro info"> -->
-
-
-
-
-
-
-
 ## View past events
 ## [Issue #45](https://github.com/mjjstockman/ecomm/issues/45)
+
+The events page shows some events Get Wurst have worked at, with an image, the date
+and a link to the events official page.
+
+<img src="images/us-45/events.png" alt="Get Wurst's Facebook intro info">
+
 
 
 ## Email when question asnwered
 ## [Issue #46](https://github.com/mjjstockman/ecomm/issues/46)
 
+User can check the checkbox underneath the question field if they wish to recieve an email when
+their question gets an approved answer.
+
+<img src="images/us-46/user-question-with-email.png" alt="Get Wurst's Facebook intro info">
+
+The email a user will recieve.
+
+<img src="images/us-46/question-answered-email.png" alt="Get Wurst's Facebook intro info">
