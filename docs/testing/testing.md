@@ -393,10 +393,10 @@ Order history detail
 
 <img src="images/us-42/order-history-detail.png" alt="Detailed info on precious order">
 
-## Submit a question
+## Submit an question
 ## [Issue #43](https://github.com/mjjstockman/ecomm/issues/43)
 
-Questions before adding new one
+<!-- Questions before adding new one
 
 <img src="images/us-43/questions-before.png" alt="Get Wurst's Facebook intro info">
 
@@ -426,11 +426,111 @@ Owner publishes question in admin
 
 Question shown on site
 
-<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
+<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info"> -->
+
+Logged in user can submit a question
+
+<img src="images/us-43/question-form-complete.png" alt="Get Wurst's Facebook intro info">
+
+Duplicate questions are not allowed
+
+<img src="images/us-43/duplicate-question.png" alt="Get Wurst's Facebook intro info">
+
+Anonymous users cannot submit a question.
+
+<img src="images/us-43/faq-anon.png" alt="Get Wurst's Facebook intro info">
+
+User submitted questions have default submitted status value
+
+<img src="images/us-43/user-question-default.png" alt="Get Wurst's Facebook intro info">
+
+Staff submitted questions have default published status value
+
+<img src="images/us-43/staff-question-admin.png" alt="Get Wurst's Facebook intro info">
+
+Questions with submitted status value are not shown on the site
+
+<img src="images/us-43/questions-only-approved.png" alt="Get Wurst's Facebook intro info">
+
+Six questions in admin, but only five are published
+
+<img src="images/us-43/six-questions-admin.png" alt="Get Wurst's Facebook intro info">
+
+Staff can change question status to published 
+
+<img src="images/us-43/publish-user-admin.png" alt="Get Wurst's Facebook intro info">
+
+This adds the question to the site
+
+<img src="images/us-43/all-questions.png" alt="Get Wurst's Facebook intro info">
+
 
 
 ## Submit an answer
 ## [Issue #44](https://github.com/mjjstockman/ecomm/issues/44)
+
+
+Logged in user can submit an answer
+
+<img src="images/us-44/user-answer-form.png" alt="Get Wurst's Facebook intro info">
+
+Non-logged in user cannot submit an answer and are promted to either Login or Sign Up
+
+<img src="images/us-44/anon-no-form.png" alt="Get Wurst's Facebook intro info">
+
+User submitted answers have default submitted status value
+
+<img src="images/us-44/admin-user-default.png" alt="Get Wurst's Facebook intro info">
+
+Staff submitted answers have default published status value
+
+<img src="images/us-44/admin-staff-default.png" alt="Get Wurst's Facebook intro info">
+
+Answers with submitted status value are not shown on the site. There are 2 answers in answers admin
+for "question for test"
+
+<img src="images/us-44/admin-1-published.png" alt="Get Wurst's Facebook intro info">
+
+However only 1 is published so the other does not show.
+
+<img src="images/us-44/1-answer.png" alt="Get Wurst's Facebook intro info">
+
+When staff change other answer to published both answers can be seen.
+
+<img src="images/us-44/2-answers.png" alt="Get Wurst's Facebook intro info">
+
+
+
+
+
+
+<!-- <img src="images/us-43/question-form-complete.png" alt="Get Wurst's Facebook intro info">
+
+Duplicate questions are not allowed
+
+<img src="images/us-43/duplicate-question.png" alt="Get Wurst's Facebook intro info">
+
+Anonymous users cannot submit a question.
+
+<img src="images/us-43/faq-anon.png" alt="Get Wurst's Facebook intro info">
+
+User submitted questions have default submitted status value
+
+<img src="images/us-43/user-question-default.png" alt="Get Wurst's Facebook intro info">
+
+Staff submitted questions have default published status value
+
+<img src="images/us-43/staff-question-admin.png" alt="Get Wurst's Facebook intro info">
+
+Questions with submitted status value are not shown on the site
+
+<img src="images/us-43/questions-only-approved.png" alt="Get Wurst's Facebook intro info"> -->
+
+
+
+
+
+
 
 ## View past events
 ## [Issue #45](https://github.com/mjjstockman/ecomm/issues/45)
