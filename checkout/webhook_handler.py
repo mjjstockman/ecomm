@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from products.models import Product
 from profiles.models import UserProfile
 from .models import Order, OrderLineItem
+import stripe
 
 
 class StripeWH_Handler:
@@ -18,7 +19,6 @@ class StripeWH_Handler:
         self.request = request
 
     def _send_confirmation_email(self, order):
-        console.log("_send_confirmation_email triggered")
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
@@ -47,13 +47,21 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe.
         """
+        print("HANDLE PAYMENT")
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        billing_details = intent.charges.data[0].billing_details
-        total = round(intent.charges.data[0].amount / 100, 2)
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+        
+        billing_details = stripe_charge.billing_details
+        total = round(stripe_charge.amount / 100, 2)
+
+        # billing_details = intent.charges.data[0].billing_details
+        # total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean data in the billing details
         for field, value in billing_details.address.items():
@@ -98,6 +106,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
+            print("SENDING EMAIL")
             self._send_confirmation_email(order)
             return HttpResponse(
                     content=f'Webhook received: {event["type"]} | SUCCESS: \
