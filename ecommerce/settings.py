@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 # SECURITY WARNING: don't run with debug turned on in production!
 # Only set debug to True if DEVELOPMENT var is in the environ
 # DEBUG = "DEVELOPMENT" in os.environ
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["ecomm-gw.herokuapp.com", "localhost"]
 
