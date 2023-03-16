@@ -330,7 +330,10 @@ Order success message
 
 ## Email order confirmation
 ## [Issue #35](https://github.com/mjjstockman/ecomm/issues/35)
-TO ADD TO ADD TO ADD TO ADD TO ADD TO ADD
+
+Email sent confirming order
+
+<img src="images/us-35/email-order-confirmation.png" alt="Email confirming order">
 
 ## Facebook page
 ## [Issue #36](https://github.com/mjjstockman/ecomm/issues/36)
