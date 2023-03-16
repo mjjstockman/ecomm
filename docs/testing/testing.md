@@ -524,3 +524,270 @@ their question gets an approved answer.
 The email a user will recieve.
 
 <img src="images/us-46/question-answered-email.png" alt="Get Wurst's Facebook intro info">
+
+
+# Automated Testing
+
+A small portion of the site was created using Test Driven Behaviour.
+
+//////////////////////////////
+PRODUCTS MODELS
+
+from django.test import TestCase
+from .models import Category, Product
+
+
+class TestModels(TestCase):
+    def test_product_has_a_category(self):
+        category1 = Category.objects.create(name='Category 1')
+        product1 = Product.objects.create(
+            name='Product 1',
+            short_description='Prod 1 description',
+            description='Prod 1 full description',
+            price=1,
+            image='media/product_images/test1.png',
+            # product1.caterogy=category1,
+            category=self.category1
+        )
+
+///////////////////////////
+
+PRODUCTS FORMS
+# from django.test import TestCase, Client
+# from django.core.files.uploadedfile import SimpleUploadedFile
+# from products.form import FakeForm
+# from products.models import Category
+
+
+class TestFakeForm(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.category1 = Category.objects.create(
+            name='Category 1',
+        )
+
+    def test_fake_form_valid_data(self):
+        form = FakeForm(data={
+            'name': 'Fake Name 1',
+            'category': self.category1,
+            'image': SimpleUploadedFile('file.jpg', b"file_content",
+                                        content_type='image/jpeg')
+        })
+
+        self.assertTrue(form.is_valid())
+
+    /////////////////////
+
+PRODUCT URLS
+
+    # import unittest
+# from django.urls import reverse, resolve
+# from products.views import all, detail, add, edit, delete
+
+
+# class TestUrls(unittest.TestCase):
+
+#     def test_products_url_resolves(self):
+#         url = reverse('products')
+#         self.assertEqual(resolve(url).func, all)
+
+#     def test_product_detail_url_resolves(self):
+#         url = reverse('product_detail', args=[1])
+#         self.assertEqual(resolve(url).func, detail)
+
+#     def test_add_product_url_resolves(self):
+#         url = reverse('add_product')
+#         self.assertEqual(resolve(url).func, add)
+
+#     def test_product_edit_url_resolves(self):
+#         url = reverse('edit_product', args=[1])
+#         self.assertEqual(resolve(url).func, edit)
+
+#     def test_product_delete_url_resolves(self):
+#         url = reverse('delete_product', args=[1])
+#         self.assertEqual(resolve(url).func, delete)
+
+///////////////////////////
+
+PRODUCT VIEWS
+
+# import unittest
+# from django.urls import reverse
+# from django.test import TestCase, Client
+# from products.models import Category, Product
+
+
+# class TestViews(TestCase):
+
+#     def setUp(self):
+#         self.client = Client()
+#         self.category1 = Category.objects.create(
+#             name = 'Category 1',
+#         )
+#         self.products_url = reverse('products')
+#         self.products_detail_url = reverse('product_detail', args=[1])
+#         self.products_edit_url = reverse('edit_product', args=[1])
+#         self.products_delete_url = reverse('delete_product', args=[1])
+#         self.product1 = Product.objects.create(
+#             name = 'Product 1',
+#             short_description = 'Prod 1 description',
+#             description = 'Prod 1 full description',
+#             price = 1,
+#             image = 'media/product_images/test1.png',
+#             category = self.category1
+#         )
+
+#     def tearDown(self):
+#         self.category1.delete()
+
+
+#     def test_products_all_GET(self):
+        
+#         response = self.client.get(self.products_url)
+
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed('products/all.html')
+
+
+#     def test_products_detail_GET(self):
+       
+#         response = self.client.get(self.products_url)
+
+#         self.assertEqual(response.status_code, 200)
+#         self.assertTemplateUsed('products/detail.html')
+
+
+#     needed as used in setup???
+#     def test_products_add_POST_adds_new_product(self):
+       
+#         response = self.client.post(self.products_url)
+
+#         self.assertEqual(response.status_code, 200)
+#         self.assertEqual(self.product1.name, 'Product 1')
+#         self.assertEqual(self.product1.category, 'Category 1')
+#         self.assertTemplateUsed('products/add.html')
+
+
+#     def test_products_edit_POST_edits_product(self):
+
+#         self.product1.name = 'Edited Product Name'
+       
+#         response = self.client.post(self.products_edit_url, {
+#             'name': 'Edited Product Name'
+#         })
+
+#         self.assertEqual(response.status_code, 302)
+#         self.assertEqual(self.product1.name, 'Edited Product Name')
+#         self.assertTemplateUsed('products/add.html')
+
+#     def test_products_delete_POST_deletes_product(self):
+
+#         self.product1.delete()
+        
+#         response = self.client.post(self.products_delete_url)
+
+#         self.assertEqual(response.status_code, 302)
+#         self.assertEqual(Product.objects.count(), 0)
+
+////////////////////////
+
+FAQ URLS
+
+# from django.test import SimpleTestCase
+# from django.urls import reverse, resolve
+# from faq.views import faq
+
+
+# class TestUrls(SimpleTestCase):
+
+#     def test_faq_url_resolves(self):
+#         url = reverse('faq')
+#         self.assertEqual(resolve(url).func, faq)
+
+
+/////////////////
+
+EVENTS. test_events.py
+
+import pytest
+from events.models import Event
+
+
+@pytest.fixture()
+def event():
+    event = Event()
+    return event
+
+
+def test_canAddEventName(event):
+    event.addName("Glasto")
+
+
+def test_canAddEventLink(event):
+    event.addLink("https://tramlines.org.uk/")
+
+
+def test_canAddEventImg(event):
+    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.\
+                  39_78nCoVz.png")
+
+
+///////////////////
+
+EVENTS MODELS
+
+from django.test import TestCase
+from events.models import Event
+
+
+class TestModels(TestCase):
+
+    def setUp(self):
+        self.event = Event()
+
+    def test_can_instantiate_an_event(self):
+        self.assertIsInstance(self.event, Event)
+
+    def test_can_add_an_event_name(self):
+        self.event.name = 'Glasto'
+        self.assertEqual(self.event.name, 'Glasto')
+
+    def test_can_add_an_event_image(self):
+        self.event.image = 'image'
+        # assert 1 == 2
+        self.assertEqual(self.event.image, 'image')
+
+
+///////////////////////
+
+EVENTS URLs
+
+from django.test import SimpleTestCase
+from django.urls import reverse, resolve
+from events.views import events
+
+
+class TestUrls(SimpleTestCase):
+
+    def test_events_url_is_resolved(self):
+        url = reverse('events')
+        self.assertEqual(resolve(url).func, events)
+
+
+/////////////////////
+
+EVENTS VIEWS
+
+from django.test import TestCase, Client
+from django.urls import reverse
+
+
+class TestViews(TestCase):
+
+    def test_events_view(self):
+        client = Client()
+
+        response = client.get(reverse('events'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'events/events.html')
