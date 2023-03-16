@@ -526,6 +526,22 @@ The email a user will recieve.
 <img src="images/us-46/question-answered-email.png" alt="Get Wurst's Facebook intro info">
 
 
+## Can like/unlike answer
+## [Issue #60](https://github.com/mjjstockman/ecomm/issues/60)
+
+Logged in user has a thumb icon they can click to like an answer.
+
+<img src="images/us-60/answers-no-like.png" alt="Get Wurst's Facebook intro info">
+
+Once cliked the thumb icon and the number of likes changes
+
+<img src="images/us-60/answer-liked.png" alt="Get Wurst's Facebook intro info">
+
+If clicked again the thumb icon and the number of likes changes back
+
+<img src="images/us-60/answer-unliked.png" alt="Get Wurst's Facebook intro info">
+
+
 # Automated Testing
 
 A small portion of the site was created using Test Driven Behaviour.
