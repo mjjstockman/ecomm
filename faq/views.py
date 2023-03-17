@@ -46,6 +46,7 @@ def answer(request, pk):
                 "answer_form": answer_form,
                 "liked": liked,
                 }
+            messages.error(request, f'Sorry! There was a problem!')
             return render(request, "faq/faq.html", context)
 
 
@@ -61,9 +62,11 @@ def question(request):
             if request.user.is_superuser:
                 question_form.instance.status = 1
             question_form.save()
+            messages.success(request, f'Your question has been submitted!')
             return redirect("/")
         else:
             context = {"question_form": question_form}
+            messages.error(request, f'Sorry! There was a problem!')
             return render(request, "faq/faq.html", context)
 
 
@@ -71,8 +74,12 @@ def question(request):
 def like(request, pk):
     answer = get_object_or_404(Answer, id=pk)
     if answer.like.filter(id=request.user.id).exists():
+        messages.success(request, f'You have unliked the answer!')
         answer.like.remove(request.user)
+        
     else:
+        messages.success(request, f'You have liked the answer!')
         answer.like.add(request.user)
+        
 
     return HttpResponseRedirect(reverse("faq"))
