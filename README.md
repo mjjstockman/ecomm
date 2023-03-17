@@ -11,6 +11,7 @@
 ## Table of contents
 
 1. [Introduction](#Introduction)
+2. [Technologies Used](#Technologies-used)
 3. [UX and Design](#UX-and-design)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
@@ -49,6 +50,50 @@
 This is a fictional website (for educational purposes) for a street food company named Get Wurst.  They sell Bratwursts, Burgers and Chicken. The site can be used to view the menu, order and pay for items and view a sample of previous events the company has worked at. A Frequently Asked Questions page allows users to view previous questions and answers. If the user is logged in they can submit questions, answer previous questions and like answers.
 
 [Back to top ⇧](#Get-Wurst)
+
+# Technologies used
+
+### Languages Used
+
+   + HTML5
+   + CSS3
+   + JavaScript
+   + jQuery
+   + Python
+   + Django
+
+### Technologies and Programs Used:
++ GitHub
+    Git was used for version control
+    Github issues were used as part of a project kanban
+    GitPod was used as IDE
++ Heroku 
+    The page was deployed to Heroku
++ PostgreSQL
+    ElephantSQL was used to host the database
++ Stripe
+    To deal with card payments
++ AWS S3 bucket sstorage
+    To store static files and media files
+
+ ### Frameworks Libraries and Programs Used
+
++ Allauth:
++ Balsamiq:
+    Balsamiq was used to create the wireframes during the design process.
++ Bootstrap 5:
+    Bootstrap was used to add style to the website.
++ Crispy Forms
++ Font Awesome
++ Django
++ Django Extensions
++ Pillow
++ Selenium
++ Stripe
+
+
+[Back to top ⇧](#Get-Wurst)
+
 
 # UX and Design
 
