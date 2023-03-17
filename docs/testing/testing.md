@@ -14,7 +14,7 @@ Form validation
 
 
 Missing info
-<img src="images/us-15/form-no-password.png" alt="SSignup form with missing password field warning">
+<img src="images/us-15/form-no-password.png" alt="Signup form with missing password field warning">
 
 Once filled in correctly...
 
@@ -174,10 +174,16 @@ ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
 
 
 
-ADD NEW ISSUE FOR SEARCH PRODU|CT AND UPDATE ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
-
 ## Search products
-## [Issue .................](https://github.com/mjjstockman/ecomm/issues/26)
+## [Issue #59](https://github.com/mjjstockman/ecomm/issues/59)
+
+Searching for the term "special"
+
+<img src="images/us-59/searchbar.png" alt="Search bar in navigation with special entered">
+
+Products including the term "special"
+
+<img src="images/us-59/special-products.png" alt="Menu only showing items that include the word special">
 
 
 ## Edit products through admin
@@ -398,38 +404,6 @@ Order history detail
 
 ## Submit an question
 ## [Issue #43](https://github.com/mjjstockman/ecomm/issues/43)
-
-<!-- Questions before adding new one
-
-<img src="images/us-43/questions-before.png" alt="Get Wurst's Facebook intro info">
-
-Asking a question
-
-<img src="images/us-43/question-form-complete.png" alt="Get Wurst's Facebook intro info">
-
-Duplicate question
-
-<img src="images/us-43/question-duplicate-error.png" alt="Get Wurst's Facebook intro info">
-
-Questions after adding new one
-
-<img src="images/us-43/questions-after.png" alt="Get Wurst's Facebook intro info">
-
-Owner question straight to published
-
-<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
-
-User question straight to submitted
-
-<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
-
-Owner publishes question in admin
-
-<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info">
-
-Question shown on site
-
-<img src="images/us-43/owner-question-straight-to-published.png" alt="Get Wurst's Facebook intro info"> -->
 
 Logged in user can submit a question
 
