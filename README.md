@@ -56,13 +56,13 @@ This is a fictional website (for educational purposes) for a street food company
 
 ## User Stories
 
-A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23/views/1).
+A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23).
 
 
 ### Themes, Epics, Related User Stories, MOSCOW
 
 The following table was used to plan the development of the project.  This helped to easily break down
-Themes into Epics, their related User Stories and prioritise their importance. 
+Themes into Epics, their related User Stories and prioritise their importance. This will be updated as devleopment progresses.
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
 |--|--|--|--|--|
@@ -317,6 +317,10 @@ These can be viewed in the following links:
 [Database Issues](https://github.com/mjjstockman/ecomm/issues/49)
 
 [Item quantity](https://github.com/mjjstockman/ecomm/issues/50)
+
+[Chromedriver error](https://github.com/mjjstockman/ecomm/issues/52)
+
+[Order email confirmation not sent](https://github.com/mjjstockman/ecomm/issues/57)
 
 
 ## Remaining Bugs
