@@ -152,25 +152,26 @@ Products on site after
 
 ## View all products
 ## [Issue #25](https://github.com/mjjstockman/ecomm/issues/25)
-ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
+
 All products on menu page
 
+<img src="images/us-25/menu.png" alt="Menu showing all items">
 
 ## View products by category
 ## [Issue #26](https://github.com/mjjstockman/ecomm/issues/26)
 
 
 Bratwurts
-ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
-<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+<img src="images/us-26/menu-brat.png" alt="Bratwurst menu">
 
 Chicken
-ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
-<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+<img src="images/us-26/menu-chicken.png" alt="Chicken menu">
 
 Burgers
-ADD ADD ADD ADD ADD ADD ADD ADD ADD!!!!!!!!!!!!!!!!!!
-<!-- <img src="images/us-24/product-admin-before.png" alt="Products admin model showing short description and name for all 11 products"> -->
+
+<img src="images/us-26/menu-burgers.png" alt="Burgers menu">
 
 
 
@@ -185,6 +186,13 @@ Products including the term "special"
 
 <img src="images/us-59/special-products.png" alt="Menu only showing items that include the word special">
 
+Searches are case insnesitive
+
+<img src="images/us-59/multicase-searchbar.png" alt="Menu only showing items that include the word special">
+
+Searches within long desctiption as well
+
+<img src="images/us-59/basil-product.png" alt="Menu only showing items that include the word special">
 
 ## Edit products through admin
 ## [Issue #37](https://github.com/mjjstockman/ecomm/issues/37)
