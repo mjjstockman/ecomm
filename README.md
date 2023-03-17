@@ -375,6 +375,54 @@ These can be viewed in the following links:
 
 # Deployment
 
+## Create an external database
+
+Sign in or create an account with [ElephantSQL](https://www.elephantsql.com/)
+
+
+## Create an app on Heroku
+
+Sign in or create an account with [Heroku](https://www.heroku.com/)
+
+In the Heroku dashboard use the New tab to create a new app.
+
+Name the app and choose a region.
+
+In the Settings tab select "Reveal Congig Vars".
+
+Add DATABASE_URL with the value of the database URL from ElephantSQL.
+
+Enter the following command in to your terminal
+
+```pip3 install dj_database_url==0.5.0 psycopg2```
+
+Followed by ```pip freeze > requirements.txt```
+
+Add ``` import dj_database_url``` below import os in settings.py
+
+
+## Set up hosting of static and media files with AWS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## GitHub
 
 The code was deployed to GitHub Pages in the following way:
