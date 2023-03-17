@@ -1,5 +1,6 @@
 from django.shortcuts import (render, redirect, reverse, get_object_or_404,
                               get_list_or_404)
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .forms import QuestionForm, AnswerForm
@@ -38,6 +39,7 @@ def answer(request, pk):
             if request.user.is_superuser:
                 answer_form.instance.status = 1
             answer_form.save()
+            messages.success(request, f'Your answer has been submitted!')
             return redirect("/")
         else:
             context = {
