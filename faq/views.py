@@ -27,9 +27,6 @@ def answer(request, pk):
     """Adds a setlist to the database for the admin to consider"""
     question = get_object_or_404(Question, id=pk)
     author = request.user
-    # liked = False
-    # if post.like.filter(id=self.request.user.id).exists():
-    #     liked = True
     answer_form = AnswerForm()
     if request.method == "POST":
         answer_form = AnswerForm(request.POST)
@@ -76,10 +73,8 @@ def like(request, pk):
     if answer.like.filter(id=request.user.id).exists():
         messages.success(request, f'You have unliked the answer!')
         answer.like.remove(request.user)
-        
     else:
         messages.success(request, f'You have liked the answer!')
         answer.like.add(request.user)
-        
 
     return HttpResponseRedirect(reverse("faq"))
