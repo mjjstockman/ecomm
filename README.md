@@ -260,14 +260,9 @@ An ERD for the site can be found below. This was created using [Django-extension
 
 The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site, as this is common practice and is the area where most users eyes will be initially drawn. When a link is hovered over, it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once it is selected.
 
-
-
 The 'hamburger' icon was used on large screens, where the navigation bar will collapse and be represented as three horizontal lines. When touched or clicked, this displays the navigation in a dropdown menu. This is done due to the limited real estate space on the screen, which makes the text hard to read at this size.
 
-
-
-<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
-
+<img src="docs/readme/features/images/nav-anonymous.png" alt="Nav at mobile size showing the hamburger icon"> 
 
 
 When a user is not logged in, the right side of the navigation includes "Sign Up" and "Login" links. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
