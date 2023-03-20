@@ -264,48 +264,11 @@ The 'hamburger' icon was used on large screens, where the navigation bar will co
 
 <img src="docs/readme/features/images/nav-anonymous.png" alt="Nav at mobile size showing the hamburger icon"> 
 
-
 When a user is not logged in, the right side of the navigation includes "Sign Up" and "Login" links. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
-
-
 
 When the "FAQ's" link is hovered over, its non-abbreviated version, "Frequently Asked Questions," is displayed. This helps usability and can also help with translation systems and SEO.
 
-
-
 A secondary navigation bar below has links to the product categories: bratwurst, Bratwurst, Chicken and Burgers. The search bar within this navigation can be used to search for words within a product's title, description and short description.
-
-
-<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
-
-
-When a user is not logged the right side of the navigation includes a "Sign Up" and "Login" link. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
-
-
-When the "FAQ's" link is hovered over its non-abbreviated version "Frequently Asked Questions" is displayed to aid usability. This can also help with translation systems and SEO.
-
-
-A secondary navigation bar below has links to the product categories: bratwurst, Bratwurst, Chicken and Burgers. The search bar within this navigation can be used to search for words within a product's title, description and short description.
-
-
-<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
-
-
-<!-- <img src="docs/readme/images/nav-expanded-hover.png" alt="Nav at mobile size showing the hamburger icon"> -->
-
-
-<!-- The logo is displayed on the left hand side and is a link to the home page. -->
-
-
-<!-- If the user is logged in the navigation displys the following links for My Profile and Logout:
-<img src="docs/readme_images/nav-user.png" alt="Nav at mobile size showing the hamburger icon"> -->
-
-
-
-<!-- If the user is not logged in the navigation displys the following links for Home and Sign Up and Login: -->
-
-
-<!-- <img src="docs/readme_images/features/nav/nav-not-loggedin.png" alt="Nav at large size showing the hamburger icon"> -->
 
 
 # Login
@@ -347,6 +310,9 @@ A small section containing introductory information is placed below the hero ima
 [Back to top ⇧](#Get-Wurst)
 
 # Menu
+
+<img src="docs/readme/features/images/menu.png" alt="Nav at mobile size showing the hamburger icon"> 
+
 The menu shows a brief general introduction to the products.
 
 This is followed by information about the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particualr item.
@@ -379,6 +345,8 @@ A primary button back to the menu and a CTA "Add to Cart" button is shown below 
 
 ## FAQ's
 
+<img src="docs/readme/features/images/faq.png" alt="Nav at mobile size showing the hamburger icon"> 
+
 All visitors to the site can view published questions, answers and how many likes an answer has. 
 
 Anonymous users are informed that they need to login to submit questions and answers, or to like published answers.
@@ -387,6 +355,8 @@ A logged in user can submit a question and answer and like/unlike an answer. Whe
 
 
 ## Events
+
+<img src="docs/readme/features/images/events.png" alt="Nav at mobile size showing the hamburger icon"> 
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
