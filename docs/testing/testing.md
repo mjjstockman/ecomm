@@ -14,6 +14,7 @@ Form validation
 
 
 Missing info
+
 <img src="images/us-15/form-no-password.png" alt="Signup form with missing password field warning">
 
 Once filled in correctly...

@@ -216,56 +216,82 @@ An ERD for the site can be found below. This was created using [Django-extension
 
 ## Navigation and Header
 
-The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site as this is common practice and is the area where most users eyes will be initially drawn to. When a link is hovered over it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once selected.
-
-The 'hamburger' icon was used on large screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
-
-When a user is not logged the right side of the navigation includes a Sign Up and Log in link. A logged in user is shown a "My Profile" and "Logout" link.
-
-<img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon">
-
-The logo is displayed on the left hand side and is a link to the home page.
-
-If the user is logged in the navigation displys the following links for Home and Logout:
-<img src="docs/readme_images/features/nav/nav-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
+The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site, as this is common practice and is the area where most users eyes will be initially drawn. When a link is hovered over, it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once it is selected.
 
 
-If the user is not logged in the navigation displys the following links for Home and Sign Up and Login:
+The 'hamburger' icon was used on large screens, where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu. This is done due to the limited real estate space on the screen, which makes the text hard to read at this size.
 
-<img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at large size showing the hamburger icon">
+
+<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
+
+
+When a user is not logged in, the right side of the navigation includes "Sign Up" and "Login" links. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
+
+
+When the "FAQ's" link is hovered over, its non-abbreviated version, "Frequently Asked Questions," is displayed. This helps usability and can also help with translation systems and SEO.
+
+
+A secondary navigation bar below has links to the product categories: bratwurst, Bratwurst, Chicken and Burgers. The search bar within this navigation can be used to search for words within a product's title, description and short description.
+
+<!-- <img src="docs/readme/images/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+
+When a user is not logged the right side of the navigation includes a "Sign Up" and "Login" link. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
+
+When the "FAQ's" link is hovered over its non-abbreviated version "Frequantly Asked Questions" is displayed to aid userbitility.  This can also help for translation systems and SEO.
+
+A secondary navigation bar below has links to the product categories, Bratwurst, Chicken and Burgers.  The search bar within this nav can be used to search for words within a products title, description and short desctiption.
+
+<!-- <img src="docs/readme/images/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+
+<!-- <img src="docs/readme/images/nav-expanded-hover.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+
+<!-- The logo is displayed on the left hand side and is a link to the home page. -->
+
+<!-- If the user is logged in the navigation displys the following links for My Profile and Logout:
+<img src="docs/readme_images/nav-user.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+
+
+<!-- If the user is not logged in the navigation displys the following links for Home and Sign Up and Login: -->
+
+<!-- <img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at large size showing the hamburger icon"> -->
 
 # Home Page
+
+## Hero text
+The hero text is in bold and the product categories are capitalized to draw attention and help explain straight away the sites purpose. A bright Call to Action button below the text aims to drive traffic to the menu, the first step in making a sale.
+
 [Back to top ⇧](#Get-Wurst)
 ## Hero Image
 
-An eye-catching image of a burger is placed. This helps grab the users attention and make them want to order food! The burger is used as this is a new
-addition to Get Wurst's menu.
+An eye-catching image of a burger is placed to the right. This helps grab the user's attention and make them want to order food! The burger is used as this is a new addition to Get Wurst's menu.
 
-<img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
+<!-- <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon"> -->
 
-[Back to top ⇧](#Get-Wurst))
+[Back to top ⇧](#Get-Wurst)
 
 ## Our Story Information Box
 
-A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the sites pupose, so they understand its goal.
+
+A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the site's purpose, so they understand its goal.
 
 [Back to top ⇧](#Get-Wurst)
 
 # Menu
 The menu shows a brief general introduction to the products.
 
-This is followed by information of the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particualr item.
+This is followed by information about the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particualr item.
 
 This is followed with the same for Chicken and then Burgers.
 
-If a site owner is logged in each product has a delete and edit button. 
+If a site owner is logged in, each product has a delete and edit button.
 
-<img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
+
+<!-- <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon"> -->
 
 [Back to top ⇧](#Get-Wurst)
 
 # Product/delete
-When a site owner is logged in and clicks the "delete" button a pop-up box asks if they are sure if they want to delete the item. They can use a button to either delete the item or cancel.
+When a site owner is logged in and clicks the "DELETE" button a pop-up box asks if they are sure they want to delete the item. They can use a button to either delete the item or cancel.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -277,34 +303,38 @@ When a site owner is logged in and clicks the "edit" button a form is displayed 
 ## Product Detail
 An image of the product is shown as well as it's name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more then 9.
 
-A primary button back to the menu and a CTA add to cart button is shown below the qunatity input.
+A primary button back to the menu and a CTA "Add to Cart" button is shown below the qunatity input.
 
 [Back to top ⇧](#Get-Wurst)
 ## Events
-The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in 
-Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
+The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
 ## Cart
 If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
-A user with items in their cart is shown an image of the item, it's name and price. They can use a quantity input to adjust the quantity, or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help install user confidence.
+A user with items in their cart is shown an image of the item, it's name and price. They can use a quantity input to adjust the quantity (no more than 9, no less then 1), or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help install user confidence.
 
 [Back to top ⇧](#Get-Wurst)
 
 ## Checkout
-The checkout shows an order summary and a form to fill in payment details. There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
+The checkout shows an order summary and a form to fill in payment details. The form will be pre-filled if the logged in user has previously chosen to have their information saved.
 
-When a site user is logged in they can choose to have their details saved by checking a checkbox.
+
+There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
+
+When a site user is logged in they can choose to have their details saved by checking a checkbox. 
 
 Red warning text and an explanation icon informs the user how much they are about to be charged.
+
+The form can't be sent with invalid information and the user is informed where the error is.
 
 [Back to top ⇧](#Get-Wurst)
 
 ## Checkout Success
 The checkout success page shows the user the email confirmation has been sent to their email.
 
-A primary "Back to Home Page" is displayed beneath. 
+A primary "Back to Home Page" button is displayed beneath. 
 
 [Back to top ⇧](#Get-Wurst)
 
