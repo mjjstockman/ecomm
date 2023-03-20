@@ -353,6 +353,7 @@ Anonymous users are informed that they need to login to submit questions and ans
 
 A logged in user can submit a question and answer and like/unlike an answer. When submitting a question site users can check a checkbox if they wish to recieve an email when their question has an approved answer. A question exactly as ther same as a published question cannot be submitted and the user is informed this.
 
+Multiple answers can be published for each question. When more than one answer is published each answer except the last has a line underneath. The last answer has a heading letting users know they can submit another answer and a form to do so.
 
 ## Events
 
@@ -360,6 +361,7 @@ A logged in user can submit a question and answer and like/unlike an answer. Whe
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
+
 ## Cart
 If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
@@ -369,7 +371,6 @@ A user with items in their cart is shown an image of the item, it's name and pri
 
 ## Checkout
 The checkout shows an order summary and a form to fill in payment details. The form will be pre-filled if the logged in user has previously chosen to have their information saved.
-
 
 There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
 
@@ -393,11 +394,10 @@ A primary "Back to Home Page" button is displayed beneath.
 The footer at the bottom of the page includes a link to Get Wurst's Facebook business page and their Privacy Policy.
 
 ## Facebook page
-The Facebook link in the footer goes to Get Wurst's Facebook page, as seen below:
-<img src="static/images/readme/general/facebook-top.png"  alt="Get Wurst's Facebook page">
 
-The Facebook page contains Get Wurst's business information:
-<img src="static/images/readme/general/facebook-intro.png"  alt="Get Wurst's Intro information on their Facebook page">
+The Facebook link in the footer goes to Get Wurst's Facebook page, as seen below:
+
+<img src="docs/testing/images/us-36/facebook-top.png" alt="Get Wurst's Facebook page">
 
 [Back to top ⇧](#Get-Wurst)
 
