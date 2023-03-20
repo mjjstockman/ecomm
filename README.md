@@ -47,42 +47,50 @@
 
 # Introduction
 
-This is a fictional website (for educational purposes) for a street food company named Get Wurst.  They sell Bratwursts, Burgers and Chicken. The site can be used to view the menu, order and pay for items and view a sample of previous events the company has worked at. A Frequently Asked Questions page allows users to view previous questions and answers. If the user is logged in they can submit questions, answer previous questions and like answers.
+
+This is a fictional website (for educational purposes) for a street food company named Get Wurst. They sell Bratwursts, Burgers and Chicken. The site can be used to view the menu, order and pay for items and view a sample of previous events the company has worked at. A Frequently Asked Questions page allows users to view previous questions and answers. If the user is logged in they can submit questions, answer previous questions and like answers.
+
 
 [Back to top ⇧](#Get-Wurst)
 
+
 # Technologies used
+
 
 ### Languages Used
 
-   + HTML5
-   + CSS3
-   + JavaScript
-   + jQuery
-   + Python
-   + Django
+
++ HTML5
++ CSS3
++ JavaScript
++ jQuery
++ Python
++ Django
+
 
 ### Technologies and Programs Used:
 + GitHub
-    Git was used for version control
-    Github issues were used as part of a project kanban
-    GitPod was used as IDE
-+ Heroku 
-    The page was deployed to Heroku
+Git was used for version control
+Github issues were used as part of a project kanban
+GitPod was used as IDE
++ Heroku
+The page was deployed to Heroku
 + PostgreSQL
-    ElephantSQL was used to host the database
+ElephantSQL was used to host the database
 + Stripe
-    To deal with card payments
-+ AWS S3 bucket sstorage
-    To store static files and media files
+To deal with card payments
++ AWS S3 bucket storage
+To store static files and media files
 
- ### Frameworks Libraries and Programs Used
+
+Frameworks, Libraries and Programs Used
+
 
 + Allauth:
 + Balsamiq:
-    Balsamiq was used to create the wireframes during the design process.
+Balsamiq was used to create the wireframes during the design process.
 + Bootstrap 5:
-    Bootstrap was used to add style to the website.
+Bootstrap was used to add style to the website.
 + Crispy Forms
 + Font Awesome
 + Django
@@ -92,168 +100,235 @@ This is a fictional website (for educational purposes) for a street food company
 + Stripe
 
 
+
 [Back to top ⇧](#Get-Wurst)
+
 
 
 # UX and Design
 
+
 [Back to top ⇧](#Get-Wurst)
 
+
 ## User Stories
+
 
 A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23).
 
 
+
 ### Themes, Epics, Related User Stories, MOSCOW
 
-The following table was used to plan the development of the project.  This helped to easily break down
-Themes into Epics, their related User Stories and prioritise their importance. This will be updated as devleopment progresses.
+
+The following table was used to plan the development of the project. This helped to easily break down
+Themes into Epics, their related User Stories and prioritise their importance. This will be updated as development progresses.
+
 
 | Theme | Epic | Related User Stories | MOSCOW | Completed |
 |--|--|--|--|--|
 | Account Management | Sign up | [#15](https://github.com/mjjstockman/ecomm/issues/15) Sign up using email, username and password | Must have | Yes |
-| 					| 			| [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google | Should have | Yes |
-| 					| 			| [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email | Should have | Yes |
-| 					| Sign in | [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password | Must have | Yes |
-| 					| 		  | [#19](https://github.com/mjjstockman/ecomm/issues/19) Login using Google | Should have | Yes |
-| 					| 			| [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info | Should have | Yes |
-| 					| 			| [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state | Should have |  Yes |
-| 					| Log out | [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual log out | Must have | Yes |
-| 					| 			| [#23](https://github.com/mjjstockman/ecomm/issues/23) Automatic log out | Won't have | No |
+| | | [#16](https://github.com/mjjstockman/ecomm/issues/16) Sign up using Google | Should have | Yes |
+| | | [#17](https://github.com/mjjstockman/ecomm/issues/17) Confirm Sign up via email | Should have | Yes |
+| | Sign in | [#18](https://github.com/mjjstockman/ecomm/issues/18) Log in using username / password | Must have | Yes |
+| | | [#19](https://github.com/mjjstockman/ecomm/issues/19) Login using Google | Should have | Yes |
+| | | [#20](https://github.com/mjjstockman/ecomm/issues/20) Forgot sign in info | Should have | Yes |
+| | | [#21](https://github.com/mjjstockman/ecomm/issues/21) Login state | Should have | Yes |
+| | Log out | [#22](https://github.com/mjjstockman/ecomm/issues/22) Manual log out | Must have | Yes |
+| | | [#23](https://github.com/mjjstockman/ecomm/issues/23) Automatic log out | Won't have | No |
 | Products | Add products | [#24](https://github.com/mjjstockman/ecomm/issues/24) Add products through admin | Must have | Yes |
-| 			| 				| [#20](https://github.com/mjjstockman/ecomm/issues/20) Add products through site | Must have |Yes |
-| 			| View products| [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products | Must have |  Yes |
-| 			| 			|[#26](https://github.com/mjjstockman/ecomm/issues/26) View products by category | Must have | Yes |
-| 			| 			| View new products | Won't have | No |
-| 			| 			| [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have |  Yes |
-| 			| Edit products	|  [#27](https://github.com/mjjstockman/ecomm/issues/27) Edit products through site | Must have | Yes |
-| 			|  				|  [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin | Must have |  Yes |
-| 			| Delete products	| [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin | Must have | Yes |
-| 			|           	| [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site | Must have | Yes |
-| Cart	    | Make purchase | [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart | Must have |  Yes |
-| 			|  				| [#30](https://github.com/mjjstockman/ecomm/issues/30) Change product quantity in cart | Should have | Yes |
-| 			|  				| [#31](https://github.com/mjjstockman/ecomm/issues/31) Remove items from cart | Should have | Yes |
-| 			|  				|  [#32](https://github.com/mjjstockman/ecomm/issues/32) See order total | Must have |  Yes |
-| 			|  				| [#33](https://github.com/mjjstockman/ecomm/issues/33) Pay for goods | Must have | Yes |
-| 			|  				|  [#34](https://github.com/mjjstockman/ecomm/issues/34) Know if an order was successful | Must have | Yes |
-| 			|  				| [#35](https://github.com/mjjstockman/ecomm/issues/35) Email order confirmation | Should have | Yes |
-| 	Profile |  Details		| [#40](https://github.com/mjjstockman/ecomm/issues/40) Save profile details | Should have | Yes |
-|           |           	| [#41](https://github.com/mjjstockman/ecomm/issues/41) Edit profile details | Should have | Yes |
-| 			|  				|  [#42](https://github.com/mjjstockman/ecomm/issues/42) View order history | Should have | Yes |
-| FAQ		|  				|  [#43](https://github.com/mjjstockman/ecomm/issues/43) Submit a question | Must have | Yes |
-|   		|  				|  [#44](https://github.com/mjjstockman/ecomm/issues/44) Submit an answer | Must have | Yes |
-|   		|  				|  [#46](https://github.com/mjjstockman/ecomm/issues/46) Email when question answered | Could have | Yes |
-| Events	|  				|  [#45](https://github.com/mjjstockman/ecomm/issues/45) See previous events | Should have | Yes |
-| Marketing	|  				|  [#36](https://github.com/mjjstockman/ecomm/issues/20) Add Facebook page | Must have | Yes |
+| | | [#20](https://github.com/mjjstockman/ecomm/issues/20) Add products through site | Must have |Yes |
+| | View products| [#25](https://github.com/mjjstockman/ecomm/issues/25) View all products | Must have | Yes |
+| | |[#26](https://github.com/mjjstockman/ecomm/issues/26) View products by category | Must have | Yes |
+| | | View new products | Won't have | No |
+| | | [#26](https://github.com/mjjstockman/ecomm/issues/26) Search products | Should have | Yes |
+| | Edit products | [#27](https://github.com/mjjstockman/ecomm/issues/27) Edit products through site | Must have | Yes |
+| | | [#37](https://github.com/mjjstockman/ecomm/issues/37) Edit products through Django admin | Must have | Yes |
+| | Delete products | [#38](https://github.com/mjjstockman/ecomm/issues/38) Delete products through admin | Must have | Yes |
+| | | [#28](https://github.com/mjjstockman/ecomm/issues/28) Delete products through site | Must have | Yes |
+| Cart | Make purchase | [#29](https://github.com/mjjstockman/ecomm/issues/29) Add item to cart | Must have | Yes |
+| | | [#30](https://github.com/mjjstockman/ecomm/issues/30) Change product quantity in cart | Should have | Yes |
+| | | [#31](https://github.com/mjjstockman/ecomm/issues/31) Remove items from cart | Should have | Yes |
+| | | [#32](https://github.com/mjjstockman/ecomm/issues/32) See order total | Must have | Yes |
+| | | [#33](https://github.com/mjjstockman/ecomm/issues/33) Pay for goods | Must have | Yes |
+| | | [#34](https://github.com/mjjstockman/ecomm/issues/34) Know if an order was successful | Must have | Yes |
+| | | [#35](https://github.com/mjjstockman/ecomm/issues/35) Email order confirmation | Should have | Yes |
+| Profile | Details | [#40](https://github.com/mjjstockman/ecomm/issues/40) Save profile details | Should have | Yes |
+| | | [#41](https://github.com/mjjstockman/ecomm/issues/41) Edit profile details | Should have | Yes |
+| | | [#42](https://github.com/mjjstockman/ecomm/issues/42) View order history | Should have | Yes |
+| FAQ | | [#43](https://github.com/mjjstockman/ecomm/issues/43) Submit a question | Must have | Yes |
+| | | [#44](https://github.com/mjjstockman/ecomm/issues/44) Submit an answer | Must have | Yes |
+| | | [#46](https://github.com/mjjstockman/ecomm/issues/46) Email when question answered | Could have | Yes |
+| Events | | [#45](https://github.com/mjjstockman/ecomm/issues/45) See previous events | Should have | Yes |
+| Marketing | | [#36](https://github.com/mjjstockman/ecomm/issues/20) Add Facebook page | Must have | Yes |
+
 
 [Back to top ⇧](#Get-Wurst)
+
 
 ## Wireframes
 
+
 ## Home Page: small
-<img src="static/images/readme/wireframes/home-small-wireframe.png"  alt="Black and white wireframe of home page on a small device">
+<img src="static/images/readme/wireframes/home-small-wireframe.png" alt="Black and white wireframe of home page on a small device">
+
 
 ## Home Page: large
-<img src="static/images/readme/wireframes/home-large-wireframe.png"  alt="Black and white wireframe of home page on a large device">
+<img src="static/images/readme/wireframes/home-large-wireframe.png" alt="Black and white wireframe of home page on a large device">
+
 
 ## Menu Page: small, site owner
 When a site owner is logged in the menu page has additional "Edit" and "Delete" buttons for each product.
-<img src="static/images/readme/wireframes/menu-small-owner-wireframe.png"  alt="Black and white wireframe of menu page as site owner on a small device">
+<img src="static/images/readme/wireframes/menu-small-owner-wireframe.png" alt="Black and white wireframe of menu page as site owner on a small device">
+
 
 ## Menu Page: large, site owner
-<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of menu page as site owner on a small device">
+<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png" alt="Black and white wireframe of menu page as site owner on a small device">
+
 
 ## Menu Page: small, site user
-<img src="static/images/readme/wireframes/menu-small-user-wireframe.png"  alt="Black and white wireframe of menu page as site user on a small device">
+<img src="static/images/readme/wireframes/menu-small-user-wireframe.png" alt="Black and white wireframe of menu page as site user on a small device">
+
 
 ## Menu Page: large, site user
-<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png"  alt="Black and white wireframe of menu page as site user on a large device">
+<img src="static/images/readme/wireframes/menu-large-owner-wireframe.png" alt="Black and white wireframe of menu page as site user on a large device">
+
 
 ## FAQs Page: small, logged in
-A logged in user can submit a quetion, an answer and like/remove their like of published answers.
-Useres are told if a questions doesn't have a published answer.
-<img src="static/images/readme/wireframes/faq-small-loggedin-wireframe.png"  alt="Black and white wireframe of FAQ page as a logged in user on a small device">
+A logged in user can submit a question, an answer and like/remove their like of published answers.
+Users are told if a question doesn't have a published answer.
+<img src="static/images/readme/wireframes/faq-small-loggedin-wireframe.png" alt="Black and white wireframe of FAQ page as a logged in user on a small device">
+
 
 ## FAQs Page: large, anonymous user
 Non-logged in users can view published questions and answers and see how many people have liked the answer.
-<img src="static/images/readme/wireframes/faq-large-anonymous-wireframe.png"  alt="Black and white wireframe of FAQ page as an anonymous user on a large device">
+<img src="static/images/readme/wireframes/faq-large-anonymous-wireframe.png" alt="Black and white wireframe of FAQ page as an anonymous user on a large device">
+
 
 ## Events Page: small
-<img src="static/images/readme/wireframes/events-small-wireframe.png"  alt="Black and white wireframe of events page on a small device">
+<img src="static/images/readme/wireframes/events-small-wireframe.png" alt="Black and white wireframe of events page on a small device">
+
 
 ## Events Page: large
-<img src="static/images/readme/wireframes/events-large-wireframe.png"  alt="Black and white wireframe of events page on a large device">
+<img src="static/images/readme/wireframes/events-large-wireframe.png" alt="Black and white wireframe of events page on a large device">
+
 
 ## Cart Page
-<img src="static/images/readme/wireframes/cart-wireframe.png"  alt="Black and white wireframe of home page">
+<img src="static/images/readme/wireframes/cart-wireframe.png" alt="Black and white wireframe of home page">
+
 
 ## Profile Page: small
-<img src="static/images/readme/wireframes/profile-small-wireframe.png"  alt="Black and white wireframe of profile page on a small device">
+<img src="static/images/readme/wireframes/profile-small-wireframe.png" alt="Black and white wireframe of profile page on a small device">
+
 
 ## Profile Page: large
-<img src="static/images/readme/wireframes/profile-large-wireframe.png"  alt="Black and white wireframe of profile page on a large device">
+<img src="static/images/readme/wireframes/profile-large-wireframe.png" alt="Black and white wireframe of profile page on a large device">
+
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
+
 [Back to top ⇧](#Get-Wurst)
+
 
 ## Database Design
 An ERD for the site can be found below. This was created using [Django-extensions](https://github.com/django-extensions/).
-<img src="static/images/readme/general/erd.png"  alt="Entity Relarionship Diagram">
+<img src="static/images/readme/general/erd.png" alt="Entity Relarionship Diagram">
+
 
 ## Typography
 
+
 [Typespiration](https://typespiration.com/) was used to find complimenting [Google Font](https://fonts.google.com) pairings, with the following decided upon:
 
-- Headings: Paytone One, with a fallback of sans-serif. 
+
+- Headings: Paytone One, with a fallback of sans-serif.
 - Body: PT Sans, with a fallback of sans-serif.
+
 
 [Back to top ⇧](#Get-Wurst)
 
+
 # Features
+
 
 # General
 
+
 ## Navigation and Header
+
 
 The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site, as this is common practice and is the area where most users eyes will be initially drawn. When a link is hovered over, it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once it is selected.
 
 
-The 'hamburger' icon was used on large screens, where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu. This is done due to the limited real estate space on the screen, which makes the text hard to read at this size.
+
+The 'hamburger' icon was used on large screens, where the navigation bar will collapse and be represented as three horizontal lines. When touched or clicked, this displays the navigation in a dropdown menu. This is done due to the limited real estate space on the screen, which makes the text hard to read at this size.
+
 
 
 <!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
 
 
+
 When a user is not logged in, the right side of the navigation includes "Sign Up" and "Login" links. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
+
 
 
 When the "FAQ's" link is hovered over, its non-abbreviated version, "Frequently Asked Questions," is displayed. This helps usability and can also help with translation systems and SEO.
 
 
+
 A secondary navigation bar below has links to the product categories: bratwurst, Bratwurst, Chicken and Burgers. The search bar within this navigation can be used to search for words within a product's title, description and short description.
 
-<!-- <img src="docs/readme/images/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+
+<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
+
 
 When a user is not logged the right side of the navigation includes a "Sign Up" and "Login" link. A logged in user is shown a "My Profile" and "Logout" link and staff members have an additional "Product Management" dropdown link.
 
-When the "FAQ's" link is hovered over its non-abbreviated version "Frequantly Asked Questions" is displayed to aid userbitility.  This can also help for translation systems and SEO.
 
-A secondary navigation bar below has links to the product categories, Bratwurst, Chicken and Burgers.  The search bar within this nav can be used to search for words within a products title, description and short desctiption.
+When the "FAQ's" link is hovered over its non-abbreviated version "Frequently Asked Questions" is displayed to aid usability. This can also help with translation systems and SEO.
 
-<!-- <img src="docs/readme/images/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon"> -->
 
-<!-- <img src="docs/readme/images/nav-expanded-hover.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+A secondary navigation bar below has links to the product categories: bratwurst, Bratwurst, Chicken and Burgers. The search bar within this navigation can be used to search for words within a product's title, description and short description.
+
+
+<!-- <img src="docs/readme/images/nav-hamburger.png" alt="Nav at mobile size showing the hamburger icon"> -->
+
+
+<!-- <img src="docs/readme/images/nav-expanded-hover.png" alt="Nav at mobile size showing the hamburger icon"> -->
+
 
 <!-- The logo is displayed on the left hand side and is a link to the home page. -->
 
+
 <!-- If the user is logged in the navigation displys the following links for My Profile and Logout:
-<img src="docs/readme_images/nav-user.png"  alt="Nav at mobile size showing the hamburger icon"> -->
+<img src="docs/readme_images/nav-user.png" alt="Nav at mobile size showing the hamburger icon"> -->
+
 
 
 <!-- If the user is not logged in the navigation displys the following links for Home and Sign Up and Login: -->
 
-<!-- <img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at large size showing the hamburger icon"> -->
+
+<!-- <img src="docs/readme_images/features/nav/nav-not-loggedin.png" alt="Nav at large size showing the hamburger icon"> -->
+
+
+# Login
+
+A user can login using their Google account or their Get Wurst username and password. The user can check the "Remember Me" checkbox if they want to be automatically logged in the next time they use the site. 
+
+
+They can also click a link if they have forgotten their password.
+
+
+# Signup
+
+A user can sign up to the site by entering an email, username and password. Email and passwords fields need to be entered twice and are validated to make sure they match. Any invalid inputs are reploretd to the user.
+
+# Forgot password
+
+A user can enter their email to get an email link they can follow to reset their password.
+
 
 # Home Page
 
