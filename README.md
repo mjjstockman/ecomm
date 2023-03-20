@@ -306,6 +306,16 @@ An image of the product is shown as well as it's name, long description, price a
 A primary button back to the menu and a CTA "Add to Cart" button is shown below the qunatity input.
 
 [Back to top ⇧](#Get-Wurst)
+
+## FAQ's
+
+All visitors to the site can view published questions, answers and how many likes an answer has. 
+
+Anonymous users are informed that they need to login to submit questions and answers, or to like published answers.
+
+A logged in user can submit a question and answer and like/unlike an answer. When submitting a question site users can check a checkbox if they wish to recieve an email when their question has an approved answer. A question exactly as ther same as a published question cannot be submitted and the user is informed this.
+
+
 ## Events
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
@@ -350,6 +360,15 @@ The Facebook page contains Get Wurst's business information:
 <img src="static/images/readme/general/facebook-intro.png"  alt="Get Wurst's Intro information on their Facebook page">
 
 [Back to top ⇧](#Get-Wurst)
+
+## My Profile
+
+Logged in users can view their profile. This shows their default information and any order history. Users can update their default info or click on a previous order number to see details of past orders. 
+
+## Order history detail
+
+If a user clicks the order number link they are shown the details of that order.
+
 
 # Features to Implement in the future
 
