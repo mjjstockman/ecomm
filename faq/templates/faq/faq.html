@@ -75,7 +75,8 @@
     {% if user.is_authenticated %}
     <a href="#ask-question" class="btn btn-primary my-3">To Ask Question</a>
     {% else %}
-    <p>Please login to submit questions and answers or to like answers.</p>
+    <p>Please <a href="{% url 'account_login' %}">Login</a>
+        or <a href="{% url 'account_signup' %}">Sign Up</a> to submit questions and answers or to like answers.</p>
     {% endif %}
     <p>Your question may already have an answer! Check below.</p>
 
