@@ -315,7 +315,7 @@ A small section containing introductory information is placed below the hero ima
 
 The menu shows a brief general introduction to the products.
 
-This is followed by information about the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particualr item.
+This is followed by information about the Bratwurst on sale. Each product has an image, a name, a short description, a link to its related category and a "See More Info" button. When the image is hovered, the name link is put in a hover state. Clicking the image, name or "See More Info" button takes the user to product information about that particular item.
 
 This is followed with the same for Chicken and then Burgers.
 
@@ -332,14 +332,14 @@ When a site owner is logged in and clicks the "DELETE" button a pop-up box asks 
 [Back to top ⇧](#Get-Wurst)
 
 # Product/edit
-When a site owner is logged in and clicks the "edit" button a form is displayed with the product information pre-filled. They can then change any information that needs updating and click the "Update Product" button.  THere is also a button to cancel editing the information.
+When a site owner is logged in and clicks the "EDIT" button a form is displayed with the product information pre-filled. They can then change any information that needs updating and click the "Update Product" button. There is also a button to cancel editing the information.
 
 [Back to top ⇧](#Get-Wurst)
 
 ## Product Detail
-An image of the product is shown as well as it's name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more then 9.
+An image of the product is shown, as well as its name, long description, price and category link. The user can select their specified quantity by using their keyboard or the plus and minus icons either side of the input. They cannot enter an input of less than 1 or more than 9.
 
-A primary button back to the menu and a CTA "Add to Cart" button is shown below the qunatity input.
+A primary button back to the menu and a CTA "Add to Cart" button are shown below the quantity input.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -347,17 +347,17 @@ A primary button back to the menu and a CTA "Add to Cart" button is shown below 
 
 <img src="docs/readme/features/images/faq.png" alt="Nav at mobile size showing the hamburger icon"> 
 
-All visitors to the site can view published questions, answers and how many likes an answer has. 
+All visitors to the site can view published questions, answers and how many likes an answer has.
 
 Anonymous users are informed that they need to login to submit questions and answers, or to like published answers.
 
-A logged in user can submit a question and answer and like/unlike an answer. When submitting a question site users can check a checkbox if they wish to recieve an email when their question has an approved answer. A question exactly as ther same as a published question cannot be submitted and the user is informed this.
+A logged in user can submit a question and answer and like/unlike an answer. When submitting a question site users can check a checkbox if they wish to receive an email when their question has an approved answer. A question exactly the same as a published question cannot be submitted and the user is informed of this.
 
 Multiple answers can be published for each question. When more than one answer is published each answer except the last has a line underneath. The last answer has a heading letting users know they can submit another answer and a form to do so.
 
 ## Events
 
-<img src="docs/readme/features/images/events.png" alt="Nav at mobile size showing the hamburger icon"> 
+<imgsrc="docs/readme/features/images/events.png"alt="Nav at mobile size showing the hamburger icon">
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
@@ -365,16 +365,16 @@ The events page has a short introductionary paragraph. A selection of events Get
 ## Cart
 If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
-A user with items in their cart is shown an image of the item, it's name and price. They can use a quantity input to adjust the quantity (no more than 9, no less then 1), or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help install user confidence.
+A user with items in their cart is shown an image of the item, its name and price. They can use a quantity input to adjust the quantity (no more than 9, no less than 1), or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help build user confidence.
 
 [Back to top ⇧](#Get-Wurst)
 
 ## Checkout
 The checkout shows an order summary and a form to fill in payment details. The form will be pre-filled if the logged in user has previously chosen to have their information saved.
 
-There is a primary button to adjust the cart and a CTA button to complete order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
+There is a primary button to adjust the cart and a CTA button to complete the order. The "Complete Order" button includes an icon of a padlock for reasons discussed previously.
 
-When a site user is logged in they can choose to have their details saved by checking a checkbox. 
+When a site user is logged in they can choose to have their details saved by checking a checkbox.
 
 Red warning text and an explanation icon informs the user how much they are about to be charged.
 
@@ -385,7 +385,7 @@ The form can't be sent with invalid information and the user is informed where t
 ## Checkout Success
 The checkout success page shows the user the email confirmation has been sent to their email.
 
-A primary "Back to Home Page" button is displayed beneath. 
+A primary "Back to Home Page" button is displayed beneath.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -403,7 +403,7 @@ The Facebook link in the footer goes to Get Wurst's Facebook page, as seen below
 
 ## My Profile
 
-Logged in users can view their profile. This shows their default information and any order history. Users can update their default info or click on a previous order number to see details of past orders. 
+Logged in users can view their profile. This shows their default information and any order history. Users can update their default information or click on a previous order number to see details of past orders.
 
 ## Order history detail
 
