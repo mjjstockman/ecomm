@@ -7,6 +7,10 @@ class ProductForm(forms.ModelForm):
     """
     Model form for product info.
     """
+    short_description = forms.CharField(widget=forms.Textarea(
+                                        attrs={'rows': 1}))
+    description = forms.CharField(widget=forms.Textarea(attrs={'rows': 2}))
+
     class Meta:
         model = Product
         fields = [

@@ -263,6 +263,10 @@ abbr {
   height: 100px;
 }
 
+#select-img-field {
+  color: var(--gw-dark);
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 370px) {
@@ -283,5 +287,3 @@ abbr {
     border: 0px solid !important;
   }
 }
-
-
