@@ -86,23 +86,23 @@ To store static files and media files
 Frameworks, Libraries and Programs Used
 
 
-+ Allauth:
-+ Balsamiq:
-Balsamiq was used to create the wireframes during the design process.
-+ Bootstrap 5:
-Bootstrap was used to add style to the website.
++ Allauth
++ Balsamiq
++ Bootstrap 5
 + Crispy Forms
-+ Font Awesome
 + Django
 + Django Extensions
++ Django Phone Number Field
++ Django Storages
++ Django Summernote
++ ElephantSQL
++ Font Awesome
++ Graphviz
++ Gunicorn
++ Phonenumbers
 + Pillow
 + Selenium
 + Stripe
-+ Phonenumbers
-+ Stripe
-
-
-
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -382,7 +382,9 @@ There is a primary button to adjust the cart and a CTA button to complete the or
 
 When a site user is logged in they can choose to have their details saved by checking a checkbox.
 
-Red warning text and an explanation icon informs the user how much they are about to be charged.
+Red warning text and an explanation icon informs the user how much they are about to be charged. 
+
+[Django-phone-numberber-field library](https://pypi.org/project/django-phonenumber-field/) was used to validate the phone number.
 
 The form can't be sent with invalid information and the user is informed where the error is.
 
