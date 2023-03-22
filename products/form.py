@@ -5,7 +5,8 @@ from .models import Product, Category
 
 class ProductForm(forms.ModelForm):
     """
-    Model form for product info.
+    Model form for product info. Widgets are used to change the default height
+    of teaxt areas and to show the products current image
     """
     short_description = forms.CharField(widget=forms.Textarea(
                                         attrs={'rows': 1}))
