@@ -416,6 +416,8 @@ Add an Expand / Collapse All button to the accordion in the FAQ app.
 
 Tried many different ways but never satifactory.
 
+
+
 1.  Toggling
 2.  Using SO answer https://stackoverflow.com/questions/12843418/jquery-ui-accordion-expand-collapse-all
 3.  Using.....

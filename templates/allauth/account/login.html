@@ -23,12 +23,10 @@
     <a href="{{ signup_url }}">Sign Up</a> first.{% endblocktrans %}</p>
   {% endif %}
 
-  <!-- <button class="btn btn-primary mb-3"> -->
     <a class="btn btn-primary mb-3" href=" {% provider_login_url 'google'%}?next=/">
       <i class="fab fa-google"></i>
       Login with Google
     </a>
-  <!-- </button> -->
 
   <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
@@ -39,7 +37,7 @@
     <a class="btn btn-primary" href="{% url 'home' %}">Home</a>
     <button class="btn btn-cta" type="submit">{% trans "Login" %}</button>
     <p class="mt-2">
-      <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+      <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
     </p>
   </form>
 

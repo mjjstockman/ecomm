@@ -525,11 +525,69 @@ If clicked again the thumb icon and the number of likes changes back
 <img src="images/us-60/answer-unliked.png" alt="Get Wurst's Facebook intro info">
 
 
+# Test Driven Development
+
+## Part of the site was devloped using TDD
+
+This can be seen in the following commits:
+
+<img src="images/general/tdd-commits.png" alt="Commits implementing TDD for events>
+
+
 # Automated Testing
 
-A small portion of the site was created using Test Driven Behaviour.
+## Selenium
+
+
+https://github.com/mjjstockman/ecomm/commit/0f4034d59d9f54a3d81939903b7d3c56ae391575
+
+
+
+
+https://github.com/mjjstockman/ecomm/commit/19ddfe9ef9b2c829e630104e6a69f0a68c47e91f
+
+
+
+///////////////////
+
+Many attempts were made to automate testing. These can be seen in the following commits:
+
+https://github.com/mjjstockman/ecomm/commit/e320a1486c4a86f5c95dc4bfd891873f9ac6830a
+
+https://github.com/mjjstockman/ecomm/commit/301eb775d4e63e2a4616a13cb19d73ffa3a6efa8
+
+https://github.com/mjjstockman/ecomm/commit/3ec3930b9bcc9f9bcd62b50ae59bd46670882174
+
+https://github.com/mjjstockman/ecomm/commit/fe7b1d6a938517f51eabf20a5fcae3413359b990
+
+https://github.com/mjjstockman/ecomm/commit/3a96cbb9b72d0bc03e313c2839d11431cb064908
+
+https://github.com/mjjstockman/ecomm/commit/e96672ae083c3c75fb29b070db4e24268b4ef04b
+
+https://github.com/mjjstockman/ecomm/commit/51fd7975bc9c6b1090ae0cb5141e10a885c364dc
+
+https://github.com/mjjstockman/ecomm/commit/ff16bb8d4d42c8dffbe22ded8e8bf5d2558e7715
+
+https://github.com/mjjstockman/ecomm/commit/aa8786382a3796ba118272b1ef488c75690bd3d2
+
+https://github.com/mjjstockman/ecomm/commit/ad9d678e2e7830bcfeba16aa8bd1e1f5688feb95
+
+https://github.com/mjjstockman/ecomm/commit/7e78faf60d927fa5eadf5bbf800e49168653b166
+
+https://github.com/mjjstockman/ecomm/commit/a3272d2f0c31fd4463886c8c1302992aca498f2d
 
 //////////////////////////////
+
+
+Basic automated testing was attempted, such as testing urls:
+
+
+
+
+
+
+
+
 PRODUCTS MODELS
 
 from django.test import TestCase
