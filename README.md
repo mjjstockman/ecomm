@@ -98,6 +98,9 @@ Bootstrap was used to add style to the website.
 + Pillow
 + Selenium
 + Stripe
++ Phonenumbers
++ Stripe
+
 
 
 
@@ -334,7 +337,7 @@ When a site owner is logged in and clicks the "DELETE" button a pop-up box asks 
 # Product/edit
 When a site owner is logged in and clicks the "EDIT" button a form is displayed with the product information pre-filled. They can then change any information that needs updating and click the "Update Product" button. There is also a button to cancel editing the information.
 
-Django widgets have been used to set the height of the textarea inputs so they don't take up unnecessary real estate on the page. The image uses the CustomClearableFileInput widget to show the currently selected image
+Django widgets have been used to set the height of the textarea inputs so they don't take up unnecessary real estate on the page. The image uses the CustomClearableFileInput widget to show the currently selected image.
 
 
 [Back to top ⇧](#Get-Wurst)
