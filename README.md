@@ -11,11 +11,23 @@
 ## Table of contents
 
 1. [Introduction](#Introduction)
+    - Project Rationale
+        Purpose and Goal
+        Target Audience
+        How user needs are addressed
+
+    - Business and Customer Goals
+        Purpose and values to users and business
+        Map tests to project goals, US's to goals
 2. [Technologies Used](#Technologies-used)
 3. [UX and Design](#UX-and-design)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
-   - [Database Design](#Database-design) 
+   - Colour Scheme
+   - Marketing: B2C
+        core business intents
+   - [Database Design](#Database-design)
+        show original first
    - [Kanban](#Kanban) 
    - [Typography](#typography)
 4. [Features](#Features)
@@ -32,8 +44,19 @@
      - [Products](#General)
 5. [Future Features](#Features-to-Implement-in-the-future)
 6. [Testing](#Testing)
+    - responsivness
+    - browser compatibility
+    - lighthouse
+    - code validation
+    - US testing
+    - features testing
 7. [Bugs](#Bugs)
 8. [Deployment](#Deployment)
+   - pre-requisits, installs, IDE etc
+   - fork, clone, local deployment from repo
+   - heroku app creation
+   - AWS S3 bucket creation
+   - Stripe configuration
    - [How the site was Deployed](#How-the-site-was-Deployed)
    - [How to Fork the Repository](#How-to-Fork-the-Repository)
    - [How to create a Clone](#How-to-create-a-Clone-using-SSH)
