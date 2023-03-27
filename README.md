@@ -275,6 +275,46 @@ An ERD for the site can be found below. This was created using [Django-extension
 [Back to top ⇧](#Get-Wurst)
 
 
+## Colour Scheme
+
+Once the hero image was chosen a shade of yellow from the cheese was used for the sites primary colour. A secondary, lighter colour was chosen for the secondary colour.  These were defined in the css as variables:
+
+### General
+
+![#EFC102](https://placehold.co/30/efc102/efc102) `Primary colour: #EFC102`
+
+![F0E582](https://placehold.co/30/f0e582/f0e582) `Primary lighter colour: #F0E582`
+
+
+### Buttons
+
+The following colours were used as variables for primary buttons:
+
+![#9DD9D2](https://placehold.co/30/9DD9D2/9DD9D2) `Primary colour: #9DD9D2`
+
+![#71ABA5](https://placehold.co/30/71ABA5/71ABA5) `Primary dark colour: #71ABA5`
+
+![#46807A](https://placehold.co/30/46807A/46807A) `Primary darker colour: #46807A`
+
+![#1A5751](https://placehold.co/30/1A5751/1A5751) `Primary darkest colour: #1A5751`
+
+The following colours were used as variables for the call to action buttons:
+
+![#FFB8E4](https://placehold.co/30/FFB8E4/FFB8E4) `CTA primary colour: #FFB8E4`
+
+![#CF8BB6](https://placehold.co/30/CF8BB6/CF8BB6) `CTA dark colour: #CF8BB6`
+
+![#A1618A](https://placehold.co/30/A1618A/A1618A) `CTA darkest colour: #A1618A`
+
+The following colours were used as variables for links:
+
+![#25598E](https://placehold.co/30/25598E/25598E) `Primary colour: #25598E`
+
+![#1D426D](https://placehold.co/30/1D426D/1D426D) `Hover colour: #1D426D`
+
+![#153251](https://placehold.co/30/153251/153251) `Visited colour: #153251`
+
+
 # Features
 
 
@@ -855,37 +895,6 @@ https://ecomm-gw.herokuapp.com/checkout/wh/
 
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
-
-
-////////////////////////////////////////////////
-
-
-
-
-
-
-
-## GitHub
-
-The code was deployed to GitHub Pages in the following way:
-
-Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-
-Select the [GitHub Repository](https://github.com/mjjstockman/ecomm).
-
-Open Settings by clicking on the Settings link (with the cog icon).
-
-Scroll down to the GitHub Pages section and click on the link.
-
-Click the dropdown box in the Source section (which currently states "none") and select master (this may be named "main" for some users).
-
-Click Save.
-
-The URL address for the deployed site will be shown.
-
-[Back to top ⇧](#Get-Wurst)
-
-- - -
 
 ## How to Fork the Repository
 
