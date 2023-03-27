@@ -349,6 +349,8 @@ They can also click a link if they have forgotten their password.
 
 A user can sign up to the site by entering an email, username and password. Email and passwords fields need to be entered twice and are validated to make sure they match. Any invalid inputs are reploretd to the user.
 
+<img src="docs/readme/features/images/sign-up.png" alt="Nav at mobile size showing the hamburger icon"> 
+
 # Forgot password
 
 A user can enter their email address to get an emailed link they can follow to reset their password.  The new password must be entered twice and they must match.
@@ -385,9 +387,6 @@ This is followed by information about the Bratwurst on sale. Each product has an
 This is followed with the same for Chicken and then Burgers.
 
 If a site owner is logged in, each product has a delete and edit button.
-
-
-<!-- <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon"> -->
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -428,7 +427,8 @@ Multiple answers can be published for each question. When more than one answer i
 
 ## Events
 
-<imgsrc="docs/readme/features/images/events.png" alt="Nav at mobile size showing the hamburger icon">
+<img src="docs/readme/features/images/events.png" alt="Nav at mobile size showing the hamburger icon"> 
+
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
@@ -456,6 +456,9 @@ The form can't be sent with invalid information and the user is informed where t
 [Back to top ⇧](#Get-Wurst)
 
 ## Checkout Success
+
+<img src="docs/readme/features/images/order-confirmation.png" alt="Nav at mobile size showing the hamburger icon"> 
+
 The checkout success page shows the user the email confirmation has been sent to their email.
 
 A primary "Back to Home Page" button is displayed beneath.
