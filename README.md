@@ -311,20 +311,19 @@ A user can sign up to the site by entering an email, username and password. Emai
 
 # Forgot password
 
-A user can enter their email to get an email link they can follow to reset their password.
+A user can enter their email address to get an emailed link they can follow to reset their password.  The new password must be entered twice and they must match.
 
 
 # Home Page
 
 ## Hero text
-The hero text is in bold and the product categories are capitalized to draw attention and help explain straight away the sites purpose. A bright Call to Action button below the text aims to drive traffic to the menu, the first step in making a sale.
+The hero text is in bold and the product categories are capitalised to draw attention and help explain straight away the sites purpose. A bright Call to Action button below the text aims to drive traffic to the menu, the first step in making a sale.
 
 [Back to top ⇧](#Get-Wurst)
 ## Hero Image
 
 An eye-catching image of a burger is placed to the right. This helps grab the user's attention and make them want to order food! The burger is used as this is a new addition to Get Wurst's menu.
 
-<!-- <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon"> -->
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -382,11 +381,14 @@ Anonymous users are informed that they need to login to submit questions and ans
 
 A logged in user can submit a question and answer and like/unlike an answer. When submitting a question site users can check a checkbox if they wish to receive an email when their question has an approved answer. A question exactly the same as a published question cannot be submitted and the user is informed of this.
 
+Questions or answers submitted by a site user has to be approved by a site owner before it is published. This is to make sure only suitable content is published and can be donw within the
+Django admin. Questions and answers submitted by site owners are immediatly published.
+
 Multiple answers can be published for each question. When more than one answer is published each answer except the last has a line underneath. The last answer has a heading letting users know they can submit another answer and a form to do so.
 
 ## Events
 
-<imgsrc="docs/readme/features/images/events.png"alt="Nav at mobile size showing the hamburger icon">
+<imgsrc="docs/readme/features/images/events.png" alt="Nav at mobile size showing the hamburger icon">
 The events page has a short introductionary paragraph. A selection of events Get Wurst has catered for are shown with an image, a name and the date in Month / Year format. The image and name are links to the event. When the image is hovered the name link is displayed as hovered.
 
 [Back to top ⇧](#Get-Wurst)
@@ -394,7 +396,7 @@ The events page has a short introductionary paragraph. A selection of events Get
 ## Cart
 If the current user does not have any items in their cart they are shown a message that their cart is empty and a CTA button back to the menu.
 
-A user with items in their cart is shown an image of the item, its name and price. They can use a quantity input to adjust the quantity (no more than 9, no less than 1), or use a remove link to remove all items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help build user confidence.
+A user with items in their cart is shown an image of the item, its name and price. They can use a quantity input to adjust the quantity (no more than 9, no less than 1), or use a remove link to remove all chosen items from the cart. The cart total in shown and a primary button back to the menu and a CTA button to the checkout. The checkout button has the text "Secure Checkout" and an icon of a padlock to help build user confidence.
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -567,6 +569,8 @@ Create a superuser and supply a username and password:
  python3 manage.py migrate
 ```
 
+Within the Django admin confirm the email address
+
 Change the DATABSE settings to the following:
 
 ```
@@ -684,7 +688,7 @@ the bottom of the page:
 
 12.  Back in the AWS "Edit bucket policy" paste the policy just copied.
 
-13.  At the end of the resource key but before the closing quoptation mark add: 
+13.  At the end of the resource key but before the closing quotation mark add: 
 ```
 /*
 ```
@@ -785,7 +789,7 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 ```
 
-# Back in Heoku
+# Back in Heroku
 
 1.  Select "Reveal Config Vars" in the "Settings" tab
 
@@ -821,12 +825,39 @@ to Heroku, also deploy to Heroku.
 
  2.  Click "Upload" in the media folder
 
+ 3.  Select the images used on the site and click "Next"
 
-3:10 CI Caching, Media Files & Stripe
+ 4.  Select "Grant public read access to this object(s)" under Manage public permissions,
+ click "Next" then "Next" again
+
+ 5.   Click "Upload"
+
+# Stripe
+
+1.  Sign in or create an account with [Stripe](https://stripe.com/gb)
+
+2.  Click "Developers" from the menu on the left hand side and then "API keys"
+
+3.  Copy the "Publishable key" and "Secret key"
+
+4.  Add these to Heroku Config Vars as STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY respectivaely.
+
+5.  Click "Webhooks" from the Developers tab and then "+ Add endpoint"
+
+6.  Enter the following as the "Endpoint URL":
+```
+https://ecomm-gw.herokuapp.com/checkout/wh/
+```
+
+7.  Select "Recieve all events" and then "Add endpoint"
+
+8.  Copy the "Signing secret"
+
+9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
 
 
-
+////////////////////////////////////////////////
 
 
 
