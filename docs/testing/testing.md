@@ -536,21 +536,14 @@ This can be seen in the following commits:
 
 # Automated Testing
 
+Many attempts were made to automate testing. These can be seen in the following commits:
+
 ## Selenium
 
 
 https://github.com/mjjstockman/ecomm/commit/0f4034d59d9f54a3d81939903b7d3c56ae391575
 
-
-
-
 https://github.com/mjjstockman/ecomm/commit/19ddfe9ef9b2c829e630104e6a69f0a68c47e91f
-
-
-
-///////////////////
-
-Many attempts were made to automate testing. These can be seen in the following commits:
 
 https://github.com/mjjstockman/ecomm/commit/e320a1486c4a86f5c95dc4bfd891873f9ac6830a
 
@@ -576,17 +569,8 @@ https://github.com/mjjstockman/ecomm/commit/7e78faf60d927fa5eadf5bbf800e49168653
 
 https://github.com/mjjstockman/ecomm/commit/a3272d2f0c31fd4463886c8c1302992aca498f2d
 
-//////////////////////////////
 
-
-Basic automated testing was attempted, such as testing urls:
-
-
-
-
-
-
-
+Examples of automated testing:
 
 PRODUCTS MODELS
 
@@ -607,13 +591,13 @@ class TestModels(TestCase):
             category=self.category1
         )
 
-///////////////////////////
 
 PRODUCTS FORMS
-# from django.test import TestCase, Client
-# from django.core.files.uploadedfile import SimpleUploadedFile
-# from products.form import FakeForm
-# from products.models import Category
+
+from django.test import TestCase, Client
+from django.core.files.uploadedfile import SimpleUploadedFile
+from products.form import FakeForm
+from products.models import Category
 
 
 class TestFakeForm(TestCase):
@@ -633,136 +617,133 @@ class TestFakeForm(TestCase):
 
         self.assertTrue(form.is_valid())
 
-    /////////////////////
 
 PRODUCT URLS
 
-    # import unittest
-# from django.urls import reverse, resolve
-# from products.views import all, detail, add, edit, delete
+import unittest
+from django.urls import reverse, resolve
+from products.views import all, detail, add, edit, delete
 
 
-# class TestUrls(unittest.TestCase):
+class TestUrls(unittest.TestCase):
 
-#     def test_products_url_resolves(self):
-#         url = reverse('products')
-#         self.assertEqual(resolve(url).func, all)
+     def test_products_url_resolves(self):
+         url = reverse('products')
+         self.assertEqual(resolve(url).func, all)
 
-#     def test_product_detail_url_resolves(self):
-#         url = reverse('product_detail', args=[1])
-#         self.assertEqual(resolve(url).func, detail)
+     def test_product_detail_url_resolves(self):
+         url = reverse('product_detail', args=[1])
+         self.assertEqual(resolve(url).func, detail)
 
-#     def test_add_product_url_resolves(self):
-#         url = reverse('add_product')
-#         self.assertEqual(resolve(url).func, add)
+     def test_add_product_url_resolves(self):
+         url = reverse('add_product')
+         self.assertEqual(resolve(url).func, add)
 
-#     def test_product_edit_url_resolves(self):
-#         url = reverse('edit_product', args=[1])
-#         self.assertEqual(resolve(url).func, edit)
+     def test_product_edit_url_resolves(self):
+         url = reverse('edit_product', args=[1])
+         self.assertEqual(resolve(url).func, edit)
 
-#     def test_product_delete_url_resolves(self):
-#         url = reverse('delete_product', args=[1])
-#         self.assertEqual(resolve(url).func, delete)
+     def test_product_delete_url_resolves(self):
+         url = reverse('delete_product', args=[1])
+         self.assertEqual(resolve(url).func, delete)
 
-///////////////////////////
+
 
 PRODUCT VIEWS
 
-# import unittest
-# from django.urls import reverse
-# from django.test import TestCase, Client
-# from products.models import Category, Product
+import unittest
+from django.urls import reverse
+from django.test import TestCase, Client
+from products.models import Category, Product
 
 
-# class TestViews(TestCase):
+class TestViews(TestCase):
 
-#     def setUp(self):
-#         self.client = Client()
-#         self.category1 = Category.objects.create(
-#             name = 'Category 1',
-#         )
-#         self.products_url = reverse('products')
-#         self.products_detail_url = reverse('product_detail', args=[1])
-#         self.products_edit_url = reverse('edit_product', args=[1])
-#         self.products_delete_url = reverse('delete_product', args=[1])
-#         self.product1 = Product.objects.create(
-#             name = 'Product 1',
-#             short_description = 'Prod 1 description',
-#             description = 'Prod 1 full description',
-#             price = 1,
-#             image = 'media/product_images/test1.png',
-#             category = self.category1
-#         )
+     def setUp(self):
+         self.client = Client()
+         self.category1 = Category.objects.create(
+             name = 'Category 1',
+         )
+         self.products_url = reverse('products')
+         self.products_detail_url = reverse('product_detail', args=[1])
+         self.products_edit_url = reverse('edit_product', args=[1])
+         self.products_delete_url = reverse('delete_product', args=[1])
+         self.product1 = Product.objects.create(
+             name = 'Product 1',
+             short_description = 'Prod 1 description',
+             description = 'Prod 1 full description',
+             price = 1,
+             image = 'media/product_images/test1.png',
+             category = self.category1
+         )
 
-#     def tearDown(self):
-#         self.category1.delete()
+     def tearDown(self):
+         self.category1.delete()
 
 
-#     def test_products_all_GET(self):
+     def test_products_all_GET(self):
         
-#         response = self.client.get(self.products_url)
+         response = self.client.get(self.products_url)
 
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed('products/all.html')
+         self.assertEqual(response.status_code, 200)
+         self.assertTemplateUsed('products/all.html')
 
 
-#     def test_products_detail_GET(self):
+     def test_products_detail_GET(self):
        
-#         response = self.client.get(self.products_url)
+         response = self.client.get(self.products_url)
 
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed('products/detail.html')
+         self.assertEqual(response.status_code, 200)
+         self.assertTemplateUsed('products/detail.html')
 
 
-#     needed as used in setup???
-#     def test_products_add_POST_adds_new_product(self):
+     needed as used in setup???
+     def test_products_add_POST_adds_new_product(self):
        
-#         response = self.client.post(self.products_url)
+         response = self.client.post(self.products_url)
 
-#         self.assertEqual(response.status_code, 200)
-#         self.assertEqual(self.product1.name, 'Product 1')
-#         self.assertEqual(self.product1.category, 'Category 1')
-#         self.assertTemplateUsed('products/add.html')
+         self.assertEqual(response.status_code, 200)
+         self.assertEqual(self.product1.name, 'Product 1')
+         self.assertEqual(self.product1.category, 'Category 1')
+         self.assertTemplateUsed('products/add.html')
 
 
-#     def test_products_edit_POST_edits_product(self):
+     def test_products_edit_POST_edits_product(self):
 
-#         self.product1.name = 'Edited Product Name'
+         self.product1.name = 'Edited Product Name'
        
-#         response = self.client.post(self.products_edit_url, {
-#             'name': 'Edited Product Name'
-#         })
+         response = self.client.post(self.products_edit_url, {
+             'name': 'Edited Product Name'
+         })
 
-#         self.assertEqual(response.status_code, 302)
-#         self.assertEqual(self.product1.name, 'Edited Product Name')
-#         self.assertTemplateUsed('products/add.html')
+         self.assertEqual(response.status_code, 302)
+         self.assertEqual(self.product1.name, 'Edited Product Name')
+         self.assertTemplateUsed('products/add.html')
 
-#     def test_products_delete_POST_deletes_product(self):
+     def test_products_delete_POST_deletes_product(self):
 
-#         self.product1.delete()
+         self.product1.delete()
         
-#         response = self.client.post(self.products_delete_url)
+         response = self.client.post(self.products_delete_url)
 
-#         self.assertEqual(response.status_code, 302)
-#         self.assertEqual(Product.objects.count(), 0)
+         self.assertEqual(response.status_code, 302)
+         self.assertEqual(Product.objects.count(), 0)
 
-////////////////////////
 
 FAQ URLS
 
-# from django.test import SimpleTestCase
-# from django.urls import reverse, resolve
-# from faq.views import faq
+ from django.test import SimpleTestCase
+ from django.urls import reverse, resolve
+ from faq.views import faq
 
 
-# class TestUrls(SimpleTestCase):
+ class TestUrls(SimpleTestCase):
 
-#     def test_faq_url_resolves(self):
-#         url = reverse('faq')
-#         self.assertEqual(resolve(url).func, faq)
+     def test_faq_url_resolves(self):
+         url = reverse('faq')
+         self.assertEqual(resolve(url).func, faq)
 
 
-/////////////////
 
 EVENTS. test_events.py
 
@@ -789,7 +770,6 @@ def test_canAddEventImg(event):
                   39_78nCoVz.png")
 
 
-///////////////////
 
 EVENTS MODELS
 
@@ -815,7 +795,6 @@ class TestModels(TestCase):
         self.assertEqual(self.event.image, 'image')
 
 
-///////////////////////
 
 EVENTS URLs
 
@@ -830,8 +809,6 @@ class TestUrls(SimpleTestCase):
         url = reverse('events')
         self.assertEqual(resolve(url).func, events)
 
-
-/////////////////////
 
 EVENTS VIEWS
 

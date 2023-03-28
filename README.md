@@ -952,61 +952,6 @@ Press **Enter**.
 
 [Back to top ⇧](#Get-Wurst)
 
-
-
-# Create Heroku app
-Go to https://www.heroku.com/ and login/signup
-
-Click on the New button
-
-In the Resources tab search for Heroku postgres in the Add-ons search box and add to the project.
-
-In the Settings tab click on Reveal Config Vars button
-
-Copy or make a note of the value of the DATABASE_URL var
-
-[Back to top ⇧](#Get-Wurst)
-
-# Attach PostgreSQL database 
-In settings.py add the following below 'from pathlib import Path
-
-
-    import os
-    import dj_database_url
-    if os.path.isfile('env.py'):
-    	import env
- 
- Comment out DATABASES and add the following:
-
-    DATABASES = {
-	    'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
-     }
-
-Migrate changes
-
-[Back to top ⇧](#Get-Wurst)
-# Prepare environment and settings.py files
-Add a env.py file to the root directory if it does not exist
-
-Add env.py to the .gitignore file
-
-Add the following in env.py and save the file:
-
-    
-    os.environ[‘DATABASE_URL’] = <‘YOUR_DATABASE_URL’>
-    os.environ[‘SECRET_KEY’] = <‘RANDOM_SECRET_KEY’>
-   
-
-Copy your SECRET_KEY
-
-Add SECRET_KEY to Heroku Config vars 
-
-Change SECRET_KEY key in settings.py to:
-
-    SECRET_KEY  =  os.environ.get('SECRET_KEY')
-
-[Back to top ⇧](#Get-Wurst)
-
 # Google Authentification
 
 In order to allow users to register and login using Google.
@@ -1067,83 +1012,7 @@ https://tinypng.com/
 
 
 
-## Images
 
-
-
-## Code Validation
-
-### HTML beautify
-
- [online HTML code Beautifier](https://htmlbeautify.com/). 
-
-### HTML valiation
-
-[HTML validator](https://validator.w3.org/nu/#textarea)
-
-
-| App  |  page | result |
-| ------ | ------ | ------ |
-|  Home | Home | [No errors](README_docs/HTML-validator/01-home.pdf) |
-|  Trees | Add tree form| [No errors](README_docs/HTML-validator/02-shop-add-tree-form.pdf) |
-|  Trees | Shop | [No errors](README_docs/HTML-validator/02-shop.pdf) |
-|  Trees | Tree detail | [No errors](README_docs/HTML-validator/02-tree-detail.pdf) |
-|  Questions | FAQ | [No errors](README_docs/HTML-validator/03-faq.pdf) |
-|  Questions | FAQ form | [No errors](README_docs/HTML-validator/03-question-form.pdf) |
-|  Newsletter | Subscribers Manager| [No errors](README_docs/HTML-validator/04-Admin-subscribers.pdf) |
-|  Profiles | User Profile | [No errors](README_docs/HTML-validator/04-user-profile.pdf) |
-|  Accounts | User login | [No errors](README_docs/HTML-validator/04-users-login.pdf) |
-|  Accounts | Register User | [No errors](README_docs/HTML-validator/04-users-register.pdf) |
-|  Accounts | User sign out | [No errors](README_docs/HTML-validator/04-users-signout.pdf) |
-
-
-### CSS validation
-
-Due to extensive user of Bottstrap classes, only minimial styling was applied. Most of the css code comes from bootstrap's carousele template with some modifications. The CSS code was validated with [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) 
-
-| App  |  file | result |
-| ------ | ------ | ------ |
-|  Checkout | checkout.css | [No errors](README_docs/HTML-validator/01-home.pdf) |
-|  Home | home.css | [No errors](README_docs/jigsaw-validator/02-home.pdf) |
-|  Profiles | profiles.css | [No errors](README_docs/jigsaw-validator/03-profiles.pdf) |
-|  Questions | questions.css | [No errors](README_docs/jigsaw-validator/04-questions.pdf) |
-|  Base | base.css | [No errors](README_docs/jigsaw-validator/05-base.pdf) |
-
-
-### JavaScript validation
-
-Javascript code validation was complited on [jshint](https://jshint.com/)
-Initialy it was returning errors in relation of ES6 syntax, which was resolved by adding this line to the beggining of the file
-```
-/*jshint esversion: 6*/
-```
-
-Second issue with jshint was that it wasn't recognizing syntax of JQuery. This was resolved by adding the below code:
-```
-/*globals $:false */
-```
-Most of the results came with no errors except of stripe_element.js It has returned that Stripe is undefined. This is due to core functionality reffering to Stripe. Copy of the code was taken from older version Stripe pages that were referenced in Butique Ado.
-
-| App  |  file | result |
-| ------ | ------ | ------ |
-|  Checkout| stripe_element.js| [undefined variable Stripe](README_docs/jshint-validator/01-checkout.pdf) |
-|  Trees | trees.js| [no errors](README_docs/jshint-validator/02-trees.pdf) |
-
-
-### Python beautify
-All pages were initialy put through [Python Formatter](https://codebeautify.org/python-formatter-beautifier) which automaticaly sorted most of the too long lines errors. Than the code was checked by pylint and problems were displayed in the console. Once the issues were cleared I have put all code though pep8 validator.
-
-### Pep 8 
-
-```
-Python3 -m flake8
-```
-### Python validator
-
-
-
-
-### Automated tests
 
 Attempts at automated testing.....
 
@@ -1580,7 +1449,7 @@ Wet menu/all template
 
 ```
 
-Used parial template to DRY
+Used partial template to DRY
 
 '''
 class QuestionForm(forms.ModelForm):
@@ -1657,30 +1526,8 @@ Targeted the input and guessed styling.
 ```
 
 
-### link vs btn
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/link-vs-btn.png)
 
 
-
-
-
-
-
-### Getting email variables from gmail
-
-
-- Log into gmail account
-- Go to Settings and than See all settings
-- Top menu go to Accounts and import
-- Find on the list Other google account settings
-- Left side menu - Security
-- Turn on two step verification: add phone number and follow instructions
-- Go back to security
-App passwords - Select Mail, Select Device - Other, Django, Copy app password.
-
-In Heroku 
-EMAIL_HOST_PASS is the password copied from above.
-EMAIL_HOST_USER is the gmail email address
 
 
 
