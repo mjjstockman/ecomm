@@ -557,6 +557,10 @@ A package [webdriver-manager](https://pypi.org/project/webdriver-manager/) was a
 
 [Back to top ⇧](#Get-Wurst)
 
+# Still to do
++ Remove unused dependencies from requirements.txt
++ Check for unused CSS and JS
+
 # Deployment
 
 ## Create an external database
@@ -978,6 +982,17 @@ Many thanks to the following which were used throughout the creation of this sit
 - [Super Cool Design](https://supercooldesign.co.uk/blog/how-to-write-good-alt-text)
 - [Typespiration](https://typespiration.com)
 - [xml-sitemaps.com](www.xml-sitemaps.com)
+## Acknowledgements
+
+- Many thanks to my mentor for guidance.
+- Thank you to the Code Institute Slack community for their advice.
+- A wonderful [README.md](https://github.com/rebeccatraceyt/KryanLive) by [Rebecca Tracey-Timoney](https://github.com/rebeccatraceyt) was used for inspiration and guidance.
+
+[Back to top ⇧](#Get-Wurst)
+
+### Tutorials and inspiration
+
+* The project walkthrough Butique Ado from Code Institute 
 
 
 [Back to top ⇧](#Get-Wurst)
@@ -995,343 +1010,46 @@ https://tinypng.com/
 
 [Back to top ⇧](#Get-Wurst)
 
-## Acknowledgements
-
-- Many thanks to my mentor for guidance.
-- Thank you to the Code Institute Slack community for their advice.
-- A wonderful [README.md](https://github.com/rebeccatraceyt/KryanLive) by [Rebecca Tracey-Timoney](https://github.com/rebeccatraceyt) was used for inspiration and guidance.
-
-[Back to top ⇧](#Get-Wurst)
-
-
-
-
-
-
-
-
-
-
-
-
-Attempts at automated testing.....
-
-
-## Events
-
-### events/events
-
-import pytest
-from events.models import Event
-
-
-@pytest.fixture()
-def event():
-    event = Event()
-    return event
-
-
-def test_canAddEventName(event):
-    event.addName("Glasto")
-
-
-def test_canAddEventLink(event):
-    event.addLink("https://tramlines.org.uk/")
-
-
-def test_canAddEventImg(event):
-    event.addImg("media/product_images/Screenshot_2022-11-28_at_14.00.\
-                  39_78nCoVz.png")
-
-### events/models
-
-from django.test import TestCase
-from events.models import Event
-
-
-class TestModels(TestCase):
-
-    def setUp(self):
-        self.event = Event()
-
-    def test_can_instantiate_an_event(self):
-        self.assertIsInstance(self.event, Event)
-
-    def test_can_add_an_event_name(self):
-        self.event.name = 'Glasto'
-        self.assertEqual(self.event.name, 'Glasto')
-
-    def test_can_add_an_event_image(self):
-        self.event.image = 'image'
-        # assert 1 == 2
-        self.assertEqual(self.event.image, 'image')
-
-### events/urls
-
-from django.test import SimpleTestCase
-from django.urls import reverse, resolve
-from events.views import events
-
-
-class TestUrls(SimpleTestCase):
-
-    def test_events_url_is_resolved(self):
-        url = reverse('events')
-        self.assertEqual(resolve(url).func, events)
-
-
-### events/views
-from django.test import TestCase, Client
-from django.urls import reverse
-
-
-class TestViews(TestCase):
-
-    def test_events_view(self):
-        client = Client()
-
-        response = client.get(reverse('events'))
-
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'events/events.html')
-
-## FAQ
-
-### faq/urls
-
-from django.test import SimpleTestCase
-from django.urls import reverse, resolve
-from faq.views import view_faq
-
-
-class TestUrls(SimpleTestCase):
-
-    def test_faq_url_resolves(self):
-        url = reverse('view_faq')
-        self.assertEqual(resolve(url).func, view_faq)
-
-### Products
-
-## Products/conftest
-import pytest
-
-
-@pytest.fixture
-def setUp():
-    print("Setting up")
-    yield
-    print("Tearing down")
-
-
-@pytest.fixture(autouse=True)
-def each_time():
-    print("Autouse=True, runs each time")
-
-
-## products/forms
-class TestFakeForm(TestCase):
-    def setUp(self):
-        self.client = Client()
-        self.category1 = Category.objects.create(
-            name='Category 1',
-        )
-
-    def test_fake_form_valid_data(self):
-        form = FakeForm(data={
-            'name': 'Fake Name 1',
-            'category': self.category1,
-            'image': SimpleUploadedFile('file.jpg', b"file_content",
-                                        content_type='image/jpeg')
-        })
-
-        self.assertTrue(form.is_valid())
-
-## products/models
-
-class TestModels(TestCase):
-    def test_product_has_a_category(self):
-        category1 = Category.objects.create(name='Category 1')
-        product1 = Product.objects.create(
-            name='Product 1',
-            short_description='Prod 1 description',
-            description='Prod 1 full description',
-            price=1,
-            image='media/product_images/test1.png',
-            product1.caterogy=category1
-            category=self.category1
-        )
-
-## products/froms
-
-
-import pytest
-from products.models import Category
-
-
-@pytest.fixture
-def test_product_1(db):
-    return Category.objects.create_product('Product 1')
-
-
-@pytest.mxampleark.django_db
-def test_set_category_price(product_1):
-    product_1.set_name('Prod 1')
-    assert product_1_name('Prod 1') is True
-    
-## products/models
-
-class TestModels(TestCase):
-    def test_product_has_a_category(self):
-        category1 = Category.objects.create(name='Category 1')
-        product1 = Product.objects.create(
-            name='Product 1',
-            short_description='Prod 1 description',
-            description='Prod 1 full description',
-            price=1,
-            image='media/product_images/test1.png',
-            product1.caterogy=category1
-            category=self.category1
-        )
-
-## products/pytest
-import pytest
-from products.models import Category
-
-
-@pytest.fixture
-def test_product_1(db):
-    return Category.objects.create_product('Product 1')
-
-
-@pytest.mxampleark.django_db
-def test_set_category_price(product_1):
-    product_1.set_name('Prod 1')
-    assert product_1_name('Prod 1') is True
-    
-
-## products/urls
-import unittest
-from django.urls import reverse, resolve
-from products.views import all, detail, add, edit, delete
-
-
-class TestUrls(unittest.TestCase):
-
-    def test_products_url_resolves(self):
-        url = reverse('products')
-        self.assertEqual(resolve(url).func, all)
-
-    def test_product_detail_url_resolves(self):
-        url = reverse('product_detail', args=[1])
-        self.assertEqual(resolve(url).func, detail)
-
-    def test_add_product_url_resolves(self):
-        url = reverse('add_product')
-        self.assertEqual(resolve(url).func, add)
-
-    def test_product_edit_url_resolves(self):
-        url = reverse('edit_product', args=[1])
-        self.assertEqual(resolve(url).func, edit)
-
-    def test_product_delete_url_resolves(self):
-        url = reverse('delete_product', args=[1])
-        self.assertEqual(resolve(url).func, delete)
-
-   
-## products/views
-import unittest
-from django.urls import reverse, resolve
-from products.views import all, detail, add, edit, delete
-
-
-class TestUrls(unittest.TestCase):
-
-    def test_products_url_resolves(self):
-        url = reverse('products')
-        self.assertEqual(resolve(url).func, all)
-
-    def test_product_detail_url_resolves(self):
-        url = reverse('product_detail', args=[1])
-        self.assertEqual(resolve(url).func, detail)
-
-    def test_add_product_url_resolves(self):
-        url = reverse('add_product')
-        self.assertEqual(resolve(url).func, add)
-
-    def test_product_edit_url_resolves(self):
-        url = reverse('edit_product', args=[1])
-        self.assertEqual(resolve(url).func, edit)
-
-    def test_product_delete_url_resolves(self):
-        url = reverse('delete_product', args=[1])
-        self.assertEqual(resolve(url).func, delete)
-
-## products/widgets
-from django.forms.widgets import ClearableFileInput
-from django.utils.translation import gettext_lazy as _
-
-
-class CustomClearableFileInput(ClearableFileInput):
-    clear_checkbox_label = _("Remove")
-    initial_text = _("Current Image")
-    input_text = _("")
-    template_name = "products/custom_widget_templates/\
-                     custom_clearable_file_input.html"
 
 ### Lighthouse
 
 - Initial Lighthouse reports can be seen below
 
-<!-- CHANGE CHANGE CHANGE LINK CHANGE CHANGE CHANGE -->
-![lighthouse report]((static/images/readme/lighthouse/first/lighthouse report viewer.dpf))
+[lighthouse report]((static/images/readme/lighthouse/first/lighthouse report viewer.dpf))
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/overall.png)
+[lighthouse](static/images/readme/lighthouse/first/overall.png)
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/accessibility.png)
+[lighthouse](static/images/readme/lighthouse/first/accessibility.png)
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/best-practices.png)
+[lighthouse](static/images/readme/lighthouse/first/best-practices.png)
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/performance.png)
+[lighthouse](static/images/readme/lighthouse/first/performance.png)
 
 The following article helped to improve elimination of render blocking resources:
 https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources/
 
 
-Eliminate render-blocking resources
-(static/images/readme/lighthouse/first.coverage.png)
-
 Main render-blocking resources are Stripe (with 447,926 bytes and 78% being unused) and Bootstrap (with 194,696 and 87 % being unused).
 It was decided not to purge these of unused CSS incase the project needs expanding on or revision at a future date.
 
 Correct ratio of logo
-[IMG ALT DESC HERE](static/images/readme/lighthouse/first/logo-ratio.png)
+[Lighthouse](static/images/readme/lighthouse/first/logo-ratio.png)
 (static/images/readme/lighthouse/first/logo-ratio.png)
 
 
+[Lighthouse](static/images/readme/lighthouse/first/pwa.png)
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/pwa.png)
+[Lighthouse](static/images/readme/lighthouse/first/seo.png)
 
-Error: ![IMG ALT DESC HERE](static/images/readme/lighthouse/first/seo.png)
-
-(static/images/readme/bugs/link-vs-btn.png)
-
-(static/images/readme/bugs/link-vs-btn.png)
 
 ## What did
 Gave logo explicit width and height.
 
 
-
-
-
-
-
-
-
 ## Project Bugs and Solutions:
 
 ### menu/add/
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/menu-add-ws.png)
+[Template does not exist](static/images/readme/bugs/menu-add-ws.png)
 
 Saw space between exception value, checked code
 
@@ -1356,7 +1074,7 @@ template_name = "products/custom_widget_templates/" \
 
 
 ### Wet menu template
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/faq-label-error.png)
+(static/images/readme/bugs/faq-label-error.png)
 COMMIT 501
 
 Wet menu/all template
@@ -1459,7 +1177,7 @@ class QuestionForm(forms.ModelForm):
         self.fields['body'].label = "Question"
 
 ### Cat-nav links
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/list-no-filter.png)
+[Attribute error](static/images/readme/bugs/list-no-filter.png)
 
 Saw refering to a list var
 
@@ -1481,7 +1199,7 @@ def all(request):
 
 
 ### FAQ form labels
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/faq-label-error.png)
+[Incorrect form label](static/images/readme/bugs/faq-label-error.png)
 
 Django field labels not working once added css
 
@@ -1509,58 +1227,5 @@ class QuestionForm(forms.ModelForm):
         self.fields['body'].label = "Question"
 '''
 
-### allauth signup
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/signup-diff-style.png)
-Error: ![IMG ALT DESC HERE](static/images/readme/bugs/signin-diff-style.png)
-
-Why styled differently??
-
-Targeted the input and guessed styling.
-
-```
-#signup_form p input {
-  border: 3px solid var(--gw-dark);
-  width: 100%;
-  height: 42px;
-}
-```
 
 
-
-
-
-
-
-## Credits 
-### Online resources
-* [Icons8](https://icons8.com/)
-* [unsplash](https://unsplash.com/)
-* [Fontawsome](https://fontawesome.com/)
-* [Bootstrap 5]()
-* [Markdown best practices](https://www.markdownguide.org/basic-syntax/)
-* [Markdown Table of content generator](http://ecotrust-canada.github.io/markdown-toc/)
-
-* [icon](https://www.flaticon.com/free-icons/trees)
-* png to svg [converter](https://convertio.co/download/d39aa7f30e79f4379b9bce697c5afe384b5853/)
-* resizing photos by [photoresizer](https://www.photoresizer.com/)
-* [TinyPng Image Guide](https://tiny-img.com/blog/best-image-size-for-website/)
-* [Simple Image Resizer](https://www.simpleimageresizer.com/)
-* [TinyPng](https://tinypng.com/)
-
-### Tutorials and inspiration
-
-* The project walkthrough Butique Ado from Code Institute [oryginal repo](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59), deployed [here](https://ado-clothes-shop.herokuapp.com/). 
-
-* My favourite Bonsai shop as inspiration [Herons Bonsai](https://www.herons.co.uk/)
-* [starter template](https://getbootstrap.com/docs/5.0/getting-started/introduction/) from bootstrap 5
-* base template from [bootstrap examples](https://getbootstrap.com/docs/5.0/examples/carousel/)
-
-### People
-
-- Daisy Mc Girr - my mentor from Code Institute
-- Julia Konn - for testing the app extensively
-- Rachel Rock - for testing the app extensively
-- Kamil Kwiatkowski - for testing the app extensively
-
-
-- Joanna Gorska - for great advice on creating a README and the README template used
