@@ -16,7 +16,6 @@
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
    - [Database Design](#Database-design)
-        show original first
    - [Kanban](#Kanban) 
    - [Typography](#typography)
 4. [Features](#Features)
@@ -33,19 +32,8 @@
    - [Marketing](#Marketing)
 5. [Future Features](#Features-to-Implement-in-the-future)
 6. [Testing](#Testing)
-    - responsivness
-    - browser compatibility
-    - lighthouse
-    - code validation
-    - US testing
-    - features testing
 7. [Bugs](#Bugs)
 8. [Deployment](#Deployment)
-   - pre-requisits, installs, IDE etc
-   - fork, clone, local deployment from repo
-   - heroku app creation
-   - AWS S3 bucket creation
-   - Stripe configuration
    - [How the site was Deployed](#How-the-site-was-Deployed)
    - [How to Fork the Repository](#How-to-Fork-the-Repository)
    - [How to create a Clone](#How-to-create-a-Clone-using-SSH)
@@ -1005,73 +993,11 @@ Change SECRET_KEY key in settings.py to:
 
 [Back to top ⇧](#Get-Wurst)
 
-# Store static and media files on Cloudinary
-
-Go to cloudinary.com and login/signup
-
-In the Dashboard copy your API Environment variable
-
-In env.py add:
-
-    os.environ[‘CLOUDINARY_URL’] = <‘CLOUDINARY_API_ENVIRONMENT_VAR’ (with  ‘CLOUIDINARY_URL=‘ removed)>
-*Note the removal of ‘CLOUIDINARY_URL=' at the beginning of the key*
-
-Copy above and add to Heroku Config vars
-
-
-In settings.py add the following to INSTALLED_APPS:
-
-    ‘cloudinary_storage’
-
-*This must go above django.contrib.staticfiles*
-
-  Following django.contrib.staticfiles add:
-
-    'django.contrib.staticfiles',
-    'cloudinary'
-
-Add following to settings.py:
-
-    STATIC_URL = '/static/'
-    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    
-    MEDIA_URL = '/media/'
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
-Add the following below BASE_DIR declaration:
-
-    TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-Change 'DIRS' key to TEMPLATES_DIR:
-
-    'DIRS': [TEMPLATES_DIR],
-
-Add `ALLOWED_HOSTS = ['setlist-sharer-this.herokuapp.com', 'localhost']`
-
-Add media, templates and static folders to root level
-
-Create Procfile at root level and add:
-
-    web: gunicorn setlistsharer.wsgi
-
-Add, commit and push to your repo
-
-In the Deploy tab in Heroku click on GitHub for the Deployment method
-
-Search for the repo and click the Connect button
-
-Click on the Deploy Branch button
-
-Click on the Open app button to open the project
-
-[Back to top ⇧](#Get-Wurst)
-
 # Google Authentification
+
 In order to allow users to register and login using Google.
 See [here](https://www.section.io/engineering-education/django-google-oauth/) for detailed instructions.
+
 
 # Credits
 
@@ -1099,7 +1025,14 @@ Many thanks to the following which were used throughout the creation of this sit
 
 ## Images
 The logo was created by [Alex Mench](https://twitter.com/Alex_Mench) who kindly gave permission for its use.
+
 All other images were taken from [Unsplash](https://unsplash.com/).
+
+Images were resized and comnverted to webp files using:
+
+https://www.simpleimageresizer.com/
+https://tinypng.com/
+
 
 [Back to top ⇧](#Get-Wurst)
 
@@ -1122,11 +1055,6 @@ All other images were taken from [Unsplash](https://unsplash.com/).
 
 ## Images
 
-### Optimisattion
-sizing...
-https://tiny-img.com/blog/best-image-size-for-website/
-https://www.simpleimageresizer.com/
-https://tinypng.com/
 
 
 ## Code Validation
