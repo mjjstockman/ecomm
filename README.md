@@ -112,9 +112,6 @@ the colomns as progress was made. Additional information was added throughout th
 an agile manner.
 
 
-
-
-
 ### Themes, Epics, Related User Stories, MOSCOW
 
 
@@ -441,16 +438,25 @@ A primary "Back to Home Page" button is displayed beneath.
 The footer at the bottom of the page includes a link to Get Wurst's Facebook business page and their Privacy Policy.
 
 ## Marketing
+
 ## Facebook page
 
 The Facebook link in the footer goes to Get Wurst's Facebook page, as seen below:
 
 <img src="docs/testing/images/us-36/facebook-top.png" alt="Get Wurst's Facebook page">
 
-The hero image is of a burger as this is a new range Get Wurst has recently added so user attention
-was brought to this range.
+The hero image is of a burger as this is a new range Get Wurst has recently added so user attention was brought to this range.
 
-The company is a Business to Customer business and the site was designed with this in mind.
+Users can choose to sign up for a newletter so marketing information can be sent via
+email. Emails can also be recieved when a users question within the FAQ has an approved answer.
+This encourages the user to visit the site again and hopefully increase site usage.
+
+The company is a Business to Customer business and the site was designed with this in mind. 
+Details of products etc were described in language and using terms that a general customer
+would undersatand and relate to. The detail and type of information offered would have been
+different if the business sold to other businesses.
+
+The brannding (colours used, style of the site etc) was kept consistant throughout the site.
 
 [Back to top ⇧](#Get-Wurst)
 
