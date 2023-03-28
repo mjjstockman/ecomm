@@ -100,10 +100,18 @@ This is a fictional website (for educational purposes) for a street food company
 [Back to top ⇧](#Get-Wurst)
 
 
+# Agile Development
+
 ## User Stories
 
+A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23). User stories were added, and labels for bugs or to change
+where necessary.
 
-A kanban was used to keep an agile view on user stories. This can be seen [here](https://github.com/users/mjjstockman/projects/23).
+Three coloumns were used (To Do, In Progress and Done) and issues/user stories were moved between
+the colomns as progress was made. Additional information was added throughout the process in
+an agile manner.
+
+
 
 
 
