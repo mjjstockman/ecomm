@@ -16,7 +16,6 @@ class AnswerInline(admin.TabularInline):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('body', 'created_on')
-    # prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     actions = ['publish_questions']
     inlines = [
