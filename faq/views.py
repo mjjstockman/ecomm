@@ -24,7 +24,7 @@ def faq(request):
 
 @login_required
 def answer(request, pk):
-    """Adds a setlist to the database for the admin to consider"""
+    """Adds an answer to the database for the admin to consider"""
     question = get_object_or_404(Question, id=pk)
     author = request.user
     answer_form = AnswerForm()
@@ -49,7 +49,7 @@ def answer(request, pk):
 
 @login_required
 def question(request):
-    """Adds a setlist to the database for the admin to consider"""
+    """Adds a question to the database for the admin to consider"""
     author = request.user
     question_form = QuestionForm()
     if request.method == "POST":
