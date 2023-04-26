@@ -63,7 +63,7 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-        <!-- IS THIS NEEDED IF NOT USING DEFAULY BG COLOURS????????? -->
+        <!-- IS THIS NEEDED IF NOT USING DEFAULT BG COLOURS????????? -->
             {% with message.level as level %}
                 {% if level == 40 %}
                     {% include 'includes/toasts/toast_error.html' %}
