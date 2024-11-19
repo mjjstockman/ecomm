@@ -4,7 +4,9 @@
 
 *Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
 
-[View the live project here](https://ecomm-gw.herokuapp.com/).
+**PLEASE NOTE: in process of migrating project from Heroku and ElephantSQL to Render and Neon**
+
+~~[View the live project here](https://ecomm-gw.herokuapp.com/).~~
 
 ---
 
