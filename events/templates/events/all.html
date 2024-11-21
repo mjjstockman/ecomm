@@ -1,52 +1,58 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block extra_meta %}
+<meta
+  name="description"
+  content="View a selection of previous events Get Wurst has served their authentic German 
+Bratwursts, Burgers and Chicken. These include festivals, parties, markets and food halls." />
 
-{% block extra_meta %}
-<meta name="description" content="View a selection of previous events Get Wurst has served their authentic German 
-Bratwursts, Burgers and Chicken. These include festivals, parties, markets and food halls.">
+<meta
+  name="keywords"
+  content="Festival, street food, markets, parties, events, football, stadium, Sheffield, East Midlands,
+opera" />
 
-<meta name="keywords" content="Festival, street food, markets, parties, events, football, stadium, Sheffield, East Midlands,
-opera">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="#" />
 
-<link rel="canonical" href="#">
-
-<meta name="robots" content="index, follow">
-
-{% endblock %}
-
-{% block extra_title %}Events{% endblock %}
-
-{% block content %}
+<meta name="robots" content="index, follow" />
+{% endblock %} {% block extra_title %}Events{% endblock %} {% block content %}
 
 <div class="container">
-    <h1>Events</h1>
-    <p>We are also available to provide catering for private and public events.
-        Some previous events are shown below.
-    </p>
+  <h1>Events</h1>
+  <p>
+    We are also available to provide catering for private and public events.
+    Some previous events are shown below.
+  </p>
 </div>
 
 <div class="container">
-    <div class="row">
-        {% for event in events %}
-            <div class="col-md-6 col-lg-4">
-                <div class="card mb-4 thick-border">
-                    <div class="card-body">
-                        <div class="image-container">
-                            <a href="{{ event.link }}" target="_blank" rel="noopener"
-                                aria-label="Visit {{ event.name }}'s page (opens in a new tab)">
-                                <img class="card-img" src="{{ MEDIA_URL }}{{ event.image }}"
-                                    alt="{{ event.name }} on {{ event.date|date:'M o' }}">
-                                <h2 class="card-title">{{ event.name }}</h2>
-                            </a>
-                            <p class="card-text">{{ event.date|date:"M o" }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+  <div class="row">
+    {% if message %}
+    <div class="col-12">
+      <p>{{ message }}</p>
     </div>
+    {% else %} {% for event in events %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card mb-4 thick-border">
+        <div class="card-body">
+          <div class="image-container">
+            <a
+              href="{{ event.link }}"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit {{ event.name }}'s page (opens in a new tab)">
+              <img
+                class="card-img"
+                src="{{ MEDIA_URL }}{{ event.image }}"
+                alt="{{ event.name }} on {{ event.date|date:'M o' }}" />
+              <h2 class="card-title">{{ event.name }}</h2>
+            </a>
+            <p class="card-text">{{ event.date|date:"M o" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </div>
 </div>
+
 {% endblock %}
- 

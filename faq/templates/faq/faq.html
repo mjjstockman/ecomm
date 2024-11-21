@@ -2,105 +2,103 @@
 {% load static %}
 
 {% block extra_meta %}
-    <meta name="description" content="Ask or view questions about Get Wurst. Want to know what a Bratwurst is?">
-    <meta name="keywords" content="Frequantley asked questions, FAQ, FAQ's, what is a bratwurst">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
+<meta name="description" content="Ask or view questions about Get Wurst. Want to know what a Bratwurst is?" />
+<meta name="keywords" content="Frequently asked questions, FAQ, FAQ's, what is a bratwurst" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index, follow" />
 {% endblock %}
+
 {% block extra_title %}FAQ{% endblock %}
+
 {% block content %}
-
 <div class="container mb-3">
-    <h1>We hear you may have a question for Get Wurst?</h1>
-    {% if user.is_authenticated %}
-    <a href="#ask-question" class="btn btn-primary my-3">To Ask Question</a>
-    {% else %}
-    <p>Please <a href="{% url 'account_login' %}">Login</a>
-        or <a href="{% url 'account_signup' %}">Sign Up</a> to submit questions and answers or to like answers.</p>
-    {% endif %}
-    <p>Your question may already have an answer! Check below.</p>
+  <h1>We hear you may have a question for Get Wurst?</h1>
 
-    <div class="accordion thick-border" id="faqAccordion">
-        {% for question in questions %}
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="heading{{question.id}}">
-                <button class="accordion-button" type="button" 
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse{{question.id}}" aria-expanded="true" 
-                    aria-controls="collapse{{question.id}}">
-                    {{ question.body }}
-                </button>
-            </h2>
-            <div id="collapse{{question.id}}" class="accordion-collapse collapse"
-                aria-labelledby="heading{{question.id}}"
-                data-bs-parent="#faqAccordion">
-                <div class="accordion-body border-0">
-                    {% if not question.question_answer.all %}
-                        <p>This question hasn't had an approved answer yet.
-                            {% if user.is_authenticated %}
-                                Submit an answer below.
-                                {% else %}
-                                    <a href="{% url 'account_login' %}">Login</a> 
-                                    or <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
-                            {% endif %}
-                        </p>
-                    {% endif %}
-                    {% for answer in question.question_answer.all %}
-                        {% if answer.status == 1 %}
-                        <p>{{ answer.body | safe }}</p>
-                            {% if user.is_authenticated %}
-                                <form action="{% url 'like' answer.pk %}" method="POST" class="d-inline">
-                                    {% csrf_token %}
-                                    {% if answer in request.user.like_answer.all %}
-                                        <button type="submit" name="answer_id" class="border-0"
-                                            value="{{ answer.id }}"><i class="fa-solid fa-thumbs-up"></i>
-                                        </button>
-                                     {% else %}
-                                        <button type="submit" name="answer_id" class="border-0"
-                                            value="{{ answer.id }}"><i class="fa-regular fa-thumbs-up"></i>
-                                        </button>
-                                     {% endif %}
-                                </form>
-                                <span class="d-inline-block mb-3" >Liked by {{ answer.like.all.count }}
-                                user{{ answer.like.all.count|pluralize }}</span>     
-                                {% if forloop.last %}
-                                    <h3>Feel free to submit another answer below!</h3>
-                                {% endif %}
-                            {% else %}
-                            <span class="d-inline-block mb-3">Liked by {{ answer.like.all.count }}
-                                user{{ answer.like.all.count|pluralize }}</span>
-                            <p>
-                                <a href="{% url 'account_login' %}">Login</a>
-                                or <a href="{% url 'account_signup' %}">Sign Up</a> to submit another answer!
-                            </p>
-                            {% endif %}
-                         {% if not forloop.last %}
-                         <hr>
-                         {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                    {% if user.is_authenticated %}
-                    <form action="{% url 'answer' question.id %}" method="post">
-                        {% csrf_token %}
-                        {{ answer_form | crispy }}
-                        <input type="submit" class="btn btn-primary" value="Submit Answer">
-                    </form>
-                    {% endif %}
-                </div>  
-            </div>
+  {% if user.is_authenticated %}
+  <a href="#ask-question" class="btn btn-primary my-3">To Ask Question</a>
+  {% else %}
+  <p>
+    Please <a href="{% url 'account_login' %}">Login</a> or
+    <a href="{% url 'account_signup' %}">Sign Up</a> to submit questions and
+    answers or to like answers.
+  </p>
+  {% endif %}
+
+  <p>Your question may already have an answer! Check below.</p>
+
+  {% if messages %}
+  <div class="alert alert-info" role="alert">
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="accordion thick-border" id="faqAccordion">
+    {% for question in questions %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading{{ question.id }}">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse{{ question.id }}"
+          aria-expanded="true"
+          aria-controls="collapse{{ question.id }}">
+          {{ question.body }}
+        </button>
+      </h2>
+      <div
+        id="collapse{{ question.id }}"
+        class="accordion-collapse collapse"
+        aria-labelledby="heading{{ question.id }}"
+        data-bs-parent="#faqAccordion">
+        <div class="accordion-body border-0">
+          {% if not question.question_answer.all %}
+          <p>
+            This question hasn't had an approved answer yet. 
+            {% if user.is_authenticated %}
+            Submit an answer below. 
+            {% else %}
+            <a href="{% url 'account_login' %}">Login</a> or
+            <a href="{% url 'account_signup' %}">Sign Up</a> to submit an answer!
+            {% endif %}
+          </p>
+          {% endif %}
+
+          {% for answer in question.question_answer.all %}
+            {% if answer.status == 1 %}
+            <p>{{ answer.body|safe }}</p>
+
+            {% if user.is_authenticated %}
+            <form
+              action="{% url 'like' answer.pk %}"
+              method="POST"
+              class="d-inline">
+              {% csrf_token %}
+              {% if answer in request.user.like_answer.all %}
+              <button type="submit" name="answer_id" class="border-0" value="{{ answer.id }}">
+                <i class="fa-solid fa-thumbs-up"></i>
+              </button>
+              {% else %}
+              <button type="submit" name="answer_id" class="border-0" value="{{ answer.id }}">
+                <i class="fa-regular fa-thumbs-up"></i>
+              </button>
+              {% endif %}
+            </form>
+            <span class="d-inline-block mb-3">
+              Liked by {{ answer.like.all.count }} user{{
+              answer.like.all.count|pluralize }}
+            </span>
+            {% endif %}
+            {% endif %}
+          {% endfor %}
         </div>
-        {% endfor %}
+      </div>
     </div>
+    {% empty %}
+    <p>No questions available.</p>
+    {% endfor %}
+  </div>
 </div>
-
-{% if user.is_authenticated %}
-<div class="container">
-    <form action="{% url 'question' %}" id="ask-question" method="post">
-        {% csrf_token %}
-        {{ question_form | crispy }} 
-        <input type="submit" class="btn btn-primary" value="Submit Question">
-    </form>
-</div>
-{% endif %}
-
 {% endblock %}

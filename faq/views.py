@@ -8,9 +8,11 @@ from .models import Question, Answer
 
 
 def faq(request):
-    questions = get_list_or_404(
-        Question.objects.filter(status=1).order_by("-created_on")
-    )
+    questions = Question.objects.filter(status=1).order_by("-created_on")
+
+    if not questions.exists():
+        messages.info(request, 'No FAQs available yet. Please check back later.')
+
     question_form = QuestionForm()
     answer_form = AnswerForm()
 
@@ -20,6 +22,7 @@ def faq(request):
         "questions": questions,
     }
     return render(request, "faq/faq.html", context)
+
 
 
 @login_required
