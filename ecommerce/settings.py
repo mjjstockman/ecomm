@@ -2,13 +2,19 @@ import os
 from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
+
+# Load environment variables from the .env file
 load_dotenv()
 
+# Check if the DATABASE_URL environment variable exists
+print(os.getenv('DATABASE_URL'))
+
+# Check for env.py file for local environment settings
 if os.path.isfile("env.py"):
     import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -20,11 +26,9 @@ if not SECRET_KEY:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Only set debug to True if DEVELOPMENT var is in the environ
-# DEBUG = "DEVELOPMENT" in os.environ
 DEBUG = True
 
 ALLOWED_HOSTS = ["ecomm-gw.herokuapp.com", '127.0.0.1', "localhost"]
-
 
 # Application definition
 
@@ -98,7 +102,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
@@ -132,22 +135,16 @@ LOGIN_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = "ecommerce.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# 
 
-
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-        }
-    }
+}
 
 
 # Password validation
@@ -168,7 +165,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -185,12 +181,8 @@ USE_TZ = True
 PHONENUMBER_DEFAULT_REGION = 'GB'
 PHONENUMBER_DB_FORMAT = 'NATIONAL'
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
@@ -223,7 +215,6 @@ if "USE_AWS" in os.environ:
         "CacheControl": "max-age=94608000",
     }
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -234,7 +225,6 @@ STRIPE_CURRENCY = "gbp"
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", "")
-
 
 if "DEVELOPMENT" in os.environ:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
