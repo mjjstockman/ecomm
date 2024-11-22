@@ -24,9 +24,13 @@ def all(request):
 
     if request.GET:
         if "category" in request.GET:
+            print("Category parameter:", request.GET["category"])
             categories = request.GET["category"].split(",")
+            print("Parsed categories:", categories)
             products = products.filter(category__name__in=categories)
+            print("Filtered products:", products)
             categories = Category.objects.filter(name__in=categories)
+            print("Filtered categories:", categories)
 
         if "q" in request.GET:
             query = request.GET["q"]

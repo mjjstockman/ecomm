@@ -6,15 +6,15 @@
                 {% with url_path=request.get_full_path %}
                  <li class="nav-item">
                     <a class="nav-link {% if url_path == '/menu/?category=bratwurst' %}active{% endif %}"
-                        href="{% url 'products' %}?category=bratwurst">Bratwurst</a>
+                        href="{% url 'products' %}?category=Bratwurst">Bratwurst</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link {% if url_path == '/menu/?category=chicken' %}active{% endif %}"
-                         href="{% url 'products' %}?category=chicken">Chicken</a>
+                         href="{% url 'products' %}?category=Chicken">Chicken</a>
                  </li>
                  <li class="nav-item me-2">
                      <a class="nav-link {% if url_path == '/menu/?category=burger' %}active{% endif %}"
-                         href="{% url 'products' %}?category=burger">Burgers</a>
+                         href="{% url 'products' %}?category=Burger">Burgers</a>
                  </li>
                  <li>
                      <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
