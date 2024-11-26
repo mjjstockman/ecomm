@@ -3,6 +3,11 @@ from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
 
+# settings.py
+print("DATABASE_URL:", os.getenv("DATABASE_URL"))
+print("SECRET_KEY:", os.getenv("SECRET_KEY"))
+print("AWS_ACCESS_KEY_ID:", os.getenv("AWS_ACCESS_KEY_ID"))
+
 # Load environment variables from the .env file
 load_dotenv()
 
@@ -16,6 +21,8 @@ if os.path.isfile("env.py"):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+print("DATABASE_URL:", os.getenv("DATABASE_URL"))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -26,7 +33,7 @@ if not SECRET_KEY:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Only set debug to True if DEVELOPMENT var is in the environ
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["ecomm-gw.herokuapp.com", '127.0.0.1', "localhost"]
 
@@ -139,12 +146,21 @@ WSGI_APPLICATION = "ecommerce.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 # 
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+if os.getenv("DATABASE_URL"):
+    DATABASES = {
+        "default": dj_database_url.parse(
+            os.getenv("DATABASE_URL"),
+            conn_max_age=600,
+            ssl_require=True
+        )
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
 
 
 # Password validation
@@ -237,3 +253,4 @@ else:
     EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
     EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+
