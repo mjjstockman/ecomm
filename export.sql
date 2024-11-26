@@ -1,10 +1,3 @@
-PRAGMA foreign_keys=OFF;
-BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS "django_migrations" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "app" varchar(255) NOT NULL, "name" varchar(255) NOT NULL, "applied" datetime NOT NULL);
-INSERT INTO django_migrations VALUES(1,'contenttypes','0001_initial','2022-09-02 07:02:21.410440');
-INSERT INTO django_migrations VALUES(2,'auth','0001_initial','2022-09-02 07:02:21.430007');
-INSERT INTO django_migrations VALUES(3,'admin','0001_initial','2022-09-02 07:02:21.440222');
-INSERT INTO django_migrations VALUES(4,'admin','0002_logentry_remove_auto_add','2022-09-02 07:02:21.451894');
 INSERT INTO django_migrations VALUES(5,'admin','0003_logentry_add_action_flag_choices','2022-09-02 07:02:21.462273');
 INSERT INTO django_migrations VALUES(6,'contenttypes','0002_remove_content_type_name','2022-09-02 07:02:21.480964');
 INSERT INTO django_migrations VALUES(7,'auth','0002_alter_permission_name_max_length','2022-09-02 07:02:21.492522');
