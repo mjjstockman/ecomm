@@ -35,7 +35,7 @@ if not SECRET_KEY:
 # Only set debug to True if DEVELOPMENT var is in the environ
 DEBUG = False
 
-ALLOWED_HOSTS = ["ecomm-gw.herokuapp.com", '127.0.0.1', "localhost", ]
+ALLOWED_HOSTS = ["ecomm-2-qb0s.onrender.com", '127.0.0.1', "localhost", ]
 
 # Application definition
 
