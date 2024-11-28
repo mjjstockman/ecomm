@@ -3,12 +3,6 @@ from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
 
-# settings.py
-print("DATABASE_URL:", os.getenv("DATABASE_URL"))
-print("SECRET_KEY:", os.getenv("SECRET_KEY"))
-print("AWS_ACCESS_KEY_ID:", os.getenv("AWS_ACCESS_KEY_ID"))
-
-# Load environment variables from the .env file
 load_dotenv()
 
 # Check if the DATABASE_URL environment variable exists
@@ -205,7 +199,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = "/media/TEST/"
+MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 if "USE_AWS" in os.environ:
