@@ -27,7 +27,7 @@ if not SECRET_KEY:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Only set debug to True if DEVELOPMENT var is in the environ
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["ecomm-2-qb0s.onrender.com", '127.0.0.1', "localhost", ]
 
@@ -123,7 +123,8 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         "AUTH_PARAMS": {
             "access_type": "online",
-        }
+        },
+        "API_VERSION": "v2",
     }
 }
 
@@ -134,6 +135,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 WSGI_APPLICATION = "ecommerce.wsgi.application"
 
@@ -246,6 +248,6 @@ else:
     EMAIL_PORT = 587
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
