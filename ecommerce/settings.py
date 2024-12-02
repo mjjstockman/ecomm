@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "products",
     "profiles",
-    "oauth2_provider",
 ]
 
 MIDDLEWARE = [
@@ -257,7 +256,3 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
-OAUTH2_PROVIDER = {
-    'ACCESS_TOKEN_EXPIRE': 3600,  # Adjust expiration time as needed
-    'AUTHORIZATION_CODE_EXPIRE': 3600,
-}
