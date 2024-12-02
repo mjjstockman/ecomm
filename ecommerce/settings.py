@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "products",
     "profiles",
+    "oauth2_provider",
 ]
 
 MIDDLEWARE = [
@@ -137,7 +138,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
-ACCOUNT_USERNAME_MIN_LENGTH = 4
+ACCOUNT_USERNAME_MIN_LENGTH = 8
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
@@ -256,3 +257,7 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
     DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
+OAUTH2_PROVIDER = {
+    'ACCESS_TOKEN_EXPIRE': 3600,  # Adjust expiration time as needed
+    'AUTHORIZATION_CODE_EXPIRE': 3600,
+}
